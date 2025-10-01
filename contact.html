@@ -29,13 +29,13 @@
     </label>
   
     <!-- primary navigation -->
-    <nav class="artlux-nav-main" role="navigation">
-      <a href="index.html" class="artlux-nav-main-button ">Home</a>
-      <a href="gallery.html" class="artlux-nav-main-button">Gallery</a>
-      <a href="commission.html" class="artlux-nav-main-button">Commission</a>
-      <a href="about.html" class="artlux-nav-main-button">About</a>
-      <a href="contact.html" class="artlux-nav-main-button active">Contact</a>
-    </nav>
+  <nav class="artlux-nav-main" id="primaryNav" role="navigation" aria-label="Primary">
+    <a class="artlux-nav-main-button active" href="index.html">Home</a>
+    <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
+    <a class="artlux-nav-main-button" href="commission.html">Commission</a>
+    <a class="artlux-nav-main-button" href="about.html">About</a>
+    <a class="artlux-nav-main-button" href="contact.html">Contact</a>
+  </nav>
   </header>
   <!-- MAIN CONTENT -->
   <main class="contact-section" role="main">
@@ -216,6 +216,30 @@
       toggleShadow();
       window.addEventListener('scroll', toggleShadow);
     })();
+
+      (function () {
+    var btn = document.querySelector('.artlux-nav-toggle');
+    var drawer = document.getElementById('artlux-nav-drawer');
+    if (!btn || !drawer) return;
+
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      if (open) {
+        drawer.setAttribute('hidden', '');
+      } else {
+        drawer.removeAttribute('hidden');
+      }
+    });
+
+    // Close drawer when a link is clicked (mobile UX)
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        btn.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('hidden', '');
+      }
+    });
+  })();
   </script>
 </body>
 </html>

@@ -85,6 +85,7 @@
       </section>
     </div>
   </main>
+
 <footer class="artlux-footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-about">
@@ -176,7 +177,29 @@
       &copy; 2025 ArtLux Murals. All rights reserved.
     </div>
   </footer>
+<script>  (function () {
+    var btn = document.querySelector('.artlux-nav-toggle');
+    var drawer = document.getElementById('artlux-nav-drawer');
+    if (!btn || !drawer) return;
 
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      if (open) {
+        drawer.setAttribute('hidden', '');
+      } else {
+        drawer.removeAttribute('hidden');
+      }
+    });
+
+    // Close drawer when a link is clicked (mobile UX)
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        btn.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('hidden', '');
+      }
+    });
+  })();</script>
 
 </body>
 </html>
