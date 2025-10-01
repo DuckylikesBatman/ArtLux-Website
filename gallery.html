@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ArtLux – Gallery | Original Paintings & Bespoke Art</title>
+  <meta name="description" content="Explore ArtLux's curated gallery of original paintings and bespoke arabesque pieces. Museum-grade materials, insured worldwide shipping." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ArtLux – Gallery" />
+  <meta property="og:description" content="Hand-painted artworks and bespoke murals by ArtLux." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-artlux.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="gallery.css" />
+
+</head>
+<body class="gallery-page">
+  <!-- ======= HEADER ======= -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <a href="index.html" class="site-logo" aria-label="ArtLux Home">Art<span>Lux</span></a>
+
+    <input type="checkbox" id="navToggle" hidden>
+    <label for="navToggle" class="burger" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav" id="primaryNav" role="navigation" aria-label="Primary">
+      <a class="site-nav__link" href="index.html">Home</a>
+      <a class="site-nav__link active" href="gallery.html">Gallery</a>
+      <a class="site-nav__link" href="commission.html">Commission</a>
+      <a class="site-nav__link" href="about.html">About</a>
+      <a class="site-nav__link" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- ======= HERO ======= -->
+    <section class="gallery-hero" role="region" aria-label="ArtLux Gallery">
+      <div class="container gallery-hero__grid">
+        <div class="gallery-hero__content">
+          <h1 class="gallery-hero__title">Transform Your Space with ArtLux</h1>
+          <p class="gallery-hero__subtitle">
+            Hand-painted arabesque and contemporary pieces, crafted with meticulous technique.
+          </p>
+        </div>
+
+        <figure class="gallery-hero__media" aria-hidden="true">
+          <img src="images/gallery-bg.png" alt="" loading="eager" />
+        </figure>
+      </div>
+
+      <!-- Enhanced filter dock -->
+      <div class="filter-dock">
+        <div class="filter-dock__container">
+          <form class="filter-dock__form" action="#artworks" method="get" aria-label="Filter artworks">
+            <div class="filter-group">
+              <span class="filter-label">Style</span>
+              <select class="filter-select" name="style">
+                <option value="">All Styles</option>
+                <option value="arabesque">Arabesque</option>
+                <option value="abstract">Abstract</option>
+                <option value="contemporary">Contemporary</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-label">Size</span>
+              <select class="filter-select" name="size">
+                <option value="">All Sizes</option>
+                <option value="small">≤ 50×70 cm</option>
+                <option value="medium">70×100 cm</option>
+                <option value="large">≥ 100×140 cm</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-label">Sort By</span>
+              <select class="filter-select" name="sort">
+                <option value="featured">Featured</option>
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+              </select>
+            </div>
+
+            <button class="filter-apply" type="submit" aria-label="Apply filters">
+              Apply Filters
+            </button>
+          </form>
+
+          <p class="filter-dock__note">Museum-grade materials • Insured worldwide shipping</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= GALLERY GRID ======= -->
+    <section class="section gallery" aria-label="Artworks for sale" id="artworks">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Available Works</h2>
+          <p class="section__subtitle">Curated selection. Ships insured worldwide.</p>
+        </header>
+
+        <div class="gallery-grid">
+          <!-- Card -->
+          <article class="artcard" id="painting6" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting6-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 6 in full">
+              <img src="images/painting6-dec.jpeg" alt="Painting 6 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 6</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting6" aria-label="Buy Painting 6">Buy Now</a>
+          </article>
+
+          <!-- Repeat for other paintings... -->
+          <article class="artcard" id="painting8" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting8-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 8 in full">
+              <img src="images/painting8-dec.jpeg" alt="Painting 8 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 8</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting8" aria-label="Buy Painting 8">Buy Now</a>
+          </article>
+
+          <article class="artcard" id="painting10" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting10-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 10 in full">
+              <img src="images/painting10-dec.jpeg" alt="Painting 10 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 10</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting10" aria-label="Buy Painting 10">Buy Now</a>
+          </article>
+
+          <article class="artcard" id="painting11" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting11-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 11 in full">
+              <img src="images/painting11-dec.jpeg" alt="Painting 11 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 11</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting11" aria-label="Buy Painting 11">Buy Now</a>
+          </article>
+
+          <article class="artcard" id="painting12" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting12-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 12 in full">
+              <img src="images/painting12-dec.jpeg" alt="Painting 12 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 12</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting12" aria-label="Buy Painting 12">Buy Now</a>
+          </article>
+
+          <article class="artcard" id="painting14" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting14-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 14 in full">
+              <img src="images/painting14-dec.jpeg" alt="Painting 14 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 14</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting14" aria-label="Buy Painting 14">Buy Now</a>
+          </article>
+
+          <article class="artcard" id="painting1" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting1-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 1 in full">
+              <img src="images/painting1-dec.jpeg" alt="Painting 1 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 1</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting1" aria-label="Buy Painting 1">Buy Now</a>
+          </article>
+
+          <article class="artcard" id="painting16" itemscope itemtype="https://schema.org/Product">
+            <a class="artcard__media" href="images/painting16-dec.jpeg" target="_blank" rel="noopener" aria-label="Open Painting 16 in full">
+              <img src="images/painting16-dec.jpeg" alt="Painting 16 — Oil on canvas" loading="lazy" itemprop="image" />
+              <figcaption class="artcard__caption">
+                <h3 class="artcard__title" itemprop="name">Painting 16</h3>
+                <p class="artcard__meta" itemprop="description">Oil on Canvas · 70×100 cm</p>
+                <div class="artcard__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                  <meta itemprop="priceCurrency" content="USD" />
+                  <span itemprop="price">$250</span>
+                </div>
+              </figcaption>
+            </a>
+            <a class="artcard__buy" href="checkout.html?product=painting16" aria-label="Buy Painting 16">Buy Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="site-logo">Art<span>Lux</span></a>
+        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+      </div>
+
+      <nav class="footer__group" aria-label="Quick Links">
+        <h3 class="footer__title">Quick Links</h3>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="commission.html">Commission</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__group" aria-label="Legal">
+        <h3 class="footer__title">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="ToS.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer__group">
+        <h3 class="footer__title">Contact</h3>
+        <p>Corniche El Mazraa, Beirut</p>
+        <p><a href="tel:+96103683127">+961 03 683 127</a></p>
+        <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+      </address>
+    </div>
+
+    <div class="footer__bottom">
+      &copy; 2025 ArtLux Murals. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ======= JS (sticky header + ARIA) ======= -->
+  <script>
+    (function () {
+      const header = document.getElementById('siteHeader');
+      const navToggle = document.getElementById('navToggle');
+      const burger = document.querySelector('label.burger');
+
+      const onScroll = () => header && header.classList.toggle('is-scrolled', window.scrollY > 50);
+      onScroll(); window.addEventListener('scroll', onScroll);
+
+      if (navToggle && burger) {
+        const sync = () => burger.setAttribute('aria-expanded', String(navToggle.checked));
+        navToggle.addEventListener('change', sync); sync();
+      }
+      
+      // Enhanced filter functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterSelects = document.querySelectorAll('.filter-select');
+        
+        filterSelects.forEach(select => {
+          // Check if there's a saved value
+          const savedValue = localStorage.getItem(`filter-${select.name}`);
+          if (savedValue) {
+            select.value = savedValue;
+          }
+          
+          // Save on change
+          select.addEventListener('change', function() {
+            localStorage.setItem(`filter-${this.name}`, this.value);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

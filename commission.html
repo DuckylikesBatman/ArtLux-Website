@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commission Custom Artwork · ArtLux</title>
+  <meta name="description" content="Commission a bespoke artwork from ArtLux. Share your vision and collaborate with our artist to create a one‑of‑a‑kind piece." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="commission.css" />
+</head>
+<body class="commission-page">
+  <!-- ========== SITE HEADER ========== -->
+  <header class="site-header" id="siteHeader">
+    <a href="index.html" class="site-logo">Art<span>Lux</span></a>
+
+    <input type="checkbox" id="navToggle" hidden>
+    <label for="navToggle" class="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="site-nav">
+      <a class="site-nav__link" href="index.html">Home</a>
+      <a class="site-nav__link" href="gallery.html">Gallery</a>
+      <a class="site-nav__link active" href="commission.html">Commission</a>
+      <a class="site-nav__link" href="about.html">About</a>
+      <a class="site-nav__link" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main id="mainContent">
+    <!-- ===== HERO ===== -->
+    <section class="commission-hero" aria-labelledby="hero-heading">
+      <div class="commission-hero-inner">
+        <h1 id="hero-heading">Commission Your Masterpiece</h1>
+        <p>Collaborate with ArtLux to create a bespoke artwork tailored to your space and vision. Our custom commissions transform your ideas into timeless pieces of art.</p>
+        <div class="hero-actions">
+          <a href="#request-form" class="cta-button primary">Start Your Commission</a>
+          <a href="gallery.html" class="cta-button secondary">View Past Works</a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2 class="section-title center">Our Process</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>Initial Consultation</h3>
+            <p>We discuss your vision, space, and preferences to set creative direction.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>Concept Development</h3>
+            <p>Preliminary sketches and color studies are prepared for your review.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>Artwork Creation</h3>
+            <p>We bring the concept to life using premium archival materials.</p>
+          </div>
+             <div class="service-card">
+            <div class="service-icon">✧</div>
+            <h3>Final Delivery</h3>
+            <p>Your work is packaged with care and shipped fully insured.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORM ===== -->
+    <section id="request-form" class="section form-section" aria-labelledby="commission-form-heading">
+      <div class="container">
+        <h2 id="commission-form-heading" class="section-title">Commission Request</h2>
+
+        <form id="commissionForm" class="request-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label for="type">Artwork Type <span class="required" aria-hidden="true">*</span></label>
+              <select id="type" name="type" required aria-required="true">
+                <option value="">Select…</option>
+                <option value="painting">Painting</option>
+                <option value="portrait">Portrait</option>
+                <option value="mural">Mural</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Tell us about your vision <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="description" name="description" minlength="20" required aria-required="true" placeholder="Theme, colors, size, space…"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="">Select…</option>
+              <option value="500-1000">$500 – $1,000</option>
+              <option value="1000-3000">$1,000 – $3,000</option>
+              <option value="3000-5000">$3,000 – $5,000</option>
+              <option value="5000+">$5,000+</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-button">Submit Request</button>
+
+          <!-- Live region for form messaging -->
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+
+        <article class="faq-item">
+          <details>
+            <summary>How long does a commission typically take?</summary>
+            <div class="faq-content">
+              <p>Most commissions take 4–6 weeks after concept approval. Larger or complex works may require 8–10 weeks.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="faq-item">
+          <details>
+            <summary>What materials do you use?</summary>
+            <div class="faq-content">
+              <p>We use archival‑quality media and supports, including:</p>
+              <ul>
+                <li>Professional acrylics and oils</li>
+                <li>Gallery‑wrapped canvases</li>
+                <li>Acid‑free papers and boards</li>
+                <li>UV‑protective varnishes</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="faq-item">
+          <details>
+            <summary>Do you offer international shipping?</summary>
+            <div class="faq-content">
+              <p>Yes, worldwide shipping with custom crating, full insurance, and tracked delivery.</p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <a href="index.html" class="site-logo">Art<span>Lux</span></a>
+        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+      </div>
+
+      <nav class="footer__group" aria-label="Quick Links">
+        <h3 class="footer__title">Quick Links</h3>
+        <ul class="footer__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="commission.html">Commission</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__group" aria-label="Legal">
+        <h3 class="footer__title">Legal</h3>
+        <ul class="footer__list">
+          <li><a href="ToS.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer__group">
+        <h3 class="footer__title">Contact</h3>
+        <p>Corniche El Mazraa, Beirut</p>
+        <p><a href="tel:+96103683127">+961 03 683 127</a></p>
+        <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+      </address>
+    </div>
+
+    <div class="footer__bottom container">
+      &copy; 2025 ArtLux Murals. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // ---- Sticky header ----
+      const header = document.getElementById('siteHeader');
+      const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 20);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // ---- Mobile nav ----
+      const navToggle = document.getElementById('navToggle');
+      const burger = document.querySelector('label.burger');
+      const syncAria = () => burger?.setAttribute('aria-expanded', String(!!navToggle?.checked));
+      navToggle?.addEventListener('change', syncAria);
+      syncAria();
+
+      // ---- Smooth scroll ----
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const id = a.getAttribute('href');
+          if (!id || id === '#') return;
+          const target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            const top = target.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // ---- FAQ accessibility ----
+      document.querySelectorAll('.faq-item details').forEach(d => {
+        const set = () => d.setAttribute('aria-expanded', d.open ? 'true' : 'false');
+        d.addEventListener('toggle', set);
+        set();
+      });
+
+      // ---- Form handling ----
+      const form = document.getElementById('commissionForm');
+      const status = document.getElementById('formStatus');
+
+      function showStatus(msg, ok = true) {
+        if (!status) return;
+        status.textContent = msg;
+        status.className = ok ? 'form-success' : 'form-error';
+      }
+
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          showStatus('Please complete the required fields.', false);
+          form.reportValidity?.();
+          return;
+        }
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        console.log('[Commission] Submitted:', data);
+
+        showStatus("Thank you! Your commission request has been received. We'll get back to you within 48 hours.");
+        form.reset();
+        syncAria();
+      });
+    })();
+  </script>
+</body>
+</html>
