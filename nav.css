@@ -86,7 +86,6 @@
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--clr-text);
   line-height: 1.1;
   cursor: pointer;
   text-decoration: none;
@@ -94,7 +93,7 @@
 
 .site-logo span,
 .artlux-header-logo span {
-  color: rgb(183, 161, 40);
+  color: rgb(210, 185, 43);
 }
 
 /* === MOBILE NAVIGATION === */
@@ -189,7 +188,7 @@ label.burger span {
 }
 
 .footer-logo span,
-.site-footer .site-logo span { color: rgb(168, 148, 33); }
+.site-footer .site-logo span { color: rgb(210, 185, 43); }
 
 .footer__brand p,
 .footer-about p {

@@ -1,0 +1,97 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found · ArtLux</title>
+  <meta name="robots" content="noindex" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <!-- Page styles -->
+  <link rel="stylesheet" href="404.css" />
+</head>
+<body class="notfound-page">
+  <header class="artlux-header" role="banner">
+    <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">ArtLux</a>
+    <nav class="artlux-nav" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="commission.html">Commission</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="notfound-main" role="main">
+    <section class="notfound-hero container" aria-labelledby="nf-title">
+      <div class="nf-visual" aria-hidden="true">
+        <svg class="nf-svg" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative">
+          <defs>
+            <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#f8f2e6"/>
+              <stop offset="100%" stop-color="#e5d8b0"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="600" height="200" fill="url(#grad)" />
+          <path d="M0,150 C150,120 300,180 600,130 L600,200 L0,200 Z" fill="#c9a33a" opacity=".15"/>
+        </svg>
+      </div>
+
+      <div class="nf-copy">
+        <h1 id="nf-title" class="nf-title">404 — Page Not Found</h1>
+        <p class="nf-subtitle">The page you’re looking for may have been moved, renamed, or no longer exists.</p>
+
+        <div class="nf-actions">
+          <a class="btn btn-primary" href="index.html">Back to Home</a>
+          <a class="btn btn-ghost" href="gallery.html">Explore the Gallery</a>
+        </div>
+
+        <details class="nf-details">
+          <summary>Why am I seeing this?</summary>
+          <ul>
+            <li>A link may be outdated or misspelled.</li>
+            <li>The page was renamed during a site update.</li>
+            <li>You followed an external link that no longer works.</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <section class="nf-links container" aria-labelledby="quick-links">
+      <h2 id="quick-links" class="sr-only">Quick links</h2>
+      <ul class="nf-quick">
+        <li><a href="commission.html">Request a Commission</a></li>
+        <li><a href="about.html">About ArtLux</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="ToS.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="artlux-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-brand">© <span id="year"></span> ArtLux</p>
+      <ul class="footer-links">
+        <li><a href="ToS.html">Terms</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Optional timed redirect:
+    // setTimeout(function(){ window.location.href = 'index.html'; }, 10000);
+  </script>
+</body>
+</html>

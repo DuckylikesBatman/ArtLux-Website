@@ -1,0 +1,296 @@
+/* ======================================================
+   ArtLux – Privacy Policy Styles
+   Elegant & Professional Legal Page
+   ====================================================== */
+
+/* ----------  Variables  ---------- */
+:root {
+  --gold-50: #faf8f3;
+  --gold-100: #f8f2e6;
+  --gold-300: #e5d8b0;
+  --gold-500: #c9a33a;
+  --gold-600: #b78c2c;
+  --gold-700: #8a6e2d;
+  --gold-900: #4d3d1a;
+  --black: #1a1a1a;
+  --gray-50: #faf9f7;
+  --gray-100: #f8f8f8;
+  --gray-300: #e0e0e0;
+  --gray-500: #999999;
+  --gray-700: #5c5c5c;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* ----------  Base Styles  ---------- */
+body.policy-page {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--black);
+  background: var(--white);
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ----------  Hero Section  ---------- */
+.policy-hero {
+  background: linear-gradient(135deg, var(--gold-50) 0%, var(--white) 100%);
+  padding: 140px 0 80px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.policy-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--gold-700);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.policy-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+/* ----------  Content Layout  ---------- */
+.policy-content {
+  padding: 5rem 0;
+  background: var(--white);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.policy-main-content {
+  max-width: none;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.intro-text p {
+  margin: 0;
+}
+
+/* ----------  Policy Sections  ---------- */
+.policy-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.policy-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-700);
+  margin-bottom: 1.5rem;
+  scroll-margin-top: 100px;
+}
+
+.policy-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+}
+
+.legal-list {
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.legal-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+.legal-list strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
+/* Links */
+.policy-section a {
+  color: var(--gold-500);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.policy-section a:hover {
+  color: var(--gold-600);
+  text-decoration: underline;
+}
+
+/* Address */
+.policy-section address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.policy-section address strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--gold-700);
+}
+
+/* ----------  Table of Contents  ---------- */
+.policy-toc {
+  position: relative;
+  top: 120px;
+  background: var(--gold-50);
+  border: 1px solid var(--gold-100);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+.email-link{
+    color: rgb(227, 178, 80);
+}
+
+.policy-toc h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold-700);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold-300);
+}
+
+.policy-toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.policy-toc li {
+  margin-bottom: 0.75rem;
+}
+
+.policy-toc a {
+  color: var(--gray-700);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.policy-toc a:hover {
+  color: var(--gold-500);
+  border-bottom-color: var(--gold-300);
+}
+
+/* ----------  Responsive Design  ---------- */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .policy-toc {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-hero {
+    padding: 120px 0 60px;
+  }
+  
+  .policy-content {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .policy-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .policy-toc {
+    padding: 1.5rem;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-title {
+    font-size: 2rem;
+  }
+  
+  .policy-subtitle {
+    font-size: 1rem;
+  }
+  
+  .policy-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .legal-list {
+    padding-left: 1rem;
+  }
+  
+  .policy-toc {
+    padding: 1.25rem;
+  }
+  
+  .policy-toc h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .policy-toc,
+  .artlux-header,
+  .artlux-footer {
+    display: none;
+  }
+  
+  .policy-hero {
+    padding: 2rem 0;
+  }
+  
+  .policy-content {
+    padding: 1rem 0;
+  }
+}
