@@ -2,185 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Commission Custom Artwork · ArtLux</title>
   <meta name="description" content="Commission a bespoke artwork from ArtLux. Share your vision and collaborate with our artist to create a one‑of‑a‑kind piece." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="nav.css" />
-  <link rel="stylesheet" href="commission.css" />
+     <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="commission.css">
 </head>
-<body class="commission-page">
-  <!-- ========== SITE HEADER ========== -->
-  <header class="site-header" id="siteHeader">
-    <a href="index.html" class="site-logo">Art<span>Lux</span></a>
+<body>
+  <!-- ======= Header ======= -->
+  <header class="artlux-header" role="banner">
+    <a class="site-logo" href="index.html" aria-label="ArtLux Home">
+      Art<span>Lux</span>
+    </a>
 
+    <!-- Mobile toggle -->
     <input type="checkbox" id="navToggle" hidden>
-    <label for="navToggle" class="burger" aria-label="Menu">
+    <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
       <span></span><span></span><span></span>
     </label>
 
-  <nav class="artlux-nav-main" id="primaryNav" role="navigation" aria-label="Primary">
-    <a class="artlux-nav-main-button " href="index.html">Home</a>
-    <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button active" href="commission.html">Commission</a>
-    <a class="artlux-nav-main-button" href="about.html">About</a>
-    <a class="artlux-nav-main-button" href="contact.html">Contact</a>
-  </nav>
+    <!-- Main navigation -->
+    <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
+      <a class="artlux-nav-main-button" href="index.html">Home</a>
+      <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
+      <a class="artlux-nav-main-button active" href="commission.html">Commission</a>
+      <a class="artlux-nav-main-button" href="about.html">About</a>
+      <a class="artlux-nav-main-button" href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- ========== MAIN ========== -->
-  <main id="mainContent">
-    <!-- ===== HERO ===== -->
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+    <!-- Hero Section -->
     <section class="commission-hero" aria-labelledby="hero-heading">
       <div class="commission-hero-inner">
         <h1 id="hero-heading">Commission Your Masterpiece</h1>
-        <p>Collaborate with ArtLux to create a bespoke artwork tailored to your space and vision. Our custom commissions transform your ideas into timeless pieces of art.</p>
+        <p class="hero-lede">Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.</p>
+        
         <div class="hero-actions">
           <a href="#request-form" class="cta-button primary">Start Your Commission</a>
-          <a href="gallery.html" class="cta-button secondary">View Past Works</a>
+          <a href="gallery.html" class="cta-button ghost">View Past Works</a>
         </div>
       </div>
     </section>
 
-
-
-
-    <!-- Services Section -->
-    <section class="services-section">
+    <!-- Process Section -->
+    <section class="section process-section" aria-labelledby="process-heading">
       <div class="container">
-        <h2 class="section-title center">Our Process</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">✧</div>
+        <h2 id="process-heading" class="section-title">Our Process</h2>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-icon">✧</div>
             <h3>Initial Consultation</h3>
-            <p>We discuss your vision, space, and preferences to set creative direction.</p>
+            <p>We discuss your vision, space requirements, and artistic preferences to establish the creative direction.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon">✧</div>
+          <div class="process-card">
+            <div class="process-icon">✧</div>
             <h3>Concept Development</h3>
-            <p>Preliminary sketches and color studies are prepared for your review.</p>
+            <p>Preliminary sketches and color studies are prepared for your review and approval.</p>
           </div>
-          <div class="service-card">
-            <div class="service-icon">✧</div>
+          <div class="process-card">
+            <div class="process-icon">✧</div>
             <h3>Artwork Creation</h3>
-            <p>We bring the concept to life using premium archival materials.</p>
+            <p>Your vision comes to life using premium archival materials and expert techniques.</p>
           </div>
-             <div class="service-card">
-            <div class="service-icon">✧</div>
+          <div class="process-card">
+            <div class="process-icon">✧</div>
             <h3>Final Delivery</h3>
-            <p>Your work is packaged with care and shipped fully insured.</p>
+            <p>Your completed artwork is carefully packaged and shipped with full insurance coverage.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FORM ===== -->
-    <section id="request-form" class="section form-section" aria-labelledby="commission-form-heading">
+    <!-- Commission Form -->
+    <section id="request-form" class="section form-section" aria-labelledby="form-heading">
       <div class="container">
-        <h2 id="commission-form-heading" class="section-title">Commission Request</h2>
-
-        <form id="commissionForm" class="request-form" novalidate>
+        <h2 id="form-heading" class="section-title">Commission Request</h2>
+        
+        <!-- Formspree Form - Replace YOUR_FORM_ID with your actual Formspree form ID -->
+        <form class="request-form" id="commissionForm" action="https://formspree.io/f/mdkwdqga" method="POST">
+          <input type="hidden" name="_subject" value="New Commission Request - ArtLux">
+          <input type="hidden" name="_cc" value="artluxdesign@outlook.com">
+          
           <div class="form-grid">
             <div class="form-group">
-              <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
-              <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" />
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required>
             </div>
-
+            
             <div class="form-group">
-              <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
-              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" />
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required>
             </div>
-
+            
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+              <input type="tel" id="phone" name="phone">
             </div>
-
+            
             <div class="form-group">
-              <label for="type">Artwork Type <span class="required" aria-hidden="true">*</span></label>
-              <select id="type" name="type" required aria-required="true">
-                <option value="">Select…</option>
+              <label for="artwork-type">Artwork Type <span class="required">*</span></label>
+              <select id="artwork-type" name="artwork-type" required>
+                <option value="">Select an option</option>
                 <option value="painting">Painting</option>
                 <option value="portrait">Portrait</option>
                 <option value="mural">Mural</option>
+                <option value="decorative-finish">Decorative Finish</option>
                 <option value="other">Other</option>
               </select>
             </div>
+            
+            <div class="form-group full-width">
+              <label for="description">Project Description <span class="required">*</span></label>
+              <textarea id="description" name="description" placeholder="Tell us about your vision, including theme, colors, dimensions, and the space where the artwork will be displayed..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="">Select an option</option>
+                <option value="500-1000">$500 – $1,000</option>
+                <option value="1000-3000">$1,000 – $3,000</option>
+                <option value="3000-5000">$3,000 – $5,000</option>
+                <option value="5000+">$5,000+</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="timeline">Desired Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select an option</option>
+                <option value="flexible">Flexible</option>
+                <option value="1-2 months">1-2 months</option>
+                <option value="3-4 months">3-4 months</option>
+                <option value="urgent">Urgent (discuss)</option>
+              </select>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="description">Tell us about your vision <span class="required" aria-hidden="true">*</span></label>
-            <textarea id="description" name="description" minlength="20" required aria-required="true" placeholder="Theme, colors, size, space…"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="budget">Budget Range</label>
-            <select id="budget" name="budget">
-              <option value="">Select…</option>
-              <option value="500-1000">$500 – $1,000</option>
-              <option value="1000-3000">$1,000 – $3,000</option>
-              <option value="3000-5000">$3,000 – $5,000</option>
-              <option value="5000+">$5,000+</option>
-            </select>
-          </div>
-
-          <button type="submit" class="submit-button">Submit Request</button>
-
-          <!-- Live region for form messaging -->
-          <p id="formStatus" role="status" aria-live="polite"></p>
+          
+          <button type="submit" class="submit-button">Submit Commission Request</button>
+          <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
         </form>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+    <!-- FAQ Section -->
     <section class="section faq-section" aria-labelledby="faq-heading">
       <div class="container">
         <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
-
-        <article class="faq-item">
-          <details>
-            <summary>How long does a commission typically take?</summary>
-            <div class="faq-content">
-              <p>Most commissions take 4–6 weeks after concept approval. Larger or complex works may require 8–10 weeks.</p>
-            </div>
-          </details>
-        </article>
-
-        <article class="faq-item">
-          <details>
-            <summary>What materials do you use?</summary>
-            <div class="faq-content">
-              <p>We use archival‑quality media and supports, including:</p>
-              <ul>
-                <li>Professional acrylics and oils</li>
-                <li>Gallery‑wrapped canvases</li>
-                <li>Acid‑free papers and boards</li>
-                <li>UV‑protective varnishes</li>
-              </ul>
-            </div>
-          </details>
-        </article>
-
-        <article class="faq-item">
-          <details>
-            <summary>Do you offer international shipping?</summary>
-            <div class="faq-content">
-              <p>Yes, worldwide shipping with custom crating, full insurance, and tracked delivery.</p>
-            </div>
-          </details>
-        </article>
+        
+        <div class="faq-container">
+          <article class="faq-item">
+            <details>
+              <summary>How long does a commission typically take?</summary>
+              <div class="faq-content">
+                <p>Most commissions take 4–6 weeks from concept approval to completion. Larger or complex works may require 8–10 weeks. We'll provide a detailed timeline during our initial consultation.</p>
+              </div>
+            </details>
+          </article>
+          
+          <article class="faq-item">
+            <details>
+              <summary>What materials do you use?</summary>
+              <div class="faq-content">
+                <p>We use only archival-quality materials to ensure your artwork stands the test of time:</p>
+                <ul>
+                  <li>Professional-grade acrylics and oils</li>
+                  <li>Gallery-wrapped canvases and premium panels</li>
+                  <li>Acid-free papers and mounting boards</li>
+                  <li>UV-protective varnishes for longevity</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+          
+          <article class="faq-item">
+            <details>
+              <summary>Do you offer international shipping?</summary>
+              <div class="faq-content">
+                <p>Yes, we offer worldwide shipping with professional custom crating, full insurance coverage, and tracked delivery to ensure your artwork arrives safely.</p>
+              </div>
+            </details>
+          </article>
+          
+          <article class="faq-item">
+            <details>
+              <summary>Can I see progress updates?</summary>
+              <div class="faq-content">
+                <p>Absolutely! We provide regular progress photos and updates throughout the creation process. We want you to be involved and excited as your vision comes to life.</p>
+              </div>
+            </details>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-<footer class="artlux-footer" role="contentinfo">
+  <!-- ======= FOOTER ======= -->
+  <footer class="artlux-footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
@@ -212,58 +240,58 @@
         <p>Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+96103683127">+961 03 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
-     <div class="social-links" aria-label="Follow us">
-        <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 2.16c3.2 0 3.58.01 4.85.07
-                     3.25.15 4.77 1.69 4.92 4.92
-                     .06 1.26.07 1.64.07 4.85
-                     0 3.2-.01 3.58-.07 4.85
-                     -.15 3.23-1.66 4.77-4.92 4.92
-                     -1.26.06-1.64.07-4.85.07
-                     -3.2 0-3.58-.01-4.85-.07
-                     -3.26-.15-4.77-1.7-4.92-4.92
-                     -.06-1.26-.07-1.64-.07-4.85
-                     0-3.2.01-3.58.07-4.85
-                     .15-3.23 1.66-4.77 4.92-4.92
-                     1.26-.06 1.65-.07 4.85-.07z
-                     m0-2.16c-3.26 0-3.67.01-4.95.07
-                     -4.36.2-6.78 2.62-6.98 6.98
-                     -.06 1.28-.07 1.69-.07 4.95
-                     0 3.26.01 3.67.07 4.95
-                     .2 4.36 2.62 6.78 6.98 6.98
-                     1.28.06 1.69.07 4.95.07
-                     3.26 0 3.67-.01 4.95-.07
-                     4.35-.2 6.78-2.62 6.98-6.98
-                     .06-1.28.07-1.69.07-4.95
-                     0-3.26-.01-3.67-.07-4.95
-                     -.2-4.35-2.62-6.78-6.98-6.98
-                     -1.28-.06-1.69-.07-4.95-.07z
-                     m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
-                     0 3.4 2.76 6.16 6.16 6.16
-                     3.4 0 6.16-2.76 6.16-6.16
-                     0-3.4-2.76-6.16-6.16-6.16
-                     z m0 10.16c-2.21 0-4-1.79-4-4
-                     s1.79-4 4-4 4 1.79 4 4
-                     -1.79 4-4 4z
-                     m6.41-11.84c-.8 0-1.44.64-1.44 1.44
-                     s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
-                     -.64-1.44-1.44-1.44z"/>
-          </svg>
-        </a>
-        <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
-                     C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
-                     h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
-                     1.32 0 2.46.1 2.8.14v3.24h-1.92
-                     c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
-                     l-.47 3.62h-3.12V24h6.12
-                     c.73 0 1.32-.59 1.32-1.32V1.32
-                     C24 .59 23.41 0 22.68 0z"/>
-          </svg>
-        </a>
-      </div>
+        <div class="social-links" aria-label="Follow us">
+          <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2.16c3.2 0 3.58.01 4.85.07
+                       3.25.15 4.77 1.69 4.92 4.92
+                       .06 1.26.07 1.64.07 4.85
+                       0 3.2-.01 3.58-.07 4.85
+                       -.15 3.23-1.66 4.77-4.92 4.92
+                       -1.26.06-1.64.07-4.85.07
+                       -3.2 0-3.58-.01-4.85-.07
+                       -3.26-.15-4.77-1.7-4.92-4.92
+                       -.06-1.26-.07-1.64-.07-4.85
+                       0-3.2.01-3.58.07-4.85
+                       .15-3.23 1.66-4.77 4.92-4.92
+                       1.26-.06 1.65-.07 4.85-.07z
+                       m0-2.16c-3.26 0-3.67.01-4.95.07
+                       -4.36.2-6.78 2.62-6.98 6.98
+                       -.06 1.28-.07 1.69-.07 4.95
+                       0 3.26.01 3.67.07 4.95
+                       .2 4.36 2.62 6.78 6.98 6.98
+                       1.28.06 1.69.07 4.95.07
+                       3.26 0 3.67-.01 4.95-.07
+                       4.35-.2 6.78-2.62 6.98-6.98
+                       .06-1.28.07-1.69.07-4.95
+                       0-3.26-.01-3.67-.07-4.95
+                       -.2-4.35-2.62-6.78-6.98-6.98
+                       -1.28-.06-1.69-.07-4.95-.07z
+                       m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
+                       0 3.4 2.76 6.16 6.16 6.16
+                       3.4 0 6.16-2.76 6.16-6.16
+                       0-3.4-2.76-6.16-6.16-6.16
+                       z m0 10.16c-2.21 0-4-1.79-4-4
+                       s1.79-4 4-4 4 1.79 4 4
+                       -1.79 4-4 4z
+                       m6.41-11.84c-.8 0-1.44.64-1.44 1.44
+                       s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
+                       -.64-1.44-1.44-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
+                       C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
+                       h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
+                       1.32 0 2.46.1 2.8.14v3.24h-1.92
+                       c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
+                       l-.47 3.62h-3.12V24h6.12
+                       c.73 0 1.32-.59 1.32-1.32V1.32
+                       C24 .59 23.41 0 22.68 0z"/>
+            </svg>
+          </a>
+        </div>
       </address>
     </div>
 
@@ -271,68 +299,85 @@
       &copy; 2025 ArtLux Murals. All rights reserved.
     </div>
   </footer>
+
   <script>
+    // Form handling with Formspree
+    document.getElementById('commissionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formStatus = document.getElementById('formStatus');
+      const formData = new FormData(this);
+      
+      formStatus.textContent = 'Sending your request...';
+      formStatus.className = 'form-status';
+      
+      // Formspree submission
+      fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          formStatus.textContent = 'Thank you! Your commission request has been received. We will contact you within 24-48 hours.';
+          formStatus.className = 'form-status form-success';
+          this.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      }).catch(error => {
+        formStatus.textContent = 'Sorry, there was an error sending your message. Please email us directly at artluxdesign@outlook.com';
+        formStatus.className = 'form-status form-error';
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Header behavior
     (function () {
-      // ---- Sticky header ----
-      const header = document.getElementById('siteHeader');
-      const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 20);
+      const header = document.querySelector('.artlux-header');
+      const navToggle = document.getElementById('navToggle');
+      const nav = document.getElementById('site-nav');
+
+      // Sticky shrink on scroll
+      const onScroll = () => {
+        if (!header) return;
+        (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+      };
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
-      // ---- Mobile nav ----
-      const navToggle = document.getElementById('navToggle');
+      // Auto-active the current page
+      const here = location.pathname.split('/').pop() || 'index.html';
+      nav?.querySelectorAll('a').forEach(a => {
+        const target = a.getAttribute('href')?.split('/').pop();
+        if (target === here) a.classList.add('active');
+      });
+
+      // Close mobile menu after clicking a link
+      nav?.addEventListener('click', e => {
+        const isLink = e.target.closest('a');
+        if (isLink) navToggle.checked = false;
+      });
+
+      // Keep ARIA in sync for accessibility
       const burger = document.querySelector('label.burger');
-      const syncAria = () => burger?.setAttribute('aria-expanded', String(!!navToggle?.checked));
+      const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
       navToggle?.addEventListener('change', syncAria);
       syncAria();
-
-      // ---- Smooth scroll ----
-      document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', (e) => {
-          const id = a.getAttribute('href');
-          if (!id || id === '#') return;
-          const target = document.querySelector(id);
-          if (target) {
-            e.preventDefault();
-            const top = target.getBoundingClientRect().top + window.scrollY - 80;
-            window.scrollTo({ top, behavior: 'smooth' });
-          }
-        });
-      });
-
-      // ---- FAQ accessibility ----
-      document.querySelectorAll('.faq-item details').forEach(d => {
-        const set = () => d.setAttribute('aria-expanded', d.open ? 'true' : 'false');
-        d.addEventListener('toggle', set);
-        set();
-      });
-
-      // ---- Form handling ----
-      const form = document.getElementById('commissionForm');
-      const status = document.getElementById('formStatus');
-
-      function showStatus(msg, ok = true) {
-        if (!status) return;
-        status.textContent = msg;
-        status.className = ok ? 'form-success' : 'form-error';
-      }
-
-      form?.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        if (!form.checkValidity()) {
-          showStatus('Please complete the required fields.', false);
-          form.reportValidity?.();
-          return;
-        }
-
-        const data = Object.fromEntries(new FormData(form).entries());
-        console.log('[Commission] Submitted:', data);
-
-        showStatus("Thank you! Your commission request has been received. We'll get back to you within 48 hours.");
-        form.reset();
-        syncAria();
-      });
     })();
   </script>
 </body>

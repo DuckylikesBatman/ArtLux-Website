@@ -7,99 +7,64 @@
   <title>ArtLux – Bespoke Murals & Fine Decorative Painting</title>
   <meta name="description" content="ArtLux creates bespoke murals and luxury decorative finishes. Elevate your space with museum-grade materials, insured worldwide shipping, and a refined creative process." />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="ArtLux – Bespoke Murals & Fine Decorative Painting" />
-  <meta property="og:description" content="Elevate your space with museum-grade decorative painting and bespoke murals by Manal Yehya." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/og-artlux.jpg" />
-  <meta property="og:url" content="https://your-domain.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Icons -->
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" href="icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
-
-  <!-- Styles -->
-<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="nav.css">
 
-
-  <!-- If you prefer to keep nav.css, include it below. index.css already styles the header. -->
-  <!-- <link rel="stylesheet" href="nav.css" /> -->
 </head>
 
 <body>
-  <!-- ======= HEADER ======= -->
-  <header class="site-header" id="siteHeader">
-    <a href="index.html" class="site-logo">Art<span>Lux</span></a>
+  <!-- HEADER --><!-- ======= ArtLux Header (unified) ======= -->
+<header class="artlux-header" role="banner">
+  <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">
+    Art<span>Lux</span>
+  </a>
 
-    <input type="checkbox" id="navToggle" hidden>
-    <label for="navToggle" class="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </label>
+  <!-- Mobile toggle -->
+  <input type="checkbox" id="navToggle" hidden>
+  <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </label>
 
-  <nav class="artlux-nav-main" id="primaryNav" role="navigation" aria-label="Primary">
+  <!-- Main navigation -->
+  <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
     <a class="artlux-nav-main-button active" href="index.html">Home</a>
     <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button " href="commission.html">Commission</a>
+    <a class="artlux-nav-main-button" href="commission.html">Commission</a>
     <a class="artlux-nav-main-button" href="about.html">About</a>
     <a class="artlux-nav-main-button" href="contact.html">Contact</a>
   </nav>
-  </header>
+</header>
 
-  <main id="mainContent">
-    <!-- ======= HERO ======= -->
-    <section class="hero" role="region" aria-label="Elevate Your Space">
-      <div class="container hero__grid">
-        <div class="hero__content">
+
+  <main id="mainContent" style="margin-top: 80px;">
+    <!-- ======= MAIN HERO ======= -->
+    <section class="hero" aria-label="ArtLux Gallery">
+      <div class="hero__content">
+        <div class="hero__text">
           <h1 class="hero__title">
-            Elevate Your Space with <span>Timeless Art</span>
+            Discover Your Masterpiece
           </h1>
-          <p class="hero__subtitle">
-            Bespoke murals and fine decorative finishes tailored to your vision — crafted with museum-grade materials and meticulous technique.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="commission.html">Start Your Project</a>
-            <a class="btn btn--outline" href="gallery.html">View Gallery</a>
+          <p class="hero__subtitle">We deliver stunning artwork that enriches your environment and sparks joy.</p>
+          <div style="margin-top: var(--s-8);">
+            <a href="gallery.html" class="btn btn--primary">Explore Gallery</a>
           </div>
-
-          <!-- Trust strip (early proof) -->
-          <ul class="trust-strip" role="list" aria-label="Key guarantees">
-            <li>Museum-grade materials</li>
-            <li>Insured worldwide shipping</li>
-            <li>200+ murals in 24 countries</li>
-          </ul>
-
-          <!-- Micro-testimonial pulled up -->
-          <figure class="micro-testimonial">
-            <blockquote>“ArtLux transformed our lobby into a statement piece. Guests comment on it daily.”</blockquote>
-            <figcaption>— Sarah K., Beirut Residence</figcaption>
-          </figure>
         </div>
 
-        <div class="hero__media" aria-hidden="true">
-          <div class="slideshow" data-slider data-autoplay="true" data-interval="6000">
-            <div class="slide is-active">
-              <img src="./images/hero-bg.jpeg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="./images/interior-2.png" alt="" />
-            </div>
-            <div class="slide">
-              <img src="./images/interior-8.jpg" alt="" />
-            </div>
+        <div class="hero__grid">
+          <!-- Main image on the left -->
+          <div class="hero__main-img">
+<img src="images/shopify-pic-3.jpg">  </div>
 
-            <div class="slider-dots" role="tablist" aria-label="Hero slides">
-              <button class="dot is-active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-              <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-              <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-            </div>
+          <!-- Two stacked images on the right -->
+          <div class="hero__side-images">
+            <div class="hero__side-img">
+<img src="images/shopify-pic-2.jpg">             </div>
+            <div class="hero__side-img">
+<img src="images/shopify-pic-1.jpg">             </div>
           </div>
         </div>
       </div>
@@ -137,6 +102,26 @@
       </div>
     </section>
 
+    <!-- ======= SHOP HERO ======= -->
+    <section class="hero" aria-label="ArtLux Shop">
+      <div class="hero__content">
+        <div class="hero__grid hero__grid--shop">
+          <!-- Main image on the left -->
+          <div class="hero__main-img">
+<img src="images/shopify-pic-4.jpg">          </div>
+          
+          <!-- Text content on the right -->
+          <div class="hero__text hero__text--right">
+            <h1 class="hero__title_shop">
+              Art That Resonates
+            </h1>
+            <p class="hero__subtitle_shop">Our paintings evoke emotions and transform spaces with elegance. Each piece is crafted to create a lasting impression.</p>
+            <button class="btn btn--primary">Shop Collection</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= FEATURED ======= -->
     <section class="section featured" aria-label="Featured Collections">
       <div class="container">
@@ -148,8 +133,7 @@
         <div class="cards">
           <article class="card">
             <a class="card__media" href="gallery.html#golden-abstraction" aria-label="View Golden Abstraction">
-              <img src="images/painting11-dec.jpeg" alt="Golden Abstraction — abstract gold and blue painting" loading="lazy" />
-            </a>
+<img src="images/painting14-dec.jpeg">             </a>
             <div class="card__body">
               <h3 class="card__title">Golden Abstraction</h3>
               <span class="card__meta">$2,800</span>
@@ -158,8 +142,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html#elegance-in-blue" aria-label="View Elegance in Blue">
-              <img src="images/painting1-dec.jpeg" alt="Elegance in Blue — abstract composition with deep blues and gold" loading="lazy" />
-            </a>
+<img src="images/painting10-dec.jpeg">             </a>
             <div class="card__body">
               <h3 class="card__title">Elegance in Blue</h3>
               <span class="card__meta">$3,200</span>
@@ -168,8 +151,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html#luminous-gold" aria-label="View Luminous Gold">
-              <img src="images/painting10-dec.jpeg" alt="Luminous Gold — shimmering textures in warm metallic tones" loading="lazy" />
-            </a>
+<img src="images/painting11-dec.jpeg">             </a>
             <div class="card__body">
               <h3 class="card__title">Luminous Gold</h3>
               <span class="card__meta">$4,500</span>
@@ -188,15 +170,15 @@
 
           <dl class="stats" aria-label="Artist statistics">
             <div class="stat">
-              <dt class="stat__num">200+</dt>
+              <dt class="stat__num">300+</dt>
               <dd class="stat__label">Murals Completed</dd>
             </div>
             <div class="stat">
-              <dt class="stat__num">15</dt>
+              <dt class="stat__num">30+</dt>
               <dd class="stat__label">Years Experience</dd>
             </div>
             <div class="stat">
-              <dt class="stat__num">24</dt>
+              <dt class="stat__num">7</dt>
               <dd class="stat__label">Countries</dd>
             </div>
           </dl>
@@ -205,7 +187,7 @@
         </div>
 
         <figure class="bio__media">
-          <img src="images/manal.jpg" alt="Artist Manal Yehya in her studio" loading="lazy" />
+          <img src="images/manal.jpg" alt="Artist Manal Yehya" />
         </figure>
       </div>
     </section>
@@ -221,7 +203,7 @@
         <div class="quotes" role="list">
           <article class="quote" role="listitem">
             <blockquote class="quote__text">
-              “ArtLux transformed our corporate lobby into a breathtaking space that perfectly represents our brand values.”
+              "ArtLux transformed our corporate lobby into a breathtaking space that perfectly represents our brand values."
             </blockquote>
             <footer class="quote__author">
               <span class="quote__name">Sarah K.</span>
@@ -231,7 +213,7 @@
 
           <article class="quote" role="listitem">
             <blockquote class="quote__text">
-              “Working with Manal was an absolute dream. She elevated our concept beyond what we imagined.”
+              "Working with Manal was an absolute dream. She elevated our concept beyond what we imagined."
             </blockquote>
             <footer class="quote__author">
               <span class="quote__name">Michel T.</span>
@@ -241,7 +223,7 @@
 
           <article class="quote" role="listitem">
             <blockquote class="quote__text">
-              “The bespoke artwork in our penthouse has completely transformed the space — exceptional quality.”
+              "The bespoke artwork in our penthouse has completely transformed the space — exceptional quality."
             </blockquote>
             <footer class="quote__author">
               <span class="quote__name">Nadia R.</span>
@@ -253,8 +235,8 @@
     </section>
   </main>
 
-
-<footer class="artlux-footer" role="contentinfo">
+  <!-- ======= FOOTER ======= -->
+  <footer class="artlux-footer" role="contentinfo">
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
@@ -286,58 +268,58 @@
         <p>Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+96103683127">+961 03 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
-     <div class="social-links" aria-label="Follow us">
-        <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 2.16c3.2 0 3.58.01 4.85.07
-                     3.25.15 4.77 1.69 4.92 4.92
-                     .06 1.26.07 1.64.07 4.85
-                     0 3.2-.01 3.58-.07 4.85
-                     -.15 3.23-1.66 4.77-4.92 4.92
-                     -1.26.06-1.64.07-4.85.07
-                     -3.2 0-3.58-.01-4.85-.07
-                     -3.26-.15-4.77-1.7-4.92-4.92
-                     -.06-1.26-.07-1.64-.07-4.85
-                     0-3.2.01-3.58.07-4.85
-                     .15-3.23 1.66-4.77 4.92-4.92
-                     1.26-.06 1.65-.07 4.85-.07z
-                     m0-2.16c-3.26 0-3.67.01-4.95.07
-                     -4.36.2-6.78 2.62-6.98 6.98
-                     -.06 1.28-.07 1.69-.07 4.95
-                     0 3.26.01 3.67.07 4.95
-                     .2 4.36 2.62 6.78 6.98 6.98
-                     1.28.06 1.69.07 4.95.07
-                     3.26 0 3.67-.01 4.95-.07
-                     4.35-.2 6.78-2.62 6.98-6.98
-                     .06-1.28.07-1.69.07-4.95
-                     0-3.26-.01-3.67-.07-4.95
-                     -.2-4.35-2.62-6.78-6.98-6.98
-                     -1.28-.06-1.69-.07-4.95-.07z
-                     m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
-                     0 3.4 2.76 6.16 6.16 6.16
-                     3.4 0 6.16-2.76 6.16-6.16
-                     0-3.4-2.76-6.16-6.16-6.16
-                     z m0 10.16c-2.21 0-4-1.79-4-4
-                     s1.79-4 4-4 4 1.79 4 4
-                     -1.79 4-4 4z
-                     m6.41-11.84c-.8 0-1.44.64-1.44 1.44
-                     s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
-                     -.64-1.44-1.44-1.44z"/>
-          </svg>
-        </a>
-        <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
-                     C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
-                     h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
-                     1.32 0 2.46.1 2.8.14v3.24h-1.92
-                     c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
-                     l-.47 3.62h-3.12V24h6.12
-                     c.73 0 1.32-.59 1.32-1.32V1.32
-                     C24 .59 23.41 0 22.68 0z"/>
-          </svg>
-        </a>
-      </div>
+        <div class="social-links" aria-label="Follow us">
+          <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2.16c3.2 0 3.58.01 4.85.07
+                       3.25.15 4.77 1.69 4.92 4.92
+                       .06 1.26.07 1.64.07 4.85
+                       0 3.2-.01 3.58-.07 4.85
+                       -.15 3.23-1.66 4.77-4.92 4.92
+                       -1.26.06-1.64.07-4.85.07
+                       -3.2 0-3.58-.01-4.85-.07
+                       -3.26-.15-4.77-1.7-4.92-4.92
+                       -.06-1.26-.07-1.64-.07-4.85
+                       0-3.2.01-3.58.07-4.85
+                       .15-3.23 1.66-4.77 4.92-4.92
+                       1.26-.06 1.65-.07 4.85-.07z
+                       m0-2.16c-3.26 0-3.67.01-4.95.07
+                       -4.36.2-6.78 2.62-6.98 6.98
+                       -.06 1.28-.07 1.69-.07 4.95
+                       0 3.26.01 3.67.07 4.95
+                       .2 4.36 2.62 6.78 6.98 6.98
+                       1.28.06 1.69.07 4.95.07
+                       3.26 0 3.67-.01 4.95-.07
+                       4.35-.2 6.78-2.62 6.98-6.98
+                       .06-1.28.07-1.69.07-4.95
+                       0-3.26-.01-3.67-.07-4.95
+                       -.2-4.35-2.62-6.78-6.98-6.98
+                       -1.28-.06-1.69-.07-4.95-.07z
+                       m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
+                       0 3.4 2.76 6.16 6.16 6.16
+                       3.4 0 6.16-2.76 6.16-6.16
+                       0-3.4-2.76-6.16-6.16-6.16
+                       z m0 10.16c-2.21 0-4-1.79-4-4
+                       s1.79-4 4-4 4 1.79 4 4
+                       -1.79 4-4 4z
+                       m6.41-11.84c-.8 0-1.44.64-1.44 1.44
+                       s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
+                       -.64-1.44-1.44-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
+                       C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
+                       h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
+                       1.32 0 2.46.1 2.8.14v3.24h-1.92
+                       c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
+                       l-.47 3.62h-3.12V24h6.12
+                       c.73 0 1.32-.59 1.32-1.32V1.32
+                       C24 .59 23.41 0 22.68 0z"/>
+            </svg>
+          </a>
+        </div>
       </address>
     </div>
 
@@ -346,46 +328,41 @@
     </div>
   </footer>
 
-  <!-- ======= JS ======= -->
-  <script>
-    // Sticky header + nav ARIA sync + hero slider (small, dependency-free)
-    (function () {
-      const header = document.getElementById('siteHeader');
-      const navToggle = document.getElementById('navToggle');
-      const burger = document.querySelector('label.burger');
-      const slider = document.querySelector('.slideshow');
-      const slides = slider ? Array.from(slider.querySelectorAll('.slide')) : [];
-      const dots = slider ? Array.from(slider.querySelectorAll('.dot')) : [];
-      let index = 0, timer = null, paused = false, interval = 6000;
-
-      // Sticky header
-      const onScroll = () => header && header.classList.toggle('is-scrolled', window.scrollY > 50);
-      onScroll(); window.addEventListener('scroll', onScroll);
-
-      // Mobile nav ARIA
-      if (navToggle && burger) {
-        const sync = () => burger.setAttribute('aria-expanded', String(navToggle.checked));
-        navToggle.addEventListener('change', sync); sync();
-      }
-
-      // Slider
-      const go = (i) => {
-        if (!slides.length) return;
-        slides.forEach(s => s.classList.remove('is-active'));
-        dots.forEach(d => d.classList.remove('is-active'));
-        slides[i].classList.add('is-active');
-        dots[i]?.classList.add('is-active');
-        index = i;
-      };
-      const next = () => go((index + 1) % slides.length);
-      const start = () => { if (timer) clearInterval(timer); timer = setInterval(() => !paused && next(), interval); };
-
-      dots.forEach((d, i) => d.addEventListener('click', () => { go(i); start(); }));
-      slider?.addEventListener('mouseenter', () => paused = true);
-      slider?.addEventListener('mouseleave', () => paused = false);
-
-      go(0); start();
-    })();
-  </script>
 </body>
+<script>
+/* ArtLux header behavior */
+(function () {
+  const header = document.querySelector('.artlux-header');
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('site-nav');
+
+  // 1) Sticky shrink on scroll
+  const onScroll = () => {
+    if (!header) return;
+    (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // 2) Auto-active the current page
+  const here = location.pathname.split('/').pop() || 'index.html';
+  nav?.querySelectorAll('a').forEach(a => {
+    const target = a.getAttribute('href')?.split('/').pop();
+    if (target === here) a.classList.add('active');
+  });
+
+  // 3) Close mobile menu after clicking a link
+  nav?.addEventListener('click', e => {
+    const isLink = e.target.closest('a');
+    if (isLink) navToggle.checked = false;
+  });
+
+  // 4) Keep ARIA in sync for accessibility
+  const burger = document.querySelector('label.burger');
+  const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
+  navToggle?.addEventListener('change', syncAria);
+  syncAria();
+})();
+</script>
+
 </html>
