@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact · ArtLux | Premium Decorative Painting</title>
   <meta name="description" content="Get in touch with ArtLux for luxury decorative painting, bespoke murals, and artistic finishes.">
-<link rel="canonical" href="https://YOURDOMAIN/PAGE.html">
+<link rel="canonical" href="https://YOURDOMAIN/contact.html">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -317,7 +317,7 @@
     </div>
 
     <div class="copyright">
-      &copy; 2025 ArtLux Murals. All rights reserved.
+      &copy; 2026 ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
@@ -357,20 +357,28 @@
       syncAria();
     })();
 
-    // Form submission handling
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
       const formStatus = document.getElementById('formStatus');
       formStatus.textContent = 'Sending your message...';
       formStatus.className = 'form-status';
-      
-      // Simulate form submission
-      setTimeout(() => {
-        formStatus.textContent = 'Thank you for your message! We will get back to you within 24 hours.';
-        formStatus.className = 'form-status success';
-        this.reset();
-      }, 1500);
+
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          formStatus.textContent = 'Thank you! We will get back to you within 24 hours.';
+          formStatus.className = 'form-status success';
+          this.reset();
+        } else {
+          throw new Error('Submission failed');
+        }
+      }).catch(() => {
+        formStatus.textContent = 'Sorry, something went wrong. Please email us directly at artluxdesign@outlook.com';
+        formStatus.className = 'form-status error';
+      });
     });
     
   </script>

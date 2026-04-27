@@ -6,6 +6,8 @@
   <title>Privacy Policy · ArtLux</title>
   <meta name="description" content="ArtLux Privacy Policy — learn how we collect, use, and protect your personal data when you visit our website or submit a form." />
 
+  <link rel="canonical" href="https://YOURDOMAIN/privacy.html">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,7 +231,7 @@
     </div>
 
     <div class="copyright">
-      &copy; 2025 ArtLux Murals. All rights reserved.
+      &copy; 2026 ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
@@ -281,63 +283,6 @@
         }
       });
     });
-(function () {
-  const nav = document.querySelector('.artlux-nav');
-  const list = document.getElementById('artluxNav');
-  const indicator = nav && nav.querySelector('.nav-indicator');
-  if (!nav || !list || !indicator) return;
-
-  const links = Array.from(list.querySelectorAll('a'));
-
-  // Helper: set indicator to an element
-  function moveIndicator(el) {
-    if (!el) return;
-    const navRect = nav.getBoundingClientRect();
-    const rect = el.getBoundingClientRect();
-    indicator.style.width = rect.width + 'px';
-    indicator.style.transform = `translateX(${rect.left - navRect.left}px)`;
-    indicator.style.opacity = '1';
-  }
-
-  // Determine active link by URL (also supports aria-current="page" if you set it)
-  function pickActive() {
-    // Prefer aria-current if present
-    let active = links.find(a => a.getAttribute('aria-current') === 'page');
-    if (active) return active;
-
-    const path = location.pathname.split('/').pop() || 'index.html';
-    // index.html when on root
-    return links.find(a => a.getAttribute('href') === path)
-        || links.find(a => /index\.html$/.test(a.getAttribute('href')));
-  }
-
-  let activeLink = pickActive();
-  if (activeLink) {
-    links.forEach(a => a.classList.toggle('is-active', a === activeLink));
-    moveIndicator(activeLink);
-  }
-
-  // Hover interactions
-  links.forEach(link => {
-    link.addEventListener('mouseenter', () => moveIndicator(link));
-    link.addEventListener('focus', () => moveIndicator(link));
-  });
-
-  // Return to active when leaving the nav
-  nav.addEventListener('mouseleave', () => moveIndicator(activeLink));
-
-  // Update active on click + after navigation (for multi-page sites)
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      activeLink = link;
-      links.forEach(a => a.classList.toggle('is-active', a === activeLink));
-      moveIndicator(activeLink);
-    });
-  });
-
-  // Reposition on resize
-  window.addEventListener('resize', () => moveIndicator(activeLink));
-})();
   </script>
 </body>
 </html>

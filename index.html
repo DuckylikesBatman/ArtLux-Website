@@ -6,7 +6,7 @@
 
   <title>ArtLux – Bespoke Murals & Fine Decorative Painting</title>
   <meta name="description" content="ArtLux creates bespoke murals and luxury decorative finishes. Elevate your space with museum-grade materials, insured worldwide shipping, and a refined creative process." />
-<link rel="canonical" href="https://YOURDOMAIN/PAGE.html">
+<link rel="canonical" href="https://YOURDOMAIN/index.html">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,7 +47,7 @@
       <div class="hero__content">
         <div class="hero__text">
           <h1 class="hero__title">
-            Discover Your Masterpiece
+            Discover Your <em>Masterpiece</em>
           </h1>
           <p class="hero__subtitle">We deliver stunning artwork that enriches your environment and sparks joy.</p>
           <div style="margin-top: var(--s-8);">
@@ -58,14 +58,14 @@
         <div class="hero__grid">
           <!-- Main image on the left -->
           <div class="hero__main-img">
-<img src="Images/shopify-pic-3.jpg">  </div>
+<img src="Images/shopify-pic-3.jpg" alt="ArtLux decorative painting showcase">  </div>
 
           <!-- Two stacked images on the right -->
           <div class="hero__side-images">
             <div class="hero__side-img">
-<img src="Images/shopify-pic-2.jpg">             </div>
+<img src="Images/shopify-pic-2.jpg" alt="ArtLux mural detail">             </div>
             <div class="hero__side-img">
-<img src="Images/shopify-pic-1.jpg">             </div>
+<img src="Images/shopify-pic-1.jpg" alt="ArtLux artwork detail">             </div>
           </div>
         </div>
       </div>
@@ -103,59 +103,42 @@
       </div>
     </section>
 
-    <!-- ======= SHOP HERO ======= -->
-    <section class="hero" aria-label="ArtLux Shop">
-      <div class="hero__content">
-        <div class="hero__grid hero__grid--shop">
-          <!-- Main image on the left -->
-          <div class="hero__main-img">
-<img src="Images/shopify-pic-4.jpg">          </div>
-          
-          <!-- Text content on the right -->
-          <div class="hero__text hero__text--right">
-            <h1 class="hero__title_shop">
-              Art That Resonates
-            </h1>
-            <p class="hero__subtitle_shop">Our paintings evoke emotions and transform spaces with elegance. Each piece is crafted to create a lasting impression.</p>
-            <button class="btn btn--primary">Shop Collection</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ======= FEATURED ======= -->
-    <section class="section featured" aria-label="Featured Collections">
+    <section class="section featured" aria-label="Selected Works">
       <div class="container">
         <header class="section__header">
-          <h2 class="section__title">Featured Collections</h2>
+          <h2 class="section__title">Selected Works</h2>
           <p class="section__subtitle">Curated works that blend contemporary vision with classic elegance.</p>
         </header>
 
         <div class="cards">
           <article class="card">
-            <a class="card__media" href="gallery.html#golden-abstraction" aria-label="View Golden Abstraction">
-<img src="Images/painting14-dec.jpeg">             </a>
+            <a class="card__media" href="gallery.html" aria-label="View Golden Abstraction in gallery">
+              <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – oil painting with gold tones">
+            </a>
             <div class="card__body">
               <h3 class="card__title">Golden Abstraction</h3>
-              <span class="card__meta">$2,800</span>
+              <span class="card__meta">Oil on Canvas</span>
             </div>
           </article>
 
           <article class="card">
-            <a class="card__media" href="gallery.html#elegance-in-blue" aria-label="View Elegance in Blue">
-<img src="Images/painting10-dec.jpeg">             </a>
+            <a class="card__media" href="gallery.html" aria-label="View Elegance in Blue in gallery">
+              <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – deep blue tones with gold accents">
+            </a>
             <div class="card__body">
               <h3 class="card__title">Elegance in Blue</h3>
-              <span class="card__meta">$3,200</span>
+              <span class="card__meta">Oil on Canvas</span>
             </div>
           </article>
 
           <article class="card">
-            <a class="card__media" href="gallery.html#luminous-gold" aria-label="View Luminous Gold">
-<img src="Images/painting11-dec.jpeg">             </a>
+            <a class="card__media" href="gallery.html" aria-label="View Luminous Gold in gallery">
+              <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – golden abstract with textured surface">
+            </a>
             <div class="card__body">
               <h3 class="card__title">Luminous Gold</h3>
-              <span class="card__meta">$4,500</span>
+              <span class="card__meta">Oil on Canvas</span>
             </div>
           </article>
         </div>
@@ -317,7 +300,7 @@
                        c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
                        l-.47 3.62h-3.12V24h6.12
                        c.73 0 1.32-.59 1.32-1.32V1.32
-                       C24 .59 23.41 0 22.68 0z"/>
+                       C24 .59 23.41 0 22.68 0z"/> 
             </svg>
           </a>
         </div>
@@ -325,46 +308,40 @@
     </div>
 
     <div class="copyright">
-      &copy; 2025 ArtLux Murals. All rights reserved.
+      &copy; 2026 ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
+  <script>
+  /* ArtLux header behavior */
+  (function () {
+    const header = document.querySelector('.artlux-header');
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('site-nav');
+
+    const onScroll = () => {
+      if (!header) return;
+      (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    const here = location.pathname.split('/').pop() || 'index.html';
+    nav?.querySelectorAll('a').forEach(a => {
+      const target = a.getAttribute('href')?.split('/').pop();
+      if (target === here) a.classList.add('active');
+    });
+
+    nav?.addEventListener('click', e => {
+      const isLink = e.target.closest('a');
+      if (isLink) navToggle.checked = false;
+    });
+
+    const burger = document.querySelector('label.burger');
+    const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
+    navToggle?.addEventListener('change', syncAria);
+    syncAria();
+  })();
+  </script>
 </body>
-<script>
-/* ArtLux header behavior */
-(function () {
-  const header = document.querySelector('.artlux-header');
-  const navToggle = document.getElementById('navToggle');
-  const nav = document.getElementById('site-nav');
-
-  // 1) Sticky shrink on scroll
-  const onScroll = () => {
-    if (!header) return;
-    (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  // 2) Auto-active the current page
-  const here = location.pathname.split('/').pop() || 'index.html';
-  nav?.querySelectorAll('a').forEach(a => {
-    const target = a.getAttribute('href')?.split('/').pop();
-    if (target === here) a.classList.add('active');
-  });
-
-  // 3) Close mobile menu after clicking a link
-  nav?.addEventListener('click', e => {
-    const isLink = e.target.closest('a');
-    if (isLink) navToggle.checked = false;
-  });
-
-  // 4) Keep ARIA in sync for accessibility
-  const burger = document.querySelector('label.burger');
-  const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
-  navToggle?.addEventListener('change', syncAria);
-  syncAria();
-})();
-</script>
-
-
 </html>

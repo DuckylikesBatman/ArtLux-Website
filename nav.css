@@ -20,43 +20,59 @@
   --tap:              .3s cubic-bezier(.4,0,.2,1);
 
   /* Spacing scale (used by nav buttons) */
-  --s-2: .25rem;
-  --s-3: .5rem;
+  --s-2: .5rem;
+  --s-3: .75rem;
   --s-8: 2rem;
 }
 
 /* === NAVIGATION === */
 .artlux-nav-main {
   display: flex;
-  gap: var(--s-8);
+  gap: 2.5rem;
   align-items: center;
 }
 
 .artlux-nav-main-button {
   font-weight: 500;
-  color: var(--clr-text);
-  padding: var(--s-2) var(--s-3);
-  border-radius: var(--radius);
-  transition: color var(--tap), transform var(--tap), background-color var(--tap);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  padding: 0.4rem 0;
   position: relative;
   text-decoration: none;
+  transition: color var(--tap);
 }
 
-.artlux-nav-main-button:hover,
+.artlux-nav-main-button::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--clr-gold);
+  border-radius: 1px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.artlux-nav-main-button:hover {
+  color: var(--clr-dark);
+}
+
+.artlux-nav-main-button:hover::after {
+  transform: scaleX(0.6);
+}
+
 .artlux-nav-main-button.active {
-  color: var(--clr-gold-dark);
+  color: var(--clr-dark);
 }
 
 .artlux-nav-main-button.active::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 4px;
+  transform: scaleX(1);
   background: var(--clr-gold);
-  border-radius: 999px;
 }
 
 /* === UNIVERSAL HEADER STYLES === */
@@ -68,32 +84,40 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .85rem 5%;
-  background: linear-gradient(90deg, var(--clr-surface) 0%, var(--clr-surface-grad) 70%, #fffbe9 100%);
-  box-shadow: 0 4px 14px rgba(0,0,0,.08);
-  transition: padding var(--tap), box-shadow var(--tap), background var(--tap);
+  padding: 1rem 5%;
+  background: rgba(250, 249, 247, 0.97);
+  border-bottom: 1px solid rgba(201, 163, 58, 0.12);
+  box-shadow: 0 2px 16px rgba(0,0,0,.06);
+  transition: padding var(--tap), box-shadow var(--tap), background var(--tap), border-color var(--tap);
 }
 
 .site-header.scrolled,
 .artlux-header.scrolled {
-  padding: .5rem 5%;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  padding: .65rem 5%;
+  background: rgba(250, 249, 247, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: rgba(201, 163, 58, 0.22);
+  box-shadow: 0 1px 0 rgba(201, 163, 58, 0.14), 0 6px 20px rgba(0,0,0,.07);
 }
 
 /* Logo */
 .site-logo,
 .artlux-header-logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.3px;
   cursor: pointer;
   text-decoration: none;
+  color: var(--clr-dark);
 }
 
 .site-logo span,
 .artlux-header-logo span {
-  color: rgb(210, 185, 43);
+  color: var(--clr-gold);
+  font-style: italic;
 }
 
 /* === MOBILE NAVIGATION === */
@@ -130,27 +154,29 @@ label.burger span {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 260px;
+    width: 280px;
     flex-direction: column;
     align-items: center;
     padding-top: 6rem;
-    background: rgba(17,17,17,.92);
-    backdrop-filter: blur(6px);
-    box-shadow: -6px 0 18px rgba(0,0,0,.55);
+    background: rgba(250, 249, 247, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid rgba(201, 163, 58, 0.18);
+    box-shadow: -8px 0 30px rgba(0,0,0,.12);
     transition: right var(--tap);
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   #navToggle:checked ~ .artlux-nav-main { right: 0; }
 
   .artlux-nav-main-button {
-    color: #ededed;
-    font-size: 1rem;
+    color: var(--clr-text);
+    font-size: 1.05rem;
   }
 
   .artlux-nav-main-button:hover,
   .artlux-nav-main-button.active {
-    color: var(--clr-gold);
+    color: var(--clr-gold-dark);
   }
 
   .artlux-nav-main-button::after { background: var(--clr-gold); }
@@ -159,9 +185,9 @@ label.burger span {
 /* === UNIVERSAL FOOTER STYLES === */
 .site-footer,
 .artlux-footer {
-  background-color: #1a1a1a;
+  background-color: #141414;
   color: var(--clr-surface);
-  padding: 4rem 5% 2rem;
+  padding: 5rem 5% 2rem;
   margin-top: auto;
 }
 
