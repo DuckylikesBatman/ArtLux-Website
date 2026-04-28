@@ -34,10 +34,10 @@
 
 .artlux-nav-main-button {
   font-weight: 500;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--clr-muted);
+  color: rgba(255,255,255,0.72);
   padding: 0.4rem 0;
   position: relative;
   text-decoration: none;
@@ -58,59 +58,94 @@
   transition: transform 0.3s cubic-bezier(.4,0,.2,1);
 }
 
-.artlux-nav-main-button:hover {
-  color: var(--clr-dark);
+.artlux-nav-main-button:hover { color: #ffffff; }
+.artlux-nav-main-button:hover::after { transform: scaleX(0.6); }
+.artlux-nav-main-button.active { color: #ffffff; }
+.artlux-nav-main-button.active::after { transform: scaleX(1); background: var(--clr-gold); }
+
+/* Scrolled: revert to dark */
+.artlux-header.scrolled .artlux-nav-main-button { color: var(--clr-muted); }
+.artlux-header.scrolled .artlux-nav-main-button:hover { color: var(--clr-dark); }
+.artlux-header.scrolled .artlux-nav-main-button.active { color: var(--clr-dark); }
+
+/* Commission CTA pill — ghost on dark hero, gold on scrolled */
+.artlux-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.3rem;
+  background: transparent;
+  color: rgba(255,255,255,0.88) !important;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  border: 1.5px solid rgba(255,255,255,0.32);
+  transition: background var(--tap), border-color var(--tap), box-shadow var(--tap), transform var(--tap), color var(--tap);
+}
+.artlux-nav-cta::after { display: none !important; }
+.artlux-nav-cta:hover {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.65);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: none;
 }
 
-.artlux-nav-main-button:hover::after {
-  transform: scaleX(0.6);
+.artlux-header.scrolled .artlux-nav-cta {
+  background: var(--clr-gold) !important;
+  color: #ffffff !important;
+  border-color: var(--clr-gold);
 }
-
-.artlux-nav-main-button.active {
-  color: var(--clr-dark);
-}
-
-.artlux-nav-main-button.active::after {
-  transform: scaleX(1);
-  background: var(--clr-gold);
+.artlux-header.scrolled .artlux-nav-cta:hover {
+  background: var(--clr-gold-dark) !important;
+  border-color: var(--clr-gold-dark);
+  box-shadow: 0 4px 18px rgba(162,131,38,0.35);
 }
 
 /* === UNIVERSAL HEADER STYLES === */
 .site-header,
 .artlux-header {
-  position: sticky;
+  position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 5%;
-  background: rgba(250, 249, 247, 0.97);
-  border-bottom: 1px solid rgba(201, 163, 58, 0.12);
-  box-shadow: 0 2px 16px rgba(0,0,0,.06);
+  padding: 1.4rem 5%;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
   transition: padding var(--tap), box-shadow var(--tap), background var(--tap), border-color var(--tap);
 }
 
 .site-header.scrolled,
 .artlux-header.scrolled {
-  padding: .65rem 5%;
-  background: rgba(250, 249, 247, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: rgba(201, 163, 58, 0.22);
-  box-shadow: 0 1px 0 rgba(201, 163, 58, 0.14), 0 6px 20px rgba(0,0,0,.07);
+  padding: .85rem 5%;
+  background: rgba(250, 249, 247, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: rgba(201, 163, 58, 0.16);
+  box-shadow: 0 1px 0 rgba(201,163,58,0.1), 0 8px 32px rgba(0,0,0,.06);
 }
 
 /* Logo */
 .site-logo,
 .artlux-header-logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.3px;
   cursor: pointer;
   text-decoration: none;
+  color: #ffffff;
+  transition: color var(--tap);
+}
+
+.artlux-header.scrolled .site-logo,
+.artlux-header.scrolled .artlux-header-logo {
   color: var(--clr-dark);
 }
 
@@ -180,6 +215,17 @@ label.burger span {
   }
 
   .artlux-nav-main-button::after { background: var(--clr-gold); }
+
+  .artlux-nav-cta,
+  .artlux-nav-cta:hover,
+  .artlux-nav-cta.active {
+    color: #fff !important;
+    background: var(--clr-gold) !important;
+    border-color: var(--clr-gold);
+    border-radius: 50px;
+    padding: 0.52rem 1.35rem;
+    margin-left: 0;
+  }
 }
 
 /* === UNIVERSAL FOOTER STYLES === */

@@ -34,41 +34,63 @@
   <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
     <a class="artlux-nav-main-button active" href="index.html">Home</a>
     <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button" href="commission.html">Commission</a>
+    <a class="artlux-nav-main-button artlux-nav-cta" href="commission.html">Commission</a>
     <a class="artlux-nav-main-button" href="about.html">About</a>
     <a class="artlux-nav-main-button" href="contact.html">Contact</a>
   </nav>
 </header>
 
 
-  <main id="mainContent" style="margin-top: 80px;">
+  <main id="mainContent">
     <!-- ======= MAIN HERO ======= -->
-    <section class="hero" aria-label="ArtLux Gallery">
-      <div class="hero__content">
-        <div class="hero__text">
-          <h1 class="hero__title">
-            Discover Your <em>Masterpiece</em>
-          </h1>
-          <p class="hero__subtitle">We deliver stunning artwork that enriches your environment and sparks joy.</p>
-          <div style="margin-top: var(--s-8);">
-            <a href="gallery.html" class="btn btn--primary">Explore Gallery</a>
-          </div>
+    <section class="hero" aria-label="ArtLux — Bespoke Art Studio">
+
+      <!-- Full-bleed background image (right panel) -->
+      <div class="hero__img-panel" aria-hidden="true">
+        <img src="Images/shopify-pic-3.jpg" alt="">
+      </div>
+
+      <!-- Floating artwork cards -->
+      <div class="hero__float hero__float--1" aria-hidden="true">
+        <img src="Images/shopify-pic-2.jpg" alt="">
+      </div>
+      <div class="hero__float hero__float--2" aria-hidden="true">
+        <img src="Images/shopify-pic-1.jpg" alt="">
+      </div>
+
+      <!-- Text content -->
+      <div class="hero__text-panel">
+        <p class="hero__eyebrow">Fine Art Studio &middot; Beirut</p>
+
+        <h1 class="hero__title">
+          Discover Your<br><em>Masterpiece</em>
+        </h1>
+
+        <p class="hero__subtitle">Bespoke murals and luxury decorative finishes that transform your space into an enduring work of art.</p>
+
+        <div class="hero__ctas">
+          <a href="gallery.html" class="btn btn--hero-light">Explore Gallery</a>
+          <a href="commission.html" class="btn btn--hero-ghost">Commission a Work</a>
         </div>
 
-        <div class="hero__grid">
-          <!-- Main image on the left -->
-          <div class="hero__main-img">
-<img src="Images/shopify-pic-3.jpg" alt="ArtLux decorative painting showcase">  </div>
-
-          <!-- Two stacked images on the right -->
-          <div class="hero__side-images">
-            <div class="hero__side-img">
-<img src="Images/shopify-pic-2.jpg" alt="ArtLux mural detail">             </div>
-            <div class="hero__side-img">
-<img src="Images/shopify-pic-1.jpg" alt="ArtLux artwork detail">             </div>
+        <div class="hero__stats" aria-label="Studio highlights">
+          <div class="hero__stat">
+            <strong>300+</strong>
+            <span>Murals</span>
+          </div>
+          <div class="hero__stat-sep" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <strong>30+</strong>
+            <span>Years Exp.</span>
+          </div>
+          <div class="hero__stat-sep" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <strong>7</strong>
+            <span>Countries</span>
           </div>
         </div>
       </div>
+
     </section>
 
     <!-- ======= PROCESS ======= -->

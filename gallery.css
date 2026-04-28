@@ -25,10 +25,10 @@
 /* ----------  Gallery Hero  ---------- */
 .gallery-hero {
   position: relative;
-  background: linear-gradient(160deg, #ffffff 0%, #f7f5f1 100%);
+  background: linear-gradient(135deg, #0d0b09 0%, #1c1610 55%, #0f0d0b 100%);
   padding: 150px 0 64px;
   text-align: center;
-  border-bottom: 1px solid rgba(201, 163, 58, 0.15);
+  border-bottom: 1px solid rgba(201, 163, 58, 0.18);
   overflow: hidden;
 }
 
@@ -40,7 +40,7 @@
   transform: translateX(-50%);
   width: 80%;
   height: 160%;
-  background: radial-gradient(ellipse at center, rgba(201, 163, 58, 0.08) 0%, transparent 65%);
+  background: radial-gradient(ellipse at center, rgba(201, 163, 58, 0.14) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -55,25 +55,25 @@
 .crumbs {
   display: flex;
   gap: .5rem;
-  color: var(--gray-500);
+  color: rgba(255,255,255,0.42);
   font-size: .875rem;
   margin-bottom: 1rem;
   justify-content: center;
   align-items: center;
 }
 .crumbs a {
-  color: var(--gray-500);
+  color: rgba(255,255,255,0.42);
   text-decoration: none;
   transition: var(--transition);
 }
 .crumbs a:hover { color: var(--gold-500); }
-.crumbs span { color: var(--gold-300); }
+.crumbs span { color: rgba(201, 163, 58, 0.45); }
 
 .gallery-title {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--black);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: #ffffff;
   letter-spacing: -0.5px;
   margin-bottom: .75rem;
 }
@@ -95,7 +95,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 0;
-  border-top: 1px solid var(--gray-300);
+  border-top: 1px solid rgba(201, 163, 58, 0.25);
   flex-wrap: wrap;
 }
 

@@ -58,7 +58,7 @@
       position: relative;
       padding: 150px 0 80px;
       text-align: center;
-      background: linear-gradient(160deg, #ffffff 0%, #f7f5f1 100%);
+      background: linear-gradient(135deg, #0d0b09 0%, #1c1610 55%, #0f0d0b 100%);
       overflow: hidden;
     }
 
@@ -70,7 +70,7 @@
       transform: translateX(-50%);
       width: 80%;
       height: 160%;
-      background: radial-gradient(ellipse at center, rgba(201, 163, 58, 0.08) 0%, transparent 65%);
+      background: radial-gradient(ellipse at center, rgba(201, 163, 58, 0.14) 0%, transparent 65%);
       pointer-events: none;
     }
 
@@ -78,13 +78,15 @@
       max-width: 700px;
       margin: 0 auto;
       padding: 0 2rem;
+      position: relative;
+      z-index: 1;
     }
 
     .contact__intro h1 {
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      color: #1a1a1a;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      color: #ffffff;
       margin-bottom: 1rem;
-      line-height: 1.15;
+      line-height: 1.12;
       letter-spacing: -0.4px;
     }
 
@@ -99,9 +101,9 @@
     }
 
     .contact__intro p {
-      color: var(--clr-muted);
-      font-size: 1.1rem;
-      line-height: 1.7;
+      color: rgba(255,255,255,0.62);
+      font-size: 1.05rem;
+      line-height: 1.75;
       margin-bottom: 0;
     }
 
