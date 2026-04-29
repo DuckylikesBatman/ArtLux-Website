@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact · ArtLux | Premium Decorative Painting</title>
   <meta name="description" content="Get in touch with ArtLux for luxury decorative painting, bespoke murals, and artistic finishes.">
-<link rel="canonical" href="https://YOURDOMAIN/contact.html">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,38 +13,45 @@
      <link href="index.css" rel="stylesheet">
          <link href="nav.css" rel="stylesheet">
   <link href="contact.css" rel="stylesheet">
-
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body class="contact-page">
-  <!-- ======= ArtLux Header ======= -->
-  <header class="artlux-header" role="banner">
-    <a class="site-logo" href="index.html" aria-label="ArtLux Home">
-      Art<span>Lux</span>
-    </a>
-
-    <!-- Mobile toggle -->
-    <input type="checkbox" id="navToggle" hidden>
-    <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </label>
-
-    <!-- Main navigation -->
-    <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
-      <a class="artlux-nav-main-button" href="index.html">Home</a>
-      <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-      <a class="artlux-nav-main-button artlux-nav-cta" href="commission.html">Commission</a>
-      <a class="artlux-nav-main-button" href="about.html">About</a>
-      <a class="artlux-nav-main-button active" href="contact.html">Contact</a>
+  <!-- ======= HEADER ======= -->
+  <header class="al-header" role="banner">
+    <div class="al-header__main">
+      <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+      <nav class="al-nav" aria-label="Site navigation">
+        <a class="al-nav__link" href="index.html">Home</a>
+        <a class="al-nav__link" href="gallery.html">Gallery</a>
+        <a class="al-nav__link" href="about.html">About</a>
+        <a class="al-nav__link active" href="contact.html">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+      </nav>
+      <button class="al-burger" id="alBurger" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+      <a class="al-mobile-nav__link" href="index.html">Home</a>
+      <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-mobile-nav__link" href="about.html">About</a>
+      <a class="al-mobile-nav__link active" href="contact.html">Contact</a>
+      <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
     </nav>
   </header>
 
   <!-- ========= MAIN CONTENT ========= -->
   <main>
     <!-- Hero Section -->
-    <section class="contact-hero">
-      <div class="contact__intro">
-        <h1>Let's Create Something Beautiful Together</h1>
-        <p>Get in touch to discuss your decorative painting project. We're here to bring your vision to life with our expertise in luxury finishes and bespoke murals.</p>
+    <section class="page-hero" aria-label="Contact ArtLux">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__content">
+        <p class="page-hero__eye">Get In Touch</p>
+        <h1 class="page-hero__title">Let's Create Something<br><em>Beautiful</em></h1>
+        <p class="page-hero__sub">Get in touch to discuss your decorative painting project. We're here to bring your vision to life.</p>
       </div>
     </section>
 
@@ -87,8 +93,6 @@
   <p id="formStatus" class="form-status" aria-live="polite"></p>
 </form>
 
-      </div>
-      
       <!-- Contact Information -->
       <div class="contact-info">
         <div class="info-card">
@@ -117,8 +121,8 @@
         <div class="info-card">
           <h2>
             <svg class="info-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             Get In Touch
           </h2>
@@ -136,6 +140,13 @@
                 <path d="M22 16.92V19.92C22 20.52 21.53 20.99 20.96 21.02C20.46 21.04 19.97 21.06 19.5 21.06C10.4 21.06 3 13.67 3 4.56C3 4.09 3.02 3.6 3.04 3.04C3.07 2.47 3.54 2 4.14 2H7.14C7.7 2 8.14 2.44 8.14 3C8.14 3.03 8.14 3.05 8.14 3.08C8.14 4.16 8.26 5.22 8.48 6.24C8.56 6.65 8.43 7.08 8.13 7.37L6.61 8.89C8.06 11.83 10.31 14.08 13.25 15.53L14.77 14.01C15.06 13.72 15.49 13.59 15.9 13.67C16.92 13.89 17.98 14.01 19.06 14.01C19.09 14.01 19.11 14.01 19.14 14.01C19.7 14.01 20.14 14.45 20.14 15.01V18.01C20.14 18.57 19.7 19.01 19.14 19.01H19.12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <a href="tel:+96103683127">+961 03 683 127</a>
+            </div>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="currentColor"/>
+              </svg>
+              <a href="https://wa.me/96103683127" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
             </div>
           </div>
           <div class="social-links">
@@ -322,40 +333,51 @@
   </footer>
 
 
-  <script>
-    /* ArtLux header behavior */
-    (function () {
-      const header = document.querySelector('.artlux-header');
-      const navToggle = document.getElementById('navToggle');
-      const nav = document.getElementById('site-nav');
+  <!-- Floating actions -->
+  <a href="https://wa.me/96103683127" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-      // 1) Sticky shrink on scroll
-      const onScroll = () => {
-        if (!header) return;
-        (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-      };
+  <script>
+    (function () {
+      var header = document.querySelector('.al-header');
+      var burger = document.getElementById('alBurger');
+      var mobile = document.getElementById('alMobileNav');
+      var isOpen = false;
+
+      function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
-      // 2) Auto-active the current page
-      const here = location.pathname.split('/').pop() || 'index.html';
-      nav?.querySelectorAll('a').forEach(a => {
-        const target = a.getAttribute('href')?.split('/').pop();
-        if (target === here) a.classList.add('active');
-      });
+      function openMenu() {
+        isOpen = true;
+        mobile.hidden = false;
+        burger.setAttribute('aria-expanded', 'true');
+        burger.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function() { mobile.classList.add('visible'); });
+      }
+      function closeMenu() {
+        isOpen = false;
+        mobile.classList.remove('visible');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.classList.remove('open');
+        document.body.style.overflow = '';
+        setTimeout(function() { mobile.hidden = true; }, 360);
+      }
 
-      // 3) Close mobile menu after clicking a link
-      nav?.addEventListener('click', e => {
-        const isLink = e.target.closest('a');
-        if (isLink) navToggle.checked = false;
+      if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
+      if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if (isOpen) closeMenu(); });
       });
-
-      // 4) Keep ARIA in sync for accessibility
-      const burger = document.querySelector('label.burger');
-      const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
-      navToggle?.addEventListener('change', syncAria);
-      syncAria();
-    })();
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+    }());
 
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -380,12 +402,15 @@
         formStatus.className = 'form-status error';
       });
     });
-    
+
+    var backTop = document.getElementById('backTop');
+    if (backTop) {
+      window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
+      backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    }
+
   </script>
   <!-- Leaflet (no API key needed) -->
-<link rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script defer
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>

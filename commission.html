@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Commission Custom Artwork · ArtLux</title>
   <meta name="description" content="Commission a bespoke artwork from ArtLux. Share your vision and collaborate with our artist to create a one‑of‑a‑kind piece." />
-<link rel="canonical" href="https://YOURDOMAIN/commission.html">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,40 +17,41 @@
   <link rel="stylesheet" href="commission.css">
 </head>
 <body>
-  <!-- ======= Header ======= -->
-  <header class="artlux-header" role="banner">
-    <a class="site-logo" href="index.html" aria-label="ArtLux Home">
-      Art<span>Lux</span>
-    </a>
-
-    <!-- Mobile toggle -->
-    <input type="checkbox" id="navToggle" hidden>
-    <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </label>
-
-    <!-- Main navigation -->
-    <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
-      <a class="artlux-nav-main-button" href="index.html">Home</a>
-      <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-      <a class="artlux-nav-main-button artlux-nav-cta active" href="commission.html">Commission</a>
-      <a class="artlux-nav-main-button" href="about.html">About</a>
-      <a class="artlux-nav-main-button" href="contact.html">Contact</a>
+  <!-- ======= HEADER ======= -->
+  <header class="al-header" role="banner">
+    <div class="al-header__main">
+      <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+      <nav class="al-nav" aria-label="Site navigation">
+        <a class="al-nav__link" href="index.html">Home</a>
+        <a class="al-nav__link" href="gallery.html">Gallery</a>
+        <a class="al-nav__link" href="about.html">About</a>
+        <a class="al-nav__link" href="contact.html">Contact</a>
+        <a class="al-nav__link al-nav__cta active" href="commission.html">Commission</a>
+      </nav>
+      <button class="al-burger" id="alBurger" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+      <a class="al-mobile-nav__link" href="index.html">Home</a>
+      <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-mobile-nav__link" href="about.html">About</a>
+      <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+      <a class="al-mobile-nav__link al-mobile-nav__cta active" href="commission.html">Commission</a>
     </nav>
   </header>
 
   <!-- ========== MAIN CONTENT ========== -->
   <main>
     <!-- Hero Section -->
-    <section class="commission-hero" aria-labelledby="hero-heading">
-      <div class="commission-hero-inner">
-        <h1 id="hero-heading">Commission Your Masterpiece</h1>
-        <p class="hero-lede">Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.</p>
-        
-        <div class="hero-actions">
-          <a href="#request-form" class="cta-button primary">Start Your Commission</a>
-          <a href="gallery.html" class="cta-button ghost">View Past Works</a>
-        </div>
+    <section class="page-hero" aria-labelledby="hero-heading">
+      <div class="page-hero__bg" aria-hidden="true">
+      </div>
+      <div class="page-hero__content">
+        <p class="page-hero__eye">ArtLux Studio</p>
+        <h1 id="hero-heading" class="page-hero__title">Commission Your<br><em>Masterpiece</em></h1>
+        <p class="page-hero__sub">Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.</p>
       </div>
     </section>
 
@@ -92,8 +92,7 @@
         <!-- Formspree Form - Replace YOUR_FORM_ID with your actual Formspree form ID -->
         <form class="request-form" id="commissionForm" action="https://formspree.io/f/mdkwdqga" method="POST">
           <input type="hidden" name="_subject" value="New Commission Request - ArtLux">
-          <input type="hidden" name="_cc" value="artluxdesign@outlook.com">
-          
+
           <div class="form-grid">
             <div class="form-group">
               <label for="name">Full Name <span class="required">*</span></label>
@@ -301,6 +300,17 @@
     </div>
   </footer>
 
+  <!-- Floating actions -->
+  <a href="https://wa.me/96103683127" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
   <script>
     // Form handling with Formspree
     document.getElementById('commissionForm').addEventListener('submit', function(e) {
@@ -347,39 +357,45 @@
       });
     });
 
-    // Header behavior
     (function () {
-      const header = document.querySelector('.artlux-header');
-      const navToggle = document.getElementById('navToggle');
-      const nav = document.getElementById('site-nav');
+      var header = document.querySelector('.al-header');
+      var burger = document.getElementById('alBurger');
+      var mobile = document.getElementById('alMobileNav');
+      var isOpen = false;
 
-      // Sticky shrink on scroll
-      const onScroll = () => {
-        if (!header) return;
-        (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-      };
+      function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
-      // Auto-active the current page
-      const here = location.pathname.split('/').pop() || 'index.html';
-      nav?.querySelectorAll('a').forEach(a => {
-        const target = a.getAttribute('href')?.split('/').pop();
-        if (target === here) a.classList.add('active');
-      });
+      function openMenu() {
+        isOpen = true;
+        mobile.hidden = false;
+        burger.setAttribute('aria-expanded', 'true');
+        burger.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(function() { mobile.classList.add('visible'); });
+      }
+      function closeMenu() {
+        isOpen = false;
+        mobile.classList.remove('visible');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.classList.remove('open');
+        document.body.style.overflow = '';
+        setTimeout(function() { mobile.hidden = true; }, 360);
+      }
 
-      // Close mobile menu after clicking a link
-      nav?.addEventListener('click', e => {
-        const isLink = e.target.closest('a');
-        if (isLink) navToggle.checked = false;
+      if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
+      if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { if (isOpen) closeMenu(); });
       });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+    }());
 
-      // Keep ARIA in sync for accessibility
-      const burger = document.querySelector('label.burger');
-      const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
-      navToggle?.addEventListener('change', syncAria);
-      syncAria();
-    })();
+    var backTop = document.getElementById('backTop');
+    if (backTop) {
+      window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
+      backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    }
   </script>
 </body>
 </html>

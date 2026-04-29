@@ -1,18 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thank You · ArtLux</title>
+  <meta name="description" content="Your message has been received. ArtLux will be in touch shortly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
-  <link rel="canonical" href="https://YOURDOMAIN/PAGE.html">
-
+  <style>
+    .thanks-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg, #f7f5f0);
+      padding: 2rem;
+    }
+    .thanks-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: clamp(2.5rem, 6vw, 4.5rem);
+      text-align: center;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,.1);
+      border: 1px solid rgba(201,163,58,.18);
+    }
+    .thanks-icon {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: rgba(201,163,58,.12);
+      border: 2px solid rgba(201,163,58,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+    }
+    .thanks-icon svg {
+      width: 34px; height: 34px;
+      stroke: #c9a33a;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .thanks-card h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #111110;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+    .thanks-card p {
+      font-size: 1rem;
+      color: #6a6866;
+      line-height: 1.72;
+      margin-bottom: 2rem;
+    }
+    .thanks-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
-  <main style="text-align:center; padding:4rem;">
-    <h1>Thank you!</h1>
-    <p>Your message has been sent. We’ll get back to you shortly.</p>
-    <p><a href="index.html">Return Home</a></p>
+  <!-- ======= HEADER ======= -->
+  <header class="al-header al-header--light" role="banner">
+    <div class="al-header__main">
+      <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+      <nav class="al-nav" aria-label="Site navigation">
+        <a class="al-nav__link" href="index.html">Home</a>
+        <a class="al-nav__link" href="gallery.html">Gallery</a>
+        <a class="al-nav__link" href="about.html">About</a>
+        <a class="al-nav__link" href="contact.html">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+      </nav>
+      <button class="al-burger" id="alBurger" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+      <a class="al-mobile-nav__link" href="index.html">Home</a>
+      <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-mobile-nav__link" href="about.html">About</a>
+      <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+      <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+    </nav>
+  </header>
+
+  <main class="thanks-page">
+    <div class="thanks-card">
+      <div class="thanks-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h1>Thank You!</h1>
+      <p>Your message has been received. We'll review it and get back to you within 24–48 hours. We look forward to bringing your vision to life.</p>
+      <div class="thanks-actions">
+        <a href="index.html" class="btn btn--primary">Return Home</a>
+        <a href="gallery.html" class="btn btn--outline">Explore Gallery</a>
+      </div>
+    </div>
   </main>
+
+  <script>
+  (function () {
+    var header = document.querySelector('.al-header');
+    var burger = document.getElementById('alBurger');
+    var mobile = document.getElementById('alMobileNav');
+    var isOpen = false;
+    function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
+    function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
+    if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
+    if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
+  }());
+  </script>
 </body>
 </html>

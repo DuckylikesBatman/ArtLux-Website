@@ -4,316 +4,472 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery · ArtLux | Premium Artworks</title>
-  <meta name="description" content="Browse the ArtLux catalog of original paintings and bespoke artworks. Filter by availability and price to find your perfect piece." />
-<link rel="canonical" href="https://YOURDOMAIN/gallery.html">
-
-  <!-- Google Fonts -->
+  <meta name="description" content="Browse the ArtLux collection of original paintings and bespoke artworks by Manal Yehya." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-       <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
-  <!-- HEADER --><!-- ======= ArtLux Header (unified) ======= -->
-<header class="artlux-header" role="banner">
-  <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">
-    Art<span>Lux</span>
-  </a>
 
-  <!-- Mobile toggle -->
-  <input type="checkbox" id="navToggle" hidden>
-  <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </label>
-
-  <!-- Main navigation -->
-  <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
-    <a class="artlux-nav-main-button " href="index.html">Home</a>
-    <a class="artlux-nav-main-button active" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button artlux-nav-cta" href="commission.html">Commission</a>
-    <a class="artlux-nav-main-button" href="about.html">About</a>
-    <a class="artlux-nav-main-button" href="contact.html">Contact</a>
+<!-- ======= HEADER ======= -->
+<header class="al-header" role="banner">
+  <div class="al-header__main">
+    <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+    <nav class="al-nav" aria-label="Site navigation">
+      <a class="al-nav__link" href="index.html">Home</a>
+      <a class="al-nav__link active" href="gallery.html">Gallery</a>
+      <a class="al-nav__link" href="about.html">About</a>
+      <a class="al-nav__link" href="contact.html">Contact</a>
+      <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+    </nav>
+    <button class="al-burger" id="alBurger" type="button"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+    <a class="al-mobile-nav__link" href="index.html">Home</a>
+    <a class="al-mobile-nav__link active" href="gallery.html">Gallery</a>
+    <a class="al-mobile-nav__link" href="about.html">About</a>
+    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
   </nav>
 </header>
 
-  <!-- ========== MAIN CONTENT ========== -->
-  <main>
-    <!-- Gallery Hero -->
-    <section class="gallery-hero" aria-labelledby="gallery-heading">
-      <div class="gallery-hero__wrap">
-        <nav class="crumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span aria-hidden="true">/</span>
-          <span>Gallery</span>
-        </nav>
+<main>
 
-        <h1 id="gallery-heading" class="gallery-title">Art Collection</h1>
+  <!-- ======= PAGE HERO ======= -->
+  <section class="page-hero" aria-label="Gallery">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="page-hero__content">
+      <p class="page-hero__eye">ArtLux Collection</p>
+      <h1 class="page-hero__title">Gallery</h1>
+      <p class="page-hero__sub">Original paintings and bespoke artworks by Manal Yehya</p>
+    </div>
+  </section>
 
-        <!-- Filter & Sort Toolbar -->
-        <div class="toolbar" role="region" aria-label="Gallery controls">
-          <div class="toolbar__left">
-            <span class="filter-label">Filter:</span>
+  <!-- ======= CONTROLS ======= -->
+  <div class="gallery-controls container" role="region" aria-label="Gallery controls">
+    <div class="gallery-filters" role="group" aria-label="Filter by availability">
+      <button class="filter-pill active" data-filter="all">All Works</button>
+      <button class="filter-pill" data-filter="in">Available</button>
+      <button class="filter-pill" data-filter="out">Commissioned</button>
+    </div>
+    <span class="gallery-count" aria-live="polite">
+      <span id="countNum">0</span> works
+    </span>
+  </div>
 
-            <details class="menu">
-              <summary class="menu__summary">Availability</summary>
-              <div class="menu__body">
-                <label><input type="checkbox" name="availability" value="in" checked> Available</label>
-                <label><input type="checkbox" name="availability" value="out"> Commissioned</label>
-              </div>
-            </details>
-          </div>
+  <!-- ======= MASONRY GALLERY ======= -->
+  <section class="gallery-section" aria-label="Artworks">
+    <div class="container">
+      <div class="gallery-masonry" id="galleryGrid" role="list">
 
-          <div class="toolbar__right">
-            <label for="sort" class="sort-label">Sort by:</label>
-            <div class="select-wrap">
-              <select id="sort" class="sort-select" aria-label="Sort artworks">
-                <option value="az" selected>Alphabetically, A-Z</option>
-                <option value="za">Alphabetically, Z-A</option>
-              </select>
+        <article class="gallery-item" role="listitem" data-title="Elegance in Blue" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting1-dec.jpeg" alt="Elegance in Blue – deep blue oil painting with gold accents">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Elegance in Blue</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
             </div>
-            <span class="count"><span id="countNum">0</span> artworks</span>
-          </div>
-        </div>
-        <div class="menu-backdrop"></div>
-      </div>
-    </section>
-
-    <!-- Artworks Grid -->
-    <section class="gallery-grid-section" aria-label="Artworks collection">
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- Artwork 1 -->
-        <article class="product-card" data-title="Elegance in Blue" data-availability="in">
-          <a class="product-card__media" href="Images/painting1-dec.jpeg" target="_blank" aria-label="View larger image of Elegance in Blue">
-            <img src="Images/painting1-dec.jpeg" alt="Elegance in Blue - Oil painting featuring deep blue tones with gold accents" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Elegance in Blue</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
           </div>
         </article>
 
-        <!-- Artwork 2 -->
-        <article class="product-card" data-title="Luminous Gold" data-availability="in">
-          <a class="product-card__media" href="Images/painting10-dec.jpeg" target="_blank" aria-label="View larger image of Luminous Gold">
-            <img src="Images/painting10-dec.jpeg" alt="Luminous Gold - Golden abstract painting with textured surface" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Luminous Gold</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
+        <article class="gallery-item" role="listitem" data-title="Luminous Gold" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting10-dec.jpeg" alt="Luminous Gold – golden abstract painting with textured surface">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Luminous Gold</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
 
-        <!-- Artwork 3 -->
-        <article class="product-card" data-title="Golden Abstraction" data-availability="in">
-          <a class="product-card__media" href="Images/painting11-dec.jpeg" target="_blank" aria-label="View larger image of Golden Abstraction">
-            <img src="Images/painting11-dec.jpeg" alt="Golden Abstraction - Modern abstract piece with gold leaf details" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Golden Abstraction</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
+        <article class="gallery-item" role="listitem" data-title="Golden Abstraction" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting11-dec.jpeg" alt="Golden Abstraction – modern abstract with gold leaf details">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Golden Abstraction</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
 
-        <!-- Artwork 4 -->
-        <article class="product-card" data-title="Serene Composition" data-availability="in">
-          <a class="product-card__media" href="Images/painting6-dec.jpeg" target="_blank" aria-label="View larger image of Serene Composition">
-            <img src="Images/painting6-dec.jpeg" alt="Serene Composition - Calming abstract with soft color palette" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Serene Composition</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
+        <article class="gallery-item" role="listitem" data-title="Serene Composition" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting6-dec.jpeg" alt="Serene Composition – calming abstract with soft colour palette" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Serene Composition</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
 
-        <!-- Artwork 5 -->
-        <article class="product-card" data-title="Modern Harmony" data-availability="in">
-          <a class="product-card__media" href="Images/painting8-dec.jpeg" target="_blank" aria-label="View larger image of Modern Harmony">
-            <img src="Images/painting8-dec.jpeg" alt="Modern Harmony - Contemporary piece with balanced composition" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Modern Harmony</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
+        <article class="gallery-item" role="listitem" data-title="Modern Harmony" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting8-dec.jpeg" alt="Modern Harmony – contemporary piece with balanced composition" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Modern Harmony</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
 
-        <!-- Artwork 6 -->
-        <article class="product-card" data-title="Vibrant Expression" data-availability="in">
-          <a class="product-card__media" href="Images/painting12-dec.jpeg" target="_blank" aria-label="View larger image of Vibrant Expression">
-            <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression - Energetic abstract with bold colors" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Vibrant Expression</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
+        <article class="gallery-item" role="listitem" data-title="Vibrant Expression" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Vibrant Expression</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
 
-        <!-- Artwork 7 - Sold Out -->
-        <article class="product-card" data-title="Classic Elegance" data-availability="out">
-          <a class="product-card__media" href="Images/painting14-dec.jpeg" target="_blank" aria-label="View larger image of Classic Elegance">
-            <img src="Images/painting14-dec.jpeg" alt="Classic Elegance - Timeless piece with traditional influences" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Classic Elegance</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
-            <span class="product-card__badge commissioned">Commissioned</span>
+        <article class="gallery-item" role="listitem" data-title="Classic Elegance" data-avail="out">
+          <div class="gallery-item__inner">
+            <img src="Images/painting14-dec.jpeg" alt="Classic Elegance – timeless piece with traditional influences" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Classic Elegance</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
 
-        <!-- Artwork 8 -->
-        <article class="product-card" data-title="Contemporary Flow" data-availability="in">
-          <a class="product-card__media" href="Images/painting16-dec.jpeg" target="_blank" aria-label="View larger image of Contemporary Flow">
-            <img src="Images/painting16-dec.jpeg" alt="Contemporary Flow - Fluid abstract with modern aesthetic" loading="lazy" />
-          </a>
-          <div class="product-card__body">
-            <h3 class="product-card__title">Contemporary Flow</h3>
-            <p class="product-card__meta">Oil on Canvas · 70×100 cm</p>
+        <article class="gallery-item" role="listitem" data-title="Contemporary Flow" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting16-dec.jpeg" alt="Contemporary Flow – fluid abstract with modern aesthetic" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Contemporary Flow</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
           </div>
         </article>
-      </div>
-    </section>
-  </main>
 
- 
-  <!-- ======= FOOTER ======= -->
-  <footer class="artlux-footer" role="contentinfo">
-    <div class="footer-container">
-      <div class="footer-about">
-        <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
-      </div>
+        <article class="gallery-item" role="listitem" data-title="Amber Dusk" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones on textured canvas" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Amber Dusk</p>
+              <p class="gallery-item__med">Oil on Canvas · 60×80 cm</p>
+            </div>
+          </div>
+        </article>
 
-      <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <article class="gallery-item" role="listitem" data-title="Whispered Bronze" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics-10.jpeg" alt="Whispered Bronze – textured bronze and cream composition" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Whispered Bronze</p>
+              <p class="gallery-item__med">Mixed Media · 50×70 cm</p>
+            </div>
+          </div>
+        </article>
 
-      <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="ToS.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </nav>
+        <article class="gallery-item" role="listitem" data-title="Champagne Study" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics-9.jpg" alt="Champagne Study – soft champagne and ivory abstract" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Champagne Study</p>
+              <p class="gallery-item__med">Acrylic on Canvas · 60×90 cm</p>
+            </div>
+          </div>
+        </article>
 
-      <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
-        <p><a href="tel:+96103683127">+961 03 683 127</a></p>
-        <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
-        <div class="social-links" aria-label="Follow us">
-          <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M12 2.16c3.2 0 3.58.01 4.85.07
-                       3.25.15 4.77 1.69 4.92 4.92
-                       .06 1.26.07 1.64.07 4.85
-                       0 3.2-.01 3.58-.07 4.85
-                       -.15 3.23-1.66 4.77-4.92 4.92
-                       -1.26.06-1.64.07-4.85.07
-                       -3.2 0-3.58-.01-4.85-.07
-                       -3.26-.15-4.77-1.7-4.92-4.92
-                       -.06-1.26-.07-1.64-.07-4.85
-                       0-3.2.01-3.58.07-4.85
-                       .15-3.23 1.66-4.77 4.92-4.92
-                       1.26-.06 1.65-.07 4.85-.07z
-                       m0-2.16c-3.26 0-3.67.01-4.95.07
-                       -4.36.2-6.78 2.62-6.98 6.98
-                       -.06 1.28-.07 1.69-.07 4.95
-                       0 3.26.01 3.67.07 4.95
-                       .2 4.36 2.62 6.78 6.98 6.98
-                       1.28.06 1.69.07 4.95.07
-                       3.26 0 3.67-.01 4.95-.07
-                       4.35-.2 6.78-2.62 6.98-6.98
-                       .06-1.28.07-1.69.07-4.95
-                       0-3.26-.01-3.67-.07-4.95
-                       -.2-4.35-2.62-6.78-6.98-6.98
-                       -1.28-.06-1.69-.07-4.95-.07z
-                       m0 5.84c-3.4 0-6.16 2.76-6.16 6.16
-                       0 3.4 2.76 6.16 6.16 6.16
-                       3.4 0 6.16-2.76 6.16-6.16
-                       0-3.4-2.76-6.16-6.16-6.16
-                       z m0 10.16c-2.21 0-4-1.79-4-4
-                       s1.79-4 4-4 4 1.79 4 4
-                       -1.79 4-4 4z
-                       m6.41-11.84c-.8 0-1.44.64-1.44 1.44
-                       s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44
-                       -.64-1.44-1.44-1.44z"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36
-                       C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62
-                       h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79
-                       1.32 0 2.46.1 2.8.14v3.24h-1.92
-                       c-1.5 0-1.79.72-1.79 1.76v2.31h3.59
-                       l-.47 3.62h-3.12V24h6.12
-                       c.73 0 1.32-.59 1.32-1.32V1.32
-                       C24 .59 23.41 0 22.68 0z"/>
-            </svg>
-          </a>
-        </div>
-      </address>
+        <article class="gallery-item" role="listitem" data-title="Ivory & Gold" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics1.jpeg" alt="Ivory & Gold – delicate ivory with metallic gold details" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Ivory & Gold</p>
+              <p class="gallery-item__med">Oil on Canvas · 80×100 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Autumn Warmth" data-avail="out">
+          <div class="gallery-item__inner">
+            <img src="Images/painting-1.jpeg" alt="Autumn Warmth – warm terracotta and amber tones" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Autumn Warmth</p>
+              <p class="gallery-item__med">Oil on Canvas · 60×80 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Midnight Bloom" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting-2.jpeg" alt="Midnight Bloom – deep indigo with floral abstraction" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Midnight Bloom</p>
+              <p class="gallery-item__med">Mixed Media · 70×90 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Desert Horizon" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting-3.jpeg" alt="Desert Horizon – warm sand and sienna landscape abstraction" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Desert Horizon</p>
+              <p class="gallery-item__med">Oil on Canvas · 80×120 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Golden Hour" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/painting-4jpeg.png" alt="Golden Hour – luminous gold tones evoking late afternoon light" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Golden Hour</p>
+              <p class="gallery-item__med">Acrylic on Canvas · 60×60 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Earth & Sky" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics-5.jpg" alt="Earth & Sky – layered earth tones with a luminous horizon" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Earth & Sky</p>
+              <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Storm at Sea" data-avail="out">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics-7.jpg" alt="Storm at Sea – dramatic navy and white impasto waves" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Storm at Sea</p>
+              <p class="gallery-item__med">Oil on Canvas · 100×120 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Desert Rose" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics-8.jpeg" alt="Desert Rose – dusty rose and copper abstract composition" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Desert Rose</p>
+              <p class="gallery-item__med">Mixed Media · 50×70 cm</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Silver Mist" data-avail="in">
+          <div class="gallery-item__inner">
+            <img src="Images/new-pics-11.jpg" alt="Silver Mist – ethereal silver and white atmospheric study" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Silver Mist</p>
+              <p class="gallery-item__med">Acrylic on Canvas · 80×100 cm</p>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /gallery-masonry -->
     </div>
+  </section>
 
-    <div class="copyright">
-      &copy; 2026 ArtLux Murals. All rights reserved.
+</main>
+
+<!-- ======= LIGHTBOX ======= -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer" hidden>
+  <div class="lightbox__bd"></div>
+  <div class="lightbox__box">
+    <button class="lightbox__close" aria-label="Close viewer">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="lightbox__prev" aria-label="Previous artwork">
+      <svg viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox__next" aria-label="Next artwork">
+      <svg viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__info">
+      <p class="lightbox__title"></p>
+      <p class="lightbox__meta">Original Artwork · ArtLux</p>
     </div>
-  </footer>
+  </div>
+</div>
 
+<!-- ======= FOOTER ======= -->
+<footer class="artlux-footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-about">
+      <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
+      <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+    </div>
+    <nav class="footer-section footer-links" aria-label="Quick Links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="commission.html">Commission</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-section footer-links" aria-label="Legal">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="ToS.html">Terms of Service</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <address class="footer-section footer-contact">
+      <h3>Contact Us</h3>
+      <p>Corniche El Mazraa, Beirut</p>
+      <p><a href="tel:+96103683127">+961 03 683 127</a></p>
+      <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+      <div class="social-links" aria-label="Follow us">
+        <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.26.07 1.64.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.26.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.26-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85.15-3.23 1.66-4.77 4.92-4.92 1.26-.06 1.65-.07 4.85-.07zm0-2.16c-3.26 0-3.67.01-4.95.07-4.36.2-6.78 2.62-6.98 6.98-.06 1.28-.07 1.69-.07 4.95 0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07 3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98-1.28-.06-1.69-.07-4.95-.07zm0 5.84c-3.4 0-6.16 2.76-6.16 6.16 0 3.4 2.76 6.16 6.16 6.16 3.4 0 6.16-2.76 6.16-6.16 0-3.4-2.76-6.16-6.16-6.16zm0 10.16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm6.41-11.84c-.8 0-1.44.64-1.44 1.44s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44-.64-1.44-1.44-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79 1.32 0 2.46.1 2.8.14v3.24h-1.92c-1.5 0-1.79.72-1.79 1.76v2.31h3.59l-.47 3.62h-3.12V24h6.12c.73 0 1.32-.59 1.32-1.32V1.32C24 .59 23.41 0 22.68 0z"/></svg>
+        </a>
+      </div>
+    </address>
+  </div>
+  <div class="copyright">&copy; 2026 ArtLux Murals. All rights reserved.</div>
+</footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const grid = document.getElementById('galleryGrid');
-      const cards = Array.from(grid.getElementsByClassName('product-card'));
-      const countElement = document.getElementById('countNum');
-      const sortSelect = document.getElementById('sort');
-      const availabilityCheckboxes = document.querySelectorAll('input[name="availability"]');
+<!-- Floating actions -->
+  <a href="https://wa.me/96103683127" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.menu')) {
-          document.querySelectorAll('.menu').forEach(menu => { menu.open = false; });
-        }
-      });
+<script>
+(function () {
+  var header = document.querySelector('.al-header');
+  var burger = document.getElementById('alBurger');
+  var mobile = document.getElementById('alMobileNav');
+  var isOpen = false;
+  function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  var page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.al-nav__link, .al-mobile-nav__link').forEach(function(a) {
+    var href = (a.getAttribute('href') || '').split('/').pop() || 'index.html';
+    if (href === page) a.classList.add('active');
+  });
+  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
+  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
+  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
+  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
+}());
 
-      function applyFiltersAndSort() {
-        const allowed = Array.from(availabilityCheckboxes)
-          .filter(cb => cb.checked)
-          .map(cb => cb.value);
+/* ── Gallery filter ── */
+const pills   = document.querySelectorAll('.filter-pill');
+const items   = Array.from(document.querySelectorAll('.gallery-item'));
+const countEl = document.getElementById('countNum');
+let current = 'all';
 
-        let visibleCount = 0;
-        cards.forEach(card => {
-          const show = allowed.includes(card.dataset.availability);
-          card.style.display = show ? 'block' : 'none';
-          if (show) visibleCount++;
-        });
+function applyFilter() {
+  let n = 0;
+  items.forEach(item => {
+    const show = current === 'all' || item.dataset.avail === current;
+    item.style.display = show ? '' : 'none';
+    if (show) n++;
+  });
+  countEl.textContent = n;
+}
 
-        countElement.textContent = visibleCount;
+pills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    pills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    current = pill.dataset.filter;
+    applyFilter();
+  });
+});
 
-        const sortValue = sortSelect.value;
-        const visibleCards = cards.filter(card => card.style.display !== 'none');
-        visibleCards.sort((a, b) => {
-          const titleA = a.dataset.title.toLowerCase();
-          const titleB = b.dataset.title.toLowerCase();
-          return sortValue === 'za' ? titleB.localeCompare(titleA) : titleA.localeCompare(titleB);
-        });
-        visibleCards.forEach(card => grid.appendChild(card));
-      }
+applyFilter();
 
-      availabilityCheckboxes.forEach(cb => cb.addEventListener('change', applyFiltersAndSort));
-      sortSelect.addEventListener('change', applyFiltersAndSort);
-      applyFiltersAndSort();
-    });
-  </script>
+/* ── Lightbox ── */
+const lightbox = document.getElementById('lightbox');
+const lbImg    = lightbox.querySelector('.lightbox__img');
+const lbTitle  = lightbox.querySelector('.lightbox__title');
+
+let lbIndex = -1;
+function getVisible() { return items.filter(i => i.style.display !== 'none'); }
+
+function openLb(visIndex) {
+  const vis = getVisible();
+  lbIndex = visIndex;
+  const item = vis[visIndex];
+  const img = item.querySelector('img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lbTitle.textContent = item.dataset.title;
+  lightbox.hidden = false;
+  requestAnimationFrame(() => lightbox.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+  lightbox.querySelector('.lightbox__close').focus();
+}
+
+function moveLb(dir) {
+  const vis = getVisible();
+  lbIndex = (lbIndex + dir + vis.length) % vis.length;
+  const item = vis[lbIndex];
+  const img = item.querySelector('img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lbTitle.textContent = item.dataset.title;
+}
+
+function closeLb() {
+  lightbox.classList.remove('open');
+  lightbox.addEventListener('transitionend', () => {
+    if (!lightbox.classList.contains('open')) lightbox.hidden = true;
+  }, { once: true });
+  document.body.style.overflow = '';
+}
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    const vis = getVisible();
+    const visIndex = vis.indexOf(item);
+    if (visIndex !== -1) openLb(visIndex);
+  });
+  item.setAttribute('tabindex', '0');
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+  });
+});
+
+lightbox.querySelector('.lightbox__bd').addEventListener('click', closeLb);
+lightbox.querySelector('.lightbox__close').addEventListener('click', closeLb);
+lightbox.querySelector('.lightbox__prev').addEventListener('click', () => moveLb(-1));
+lightbox.querySelector('.lightbox__next').addEventListener('click', () => moveLb(1));
+
+document.addEventListener('keydown', e => {
+  if (lightbox.hidden) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') moveLb(-1);
+  if (e.key === 'ArrowRight') moveLb(1);
+});
+
+var backTop = document.getElementById('backTop');
+if (backTop) {
+  window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
+  backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+}
+</script>
 </body>
 </html>

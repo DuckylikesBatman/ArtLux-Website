@@ -6,7 +6,6 @@
 
   <title>ArtLux – Bespoke Murals & Fine Decorative Painting</title>
   <meta name="description" content="ArtLux creates bespoke murals and luxury decorative finishes. Elevate your space with museum-grade materials, insured worldwide shipping, and a refined creative process." />
-<link rel="canonical" href="https://YOURDOMAIN/index.html">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,83 +17,91 @@
 </head>
 
 <body>
-  <!-- HEADER --><!-- ======= ArtLux Header (unified) ======= -->
-<header class="artlux-header" role="banner">
-  <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">
-    Art<span>Lux</span>
-  </a>
-
-  <!-- Mobile toggle -->
-  <input type="checkbox" id="navToggle" hidden>
-  <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </label>
-
-  <!-- Main navigation -->
-  <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
-    <a class="artlux-nav-main-button active" href="index.html">Home</a>
-    <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button artlux-nav-cta" href="commission.html">Commission</a>
-    <a class="artlux-nav-main-button" href="about.html">About</a>
-    <a class="artlux-nav-main-button" href="contact.html">Contact</a>
-  </nav>
-</header>
-
+  <!-- ======= HEADER ======= -->
+  <header class="al-header al-header--light" role="banner">
+    <div class="al-header__main">
+      <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+      <nav class="al-nav" aria-label="Site navigation">
+        <a class="al-nav__link active" href="index.html">Home</a>
+        <a class="al-nav__link" href="gallery.html">Gallery</a>
+        <a class="al-nav__link" href="about.html">About</a>
+        <a class="al-nav__link" href="contact.html">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+      </nav>
+      <button class="al-burger" id="alBurger" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+      <a class="al-mobile-nav__link active" href="index.html">Home</a>
+      <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-mobile-nav__link" href="about.html">About</a>
+      <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+      <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+    </nav>
+  </header>
 
   <main id="mainContent">
-    <!-- ======= MAIN HERO ======= -->
+
+    <!-- ======= HERO ======= -->
     <section class="hero" aria-label="ArtLux — Bespoke Art Studio">
+      <div class="hero__content">
 
-      <!-- Full-bleed background image (right panel) -->
-      <div class="hero__img-panel" aria-hidden="true">
-        <img src="Images/shopify-pic-3.jpg" alt="">
-      </div>
-
-      <!-- Floating artwork cards -->
-      <div class="hero__float hero__float--1" aria-hidden="true">
-        <img src="Images/shopify-pic-2.jpg" alt="">
-      </div>
-      <div class="hero__float hero__float--2" aria-hidden="true">
-        <img src="Images/shopify-pic-1.jpg" alt="">
-      </div>
-
-      <!-- Text content -->
-      <div class="hero__text-panel">
-        <p class="hero__eyebrow">Fine Art Studio &middot; Beirut</p>
-
-        <h1 class="hero__title">
-          Discover Your<br><em>Masterpiece</em>
-        </h1>
-
-        <p class="hero__subtitle">Bespoke murals and luxury decorative finishes that transform your space into an enduring work of art.</p>
-
-        <div class="hero__ctas">
-          <a href="gallery.html" class="btn btn--hero-light">Explore Gallery</a>
-          <a href="commission.html" class="btn btn--hero-ghost">Commission a Work</a>
-        </div>
-
-        <div class="hero__stats" aria-label="Studio highlights">
-          <div class="hero__stat">
-            <strong>300+</strong>
-            <span>Murals</span>
-          </div>
-          <div class="hero__stat-sep" aria-hidden="true"></div>
-          <div class="hero__stat">
-            <strong>30+</strong>
-            <span>Years Exp.</span>
-          </div>
-          <div class="hero__stat-sep" aria-hidden="true"></div>
-          <div class="hero__stat">
-            <strong>7</strong>
-            <span>Countries</span>
+        <div class="hero__text">
+          <p class="hero__eyebrow">Fine Art Studio &middot; Beirut</p>
+          <h1 class="hero__title">Discover Your<br><em>Masterpiece</em></h1>
+          <p class="hero__subtitle">Bespoke murals and luxury decorative finishes that transform your space into an enduring work of art.</p>
+          <div class="hero__actions">
+            <a href="gallery.html" class="btn btn--primary">Explore Gallery</a>
+            <a href="commission.html" class="btn btn--outline">Commission a Work</a>
           </div>
         </div>
-      </div>
 
+        <div class="hero__grid">
+          <div class="hero__main-img">
+            <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya">
+          </div>
+          <div class="hero__side-images">
+            <div class="hero__side-img">
+              <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – oil painting with gold accents">
+            </div>
+            <div class="hero__side-img">
+              <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – abstract oil painting">
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
+    <!-- ======= STATS BAND ======= -->
+    <div class="home-stats" aria-label="Studio highlights">
+      <div class="home-stats__inner">
+        <div class="home-stat">
+          <strong>300+</strong>
+          <span>Murals Completed</span>
+        </div>
+        <div class="home-stat-div" aria-hidden="true"></div>
+        <div class="home-stat">
+          <strong>30+</strong>
+          <span>Years of Mastery</span>
+        </div>
+        <div class="home-stat-div" aria-hidden="true"></div>
+        <div class="home-stat">
+          <strong>7</strong>
+          <span>Countries Served</span>
+        </div>
+        <div class="home-stat-div" aria-hidden="true"></div>
+        <div class="home-stat">
+          <strong>100%</strong>
+          <span>Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
     <!-- ======= PROCESS ======= -->
-    <section class="section process" aria-label="Our Creative Process">
+    <section id="process" class="section process" aria-label="Our Creative Process">
       <div class="container">
         <header class="section__header">
           <h2 class="section__title">Our Creative Process</h2>
@@ -135,31 +142,31 @@
 
         <div class="cards">
           <article class="card">
-            <a class="card__media" href="gallery.html" aria-label="View Golden Abstraction in gallery">
-              <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – oil painting with gold tones">
+            <a class="card__media" href="gallery.html" aria-label="View Amber Dusk in gallery">
+              <img src="Images/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones">
             </a>
             <div class="card__body">
-              <h3 class="card__title">Golden Abstraction</h3>
+              <h3 class="card__title">Amber Dusk</h3>
               <span class="card__meta">Oil on Canvas</span>
             </div>
           </article>
 
           <article class="card">
-            <a class="card__media" href="gallery.html" aria-label="View Elegance in Blue in gallery">
-              <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – deep blue tones with gold accents">
+            <a class="card__media" href="gallery.html" aria-label="View Serene Composition in gallery">
+              <img src="Images/painting6-dec.jpeg" alt="Serene Composition – soft abstract palette">
             </a>
             <div class="card__body">
-              <h3 class="card__title">Elegance in Blue</h3>
+              <h3 class="card__title">Serene Composition</h3>
               <span class="card__meta">Oil on Canvas</span>
             </div>
           </article>
 
           <article class="card">
-            <a class="card__media" href="gallery.html" aria-label="View Luminous Gold in gallery">
-              <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – golden abstract with textured surface">
+            <a class="card__media" href="gallery.html" aria-label="View Vibrant Expression in gallery">
+              <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours">
             </a>
             <div class="card__body">
-              <h3 class="card__title">Luminous Gold</h3>
+              <h3 class="card__title">Vibrant Expression</h3>
               <span class="card__meta">Oil on Canvas</span>
             </div>
           </article>
@@ -171,25 +178,16 @@
     <section class="section bio" aria-label="About the Artist">
       <div class="container bio__grid">
         <div class="bio__content">
+          <p class="section__eyebrow">Meet the Artist</p>
           <h2 class="section__title">Manal Yehya</h2>
-          <p class="section__subtitle">Lebanese artist blending classical technique with modern sensibilities.</p>
+          <p class="section__subtitle">A Lebanese master artist with over 30 years of experience across the Middle East and Europe, blending classical technique with contemporary vision.</p>
 
-          <dl class="stats" aria-label="Artist statistics">
-            <div class="stat">
-              <dt class="stat__num">300+</dt>
-              <dd class="stat__label">Murals Completed</dd>
-            </div>
-            <div class="stat">
-              <dt class="stat__num">30+</dt>
-              <dd class="stat__label">Years Experience</dd>
-            </div>
-            <div class="stat">
-              <dt class="stat__num">7</dt>
-              <dd class="stat__label">Countries</dd>
-            </div>
-          </dl>
+          <blockquote class="bio__quote">
+            "Each space holds a story waiting to be told through color, texture, and light."
+            <cite>— Manal Yehya, Founder</cite>
+          </blockquote>
 
-          <a class="btn btn--outline" href="about.html">View Full Portfolio</a>
+          <a class="btn btn--outline" href="about.html">Meet the Artist</a>
         </div>
 
         <figure class="bio__media">
@@ -239,6 +237,16 @@
         </div>
       </div>
     </section>
+
+    <!-- ======= STATEMENT BAND ======= -->
+    <section class="band" aria-label="Commission your artwork">
+      <div class="container">
+        <h2 class="band__title">Ready to transform<br>your <em>space</em>?</h2>
+        <p class="band__sub">Commission a bespoke artwork and bring your vision to life with 30 years of masterful artistry.</p>
+        <a class="btn btn--primary" href="commission.html">Start Your Commission</a>
+      </div>
+    </section>
+
   </main>
 
   <!-- ======= FOOTER ======= -->
@@ -334,36 +342,64 @@
     </div>
   </footer>
 
-  <script>
-  /* ArtLux header behavior */
-  (function () {
-    const header = document.querySelector('.artlux-header');
-    const navToggle = document.getElementById('navToggle');
-    const nav = document.getElementById('site-nav');
+  <!-- Floating actions -->
+  <a href="https://wa.me/96103683127" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
-    const onScroll = () => {
-      if (!header) return;
-      (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-    };
+  <script>
+  /* ArtLux v2 — header + mobile menu */
+  (function () {
+    var header = document.querySelector('.al-header');
+    var burger = document.getElementById('alBurger');
+    var mobile = document.getElementById('alMobileNav');
+    var isOpen = false;
+
+    function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    const here = location.pathname.split('/').pop() || 'index.html';
-    nav?.querySelectorAll('a').forEach(a => {
-      const target = a.getAttribute('href')?.split('/').pop();
-      if (target === here) a.classList.add('active');
+    var page = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.al-nav__link, .al-mobile-nav__link').forEach(function(a) {
+      var href = (a.getAttribute('href') || '').split('/').pop() || 'index.html';
+      if (href === page) a.classList.add('active');
     });
 
-    nav?.addEventListener('click', e => {
-      const isLink = e.target.closest('a');
-      if (isLink) navToggle.checked = false;
-    });
+    function openMenu() {
+      isOpen = true;
+      mobile.hidden = false;
+      burger.setAttribute('aria-expanded', 'true');
+      burger.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(function() { mobile.classList.add('visible'); });
+    }
+    function closeMenu() {
+      isOpen = false;
+      mobile.classList.remove('visible');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function() { mobile.hidden = true; }, 360);
+    }
 
-    const burger = document.querySelector('label.burger');
-    const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
-    navToggle?.addEventListener('change', syncAria);
-    syncAria();
-  })();
+    if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
+    if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { if (isOpen) closeMenu(); });
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+  }());
+
+  var backTop = document.getElementById('backTop');
+  if (backTop) {
+    window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
+    backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
   </script>
 </body>
 </html>
