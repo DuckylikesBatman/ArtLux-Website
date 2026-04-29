@@ -1,18 +1,18 @@
 /* ============================================================
    ArtLux – contact.css  ·  Contact Page
    ============================================================ */
-
-/* ─── CONTACT PAGE HERO GRADIENT ─────────────────────────── */
+/* ─── CONTACT PAGE HERO BACKGROUND ────────────────────────── */
 .page-hero__bg {
   background:
-    radial-gradient(ellipse at 40% 60%, rgba(40,120,90,.18) 0%, transparent 50%),
-    radial-gradient(ellipse at 78% 22%, rgba(201,163,58,.1) 0%, transparent 42%),
-    linear-gradient(150deg, #0a1612 0%, #080807 55%, #0c0a08 100%);
+    radial-gradient(circle at 32% 64%, rgba(62, 120, 88, 0.22), transparent 34%),
+    radial-gradient(circle at 78% 24%, rgba(226, 201, 130, 0.16), transparent 34%),
+    linear-gradient(135deg, #0e1a15 0%, #0d0d0b 54%, #070605 100%);
 }
+
 .page-hero__bg::after {
   background:
-    linear-gradient(to right, rgba(0,0,0,.5) 0%, rgba(0,0,0,.1) 65%, transparent 100%),
-    linear-gradient(to top, #080807 10%, rgba(8,8,7,.4) 52%, transparent 100%);
+    linear-gradient(to bottom, rgba(7, 6, 5, 0.08), rgba(7, 6, 5, 0.72)),
+    linear-gradient(90deg, rgba(7, 6, 5, 0.78), rgba(7, 6, 5, 0.24), rgba(7, 6, 5, 0.74));
 }
 
 /* ─── CONTACT GRID ────────────────────────────────────────── */
