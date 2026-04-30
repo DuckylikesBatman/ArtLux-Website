@@ -296,7 +296,7 @@
     </div>
 
     <div class="copyright">
-      &copy; 2026 ArtLux Murals. All rights reserved.
+      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
@@ -396,6 +396,7 @@
       window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
       backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     }
+    document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
   </script>
 </body>
 </html>

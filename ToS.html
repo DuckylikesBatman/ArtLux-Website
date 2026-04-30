@@ -39,8 +39,8 @@
   <main class="terms-content">
         <section class="policy-hero">
       <div class="container">
-        <h1>ArtLux Return Policy</h1>
-        <p>Our commitment to excellence extends to every aspect of your art collecting experience</p>
+        <h1>Terms of Service</h1>
+        <p>Please read these terms carefully before using our website or commissioning a work</p>
       </div>
     </section>
     <div class="container">
@@ -179,7 +179,7 @@
     </div>
 
     <div class="copyright">
-      &copy; 2026 ArtLux Murals. All rights reserved.
+      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
     </div>
   </footer>
 <script>
@@ -215,6 +215,7 @@
   const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
   navToggle?.addEventListener('change', syncAria);
   syncAria();
+  document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 })();
 </script>
 

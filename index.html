@@ -143,7 +143,7 @@
         <div class="cards">
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Amber Dusk in gallery">
-              <img src="Images/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones">
+              <img src="Images/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones" loading="lazy">
             </a>
             <div class="card__body">
               <h3 class="card__title">Amber Dusk</h3>
@@ -153,7 +153,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Serene Composition in gallery">
-              <img src="Images/painting6-dec.jpeg" alt="Serene Composition – soft abstract palette">
+              <img src="Images/painting6-dec.jpeg" alt="Serene Composition – soft abstract palette" loading="lazy">
             </a>
             <div class="card__body">
               <h3 class="card__title">Serene Composition</h3>
@@ -163,7 +163,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Vibrant Expression in gallery">
-              <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours">
+              <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy">
             </a>
             <div class="card__body">
               <h3 class="card__title">Vibrant Expression</h3>
@@ -191,7 +191,7 @@
         </div>
 
         <figure class="bio__media">
-          <img src="Images/manal.jpg" alt="Artist Manal Yehya" />
+          <img src="Images/manal.jpg" alt="Artist Manal Yehya" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -338,7 +338,7 @@
     </div>
 
     <div class="copyright">
-      &copy; 2026 ArtLux Murals. All rights reserved.
+      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
@@ -400,6 +400,7 @@
     window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
     backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   }
+  document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
   </script>
 </body>
 </html>

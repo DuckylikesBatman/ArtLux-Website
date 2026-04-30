@@ -231,7 +231,7 @@
     </div>
 
     <div class="copyright">
-      &copy; 2026 ArtLux Murals. All rights reserved.
+      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
@@ -268,6 +268,7 @@
       const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
       navToggle?.addEventListener('change', syncAria);
       syncAria();
+      document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
     })();
 
     // Smooth scrolling for table of contents links

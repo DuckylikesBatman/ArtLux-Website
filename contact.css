@@ -72,7 +72,7 @@
 }
 
 /* Honeypot */
-.hp { position: absolute; left: -9999px; opacity: 0; }
+.hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
 
 .form-status {
   font-size: .9rem;

@@ -148,11 +148,14 @@
       color 0.25s var(--al-ease),
       background 0.25s var(--al-ease),
       transform 0.25s var(--al-ease);
+      transition: ease-in-out 0.5s;
+      
   }
   
   .al-nav__link:hover {
     color: var(--al-cream);
     background: rgba(255, 255, 255, 0.07);
+    transition: ease-in-out 0.5s;
   }
   
   .al-nav__link.active {
@@ -194,6 +197,7 @@
     color: var(--al-ink) !important;
     background: linear-gradient(135deg, var(--al-gold-light), var(--al-gold));
     box-shadow: 0 10px 28px rgba(200, 164, 93, 0.28);
+    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
   .al-nav__cta:hover {
