@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects · ArtLux | Signature Interior &amp; Mural Work</title>
+  <meta name="description" content="Explore ArtLux's signature projects — bespoke murals, luxury decorative finishes, and art installations across residential, commercial, and hospitality spaces." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header class="al-header" role="banner">
+  <div class="al-header__main">
+    <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+    <nav class="al-nav" aria-label="Site navigation">
+      <a class="al-nav__link" href="index.html">Home</a>
+      <a class="al-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-nav__link active" href="projects.html">Projects</a>
+      <a class="al-nav__link" href="about.html">About</a>
+      <a class="al-nav__link" href="contact.html">Contact</a>
+      <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+    </nav>
+    <button class="al-burger" id="alBurger" type="button"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+    <a class="al-mobile-nav__link" href="index.html">Home</a>
+    <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+    <a class="al-mobile-nav__link active" href="projects.html">Projects</a>
+    <a class="al-mobile-nav__link" href="about.html">About</a>
+    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ======= PAGE HERO ======= -->
+  <section class="page-hero" aria-label="Projects">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="page-hero__content">
+      <p class="page-hero__eye">ArtLux Studio</p>
+      <h1 class="page-hero__title">Signature<br><em>Projects</em></h1>
+      <p class="page-hero__sub">A selection of completed interiors, bespoke murals, and decorative finishes across private residences, commercial spaces, and hospitality venues.</p>
+    </div>
+  </section>
+
+  <!-- ======= STATS BAND ======= -->
+  <div class="projects-stats" aria-label="Studio highlights">
+    <div class="projects-stats__inner">
+      <div class="projects-stat">
+        <strong>300+</strong>
+        <span>Projects Completed</span>
+      </div>
+      <div class="projects-stat-div" aria-hidden="true"></div>
+      <div class="projects-stat">
+        <strong>30+</strong>
+        <span>Years of Mastery</span>
+      </div>
+      <div class="projects-stat-div" aria-hidden="true"></div>
+      <div class="projects-stat">
+        <strong>7</strong>
+        <span>Countries Served</span>
+      </div>
+      <div class="projects-stat-div" aria-hidden="true"></div>
+      <div class="projects-stat">
+        <strong>100%</strong>
+        <span>Client Satisfaction</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= CONTROLS ======= -->
+  <div class="projects-controls container" role="region" aria-label="Project filters">
+    <div class="projects-filters" role="group" aria-label="Filter by type">
+      <button class="filter-pill active" data-filter="all">All Projects</button>
+      <button class="filter-pill" data-filter="residential">Residential</button>
+      <button class="filter-pill" data-filter="commercial">Commercial</button>
+      <button class="filter-pill" data-filter="hospitality">Hospitality</button>
+    </div>
+    <span class="projects-count" aria-live="polite">
+      <span id="countNum">0</span> projects
+    </span>
+  </div>
+
+  <!-- ======= PROJECTS GRID ======= -->
+  <section class="projects-section" aria-label="Project showcase">
+    <div class="container">
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-cat="residential">
+          <div class="project-card__img">
+            <img src="Images/interior-2.png" alt="Contemporary living space with custom grey patina wall treatments – Jessica Azar Residence, Beirut" loading="lazy">
+            <span class="project-card__badge badge--residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Beirut, Lebanon</p>
+            <h2 class="project-card__title">Jessica Azar Residence</h2>
+            <p class="project-card__desc">Custom grey patina wall treatments that bring modern elegance to traditional architecture. Every surface was hand-finished to create a seamless, gallery-like atmosphere throughout the home.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Decorative Finish</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential">
+          <div class="project-card__img">
+            <img src="Images/interior-5.png" alt="Grand salon with luxurious patina ceiling and cornice details – Prince Tamim Mansion, Doha" loading="lazy">
+            <span class="project-card__badge badge--residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Doha, Qatar</p>
+            <h2 class="project-card__title">Prince Tamim Mansion</h2>
+            <p class="project-card__desc">Luxurious patina finishes applied to ceilings and cornices throughout a 12,000 sq ft private estate. The work required exceptional precision to achieve a consistent, regal tone across every room.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Patina &amp; Ornamental Finish</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="hospitality">
+          <div class="project-card__img">
+            <img src="Images/interior-8.jpg" alt="Whimsical hand-painted mural in pediatric ward – Hôtel-Dieu Hospital, Beirut" loading="lazy">
+            <span class="project-card__badge badge--hospitality">Hospitality</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Beirut, Lebanon</p>
+            <h2 class="project-card__title">Hôtel-Dieu Hospital</h2>
+            <p class="project-card__desc">Whimsical hand-painted illustrations across the pediatric ward designed to create a calming, joyful environment for young patients and their families during difficult times.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Bespoke Mural</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential">
+          <div class="project-card__img">
+            <img src="Images/new-pics-5.jpg" alt="Private villa interior with bespoke decorative wall finish" loading="lazy">
+            <span class="project-card__badge badge--residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Beirut, Lebanon</p>
+            <h2 class="project-card__title">Private Villa</h2>
+            <p class="project-card__desc">A full-residence decorative programme spanning reception, dining, and master suite. Custom texture and colour work developed in close collaboration with the homeowner's interior designer.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Decorative Finish</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="commercial">
+          <div class="project-card__img">
+            <img src="Images/new-pics-7.jpg" alt="Elegant restaurant interior with hand-crafted mural feature wall" loading="lazy">
+            <span class="project-card__badge badge--commercial">Commercial</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Beirut, Lebanon</p>
+            <h2 class="project-card__title">Signature Restaurant</h2>
+            <p class="project-card__desc">A striking feature wall mural that defines the restaurant's identity from the moment guests enter. The design weaves together cultural motifs with a contemporary palette to create an unforgettable dining backdrop.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Bespoke Mural</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="commercial">
+          <div class="project-card__img">
+            <img src="Images/new-pics-8.jpeg" alt="Corporate office lobby with refined decorative finish and brand-aligned artwork" loading="lazy">
+            <span class="project-card__badge badge--commercial">Commercial</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Dubai, UAE</p>
+            <h2 class="project-card__title">Corporate Lobby</h2>
+            <p class="project-card__desc">A refined decorative finish and commissioned artwork programme for a corporate headquarters lobby. Every piece was tailored to reflect the brand's values of sophistication and innovation.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Decorative Finish &amp; Mural</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="hospitality">
+          <div class="project-card__img">
+            <img src="Images/new-pics-9.jpg" alt="Boutique hotel suite with hand-finished walls and custom artwork" loading="lazy">
+            <span class="project-card__badge badge--hospitality">Hospitality</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Beirut, Lebanon</p>
+            <h2 class="project-card__title">Boutique Hotel Suites</h2>
+            <p class="project-card__desc">Custom decorative finishes and original artwork installations across a boutique hotel's suites and common areas, creating a cohesive, luxurious guest experience from lobby to penthouse.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Decorative Finish &amp; Art Installation</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential">
+          <div class="project-card__img">
+            <img src="Images/new-pics-10.jpeg" alt="Modern penthouse apartment with bespoke painted feature ceiling" loading="lazy">
+            <span class="project-card__badge badge--residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Doha, Qatar</p>
+            <h2 class="project-card__title">Penthouse Apartment</h2>
+            <p class="project-card__desc">A dramatic hand-painted ceiling centrepiece for a luxury penthouse, combining gold-leaf detailing with bespoke oil techniques to produce a work that rivals the finest European palaces.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Ceiling Mural &amp; Gold Leaf</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="commercial">
+          <div class="project-card__img">
+            <img src="Images/new-pics-11.jpg" alt="High-end retail space with hand-painted decorative wall treatment" loading="lazy">
+            <span class="project-card__badge badge--commercial">Commercial</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location">Riyadh, Saudi Arabia</p>
+            <h2 class="project-card__title">Luxury Retail Flagship</h2>
+            <p class="project-card__desc">Bespoke hand-painted wall treatments for a luxury brand flagship store, designed to elevate the retail experience and reinforce the brand's heritage of craftsmanship and exclusivity.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type">Decorative Finish</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= COMMISSION BAND ======= -->
+  <section class="band" aria-label="Commission your project">
+    <div class="container">
+      <h2 class="band__title">Have a project<br>in <em>mind</em>?</h2>
+      <p class="band__sub">Whether it's a private residence, commercial space, or hospitality venue — we'd love to hear your vision.</p>
+      <a class="btn btn--primary" href="commission.html">Start a Commission</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======= FOOTER ======= -->
+<footer class="artlux-footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-about">
+      <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
+      <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+    </div>
+
+    <nav class="footer-section footer-links" aria-label="Quick Links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="commission.html">Commission</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-section footer-links" aria-label="Legal">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="ToS.html">Terms of Service</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+
+    <address class="footer-section footer-contact">
+      <h3>Contact Us</h3>
+      <p>Corniche El Mazraa, Beirut</p>
+      <p><a href="tel:+96103683127">+961 03 683 127</a></p>
+      <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+      <div class="social-links" aria-label="Follow us">
+        <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.26.07 1.64.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.26.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.26-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85.15-3.23 1.66-4.77 4.92-4.92 1.26-.06 1.65-.07 4.85-.07zm0-2.16c-3.26 0-3.67.01-4.95.07-4.36.2-6.78 2.62-6.98 6.98-.06 1.28-.07 1.69-.07 4.95 0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07 3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98-1.28-.06-1.69-.07-4.95-.07zm0 5.84c-3.4 0-6.16 2.76-6.16 6.16 0 3.4 2.76 6.16 6.16 6.16 3.4 0 6.16-2.76 6.16-6.16 0-3.4-2.76-6.16-6.16-6.16zm0 10.16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm6.41-11.84c-.8 0-1.44.64-1.44 1.44s.64 1.44 1.44 1.44 1.44-.64 1.44-1.44-.64-1.44-1.44-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22.68 0H1.32C.59 0 0 .59 0 1.32v21.36C0 23.41.59 24 1.32 24h11.5v-9.29H9.69v-3.62h3.13v-2.67c0-3.1 1.89-4.79 4.66-4.79 1.32 0 2.46.1 2.8.14v3.24h-1.92c-1.5 0-1.79.72-1.79 1.76v2.31h3.59l-.47 3.62h-3.12V24h6.12c.73 0 1.32-.59 1.32-1.32V1.32C24 .59 23.41 0 22.68 0z"/></svg>
+        </a>
+      </div>
+    </address>
+  </div>
+
+  <div class="copyright">
+    &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
+  </div>
+</footer>
+
+<!-- Floating actions -->
+<a href="https://wa.me/96103683127" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+</a>
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function () {
+  var header = document.querySelector('.al-header');
+  var burger = document.getElementById('alBurger');
+  var mobile = document.getElementById('alMobileNav');
+  var isOpen = false;
+
+  function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  function openMenu() {
+    isOpen = true;
+    mobile.hidden = false;
+    burger.setAttribute('aria-expanded', 'true');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(function () { mobile.classList.add('visible'); });
+  }
+  function closeMenu() {
+    isOpen = false;
+    mobile.classList.remove('visible');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function () { mobile.hidden = true; }, 360);
+  }
+
+  if (burger) burger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
+  if (mobile) mobile.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { if (isOpen) closeMenu(); });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+}());
+
+/* ── Project filter ── */
+const pills   = document.querySelectorAll('.filter-pill');
+const cards   = Array.from(document.querySelectorAll('.project-card'));
+const countEl = document.getElementById('countNum');
+let current   = 'all';
+
+function applyFilter() {
+  let n = 0;
+  cards.forEach(function (card) {
+    const show = current === 'all' || card.dataset.cat === current;
+    card.style.display = show ? '' : 'none';
+    if (show) n++;
+  });
+  countEl.textContent = n;
+}
+
+pills.forEach(function (pill) {
+  pill.addEventListener('click', function () {
+    pills.forEach(function (p) { p.classList.remove('active'); });
+    pill.classList.add('active');
+    current = pill.dataset.filter;
+    applyFilter();
+  });
+});
+
+applyFilter();
+
+var backTop = document.getElementById('backTop');
+if (backTop) {
+  window.addEventListener('scroll', function () { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
+  backTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+}
+document.querySelectorAll('.yr').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+</script>
+</body>
+</html>

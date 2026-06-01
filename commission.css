@@ -256,4 +256,5 @@
   .process-section,
   .form-section,
   .faq-section { padding-block: 3.5rem; }
+  .submit-button { width: 100%; }
 }

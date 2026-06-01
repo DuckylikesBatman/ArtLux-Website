@@ -122,6 +122,13 @@
   transform: translateY(0);
 }
 
+/* Always show overlay on touch devices (no hover) */
+@media (hover: none) {
+  .gallery-item__overlay {
+    transform: translateY(0);
+  }
+}
+
 .gallery-item__name {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: .98rem;
@@ -239,8 +246,15 @@
 .lightbox__next svg { width: 20px; height: 20px; stroke: #fff; fill: none; }
 
 @media (max-width: 860px) {
-  .lightbox__prev { left: .4rem; top: auto; bottom: -3.8rem; transform: none; }
-  .lightbox__next { right: .4rem; top: auto; bottom: -3.8rem; transform: none; }
+  .lightbox__prev,
+  .lightbox__next {
+    position: fixed;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+  .lightbox__prev { left: .5rem; }
+  .lightbox__next { right: .5rem; }
 }
 
 .lightbox__img {

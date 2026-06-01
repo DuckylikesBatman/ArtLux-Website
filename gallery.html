@@ -23,6 +23,7 @@
     <nav class="al-nav" aria-label="Site navigation">
       <a class="al-nav__link" href="index.html">Home</a>
       <a class="al-nav__link active" href="gallery.html">Gallery</a>
+      <a class="al-nav__link" href="projects.html">Projects</a>
       <a class="al-nav__link" href="about.html">About</a>
       <a class="al-nav__link" href="contact.html">Contact</a>
       <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
@@ -35,6 +36,7 @@
   <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
     <a class="al-mobile-nav__link" href="index.html">Home</a>
     <a class="al-mobile-nav__link active" href="gallery.html">Gallery</a>
+    <a class="al-mobile-nav__link" href="projects.html">Projects</a>
     <a class="al-mobile-nav__link" href="about.html">About</a>
     <a class="al-mobile-nav__link" href="contact.html">Contact</a>
     <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
@@ -55,10 +57,10 @@
 
   <!-- ======= CONTROLS ======= -->
   <div class="gallery-controls container" role="region" aria-label="Gallery controls">
-    <div class="gallery-filters" role="group" aria-label="Filter by availability">
+    <div class="gallery-filters" role="group" aria-label="Filter by category">
       <button class="filter-pill active" data-filter="all">All Works</button>
-      <button class="filter-pill" data-filter="in">Available</button>
-      <button class="filter-pill" data-filter="out">Commissioned</button>
+      <button class="filter-pill" data-filter="painting">Paintings</button>
+      <button class="filter-pill" data-filter="interior">Murals &amp; Interiors</button>
     </div>
     <span class="gallery-count" aria-live="polite">
       <span id="countNum">0</span> works
@@ -70,7 +72,7 @@
     <div class="container">
       <div class="gallery-masonry" id="galleryGrid" role="list">
 
-        <article class="gallery-item" role="listitem" data-title="Elegance in Blue" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Elegance in Blue" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting1-dec.jpeg" alt="Elegance in Blue – deep blue oil painting with gold accents">
             <div class="gallery-item__overlay">
@@ -80,7 +82,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Luminous Gold" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Luminous Gold" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting10-dec.jpeg" alt="Luminous Gold – golden abstract painting with textured surface">
             <div class="gallery-item__overlay">
@@ -90,7 +92,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Golden Abstraction" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Golden Abstraction" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting11-dec.jpeg" alt="Golden Abstraction – modern abstract with gold leaf details">
             <div class="gallery-item__overlay">
@@ -100,7 +102,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Serene Composition" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Serene Composition" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting6-dec.jpeg" alt="Serene Composition – calming abstract with soft colour palette" loading="lazy">
             <div class="gallery-item__overlay">
@@ -110,7 +112,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Modern Harmony" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Modern Harmony" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting8-dec.jpeg" alt="Modern Harmony – contemporary piece with balanced composition" loading="lazy">
             <div class="gallery-item__overlay">
@@ -120,7 +122,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Vibrant Expression" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Vibrant Expression" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy">
             <div class="gallery-item__overlay">
@@ -130,7 +132,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Classic Elegance" data-avail="out">
+        <article class="gallery-item" role="listitem" data-title="Classic Elegance" data-avail="out" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting14-dec.jpeg" alt="Classic Elegance – timeless piece with traditional influences" loading="lazy">
             <div class="gallery-item__overlay">
@@ -140,7 +142,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Contemporary Flow" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Contemporary Flow" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting16-dec.jpeg" alt="Contemporary Flow – fluid abstract with modern aesthetic" loading="lazy">
             <div class="gallery-item__overlay">
@@ -150,7 +152,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Amber Dusk" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Amber Dusk" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones on textured canvas" loading="lazy">
             <div class="gallery-item__overlay">
@@ -160,7 +162,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Autumn Warmth" data-avail="out">
+        <article class="gallery-item" role="listitem" data-title="Autumn Warmth" data-avail="out" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting-1.jpeg" alt="Autumn Warmth – warm terracotta and amber tones" loading="lazy">
             <div class="gallery-item__overlay">
@@ -170,7 +172,7 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Midnight Bloom" data-avail="in">
+        <article class="gallery-item" role="listitem" data-title="Midnight Bloom" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
             <img src="Images/painting-2.jpeg" alt="Midnight Bloom – deep indigo with floral abstraction" loading="lazy">
             <div class="gallery-item__overlay">
@@ -180,8 +182,35 @@
           </div>
         </article>
 
-     
+        <article class="gallery-item" role="listitem" data-title="Jessica Azar Residence" data-avail="out" data-cat="interior">
+          <div class="gallery-item__inner">
+            <img src="Images/interior-2.png" alt="Contemporary interior with custom decorative wall finish – Jessica Azar Residence, Beirut" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Jessica Azar Residence</p>
+              <p class="gallery-item__med">Decorative Finish · Beirut</p>
+            </div>
+          </div>
+        </article>
 
+        <article class="gallery-item" role="listitem" data-title="Prince Tamim Mansion" data-avail="out" data-cat="interior">
+          <div class="gallery-item__inner">
+            <img src="Images/interior-5.png" alt="Luxurious patina ceiling and cornice finish – Prince Tamim Mansion, Doha" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Prince Tamim Mansion</p>
+              <p class="gallery-item__med">Patina Finish · Doha</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-item" role="listitem" data-title="Healing Garden Mural" data-avail="out" data-cat="interior">
+          <div class="gallery-item__inner">
+            <img src="Images/interior-8.jpg" alt="Hand-painted mural for pediatric ward – Hôtel-Dieu Hospital, Beirut" loading="lazy">
+            <div class="gallery-item__overlay">
+              <p class="gallery-item__name">Healing Garden Mural</p>
+              <p class="gallery-item__med">Bespoke Mural · Beirut</p>
+            </div>
+          </div>
+        </article>
 
       </div><!-- /gallery-masonry -->
     </div>
@@ -224,6 +253,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="commission.html">Commission</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -296,7 +326,7 @@ let current = 'all';
 function applyFilter() {
   let n = 0;
   items.forEach(item => {
-    const show = current === 'all' || item.dataset.avail === current;
+    const show = current === 'all' || item.dataset.cat === current;
     item.style.display = show ? '' : 'none';
     if (show) n++;
   });

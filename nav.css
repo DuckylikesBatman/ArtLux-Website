@@ -285,6 +285,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.32s var(--al-ease);
+    overflow-y: auto;
   }
   
   .al-mobile-nav.visible {
