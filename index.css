@@ -163,6 +163,11 @@
     border-color: rgba(201, 163, 58, 0.55);
   }
   
+  .btn--outline:hover svg,
+  .al-btn--ghost:hover svg {
+    transform: translateX(4px);
+  }
+
   .btn--outline:hover,
   .al-btn--ghost:hover {
     background: var(--gold-500);
