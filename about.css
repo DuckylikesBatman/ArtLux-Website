@@ -75,7 +75,7 @@
 .founder-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: clamp(2.5rem, 6vw, 5rem);
   align-items: center;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .founder-image {
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   aspect-ratio: 4/5;
   box-shadow: 0 24px 60px rgba(0,0,0,.13);
@@ -260,15 +260,44 @@
 @media (max-width: 860px) {
   .founder-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+    text-align: center;
   }
-  .founder-image { max-width: 420px; margin-inline: auto; }
+
+  .founder-content .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .founder-image {
+    max-width: 380px;
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 600px) {
   .about-founder,
   .services-section,
-  .portfolio-section { padding-block: 4rem; }
+  .portfolio-section {
+    padding-block: 3.5rem;
+  }
 
-  .about-hero h1 { letter-spacing: -1.5px; }
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .service-card,
+  .portfolio-card .card-content {
+    padding: 1.8rem 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats__row { flex-wrap: wrap; }
+  .about-stat-item { flex: 0 0 50%; padding: 1.2rem .5rem; }
+  .about-stat-div { display: none; }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }

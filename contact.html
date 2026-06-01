@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact · ArtLux | Premium Decorative Painting</title>
-  <meta name="description" content="Get in touch with ArtLux for luxury decorative painting, bespoke murals, and artistic finishes.">
+  <meta name="description" content="Get in touch with ArtLux for luxury decorative painting, bespoke murals, and artistic finishes." />
+  <link rel="canonical" href="https://artluxdesign.com/contact.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://artluxdesign.com/contact.html" />
+  <meta property="og:title"       content="Contact · ArtLux" />
+  <meta property="og:description" content="Get in touch with ArtLux to discuss your decorative painting or mural project. Studio based in Beirut, serving clients worldwide." />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/interior-2.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -405,6 +412,17 @@
         formStatus.className = 'form-status error';
       });
     });
+
+    /* ── Scroll reveal ── */
+    (function () {
+      if (!window.IntersectionObserver) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+      document.querySelectorAll('.info-card, .contact-form').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+      var ci = document.querySelector('.contact-info');
+      if (ci) Array.from(ci.children).forEach(function (c, i) { c.style.transitionDelay = (i * 100) + 'ms'; });
+    }());
 
     var backTop = document.getElementById('backTop');
     if (backTop) {

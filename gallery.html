@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery · ArtLux | Premium Artworks</title>
   <meta name="description" content="Browse the ArtLux collection of original paintings and bespoke artworks by Manal Yehya." />
+  <link rel="canonical" href="https://artluxdesign.com/gallery.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://artluxdesign.com/gallery.html" />
+  <meta property="og:title"       content="Gallery · ArtLux | Premium Artworks" />
+  <meta property="og:description" content="Browse the ArtLux collection of original paintings and bespoke artworks by Manal Yehya." />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/painting15-dec.jpeg" />
+  <meta name="twitter:card"       content="summary_large_image" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -407,6 +414,15 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') moveLb(-1);
   if (e.key === 'ArrowRight') moveLb(1);
 });
+
+/* ── Scroll reveal ── */
+(function () {
+  if (!window.IntersectionObserver) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.gallery-item').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+}());
 
 var backTop = document.getElementById('backTop');
 if (backTop) {

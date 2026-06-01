@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Commission Custom Artwork · ArtLux</title>
   <meta name="description" content="Commission a bespoke artwork from ArtLux. Share your vision and collaborate with our artist to create a one‑of‑a‑kind piece." />
+  <link rel="canonical" href="https://artluxdesign.com/commission.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://artluxdesign.com/commission.html" />
+  <meta property="og:title"       content="Commission Custom Artwork · ArtLux" />
+  <meta property="og:description" content="Commission a bespoke mural or painting from ArtLux. Share your vision and we'll create a one-of-a-kind piece for your space." />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/painting14-dec.jpeg" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -392,6 +399,17 @@
         a.addEventListener('click', function() { if (isOpen) closeMenu(); });
       });
       document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+    }());
+
+    /* ── Scroll reveal ── */
+    (function () {
+      if (!window.IntersectionObserver) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+      document.querySelectorAll('.process-card, .faq-item, .request-form').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+      var pg = document.querySelector('.process-grid');
+      if (pg) Array.from(pg.children).forEach(function (c, i) { c.style.transitionDelay = (i * 90) + 'ms'; });
     }());
 
     var backTop = document.getElementById('backTop');

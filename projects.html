@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects · ArtLux | Signature Interior &amp; Mural Work</title>
   <meta name="description" content="Explore ArtLux's signature projects — bespoke murals, luxury decorative finishes, and art installations across residential, commercial, and hospitality spaces." />
+  <link rel="canonical" href="https://artluxdesign.com/projects.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://artluxdesign.com/projects.html" />
+  <meta property="og:title"       content="Projects · ArtLux | Signature Interior & Mural Work" />
+  <meta property="og:description" content="Explore ArtLux's signature projects — bespoke murals, luxury decorative finishes, and art installations across residential, commercial, and hospitality spaces." />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/interior-2.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -600,6 +607,17 @@ document.addEventListener('keydown', function(e) {
     var dx = e.changedTouches[0].clientX - startX;
     if (Math.abs(dx) > 50) dx < 0 ? showImage(activeIdx + 1) : showImage(activeIdx - 1);
   }, { passive: true });
+}());
+
+/* ── Scroll reveal ── */
+(function () {
+  if (!window.IntersectionObserver) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.project-card').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  var pg = document.querySelector('.projects-grid');
+  if (pg) Array.from(pg.children).forEach(function (c, i) { c.style.transitionDelay = Math.min(i * 70, 280) + 'ms'; });
 }());
 
 /* ── Misc ── */

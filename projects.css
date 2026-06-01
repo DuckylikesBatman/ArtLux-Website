@@ -87,19 +87,21 @@
 /* ─── PROJECT CARD ────────────────────────────────────────── */
 .project-card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, .07);
   box-shadow: 0 4px 22px rgba(0, 0, 0, .06);
   transition: transform .34s cubic-bezier(.22, .61, .36, 1),
-              box-shadow .34s;
+              box-shadow .34s, border-color .34s;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 22px 56px rgba(0, 0, 0, .13);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .13);
+  border-color: rgba(201, 163, 58, .22);
 }
 
 .project-card__img {

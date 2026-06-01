@@ -36,7 +36,8 @@
 .filter-pill {
   display: inline-flex;
   align-items: center;
-  padding: .42rem 1.15rem;
+  padding: .5rem 1.2rem;
+  min-height: 38px;
   border-radius: 100px;
   border: 1.5px solid rgba(0,0,0,.12);
   background: transparent;
@@ -288,9 +289,26 @@
 }
 
 @media (max-width: 560px) {
-  .gallery-masonry { columns: 1; }
+  .gallery-masonry {
+    columns: 2;   /* keep 2 columns on phones so images aren't huge */
+    column-gap: 0.6rem;
+  }
+
+  .gallery-item {
+    margin-bottom: 0.6rem;
+  }
+
   .gallery-controls {
     flex-direction: column;
     align-items: flex-start;
+    padding-block: 1.6rem;
   }
+
+  .gallery-section {
+    padding-block: 1.5rem 3.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .gallery-masonry { columns: 1; }
 }

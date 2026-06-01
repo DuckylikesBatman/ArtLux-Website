@@ -2,67 +2,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOURDOMAIN/</loc>
+    <loc>https://artluxdesign.com/</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/gallery.html</loc>
+    <loc>https://artluxdesign.com/gallery.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/projects.html</loc>
+    <loc>https://artluxdesign.com/projects.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/commission.html</loc>
+    <loc>https://artluxdesign.com/commission.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/about.html</loc>
+    <loc>https://artluxdesign.com/about.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/contact.html</loc>
+    <loc>https://artluxdesign.com/contact.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/return.html</loc>
+    <loc>https://artluxdesign.com/return.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/ToS.html</loc>
+    <loc>https://artluxdesign.com/ToS.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/privacy.html</loc>
+    <loc>https://artluxdesign.com/privacy.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://YOURDOMAIN/thanks.html</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://YOURDOMAIN/checkout.html</loc>
+    <loc>https://artluxdesign.com/thanks.html</loc>
     <lastmod>2025-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

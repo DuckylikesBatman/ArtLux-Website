@@ -139,23 +139,17 @@
     color: rgba(247, 240, 230, 0.78);
     text-decoration: none;
     font-size: 0.78rem;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: 0.09em;
     text-transform: uppercase;
     border-radius: 999px;
     white-space: nowrap;
-    transition:
-      color 0.25s var(--al-ease),
-      background 0.25s var(--al-ease),
-      transform 0.25s var(--al-ease);
-      transition: ease-in-out 0.5s;
-      
+    transition: color 0.25s var(--al-ease), background 0.25s var(--al-ease);
   }
-  
+
   .al-nav__link:hover {
     color: var(--al-cream);
     background: rgba(255, 255, 255, 0.07);
-    transition: ease-in-out 0.5s;
   }
   
   .al-nav__link.active {
@@ -383,11 +377,11 @@
     color: rgba(247, 240, 230, 0.78);
     text-decoration: none;
     font-size: 0.78rem;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: 0.09em;
     text-transform: uppercase;
   }
-  
+
   .artlux-nav a:hover,
   .artlux-nav-main-button:hover {
     color: var(--al-gold-light);

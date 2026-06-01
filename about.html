@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About · ArtLux | Premium Decorative Painting</title>
-  <meta name="description" content="Discover ArtLux's story - luxury decorative painting and artistic finishes by Manal Yehya with 30+ years of international experience.">
+  <meta name="description" content="Discover ArtLux's story - luxury decorative painting and artistic finishes by Manal Yehya with 30+ years of international experience." />
+  <link rel="canonical" href="https://artluxdesign.com/about.html" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://artluxdesign.com/about.html" />
+  <meta property="og:title"       content="About · ArtLux | Premium Decorative Painting" />
+  <meta property="og:description" content="Meet Manal Yehya — Lebanese master artist with 30+ years of experience creating bespoke murals and decorative finishes across the Middle East and Europe." />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/manal.jpg" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -309,6 +316,23 @@
 </script>
 
 <script>
+/* ── Scroll reveal ── */
+(function () {
+  if (!window.IntersectionObserver) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.service-card, .portfolio-card, .about-stat-item, .founder-content, .founder-image, .band__title, .band__sub').forEach(function (el, i) {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+  ['.services-grid', '.portfolio-grid'].forEach(function (sel) {
+    var g = document.querySelector(sel);
+    if (!g) return;
+    Array.from(g.children).forEach(function (c, i) { c.style.transitionDelay = (i * 90) + 'ms'; });
+  });
+}());
+
 var backTop = document.getElementById('backTop');
 if (backTop) {
   window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });

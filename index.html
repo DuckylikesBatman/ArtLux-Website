@@ -6,6 +6,13 @@
 
   <title>ArtLux – Bespoke Murals & Fine Decorative Painting</title>
   <meta name="description" content="ArtLux creates bespoke murals and luxury decorative finishes. Elevate your space with museum-grade materials, insured worldwide shipping, and a refined creative process." />
+  <link rel="canonical" href="https://artluxdesign.com/" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://artluxdesign.com/" />
+  <meta property="og:title"       content="ArtLux – Bespoke Murals & Fine Decorative Painting" />
+  <meta property="og:description" content="Bespoke murals and luxury decorative finishes by Manal Yehya. Transforming spaces across the Middle East and Europe since 2019." />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/painting14-dec.jpeg" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,17 +67,30 @@
           </div>
         </div>
 
-        <div class="hero__grid">
-          <div class="hero__main-img">
-            <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya">
-          </div>
-          <div class="hero__side-images">
-            <div class="hero__side-img">
+        <div class="hero__slideshow" id="heroSlideshow" aria-label="Featured artworks">
+          <div class="hero__slides" id="heroSlides">
+            <div class="hero__slide">
+              <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya">
+            </div>
+            <div class="hero__slide">
               <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – oil painting with gold accents">
             </div>
-            <div class="hero__side-img">
+            <div class="hero__slide">
               <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – abstract oil painting">
             </div>
+          </div>
+
+          <button class="hero__slide-btn hero__slide-prev" aria-label="Previous artwork">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="hero__slide-btn hero__slide-next" aria-label="Next artwork">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <div class="hero__slide-dots" aria-hidden="true">
+            <button class="hero__dot active"></button>
+            <button class="hero__dot"></button>
+            <button class="hero__dot"></button>
           </div>
         </div>
 
@@ -396,6 +416,59 @@
       a.addEventListener('click', function() { if (isOpen) closeMenu(); });
     });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+  }());
+
+  /* ── Hero slideshow ── */
+  (function () {
+    var ss     = document.getElementById('heroSlideshow');
+    var track  = document.getElementById('heroSlides');
+    var dots   = Array.from(document.querySelectorAll('.hero__dot'));
+    var total  = dots.length;
+    var cur    = 0;
+    var timer  = null;
+
+    function goTo(idx) {
+      cur = (idx + total) % total;
+      track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+      dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
+    }
+
+    function start() { timer = setInterval(function () { goTo(cur + 1); }, 4500); }
+    function stop()  { clearInterval(timer); }
+
+    document.querySelector('.hero__slide-prev').addEventListener('click', function () { stop(); goTo(cur - 1); start(); });
+    document.querySelector('.hero__slide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { stop(); goTo(i); start(); }); });
+
+    ss.addEventListener('mouseenter', stop);
+    ss.addEventListener('mouseleave', start);
+
+    var tx = 0;
+    ss.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+    ss.addEventListener('touchend',   function (e) {
+      var dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 44) { stop(); goTo(dx < 0 ? cur + 1 : cur - 1); start(); }
+    }, { passive: true });
+
+    start();
+  }());
+
+  /* ── Scroll reveal ── */
+  (function () {
+    if (!window.IntersectionObserver) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+    document.querySelectorAll('.step, .card, .quote, .bio__content, .bio__media, .section__header, .band__title, .band__sub').forEach(function (el, i) {
+      el.classList.add('reveal');
+      var siblings = el.parentNode.querySelectorAll('.step, .card, .quote');
+      if (siblings.length > 1) {
+        Array.from(siblings).forEach(function (s, idx) { s.style.transitionDelay = (idx * 90) + 'ms'; });
+      }
+      io.observe(el);
+    });
   }());
 
   var backTop = document.getElementById('backTop');
