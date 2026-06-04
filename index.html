@@ -17,9 +17,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="nav.css">
+<link rel="preload" as="image" href="Images/painting14-dec.jpeg">
 
 </head>
 
@@ -70,13 +72,13 @@
         <div class="hero__slideshow" id="heroSlideshow" aria-label="Featured artworks">
           <div class="hero__slides" id="heroSlides">
             <div class="hero__slide">
-              <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya">
+              <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya" fetchpriority="high" decoding="async">
             </div>
             <div class="hero__slide">
-              <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – oil painting with gold accents">
+              <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – oil painting with gold accents" decoding="async">
             </div>
             <div class="hero__slide">
-              <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – abstract oil painting">
+              <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – abstract oil painting" decoding="async">
             </div>
           </div>
 
