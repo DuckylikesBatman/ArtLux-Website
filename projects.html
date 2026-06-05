@@ -545,7 +545,11 @@ function openModal(key) {
       const btn = document.createElement('button');
       btn.className = 'proj-modal__thumb' + (i === 0 ? ' active' : '');
       btn.setAttribute('aria-label', 'View image ' + (i + 1));
-      btn.innerHTML = '<img src="' + img.src + '" alt="" loading="lazy">';
+      const thumbImg = document.createElement('img');
+      thumbImg.src = img.src;
+      thumbImg.alt = '';
+      thumbImg.loading = 'lazy';
+      btn.appendChild(thumbImg);
       btn.addEventListener('click', function() { showImage(i); });
       thumbsEl.appendChild(btn);
     });
