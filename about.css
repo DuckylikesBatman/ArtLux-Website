@@ -1,19 +1,6 @@
 /* ============================================================
    ArtLux – about.css  ·  About Page
    ============================================================ */
-/* ─── ABOUT PAGE HERO BACKGROUND ───────────────────────────── */
-.page-hero__bg {
-  background:
-    radial-gradient(circle at 70% 32%, rgba(190, 112, 54, 0.22), transparent 34%),
-    radial-gradient(circle at 22% 38%, rgba(226, 201, 130, 0.18), transparent 32%),
-    linear-gradient(135deg, #21140c 0%, #120d09 52%, #070605 100%);
-}
-
-.page-hero__bg::after {
-  background:
-    linear-gradient(to bottom, rgba(7, 6, 5, 0.08), rgba(7, 6, 5, 0.72)),
-    linear-gradient(90deg, rgba(7, 6, 5, 0.78), rgba(7, 6, 5, 0.24), rgba(7, 6, 5, 0.72));
-}
 
 /* ─── ABOUT STATS BAND ────────────────────────────────────── */
 .about-stats {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>ArtLux – Bespoke Murals & Fine Decorative Painting</title>
   <meta name="description" content="ArtLux creates bespoke murals and luxury decorative finishes. Elevate your space with museum-grade materials, insured worldwide shipping, and a refined creative process." />
@@ -11,7 +11,7 @@
   <meta property="og:url"         content="https://artluxdesign.com/" />
   <meta property="og:title"       content="ArtLux – Bespoke Murals & Fine Decorative Painting" />
   <meta property="og:description" content="Bespoke murals and luxury decorative finishes by Manal Yehya. Transforming spaces across the Middle East and Europe since 2019." />
-  <meta property="og:image"       content="https://artluxdesign.com/Images/painting14-dec.jpeg" />
+  <meta property="og:image"       content="https://artluxdesign.com/Images/paintings/painting14-dec.jpeg" />
   <meta name="twitter:card"       content="summary_large_image" />
 
   <!-- Fonts -->
@@ -21,13 +21,13 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="nav.css">
-<link rel="preload" as="image" href="Images/painting14-dec.jpeg">
+<link rel="preload" as="image" href="Images/paintings/painting14-dec.jpeg">
 
 </head>
 
 <body> 
   <!-- ======= HEADER ======= -->
-  <header class="al-header al-header--light" role="banner">
+  <header class="al-header" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
@@ -57,45 +57,17 @@
 
     <!-- ======= HERO ======= -->
     <section class="hero" aria-label="ArtLux — Bespoke Art Studio">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="Images/paintings/painting14-dec.jpeg" alt="" fetchpriority="high" decoding="async">
+      </div>
       <div class="hero__content">
-
-        <div class="hero__text">
-          <p class="hero__eyebrow">Fine Art Studio &middot; Beirut</p>
-          <h1 class="hero__title">Discover Your<br><em>Masterpiece</em></h1>
-          <p class="hero__subtitle">Bespoke murals and luxury decorative finishes that transform your space into an enduring work of art.</p>
-          <div class="hero__actions">
-            <a href="gallery.html" class="btn btn--primary">Explore Gallery</a>
-            <a href="commission.html" class="btn btn--outline">Start a Commission <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;transition:transform .25s"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+        <p class="hero__eyebrow">Fine Art Studio &middot; Beirut</p>
+        <h1 class="hero__title">Discover Your<br><em>Masterpiece</em></h1>
+        <p class="hero__subtitle">Bespoke murals and luxury decorative finishes that transform your space into an enduring work of art.</p>
+        <div class="hero__actions">
+          <a href="gallery.html" class="btn btn--hero-light">Explore Gallery</a>
+          <a href="commission.html" class="btn btn--hero-ghost">Start a Commission <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;transition:transform .25s"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
-
-        <div class="hero__slideshow" id="heroSlideshow" aria-label="Featured artworks">
-          <div class="hero__slides" id="heroSlides">
-            <div class="hero__slide">
-              <img src="Images/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya" fetchpriority="high" decoding="async">
-            </div>
-            <div class="hero__slide">
-              <img src="Images/painting10-dec.jpeg" alt="Elegance in Blue – oil painting with gold accents" decoding="async">
-            </div>
-            <div class="hero__slide">
-              <img src="Images/painting11-dec.jpeg" alt="Luminous Gold – abstract oil painting" decoding="async">
-            </div>
-          </div>
-
-          <button class="hero__slide-btn hero__slide-prev" aria-label="Previous artwork">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button class="hero__slide-btn hero__slide-next" aria-label="Next artwork">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-
-          <div class="hero__slide-dots" aria-hidden="true">
-            <button class="hero__dot active"></button>
-            <button class="hero__dot"></button>
-            <button class="hero__dot"></button>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -162,7 +134,7 @@
         <div class="cards">
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Amber Dusk in gallery">
-              <img src="Images/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones" loading="lazy">
+              <img src="Images/paintings/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones" loading="lazy" decoding="async">
             </a>
             <div class="card__body">
               <h3 class="card__title">Amber Dusk</h3>
@@ -172,7 +144,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Serene Composition in gallery">
-              <img src="Images/painting6-dec.jpeg" alt="Serene Composition – soft abstract palette" loading="lazy">
+              <img src="Images/paintings/painting6-dec.jpeg" alt="Serene Composition – soft abstract palette" loading="lazy" decoding="async">
             </a>
             <div class="card__body">
               <h3 class="card__title">Serene Composition</h3>
@@ -182,7 +154,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Vibrant Expression in gallery">
-              <img src="Images/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy">
+              <img src="Images/paintings/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy" decoding="async">
             </a>
             <div class="card__body">
               <h3 class="card__title">Vibrant Expression</h3>
@@ -418,41 +390,6 @@
       a.addEventListener('click', function() { if (isOpen) closeMenu(); });
     });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
-  }());
-
-  /* ── Hero slideshow ── */
-  (function () {
-    var ss     = document.getElementById('heroSlideshow');
-    var track  = document.getElementById('heroSlides');
-    var dots   = Array.from(document.querySelectorAll('.hero__dot'));
-    var total  = dots.length;
-    var cur    = 0;
-    var timer  = null;
-
-    function goTo(idx) {
-      cur = (idx + total) % total;
-      track.style.transform = 'translateX(-' + (cur * 100) + '%)';
-      dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
-    }
-
-    function start() { timer = setInterval(function () { goTo(cur + 1); }, 4500); }
-    function stop()  { clearInterval(timer); }
-
-    document.querySelector('.hero__slide-prev').addEventListener('click', function () { stop(); goTo(cur - 1); start(); });
-    document.querySelector('.hero__slide-next').addEventListener('click', function () { stop(); goTo(cur + 1); start(); });
-    dots.forEach(function (d, i) { d.addEventListener('click', function () { stop(); goTo(i); start(); }); });
-
-    ss.addEventListener('mouseenter', stop);
-    ss.addEventListener('mouseleave', start);
-
-    var tx = 0;
-    ss.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
-    ss.addEventListener('touchend',   function (e) {
-      var dx = e.changedTouches[0].clientX - tx;
-      if (Math.abs(dx) > 44) { stop(); goTo(dx < 0 ? cur + 1 : cur - 1); start(); }
-    }, { passive: true });
-
-    start();
   }());
 
   /* ── Scroll reveal ── */
