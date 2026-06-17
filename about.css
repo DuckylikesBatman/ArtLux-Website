@@ -175,11 +175,13 @@
   color: #111;
   margin-bottom: .75rem;
   letter-spacing: -0.2px;
+  text-align: center;
 }
 .service-card p {
   color: #6a6866;
   font-size: .93rem;
   line-height: 1.74;
+  text-align: center;
 }
 
 /* ─── PORTFOLIO / SIGNATURE PROJECTS ─────────────────────── */
@@ -190,7 +192,7 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3.5rem;
 }
@@ -202,11 +204,12 @@
   border: 1px solid rgba(0,0,0,.07);
   box-shadow: 0 4px 20px rgba(0,0,0,.06);
   transition: transform .34s cubic-bezier(.22,.61,.36,1),
-              box-shadow .34s;
+              box-shadow .34s, border-color .28s;
 }
 .portfolio-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 52px rgba(0,0,0,.13);
+  border-color: rgba(201,163,58,.38);
 }
 
 .portfolio-card img {
@@ -245,6 +248,10 @@
 
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 860px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .founder-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
