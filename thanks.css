@@ -15,15 +15,15 @@
   max-width: 520px;
   width: 100%;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(201, 163, 58, 0.18);
+  border: 1px solid rgba(197, 160, 89, 0.18);
 }
 
 .thanks-icon {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: rgba(201, 163, 58, 0.12);
-  border: 2px solid rgba(201, 163, 58, 0.3);
+  background: rgba(197, 160, 89, 0.12);
+  border: 2px solid rgba(197, 160, 89, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@
 .thanks-icon svg {
   width: 34px;
   height: 34px;
-  stroke: #c9a33a;
+  stroke: #c5a059;
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;

@@ -100,8 +100,8 @@
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, .13), 0 0 0 1px rgba(201, 163, 58, .18);
-  border-color: rgba(201, 163, 58, .45);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .13), 0 0 0 1px rgba(197, 160, 89, .18);
+  border-color: rgba(197, 160, 89, .45);
 }
 
 .project-card__img {
@@ -116,11 +116,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform .55s cubic-bezier(.22, .61, .36, 1);
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .project-card:hover .project-card__img img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .project-card__badge {
@@ -166,7 +166,7 @@
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--gold-600, #a88a2a);
+  color: var(--gold-600, #a07840);
   margin-bottom: .55rem;
 }
 
@@ -197,11 +197,11 @@
 }
 
 .project-card__type {
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .08em;
+  font-size: .65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #9a9795;
+  color: #8c8275;
   flex: 1;
 }
 
@@ -209,9 +209,9 @@
   font-size: .72rem;
   font-weight: 600;
   letter-spacing: .04em;
-  color: var(--gold-600, #a88a2a);
+  color: var(--gold-600, #a07840);
   white-space: nowrap;
-  opacity: 0;
+  opacity: 0.35;
   transition: opacity .25s;
 }
 
@@ -415,7 +415,7 @@
 
 .proj-modal__thumb.active {
   opacity: 1;
-  border-color: var(--gold-500, #c9a33a);
+  border-color: var(--gold-500, #c5a059);
 }
 
 .proj-modal__thumb img {
@@ -462,7 +462,7 @@
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--gold-600, #a88a2a);
+  color: var(--gold-600, #a07840);
   margin-bottom: 1.4rem;
 }
 
@@ -513,7 +513,7 @@
 .projects-stat strong {
   display: block;
   font-family: 'Playfair Display', Georgia, serif;
-  color: var(--gold-500, #c9a33a);
+  color: var(--gold-500, #c5a059);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   line-height: 1;
   font-weight: 900;

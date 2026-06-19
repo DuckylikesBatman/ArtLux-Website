@@ -25,7 +25,7 @@
   bottom: 0; left: 50%;
   transform: translateX(-50%);
   width: 40px; height: 2.5px;
-  background: var(--gold-500, #c9a33a);
+  background: var(--gold-500, #c5a059);
   border-radius: 2px;
 }
 
@@ -40,7 +40,7 @@
   background: #fff;
   border-radius: 10px;
   padding: 2.2rem 1.8rem;
-  border: 1px solid rgba(201,163,58,.18);
+  border: 1px solid rgba(197,160,89,.18);
   box-shadow: 0 2px 16px rgba(0,0,0,.05);
   text-align: center;
   transition: transform .34s cubic-bezier(.22,.61,.36,1),
@@ -49,22 +49,22 @@
 .process-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 32px rgba(0,0,0,.09);
-  border-color: rgba(201,163,58,.4);
+  border-color: rgba(197,160,89,.4);
 }
 
 .process-icon {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 1.5px solid var(--gold-500, #c9a33a);
-  background: rgba(201, 163, 58, 0.08);
+  border: 1.5px solid var(--gold-500, #c5a059);
+  background: rgba(197, 160, 89, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 900;
-  color: var(--gold-600, #a88a2a);
+  color: var(--gold-600, #a07840);
   margin: 0 auto 1.25rem;
   line-height: 1;
   flex-shrink: 0;
@@ -115,7 +115,7 @@
   color: #3a3835;
 }
 
-.required { color: var(--gold-600, #a88a2a); }
+.required { color: var(--gold-600, #a07840); }
 
 .form-group input,
 .form-group select,
@@ -137,8 +137,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--gold-500, #c9a33a);
-  box-shadow: 0 0 0 3px rgba(201,163,58,.12);
+  border-color: var(--gold-500, #c5a059);
+  box-shadow: 0 0 0 3px rgba(197,160,89,.12);
 }
 
 .form-group textarea {
@@ -210,7 +210,7 @@
   overflow: hidden;
   transition: border-color .24s;
 }
-.faq-item:has(details[open]) { border-color: rgba(201,163,58,.3); }
+.faq-item:has(details[open]) { border-color: rgba(197,160,89,.3); }
 
 .faq-item details summary {
   display: flex;
@@ -230,7 +230,7 @@
   flex-shrink: 0;
   font-size: 1.3rem;
   font-weight: 300;
-  color: var(--gold-500, #c9a33a);
+  color: var(--gold-500, #c5a059);
   transition: transform .28s cubic-bezier(.22,.61,.36,1);
   line-height: 1;
 }

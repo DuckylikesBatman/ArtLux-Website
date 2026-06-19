@@ -29,7 +29,7 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.9rem, 2.8vw, 2.5rem);
   font-weight: 700;
-  color: #c9a33a;
+  color: #c5a059;
   line-height: 1;
   display: block;
 }
@@ -81,7 +81,7 @@
   position: absolute;
   bottom: 0; left: 0;
   width: 40px; height: 2.5px;
-  background: var(--gold-500, #c9a33a);
+  background: var(--gold-500, #c5a059);
   border-radius: 2px;
 }
 
@@ -125,7 +125,7 @@
   position: absolute;
   bottom: 0; left: 0;
   width: 40px; height: 2.5px;
-  background: var(--gold-500, #c9a33a);
+  background: var(--gold-500, #c5a059);
   border-radius: 2px;
 }
 .section-title.center { text-align: center; }
@@ -142,7 +142,7 @@
   background: #fff;
   border-radius: 10px;
   padding: 2.5rem 2rem;
-  border: 1px solid rgba(201,163,58,.18);
+  border: 1px solid rgba(197,160,89,.18);
   box-shadow: 0 2px 16px rgba(0,0,0,.05);
   transition: transform .34s cubic-bezier(.22,.61,.36,1),
               box-shadow .34s, border-color .34s;
@@ -150,14 +150,14 @@
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 36px rgba(0,0,0,.1);
-  border-color: rgba(201,163,58,.4);
+  border-color: rgba(197,160,89,.4);
 }
 
 .service-icon {
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: rgba(201,163,58,.1);
-  border: 1.5px solid rgba(201,163,58,.25);
+  background: rgba(197,160,89,.1);
+  border: 1.5px solid rgba(197,160,89,.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +165,7 @@
 }
 .service-icon svg {
   width: 22px; height: 22px;
-  stroke: #c9a33a;
+  stroke: #c5a059;
 }
 
 .service-card h3 {
@@ -209,7 +209,7 @@
 .portfolio-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 52px rgba(0,0,0,.13);
-  border-color: rgba(201,163,58,.38);
+  border-color: rgba(197,160,89,.38);
 }
 
 .portfolio-card img {
@@ -217,7 +217,7 @@
   aspect-ratio: 4/3;
   object-fit: cover;
   display: block;
-  transition: transform .55s cubic-bezier(.22,.61,.36,1);
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .portfolio-card:hover img { transform: scale(1.04); }
 
@@ -233,11 +233,11 @@
   letter-spacing: -0.1px;
 }
 .card-content .location {
-  font-size: .78rem;
+  font-size: .68rem;
   font-weight: 600;
-  letter-spacing: .1em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-600, #a88a2a);
+  color: var(--gold-600, #a07840);
   margin-bottom: .65rem;
 }
 .card-content p:last-child {

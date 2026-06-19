@@ -55,16 +55,16 @@
 }
 
 .filter-pill:hover {
-  background: rgba(201, 163, 58, 0.08);
-  border-color: rgba(201, 163, 58, 0.45);
-  color: var(--gold-700, #8a7022);
+  background: rgba(197, 160, 89, 0.08);
+  border-color: rgba(197, 160, 89, 0.45);
+  color: var(--gold-700, #856232);
 }
 
 .filter-pill.active {
-  background: var(--gold-500, #c9a33a);
-  border-color: var(--gold-500, #c9a33a);
+  background: var(--gold-500, #c5a059);
+  border-color: var(--gold-500, #c5a059);
   color: #111110;
-  box-shadow: 0 4px 14px rgba(201, 163, 58, 0.28);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.28);
 }
 
 .gallery-count {
@@ -107,7 +107,7 @@
   width: 100%;
   height: auto;
   display: block;
-  transition: transform .55s cubic-bezier(.22,.61,.36,1);
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .gallery-item:hover .gallery-item__inner img {
@@ -145,9 +145,12 @@
 }
 
 .gallery-item__med {
-  font-size: .75rem;
-  color: rgba(255,255,255,.58);
-  font-style: italic;
+  font-size: .65rem;
+  color: rgba(255,255,255,.52);
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
 }
 
 /* Commissioned badge */
@@ -157,7 +160,7 @@
   top: .8rem;
   right: .8rem;
   z-index: 10;
-  background: rgba(201,163,58,.92);
+  background: rgba(197,160,89,.92);
   color: #fff;
   font-size: .62rem;
   font-weight: 700;
@@ -189,9 +192,9 @@
 .lightbox__bd {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0,0,0,.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
 }
 
