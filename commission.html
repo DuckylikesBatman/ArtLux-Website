@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +22,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="commission.css">
 </head>
 <body>
@@ -30,13 +31,18 @@
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
-        <a class="al-nav__link" href="index.html">Home</a>
-        <a class="al-nav__link" href="gallery.html">Gallery</a>
-        <a class="al-nav__link" href="projects.html">Projects</a>
-        <a class="al-nav__link" href="about.html">About</a>
-        <a class="al-nav__link" href="contact.html">Contact</a>
-        <a class="al-nav__link al-nav__cta active" href="commission.html">Commission</a>
+        <a class="al-nav__link" href="index.html"        data-i18n="nav.home">Home</a>
+        <a class="al-nav__link" href="gallery.html"      data-i18n="nav.gallery">Gallery</a>
+        <a class="al-nav__link" href="projects.html"     data-i18n="nav.projects">Projects</a>
+        <a class="al-nav__link" href="about.html"        data-i18n="nav.about">About</a>
+        <a class="al-nav__link" href="contact.html"      data-i18n="nav.contact">Contact</a>
+        <a class="al-nav__link al-nav__cta active" href="commission.html" data-i18n="nav.commission">Commission</a>
       </nav>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+      </div>
       <button class="al-burger" id="alBurger" type="button"
               aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
         <span></span><span></span><span></span>
@@ -44,12 +50,17 @@
     </div>
   </header>
   <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-    <a class="al-mobile-nav__link" href="index.html">Home</a>
-    <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
-    <a class="al-mobile-nav__link" href="projects.html">Projects</a>
-    <a class="al-mobile-nav__link" href="about.html">About</a>
-    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
-    <a class="al-mobile-nav__link al-mobile-nav__cta active" href="commission.html">Commission</a>
+    <a class="al-mobile-nav__link" href="index.html"       data-i18n="nav.home">Home</a>
+    <a class="al-mobile-nav__link" href="gallery.html"     data-i18n="nav.gallery">Gallery</a>
+    <a class="al-mobile-nav__link" href="projects.html"    data-i18n="nav.projects">Projects</a>
+    <a class="al-mobile-nav__link" href="about.html"       data-i18n="nav.about">About</a>
+    <a class="al-mobile-nav__link" href="contact.html"     data-i18n="nav.contact">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta active" href="commission.html" data-i18n="nav.commission">Commission</a>
+    <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+      <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+    </div>
   </nav>
 
   <!-- ========== MAIN CONTENT ========== -->
@@ -58,108 +69,292 @@
     <section class="page-hero" aria-labelledby="hero-heading">
       <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__content">
-        <p class="page-hero__eye">ArtLux Studio</p>
-        <h1 id="hero-heading" class="page-hero__title">Commission Your<br><em>Masterpiece</em></h1>
-        <p class="page-hero__sub">Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.</p>
+        <p class="page-hero__eye" data-i18n="commission.hero.eye">ArtLux Studio</p>
+        <h1 id="hero-heading" class="page-hero__title" data-i18n="commission.hero.title">Commission Your<br><em>Masterpiece</em></h1>
+        <p class="page-hero__sub" data-i18n="commission.hero.sub">Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.</p>
       </div>
     </section>
 
     <!-- Process Section -->
     <section class="section process-section" aria-labelledby="process-heading">
       <div class="container">
-        <h2 id="process-heading" class="section-title">Our Process</h2>
+        <h2 id="process-heading" class="section-title" data-i18n="commission.process.title">Our Process</h2>
         <div class="process-grid">
           <div class="process-card">
             <div class="process-icon">01</div>
-            <h3>Initial Consultation</h3>
-            <p>We discuss your vision, space requirements, and artistic preferences to establish the creative direction.</p>
+            <h3 data-i18n="commission.p1.title">Initial Consultation</h3>
+            <p data-i18n="commission.p1.text">We discuss your vision, space requirements, and artistic preferences to establish the creative direction.</p>
           </div>
           <div class="process-card">
             <div class="process-icon">02</div>
-            <h3>Concept Development</h3>
-            <p>Preliminary sketches and color studies are prepared for your review and approval.</p>
+            <h3 data-i18n="commission.p2.title">Concept Development</h3>
+            <p data-i18n="commission.p2.text">Preliminary sketches and color studies are prepared for your review and approval.</p>
           </div>
           <div class="process-card">
             <div class="process-icon">03</div>
-            <h3>Artwork Creation</h3>
-            <p>Your vision comes to life using premium archival materials and expert techniques.</p>
+            <h3 data-i18n="commission.p3.title">Artwork Creation</h3>
+            <p data-i18n="commission.p3.text">Your vision comes to life using premium archival materials and expert techniques.</p>
           </div>
           <div class="process-card">
             <div class="process-icon">04</div>
-            <h3>Final Delivery</h3>
-            <p>Your completed artwork is carefully packaged and shipped with full insurance coverage.</p>
+            <h3 data-i18n="commission.p4.title">Final Delivery</h3>
+            <p data-i18n="commission.p4.text">Your completed artwork is carefully packaged and shipped with full insurance coverage.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Commission Form -->
+    <!-- ===== COMMISSION CONFIGURATOR ===== -->
     <section id="request-form" class="section form-section" aria-labelledby="form-heading">
       <div class="container">
-        <h2 id="form-heading" class="section-title">Commission Request</h2>
-        
-        <!-- Formspree Form - Replace YOUR_FORM_ID with your actual Formspree form ID -->
-        <form class="request-form" id="commissionForm" action="https://formspree.io/f/mdkwdqga" method="POST">
+        <h2 id="form-heading" class="section-title" data-i18n="commission.form.title">Commission Request</h2>
+
+        <!-- Step indicator -->
+        <div class="cfg-steps" role="group" aria-label="Commission steps">
+          <div class="cfg-step active" id="cfgStepDot1">
+            <span class="cfg-step__num" aria-hidden="true">1</span>
+            <span class="cfg-step__label" data-i18n="cfg.step1.label">Type</span>
+          </div>
+          <div class="cfg-step-line" aria-hidden="true"></div>
+          <div class="cfg-step" id="cfgStepDot2">
+            <span class="cfg-step__num" aria-hidden="true">2</span>
+            <span class="cfg-step__label" data-i18n="cfg.step2.label">Dimensions</span>
+          </div>
+          <div class="cfg-step-line" aria-hidden="true"></div>
+          <div class="cfg-step" id="cfgStepDot3">
+            <span class="cfg-step__num" aria-hidden="true">3</span>
+            <span class="cfg-step__label" data-i18n="cfg.step3.label">Details</span>
+          </div>
+        </div>
+
+        <form id="commissionForm" class="cfg-form" action="https://formspree.io/f/mdkwdqga" method="POST">
           <input type="hidden" name="_subject" value="New Commission Request - ArtLux">
 
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="name">Full Name <span class="required">*</span></label>
-              <input type="text" id="name" name="name" required>
+          <!-- ── STEP 1: TYPE ── -->
+          <div class="cfg-panel active" id="cfgPanel1">
+            <p class="cfg-hint" data-i18n="cfg.hint1">What type of artwork are you commissioning?</p>
+
+            <div class="type-grid">
+
+              <!-- Mural -->
+              <label class="type-card">
+                <input type="radio" name="artwork-type" value="Mural" required>
+                <div class="type-card__inner">
+                  <span class="type-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M15.2 6.8l2-2a1 1 0 011.4 0l.6.6a1 1 0 010 1.4l-2 2M15.2 6.8L5 17a3 3 0 00-.8 2.8l.8-.8M15.2 6.8l2 2"/>
+                      <path d="M3 21h3"/>
+                    </svg>
+                  </span>
+                  <strong class="type-card__name" data-i18n="cfg.type.mural">Mural</strong>
+                  <span class="type-card__desc" data-i18n="cfg.type.mural.desc">Large-scale wall paintings for residential or commercial spaces</span>
+                </div>
+              </label>
+
+              <!-- Decorative Finish -->
+              <label class="type-card">
+                <input type="radio" name="artwork-type" value="Decorative Finish">
+                <div class="type-card__inner">
+                  <span class="type-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 3v2M12 19v2M3 12h2M19 12h2M6.2 6.2l1.4 1.4M16.4 16.4l1.4 1.4M16.4 7.6l-1.4 1.4M7.6 16.4l-1.4 1.4"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                  </span>
+                  <strong class="type-card__name" data-i18n="cfg.type.decorative">Decorative Finish</strong>
+                  <span class="type-card__desc" data-i18n="cfg.type.decorative.desc">Venetian plaster, faux marble, and ornamental wall treatments</span>
+                </div>
+              </label>
+
+              <!-- Canvas Painting -->
+              <label class="type-card">
+                <input type="radio" name="artwork-type" value="Canvas Painting">
+                <div class="type-card__inner">
+                  <span class="type-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2"/>
+                      <rect x="7" y="7" width="10" height="10" rx="1"/>
+                      <path d="M7 12l3 3 7-7"/>
+                    </svg>
+                  </span>
+                  <strong class="type-card__name" data-i18n="cfg.type.canvas">Canvas Painting</strong>
+                  <span class="type-card__desc" data-i18n="cfg.type.canvas.desc">Original oil or acrylic paintings on stretched canvas</span>
+                </div>
+              </label>
+
+              <!-- Patina -->
+              <label class="type-card">
+                <input type="radio" name="artwork-type" value="Patina">
+                <div class="type-card__inner">
+                  <span class="type-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="3"/>
+                      <path d="M8 8a6 6 0 000 8M16 8a6 6 0 010 8"/>
+                      <path d="M5 5a10 10 0 000 14M19 5a10 10 0 010 14"/>
+                    </svg>
+                  </span>
+                  <strong class="type-card__name" data-i18n="cfg.type.patina">Patina</strong>
+                  <span class="type-card__desc" data-i18n="cfg.type.patina.desc">Aged metal and oxidized surface finishes</span>
+                </div>
+              </label>
+
+            </div><!-- /type-grid -->
+
+            <div class="cfg-nav">
+              <span></span>
+              <button type="button" class="cfg-btn cfg-btn--next" id="cfgNext1">
+                <span data-i18n="cfg.btn.next1">Next: Dimensions</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
             </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address <span class="required">*</span></label>
-              <input type="email" id="email" name="email" required>
+          </div><!-- /cfgPanel1 -->
+
+          <!-- ── STEP 2: DIMENSIONS ── -->
+          <div class="cfg-panel" id="cfgPanel2" hidden>
+            <p class="cfg-hint" data-i18n="cfg.hint2">Tell us about the size and scope of your project.</p>
+
+            <div class="dim-grid">
+
+              <div class="form-group">
+                <label for="cfgWidth">
+                  <span data-i18n="cfg.label.width">Width (cm)</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="number" id="cfgWidth" name="width-cm" min="10" max="3000" placeholder="e.g. 200">
+              </div>
+
+              <div class="form-group">
+                <label for="cfgHeight">
+                  <span data-i18n="cfg.label.height">Height (cm)</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="number" id="cfgHeight" name="height-cm" min="10" max="3000" placeholder="e.g. 150">
+              </div>
+
+              <div class="form-group">
+                <label for="cfgSurface">
+                  <span data-i18n="cfg.label.surface">Surface</span>
+                </label>
+                <select id="cfgSurface" name="surface">
+                  <option value="">Select surface</option>
+                  <option value="Interior wall">Interior wall</option>
+                  <option value="Exterior wall">Exterior wall</option>
+                  <option value="Canvas (stretched)">Canvas (stretched)</option>
+                  <option value="Wood panel">Wood panel</option>
+                  <option value="Ceiling">Ceiling</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cfgBudget">
+                  <span data-i18n="cfg.label.budget">Budget Range</span>
+                </label>
+                <select id="cfgBudget" name="budget">
+                  <option value="">Select range</option>
+                  <option value="Under $1,000">Under $1,000</option>
+                  <option value="$1,000 – $3,000">$1,000 – $3,000</option>
+                  <option value="$3,000 – $7,000">$3,000 – $7,000</option>
+                  <option value="$7,000 – $15,000">$7,000 – $15,000</option>
+                  <option value="$15,000+">$15,000+</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="cfgTimeline">
+                  <span data-i18n="cfg.label.timeline">Desired Timeline</span>
+                </label>
+                <select id="cfgTimeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="Flexible">Flexible</option>
+                  <option value="1–2 months">1–2 months</option>
+                  <option value="3–4 months">3–4 months</option>
+                  <option value="Urgent (discuss)">Urgent (discuss)</option>
+                </select>
+              </div>
+
+            </div><!-- /dim-grid -->
+
+            <div class="cfg-nav">
+              <button type="button" class="cfg-btn cfg-btn--back" id="cfgBack2">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+                <span data-i18n="cfg.btn.back">Back</span>
+              </button>
+              <button type="button" class="cfg-btn cfg-btn--next" id="cfgNext2">
+                <span data-i18n="cfg.btn.next2">Next: Details</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
             </div>
-            
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone">
+          </div><!-- /cfgPanel2 -->
+
+          <!-- ── STEP 3: DETAILS ── -->
+          <div class="cfg-panel" id="cfgPanel3" hidden>
+            <p class="cfg-hint" data-i18n="cfg.hint3">Share your vision and contact details.</p>
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="cfgName">
+                  <span data-i18n="cfg.label.name">Full Name</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="cfgName" name="name" autocomplete="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cfgEmail">
+                  <span data-i18n="cfg.label.email">Email Address</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="cfgEmail" name="email" autocomplete="email" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="cfgPhone">
+                  <span data-i18n="cfg.label.phone">Phone / WhatsApp</span>
+                </label>
+                <input type="tel" id="cfgPhone" name="phone" autocomplete="tel">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="cfgDesc">
+                  <span data-i18n="cfg.label.desc">Project Description</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="cfgDesc" name="description" rows="5" placeholder="Describe your vision — colors, style, mood, references, or anything that inspires you..." required></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label>
+                  <span data-i18n="cfg.label.photos">Space Photos</span>
+                  <span class="form-hint" data-i18n="cfg.photos.hint">optional — helps us visualize</span>
+                </label>
+                <div class="upload-zone" id="uploadZone" role="button" tabindex="0" aria-label="Upload space photos">
+                  <svg class="upload-zone__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                  </svg>
+                  <p class="upload-zone__text">
+                    <span data-i18n="cfg.upload.text">Drag & drop photos here, or</span>&#32;<label for="cfgPhotos" class="upload-zone__browse" data-i18n="cfg.upload.browse">browse</label>
+                  </p>
+                  <p class="upload-zone__sub" data-i18n="cfg.upload.sub">JPG, PNG, PDF · Max 10 MB per file</p>
+                  <input id="cfgPhotos" type="file" name="photos" multiple accept="image/*,.pdf" hidden aria-hidden="true">
+                  <div id="uploadPreview" class="upload-preview" role="list" aria-label="Selected files"></div>
+                </div>
+              </div>
+
+            </div><!-- /form-grid -->
+
+            <div class="cfg-nav">
+              <button type="button" class="cfg-btn cfg-btn--back" id="cfgBack3">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+                <span data-i18n="cfg.btn.back">Back</span>
+              </button>
+              <button type="submit" class="submit-button" id="cfgSubmit">
+                <span data-i18n="cfg.btn.submit">Submit Commission Request</span>
+              </button>
             </div>
-            
-            <div class="form-group">
-              <label for="artwork-type">Artwork Type <span class="required">*</span></label>
-              <select id="artwork-type" name="artwork-type" required>
-                <option value="">Select an option</option>
-                <option value="painting">Painting</option>
-                <option value="portrait">Portrait</option>
-                <option value="mural">Mural</option>
-                <option value="decorative-finish">Decorative Finish</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div class="form-group full-width">
-              <label for="description">Project Description <span class="required">*</span></label>
-              <textarea id="description" name="description" placeholder="Tell us about your vision, including theme, colors, dimensions, and the space where the artwork will be displayed..." required></textarea>
-            </div>
-            
-            <div class="form-group">
-              <label for="budget">Budget Range</label>
-              <select id="budget" name="budget">
-                <option value="">Select an option</option>
-                <option value="500-1000">$500 – $1,000</option>
-                <option value="1000-3000">$1,000 – $3,000</option>
-                <option value="3000-5000">$3,000 – $5,000</option>
-                <option value="5000+">$5,000+</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="timeline">Desired Timeline</label>
-              <select id="timeline" name="timeline">
-                <option value="">Select an option</option>
-                <option value="flexible">Flexible</option>
-                <option value="1-2 months">1-2 months</option>
-                <option value="3-4 months">3-4 months</option>
-                <option value="urgent">Urgent (discuss)</option>
-              </select>
-            </div>
-          </div>
-          
-          <button type="submit" class="submit-button">Submit Commission Request</button>
-          <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+            <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+          </div><!-- /cfgPanel3 -->
+
         </form>
       </div>
     </section>
@@ -167,21 +362,21 @@
     <!-- FAQ Section -->
     <section class="section faq-section" aria-labelledby="faq-heading">
       <div class="container">
-        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
-        
+        <h2 id="faq-heading" class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
         <div class="faq-container">
+
           <article class="faq-item">
             <details>
-              <summary>How long does a commission typically take?</summary>
+              <summary data-i18n="faq.q1">How long does a commission typically take?</summary>
               <div class="faq-content">
-                <p>Most commissions take 4–6 weeks from concept approval to completion. Larger or complex works may require 8–10 weeks. We'll provide a detailed timeline during our initial consultation.</p>
+                <p data-i18n="faq.a1">Most commissions take 4–6 weeks from concept approval to completion. Larger or complex works may require 8–10 weeks. We'll provide a detailed timeline during our initial consultation.</p>
               </div>
             </details>
           </article>
-          
+
           <article class="faq-item">
             <details>
-              <summary>What materials do you use?</summary>
+              <summary data-i18n="faq.q2">What materials do you use?</summary>
               <div class="faq-content">
                 <p>We use only archival-quality materials to ensure your artwork stands the test of time:</p>
                 <ul>
@@ -193,24 +388,25 @@
               </div>
             </details>
           </article>
-          
+
           <article class="faq-item">
             <details>
-              <summary>Do you offer international shipping?</summary>
+              <summary data-i18n="faq.q3">Do you offer international shipping?</summary>
               <div class="faq-content">
-                <p>Yes, we offer worldwide shipping with professional custom crating, full insurance coverage, and tracked delivery to ensure your artwork arrives safely.</p>
+                <p data-i18n="faq.a3">Yes, we offer worldwide shipping with professional custom crating, full insurance coverage, and tracked delivery to ensure your artwork arrives safely.</p>
               </div>
             </details>
           </article>
-          
+
           <article class="faq-item">
             <details>
-              <summary>Can I see progress updates?</summary>
+              <summary data-i18n="faq.q4">Can I see progress updates?</summary>
               <div class="faq-content">
-                <p>Absolutely! We provide regular progress photos and updates throughout the creation process. We want you to be involved and excited as your vision comes to life.</p>
+                <p data-i18n="faq.a4">Absolutely! We provide regular progress photos and updates throughout the creation process. We want you to be involved and excited as your vision comes to life.</p>
               </div>
             </details>
           </article>
+
         </div>
       </div>
     </section>
@@ -221,23 +417,23 @@
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+        <p data-i18n="footer.tagline">Elevating spaces with premium mural art and fine finishes since 2019.</p>
       </div>
 
       <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quicklinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html"       data-i18n="nav.home">Home</a></li>
+          <li><a href="gallery.html"     data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="projects.html"    data-i18n="nav.projects">Projects</a></li>
+          <li><a href="commission.html"  data-i18n="nav.commission">Commission</a></li>
+          <li><a href="about.html"       data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html"     data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
+        <h3 data-i18n="footer.legal">Legal</h3>
         <ul>
           <li><a href="ToS.html">Terms of Service</a></li>
           <li><a href="return.html">Return Policy</a></li>
@@ -246,8 +442,8 @@
       </nav>
 
       <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
+        <h3 data-i18n="footer.contact-us">Contact Us</h3>
+        <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+9613683127">+961 3 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
         <div class="social-links" aria-label="Follow us">
@@ -267,7 +463,6 @@
         </div>
       </address>
     </div>
-
     <div class="copyright">
       &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
     </div>
@@ -285,102 +480,207 @@
   </button>
 
   <script>
-    // Form handling with Formspree
-    document.getElementById('commissionForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formStatus = document.getElementById('formStatus');
-      const formData = new FormData(this);
-      
-      formStatus.textContent = 'Sending your request...';
-      formStatus.className = 'form-status';
-      
-      // Formspree submission
-      fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          formStatus.textContent = 'Thank you! Your commission request has been received. We will contact you within 24-48 hours.';
-          formStatus.className = 'form-status form-success';
-          this.reset();
-        } else {
-          throw new Error('Form submission failed');
-        }
-      }).catch(error => {
-        formStatus.textContent = 'Sorry, there was an error sending your message. Please email us directly at artluxdesign@outlook.com';
-        formStatus.className = 'form-status form-error';
-      });
-    });
+  /* ── Header / burger ── */
+  (function () {
+    var header = document.querySelector('.al-header');
+    var burger = document.getElementById('alBurger');
+    var mobile = document.getElementById('alMobileNav');
+    var isOpen = false;
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
+    function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    (function () {
-      var header = document.querySelector('.al-header');
-      var burger = document.getElementById('alBurger');
-      var mobile = document.getElementById('alMobileNav');
-      var isOpen = false;
-
-      function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-
-      function openMenu() {
-        isOpen = true;
-        mobile.hidden = false;
-        burger.setAttribute('aria-expanded', 'true');
-        burger.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        requestAnimationFrame(function() { mobile.classList.add('visible'); });
-      }
-      function closeMenu() {
-        isOpen = false;
-        mobile.classList.remove('visible');
-        burger.setAttribute('aria-expanded', 'false');
-        burger.classList.remove('open');
-        document.body.style.overflow = '';
-        setTimeout(function() { mobile.hidden = true; }, 360);
-      }
-
-      if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
-      if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
-        a.addEventListener('click', function() { if (isOpen) closeMenu(); });
-      });
-      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
-    }());
-
-    /* ── Scroll reveal ── */
-    (function () {
-      if (!window.IntersectionObserver) return;
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-      }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-      document.querySelectorAll('.process-card, .faq-item, .request-form').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-      var pg = document.querySelector('.process-grid');
-      if (pg) Array.from(pg.children).forEach(function (c, i) { c.style.transitionDelay = (i * 90) + 'ms'; });
-    }());
-
-    var backTop = document.getElementById('backTop');
-    if (backTop) {
-      window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
-      backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    function openMenu() {
+      isOpen = true; mobile.hidden = false;
+      burger.setAttribute('aria-expanded', 'true'); burger.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(function () { mobile.classList.add('visible'); });
     }
-    document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+    function closeMenu() {
+      isOpen = false; mobile.classList.remove('visible');
+      burger.setAttribute('aria-expanded', 'false'); burger.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function () { mobile.hidden = true; }, 360);
+    }
+
+    if (burger) burger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
+    if (mobile) mobile.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { if (isOpen) closeMenu(); });
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
+  }());
+
+  /* ── Multi-step configurator ── */
+  (function () {
+    var panels = ['cfgPanel1', 'cfgPanel2', 'cfgPanel3'].map(function (id) { return document.getElementById(id); });
+    var dots   = ['cfgStepDot1', 'cfgStepDot2', 'cfgStepDot3'].map(function (id) { return document.getElementById(id); });
+    var lines  = document.querySelectorAll('.cfg-step-line');
+    var current = 0;
+
+    function goTo(idx) {
+      panels[current].classList.remove('active');
+      panels[current].hidden = true;
+      current = idx;
+      panels[current].hidden = false;
+      requestAnimationFrame(function () { panels[current].classList.add('active'); });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('active', i === current);
+        d.classList.toggle('done', i < current);
+      });
+      lines.forEach(function (l, i) { l.classList.toggle('done', i < current); });
+      var sec = document.getElementById('request-form');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* Step 1 → 2 */
+    document.getElementById('cfgNext1').addEventListener('click', function () {
+      var sel = document.querySelector('input[name="artwork-type"]:checked');
+      if (!sel) {
+        var grid = document.querySelector('.type-grid');
+        if (grid) { grid.classList.add('shake'); setTimeout(function () { grid.classList.remove('shake'); }, 500); }
+        return;
+      }
+      goTo(1);
+    });
+
+    /* Step 2 → 3 */
+    document.getElementById('cfgNext2').addEventListener('click', function () {
+      var w = document.getElementById('cfgWidth');
+      var h = document.getElementById('cfgHeight');
+      var ok = true;
+      [w, h].forEach(function (el) { if (!el.value) { el.classList.add('input-error'); ok = false; } });
+      if (!ok) return;
+      goTo(2);
+    });
+
+    document.getElementById('cfgBack2').addEventListener('click', function () { goTo(0); });
+    document.getElementById('cfgBack3').addEventListener('click', function () { goTo(1); });
+
+    /* Clear error on input */
+    ['cfgWidth', 'cfgHeight'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('input', function () { this.classList.remove('input-error'); });
+    });
+
+    /* Type card selection */
+    document.querySelectorAll('.type-card input[type="radio"]').forEach(function (r) {
+      r.addEventListener('change', function () {
+        document.querySelectorAll('.type-card').forEach(function (c) { c.classList.remove('selected'); });
+        this.closest('.type-card').classList.add('selected');
+      });
+    });
+
+    /* File upload */
+    var zone    = document.getElementById('uploadZone');
+    var fileIn  = document.getElementById('cfgPhotos');
+    var preview = document.getElementById('uploadPreview');
+
+    if (zone && fileIn) {
+      zone.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('upload-zone__browse')) fileIn.click();
+      });
+      zone.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileIn.click(); }
+      });
+      fileIn.addEventListener('change', function () { renderFiles(this.files); });
+      zone.addEventListener('dragover', function (e) { e.preventDefault(); zone.classList.add('drag-over'); });
+      zone.addEventListener('dragleave', function () { zone.classList.remove('drag-over'); });
+      zone.addEventListener('drop', function (e) {
+        e.preventDefault(); zone.classList.remove('drag-over');
+        renderFiles(e.dataTransfer.files);
+      });
+
+      function renderFiles(files) {
+        if (!preview) return;
+        preview.innerHTML = '';
+        Array.from(files).forEach(function (f) {
+          var item = document.createElement('div');
+          item.className = 'upload-file'; item.setAttribute('role', 'listitem');
+          if (f.type.startsWith('image/')) {
+            var img = document.createElement('img');
+            img.src = URL.createObjectURL(f); img.alt = f.name;
+            item.appendChild(img);
+          } else {
+            var ic = document.createElement('span');
+            ic.className = 'upload-file__icon'; ic.textContent = '📄';
+            item.appendChild(ic);
+          }
+          var nm = document.createElement('span');
+          nm.className = 'upload-file__name';
+          nm.textContent = f.name.length > 18 ? f.name.slice(0, 16) + '…' : f.name;
+          item.appendChild(nm);
+          preview.appendChild(item);
+        });
+        if (files.length) zone.classList.add('has-files');
+      }
+    }
+
+    /* Form submit */
+    var form = document.getElementById('commissionForm');
+    var statusEl = document.getElementById('formStatus');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var nameEl = form.querySelector('[name="name"]');
+        var emailEl = form.querySelector('[name="email"]');
+        var descEl  = form.querySelector('[name="description"]');
+        var ok = true;
+        [nameEl, emailEl, descEl].forEach(function (el) {
+          if (!el || !el.value.trim()) { if (el) el.classList.add('input-error'); ok = false; }
+        });
+        if (!ok) return;
+
+        var btn = document.getElementById('cfgSubmit');
+        if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+        statusEl.textContent = ''; statusEl.className = 'form-status';
+
+        fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } })
+          .then(function (res) {
+            if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+            if (res.ok) {
+              statusEl.textContent = 'Thank you! Your request has been received. We'll contact you within 24–48 hours.';
+              statusEl.className = 'form-status form-success';
+              form.reset();
+              if (preview) preview.innerHTML = '';
+              if (zone) zone.classList.remove('has-files');
+              goTo(0);
+            } else { throw new Error(); }
+          })
+          .catch(function () {
+            if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+            statusEl.textContent = 'Something went wrong. Please email us at artluxdesign@outlook.com';
+            statusEl.className = 'form-status form-error';
+          });
+      });
+
+      form.querySelectorAll('input, textarea').forEach(function (el) {
+        el.addEventListener('input', function () { this.classList.remove('input-error'); });
+      });
+    }
+  }());
+
+  /* ── Scroll reveal ── */
+  (function () {
+    if (!window.IntersectionObserver) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+    document.querySelectorAll('.process-card, .faq-item').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+    var pg = document.querySelector('.process-grid');
+    if (pg) Array.from(pg.children).forEach(function (c, i) { c.style.transitionDelay = (i * 90) + 'ms'; });
+  }());
+
+  /* ── Back to top ── */
+  var backTop = document.getElementById('backTop');
+  if (backTop) {
+    window.addEventListener('scroll', function () { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
+    backTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+  document.querySelectorAll('.yr').forEach(function (e) { e.textContent = new Date().getFullYear(); });
   </script>
+
+  <script src="lang.js" defer></script>
 </body>
 </html>

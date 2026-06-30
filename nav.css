@@ -659,20 +659,113 @@
     .al-header__main {
       padding: 0 16px;
     }
-  
+
     .al-logo {
       font-size: 1.65rem;
     }
-  
+
     .al-logo::after {
       display: none;
     }
-  
+
     .footer-container {
       grid-template-columns: 1fr;
     }
-  
+
     .artlux-footer {
       padding-top: 4rem;
+    }
+  }
+
+  /* ============================================================
+     LANGUAGE SWITCHER
+     ============================================================ */
+
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 6px;
+    flex-shrink: 0;
+  }
+
+  .lang-btn {
+    background: none;
+    border: none;
+    padding: 5px 7px;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(247, 240, 230, 0.42);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.22s var(--al-ease), background 0.22s var(--al-ease);
+    line-height: 1;
+  }
+
+  .lang-btn.active {
+    color: var(--al-gold-light);
+  }
+
+  .lang-btn:hover {
+    color: var(--al-cream);
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .lang-sep {
+    color: rgba(247, 240, 230, 0.18);
+    font-size: 0.6rem;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Light header adjustments */
+  .al-header--light:not(.scrolled) .lang-btn {
+    color: rgba(15, 13, 11, 0.38);
+  }
+
+  .al-header--light:not(.scrolled) .lang-btn.active {
+    color: var(--al-gold-dark);
+  }
+
+  .al-header--light:not(.scrolled) .lang-btn:hover {
+    color: var(--al-ink);
+    background: rgba(15, 13, 11, 0.06);
+  }
+
+  .al-header--light:not(.scrolled) .lang-sep {
+    color: rgba(15, 13, 11, 0.18);
+  }
+
+  /* Mobile nav lang switch */
+  .lang-switch--mobile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(200, 164, 93, 0.2);
+    border-radius: 999px;
+  }
+
+  .lang-switch--mobile .lang-btn {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    color: rgba(247, 240, 230, 0.55);
+  }
+
+  .lang-switch--mobile .lang-btn.active {
+    color: var(--al-gold-light);
+  }
+
+  .lang-switch--mobile .lang-sep {
+    color: rgba(247, 240, 230, 0.25);
+  }
+
+  @media (max-width: 900px) {
+    .lang-switch:not(.lang-switch--mobile) {
+      display: none;
     }
   }
