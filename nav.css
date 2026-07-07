@@ -33,7 +33,25 @@
       border-color 0.35s var(--al-ease),
       backdrop-filter 0.35s var(--al-ease);
   }
-  
+
+  /* Guarantees nav text stays readable over photo heroes regardless of
+     what the decorative hero gradient looks like at any given x position. */
+  .al-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(5, 4, 3, 0.45), rgba(5, 4, 3, 0.06) 80%, transparent);
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.35s var(--al-ease);
+  }
+
+  .al-header--light:not(.scrolled)::before,
+  .al-header.scrolled::before {
+    opacity: 0;
+  }
+
   .al-header.scrolled {
     background: rgba(15, 13, 11, 0.84);
     backdrop-filter: blur(18px);
@@ -123,7 +141,27 @@
     color: var(--al-cream);
     background: rgba(255, 255, 255, 0.07);
   }
-  
+
+  .al-nav__link::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 5px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--al-gold), transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s var(--al-ease);
+  }
+
+  .al-nav__link:hover::before {
+    transform: scaleX(1);
+  }
+
+  .al-nav__link.active::before {
+    display: none;
+  }
+
   .al-nav__link.active {
     color: var(--al-gold-light);
   }
@@ -703,6 +741,13 @@
     border-radius: 4px;
     transition: color 0.22s var(--al-ease), background 0.22s var(--al-ease);
     line-height: 1;
+  }
+
+  .lang-btn[data-lang="ar"] {
+    font-family: 'Tahoma', 'Segoe UI', 'Inter', system-ui, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: 0;
   }
 
   .lang-btn.active {

@@ -3,35 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Return Policy | ArtLux Fine Art</title>
   <meta name="description" content="ArtLux's premium return policy for original artworks and commissions.">
   <link rel="canonical" href="https://artluxdesign.com/return.html">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
+
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="return.css">
 </head>
 <body><!-- ======= ArtLux Header (unified) ======= -->
-<header class="artlux-header" role="banner">
-  <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">
-    Art<span>Lux</span>
-  </a>
-
-  <!-- Mobile toggle -->
-  <input type="checkbox" id="navToggle" hidden>
-  <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </label>
-
-  <!-- Main navigation -->
-  <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
-    <a class="artlux-nav-main-button" href="index.html">Home</a>
-    <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button" href="commission.html">Commission</a>
-    <a class="artlux-nav-main-button" href="about.html">About</a>
-    <a class="artlux-nav-main-button" href="contact.html">Contact</a>
-  </nav>
+<header class="al-header al-header--light" role="banner">
+  <div class="al-header__main">
+    <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+    <nav class="al-nav" aria-label="Site navigation">
+      <a class="al-nav__link" href="index.html">Home</a>
+      <a class="al-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-nav__link" href="projects.html">Projects</a>
+      <a class="al-nav__link" href="about.html">About</a>
+      <a class="al-nav__link" href="contact.html">Contact</a>
+      <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+    </nav>
+    <button class="al-burger" id="alBurger" type="button"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
+<nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+  <a class="al-mobile-nav__link" href="index.html">Home</a>
+  <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+  <a class="al-mobile-nav__link" href="projects.html">Projects</a>
+  <a class="al-mobile-nav__link" href="about.html">About</a>
+  <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+  <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+</nav>
 
 
   <main>
@@ -87,7 +99,7 @@
     <section class="contact-cta">
       <div class="container">
         <h2>Have questions about your commission?</h2>
-        <a href="contact.html" class="btn">Contact ArtLux</a>
+        <a href="contact.html" class="btn btn--primary">Contact ArtLux</a>
       </div>
     </section>
   </main>
@@ -104,6 +116,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="commission.html">Commission</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -147,38 +160,19 @@
     </div>
   </footer>
   <script>
-/* ArtLux header behavior */
 (function () {
-  const header = document.querySelector('.artlux-header');
-  const navToggle = document.getElementById('navToggle');
-  const nav = document.getElementById('site-nav');
-
-  // 1) Sticky shrink on scroll
-  const onScroll = () => {
-    if (!header) return;
-    (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-  };
+  var header = document.querySelector('.al-header');
+  var burger = document.getElementById('alBurger');
+  var mobile = document.getElementById('alMobileNav');
+  var isOpen = false;
+  function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  // 2) Auto-active the current page
-  const here = location.pathname.split('/').pop() || 'index.html';
-  nav?.querySelectorAll('a').forEach(a => {
-    const target = a.getAttribute('href')?.split('/').pop();
-    if (target === here) a.classList.add('active');
-  });
-
-  // 3) Close mobile menu after clicking a link
-  nav?.addEventListener('click', e => {
-    const isLink = e.target.closest('a');
-    if (isLink) navToggle.checked = false;
-  });
-
-  // 4) Keep ARIA in sync for accessibility
-  const burger = document.querySelector('label.burger');
-  const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
-  navToggle?.addEventListener('change', syncAria);
-  syncAria();
+  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
+  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
+  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
+  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
   document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 })();
 </script>

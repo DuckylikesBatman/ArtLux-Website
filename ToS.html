@@ -3,62 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Terms of Service | ArtLux Fine Art</title>
   <meta name="description" content="ArtLux's Terms of Service for website usage and art commissions">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="canonical" href="https://artluxdesign.com/ToS.html">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="ToS.css">
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="nav.css">
 
 </head>
 <body><!-- ======= ArtLux Header (unified) ======= -->
-<header class="artlux-header" role="banner">
-  <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">
-    Art<span>Lux</span>
-  </a>
-
-  <!-- Mobile toggle -->
-  <input type="checkbox" id="navToggle" hidden>
-  <label class="burger" for="navToggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </label>
-
-  <!-- Main navigation -->
-  <nav id="site-nav" class="artlux-nav-main" role="navigation" aria-label="Primary">
-    <a class="artlux-nav-main-button" href="index.html">Home</a>
-    <a class="artlux-nav-main-button" href="gallery.html">Gallery</a>
-    <a class="artlux-nav-main-button" href="commission.html">Commission</a>
-    <a class="artlux-nav-main-button" href="about.html">About</a>
-    <a class="artlux-nav-main-button" href="contact.html">Contact</a>
-  </nav>
+<header class="al-header al-header--light" role="banner">
+  <div class="al-header__main">
+    <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+    <nav class="al-nav" aria-label="Site navigation">
+      <a class="al-nav__link" href="index.html">Home</a>
+      <a class="al-nav__link" href="gallery.html">Gallery</a>
+      <a class="al-nav__link" href="projects.html">Projects</a>
+      <a class="al-nav__link" href="about.html">About</a>
+      <a class="al-nav__link" href="contact.html">Contact</a>
+      <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+    </nav>
+    <button class="al-burger" id="alBurger" type="button"
+            aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
+<nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+  <a class="al-mobile-nav__link" href="index.html">Home</a>
+  <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+  <a class="al-mobile-nav__link" href="projects.html">Projects</a>
+  <a class="al-mobile-nav__link" href="about.html">About</a>
+  <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+  <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+</nav>
 
   <main class="terms-content">
         <section class="policy-hero">
       <div class="container">
+        <p class="policy-eye">Legal</p>
         <h1>Terms of Service</h1>
         <p>Please read these terms carefully before using our website or commissioning a work</p>
       </div>
     </section>
     <div class="container">
-      <section class="terms-section">
+     <div class="content-grid">
+      <div class="policy-main-content">
+      <section class="terms-section" id="introduction">
         <h2>1. Introduction</h2>
         <p>These Terms of Service ("Terms") govern your use of the ArtLux website (the "Service") operated by ArtLux Fine Art ("us", "we", or "our"). By accessing or using the Service, you agree to be bound by these Terms.</p>
       </section>
 
-      <section class="terms-section">
+      <section class="terms-section" id="intellectual-property">
         <h2>2. Intellectual Property</h2>
         <p>All original artworks, designs, and website content are the exclusive property of ArtLux and protected by international copyright laws. Unauthorized use may result in legal action.</p>
-        
+
         <h3>Commissioned Works</h3>
         <p>Clients receive physical artwork ownership but grant ArtLux a perpetual license to display the work for promotional purposes unless otherwise agreed in writing.</p>
       </section>
 
-      <section class="terms-section">
+      <section class="terms-section" id="user-obligations">
         <h2>3. User Obligations</h2>
         <p>You agree not to:</p>
         <ul>
@@ -69,7 +79,7 @@
         </ul>
       </section>
 
-      <section class="terms-section">
+      <section class="terms-section" id="limitation-of-liability">
         <h2>4. Limitation of Liability</h2>
         <p>ArtLux shall not be liable for:</p>
         <ul>
@@ -79,15 +89,29 @@
         </ul>
       </section>
 
-      <section class="terms-section">
+      <section class="terms-section" id="governing-law">
         <h2>5. Governing Law</h2>
         <p>These Terms shall be governed by the laws of Lebanon. Any disputes will be resolved in the courts of Beirut.</p>
       </section>
 
-      <section class="terms-section">
+      <section class="terms-section" id="changes-to-terms">
         <h2>6. Changes to Terms</h2>
         <p>We reserve the right to modify these Terms at any time. Continued use after changes constitutes acceptance.</p>
       </section>
+      </div>
+
+      <nav class="policy-toc" aria-label="On this page">
+        <h3>On This Page</h3>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#intellectual-property">Intellectual Property</a></li>
+          <li><a href="#user-obligations">User Obligations</a></li>
+          <li><a href="#limitation-of-liability">Limitation of Liability</a></li>
+          <li><a href="#governing-law">Governing Law</a></li>
+          <li><a href="#changes-to-terms">Changes to Terms</a></li>
+        </ol>
+      </nav>
+     </div>
     </div>
   </main>
 
@@ -104,6 +128,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="commission.html">Commission</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -147,40 +172,29 @@
     </div>
   </footer>
 <script>
-/* ArtLux header behavior */
 (function () {
-  const header = document.querySelector('.artlux-header');
-  const navToggle = document.getElementById('navToggle');
-  const nav = document.getElementById('site-nav');
-
-  // 1) Sticky shrink on scroll
-  const onScroll = () => {
-    if (!header) return;
-    (window.scrollY > 8) ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-  };
+  var header = document.querySelector('.al-header');
+  var burger = document.getElementById('alBurger');
+  var mobile = document.getElementById('alMobileNav');
+  var isOpen = false;
+  function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  // 2) Auto-active the current page
-  const here = location.pathname.split('/').pop() || 'index.html';
-  nav?.querySelectorAll('a').forEach(a => {
-    const target = a.getAttribute('href')?.split('/').pop();
-    if (target === here) a.classList.add('active');
-  });
-
-  // 3) Close mobile menu after clicking a link
-  nav?.addEventListener('click', e => {
-    const isLink = e.target.closest('a');
-    if (isLink) navToggle.checked = false;
-  });
-
-  // 4) Keep ARIA in sync for accessibility
-  const burger = document.querySelector('label.burger');
-  const syncAria = () => burger?.setAttribute('aria-expanded', String(navToggle.checked));
-  navToggle?.addEventListener('change', syncAria);
-  syncAria();
+  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
+  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
+  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
+  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
   document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 })();
+
+document.querySelectorAll('.policy-toc a[href^="#"]').forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 </script>
 
 </body>

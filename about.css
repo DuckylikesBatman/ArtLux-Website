@@ -2,12 +2,48 @@
    ArtLux – about.css  ·  About Page
    ============================================================ */
 
+/* ─── PAGE HERO BACKGROUND ────────────────────────────────── */
+.page-hero {
+  background-image: url("Images/hero-about.jpg");
+  background-image: image-set(url("Images/hero-about.webp") type("image/webp"), url("Images/hero-about.jpg") type("image/jpeg"));
+  background-position: 15% 12%;
+}
+
 /* ─── ABOUT STATS BAND ────────────────────────────────────── */
 .about-stats {
-  background: #111110;
+  position: relative;
+  background-image: url("Images/hero-about.jpg");
+  background-image: image-set(url("Images/hero-about.webp") type("image/webp"), url("Images/hero-about.jpg") type("image/jpeg"));
+  background-size: cover;
+  background-position: center 75%;
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    background-image: url("Images/hero-about-mobile.jpg");
+    background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
+  }
+  .about-stats {
+    background-image: url("Images/hero-about-mobile.jpg");
+    background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
+  }
+}
+
+.about-stats::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 12, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(226, 201, 130, 0.22);
+  border-bottom: 1px solid rgba(226, 201, 130, 0.22);
 }
 
 .about-stats__row {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +92,7 @@
 /* ─── FOUNDER SECTION ─────────────────────────────────────── */
 .about-founder {
   padding-block: 6rem;
-  background: #fff;
+  background: var(--bg);
 }
 
 .founder-grid {
@@ -93,7 +129,7 @@
 }
 
 .founder-image {
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 4/5;
   box-shadow: 0 24px 60px rgba(0,0,0,.13);
@@ -140,7 +176,7 @@
 
 .service-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
   border: 1px solid rgba(197,160,89,.18);
   box-shadow: 0 2px 16px rgba(0,0,0,.05);
@@ -187,7 +223,7 @@
 /* ─── PORTFOLIO / SIGNATURE PROJECTS ─────────────────────── */
 .portfolio-section {
   padding-block: 6rem;
-  background: #fff;
+  background: var(--bg);
 }
 
 .portfolio-grid {
@@ -198,7 +234,7 @@
 }
 
 .portfolio-card {
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background: #fff;
   border: 1px solid rgba(0,0,0,.07);

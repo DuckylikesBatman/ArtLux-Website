@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="Images/hero-home.webp" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Images/hero-home-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <title>ArtLux – Bespoke Murals & Fine Decorative Painting</title>
   <meta name="description" content="ArtLux creates bespoke murals and luxury decorative finishes. Elevate your space with museum-grade materials, insured worldwide shipping, and a refined creative process." />
@@ -17,19 +21,19 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="nav.css">
 <link rel="stylesheet" href="rtl.css">
-<link rel="preload" as="image" href="Images/paintings/painting14-dec.jpeg">
+<link rel="preload" as="image" href="Images/paintings/painting14-dec.webp" type="image/webp">
 
 
 </head>
 
 <body> 
   <!-- ======= HEADER ======= -->
-  <header class="al-header al-header--light" role="banner">
+  <header class="al-header" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
@@ -76,21 +80,21 @@
           <h1 class="hero__title">Discover Your<br><em>Masterpiece</em></h1>
           <p class="hero__subtitle">Bespoke murals and luxury decorative finishes that transform your space into an enduring work of art.</p>
           <div class="hero__actions">
-            <a href="gallery.html" class="btn btn--primary">Explore Gallery</a>
-            <a href="commission.html" class="btn btn--outline">Start a Commission <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;transition:transform .25s"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="gallery.html" class="btn btn--hero-light">Explore Gallery</a>
+            <a href="commission.html" class="btn btn--hero-ghost">Start a Commission <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;transition:transform .25s"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
 
         <div class="hero__slideshow" id="heroSlideshow" aria-label="Featured artworks">
           <div class="hero__slides" id="heroSlides">
             <div class="hero__slide">
-              <img src="Images/paintings/painting14-dec.jpeg" alt="Golden Abstraction – original oil painting by Manal Yehya" fetchpriority="high" decoding="async">
+              <picture><source srcset="Images/paintings/painting14-dec.webp" type="image/webp"><img src="Images/paintings/painting14-dec.jpeg" width="800" height="1200" alt="Golden Abstraction – original oil painting by Manal Yehya" fetchpriority="high" decoding="async"></picture>
             </div>
             <div class="hero__slide">
-              <img src="Images/paintings/painting10-dec.jpeg" alt="Elegance in Blue – oil painting with gold accents" decoding="async">
+              <picture><source srcset="Images/paintings/painting10-dec.webp" type="image/webp"><img src="Images/paintings/painting10-dec.jpeg" width="710" height="896" alt="Elegance in Blue – oil painting with gold accents" decoding="async"></picture>
             </div>
             <div class="hero__slide">
-              <img src="Images/paintings/painting11-dec.jpeg" alt="Luminous Gold – abstract oil painting" decoding="async">
+              <picture><source srcset="Images/paintings/painting11-dec.webp" type="image/webp"><img src="Images/paintings/painting11-dec.jpeg" width="800" height="1200" alt="Luminous Gold – abstract oil painting" decoding="async"></picture>
             </div>
           </div>
 
@@ -174,7 +178,7 @@
         <div class="cards">
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Amber Dusk in gallery">
-              <img src="Images/paintings/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones" loading="lazy" decoding="async">
+              <picture><source srcset="Images/paintings/painting15-dec.webp" type="image/webp"><img src="Images/paintings/painting15-dec.jpeg" width="800" height="1200" alt="Amber Dusk – warm amber tones" loading="lazy" decoding="async"></picture>
             </a>
             <div class="card__body">
               <h3 class="card__title">Amber Dusk</h3>
@@ -184,7 +188,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Serene Composition in gallery">
-              <img src="Images/paintings/painting6-dec.jpeg" alt="Serene Composition – soft abstract palette" loading="lazy" decoding="async">
+              <picture><source srcset="Images/paintings/painting6-dec.webp" type="image/webp"><img src="Images/paintings/painting6-dec.jpeg" width="800" height="1200" alt="Serene Composition – soft abstract palette" loading="lazy" decoding="async"></picture>
             </a>
             <div class="card__body">
               <h3 class="card__title">Serene Composition</h3>
@@ -194,7 +198,7 @@
 
           <article class="card">
             <a class="card__media" href="gallery.html" aria-label="View Vibrant Expression in gallery">
-              <img src="Images/paintings/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy" decoding="async">
+              <picture><source srcset="Images/paintings/painting12-dec.webp" type="image/webp"><img src="Images/paintings/painting12-dec.jpeg" width="1600" height="1600" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy" decoding="async"></picture>
             </a>
             <div class="card__body">
               <h3 class="card__title">Vibrant Expression</h3>
@@ -205,7 +209,7 @@
 
         <div class="section__cta">
           <a class="btn btn--primary" href="gallery.html">View Full Gallery</a>
-          <a class="btn btn--outline" href="projects.html">See Our Projects</a>
+          <a class="btn btn--outline" href="projects.html">See Our Projects <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </section>
@@ -223,11 +227,11 @@
             <cite>— Manal Yehya, Founder</cite>
           </blockquote>
 
-          <a class="btn btn--outline" href="about.html">Meet the Artist</a>
+          <a class="btn btn--outline" href="about.html">Meet the Artist <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
         <figure class="bio__media">
-          <img src="Images/manal.jpg" alt="Artist Manal Yehya" loading="lazy" />
+          <picture><source srcset="Images/manal.webp" type="image/webp"><img src="Images/manal.jpg" width="969" height="1200" alt="Artist Manal Yehya" loading="lazy" /></picture>
         </figure>
       </div>
     </section>
@@ -450,4 +454,4 @@
   </script>
   <script src="lang.js" defer></script>
 </body>
-</html>
+</html> 

@@ -7,10 +7,6 @@
 :root {
   --gold-50: #faf8f3;
   --gold-100: #f8f2e6;
-  --gold-300: #e5d8b0;
-  --gold-500: #c5a059;
-  --gold-600: #b78c2c;
-  --gold-700: #8a6e2d;
   --gold-900: #4d3d1a;
   --black: #1a1a1a;
   --gray-50: #faf9f7;
@@ -19,11 +15,6 @@
   --gray-500: #999999;
   --gray-700: #5c5c5c;
   --white: #ffffff;
-  --transition: all 0.3s ease;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-  --shadow-md: 0 8px 25px rgba(0,0,0,0.12);
 }
 
 /* ----------  Base Styles  ---------- */
@@ -139,14 +130,15 @@ body.policy-page {
 
 /* Links */
 .policy-section a {
-  color: var(--gold-500);
-  text-decoration: none;
+  color: var(--gold-700);
+  text-decoration: underline;
+  text-decoration-color: rgba(138, 110, 45, 0.35);
   transition: var(--transition);
 }
 
 .policy-section a:hover {
-  color: var(--gold-600);
-  text-decoration: underline;
+  color: var(--gold-900);
+  text-decoration-color: currentColor;
 }
 
 /* Address */
@@ -171,8 +163,10 @@ body.policy-page {
   padding: 2rem;
   box-shadow: var(--shadow-sm);
 }
-.email-link{
-    color: rgb(227, 178, 80);
+.email-link {
+  color: var(--gold-700);
+  text-decoration: underline;
+  text-decoration-color: rgba(138, 110, 45, 0.35);
 }
 
 .policy-toc h3 {
@@ -206,7 +200,7 @@ body.policy-page {
 }
 
 .policy-toc a:hover {
-  color: var(--gold-500);
+  color: var(--gold-700);
   border-bottom-color: var(--gold-300);
 }
 

@@ -2,17 +2,6 @@
     ArtLux Return Policy Page Styles
     =================================================================== */
 
-    :root {
-    --primary: #2a2a2a;
-    --secondary: #e8e5df;
-    --accent: #a38f6a;
-    --text: #333;
-    --light: #f9f9f7;
-    --border: #ddd;
-    --shadow: 0 4px 12px rgba(0,0,0,0.05);
-    --transition: all 0.3s ease;
-    }
-
     .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,27 +10,27 @@
 
     /* Hero Section */
     .policy-hero {
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
+    background:
+      radial-gradient(circle at 80% 25%, rgba(197, 160, 89, 0.14), transparent 36%),
+      linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
+    padding: 150px 0 80px;
     text-align: center;
     }
 
     .policy-hero h1 {
-        color:rgb(205, 175, 68);
-    font-size: 48px;
+    color: var(--primary);
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
     margin-bottom: 15px;
-    font-weight: 500;
-    font-family: var(--font-heading);
+    font-weight: 900;
+    font-family: var(--ff-serif);
+    letter-spacing: -0.03em;
     }
 
     .policy-hero p {
-                color:rgb(205, 175, 68);
+    color: var(--muted);
     font-size: 20px;
     max-width: 700px;
     margin: 0 auto;
-    opacity: 0.9;
     }
 
     /* Policy Content */
@@ -56,24 +45,28 @@
     }
 
     .policy-card {
-    background: white;
-    border: 1px solid var(--border);
+    background: var(--surface);
+    border: var(--brd-gold);
+    border-radius: var(--radius-lg);
     padding: 40px;
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     }
 
     .policy-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(197, 160, 89, 0.45);
     }
 
     .policy-card h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: var(--accent);
+    color: var(--primary);
     position: relative;
     padding-bottom: 10px;
-    font-family: var(--font-heading);
+    font-family: var(--ff-serif);
+    font-weight: 900;
     }
 
     .policy-card h2::after {
@@ -81,9 +74,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
-    height: 2px;
-    background: var(--accent);
+    width: 44px;
+    height: 2.5px;
+    border-radius: 2px;
+    background: var(--gold-500);
     }
 
     .policy-card ol,
@@ -93,6 +87,7 @@
 
     .policy-card li {
     margin-bottom: 10px;
+    color: var(--muted);
     }
 
     .policy-card ul {
@@ -101,7 +96,7 @@
 
     .policy-card ul li::before {
     content: '•';
-    color: var(--accent);
+    color: var(--gold-600);
     display: inline-block;
     width: 1em;
     margin-left: -1em;
@@ -111,31 +106,15 @@
     .contact-cta {
     text-align: center;
     padding: 60px 0;
-    background: var(--secondary);
+    background: var(--surface-soft);
     }
 
     .contact-cta h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    font-family: var(--font-heading);
-    }
-
-    .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: var(--transition);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-    }
-
-    .btn:hover {
-    background: var(--primary);
+    font-family: var(--ff-serif);
+    font-weight: 900;
+    color: var(--primary);
     }
 
     /* Responsive Adjustments */

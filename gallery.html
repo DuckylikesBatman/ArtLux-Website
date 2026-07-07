@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="Images/hero-gallery.webp" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Images/hero-gallery-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Gallery · ArtLux | Premium Artworks</title>
   <meta name="description" content="Browse the ArtLux collection of original paintings and bespoke artworks by Manal Yehya." />
   <link rel="canonical" href="https://artluxdesign.com/gallery.html" />
@@ -15,19 +18,19 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
 
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="gallery.css">
-  <link rel="preload" as="image" href="Images/paintings/painting1-dec.jpeg">
+  <link rel="preload" as="image" href="Images/paintings/painting1-dec.webp" type="image/webp">
 </head>
 <body>
 
 <!-- ======= HEADER ======= -->
-<header class="al-header al-header--light" role="banner">
+<header class="al-header" role="banner">
   <div class="al-header__main">
     <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
     <nav class="al-nav" aria-label="Site navigation">
@@ -67,7 +70,6 @@
 
   <!-- ======= PAGE HERO ======= -->
   <section class="page-hero" aria-label="Gallery">
-    <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="page-hero__content">
       <p class="page-hero__eye">ArtLux Collection</p>
       <h1 class="page-hero__title">The<br><em>Gallery</em></h1>
@@ -94,7 +96,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Elegance in Blue" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting1-dec.jpeg" decoding="async" alt="Elegance in Blue – deep blue oil painting with gold accents">
+            <picture><source srcset="Images/paintings/painting1-dec.webp" type="image/webp"><img src="Images/paintings/painting1-dec.jpeg" width="710" height="1064" decoding="async" alt="Elegance in Blue – deep blue oil painting with gold accents"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Elegance in Blue</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -104,7 +106,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Luminous Gold" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting10-dec.jpeg" decoding="async" alt="Luminous Gold – golden abstract painting with textured surface">
+            <picture><source srcset="Images/paintings/painting10-dec.webp" type="image/webp"><img src="Images/paintings/painting10-dec.jpeg" width="710" height="896" decoding="async" alt="Luminous Gold – golden abstract painting with textured surface"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Luminous Gold</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -114,7 +116,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Golden Abstraction" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting11-dec.jpeg" decoding="async" alt="Golden Abstraction – modern abstract with gold leaf details">
+            <picture><source srcset="Images/paintings/painting11-dec.webp" type="image/webp"><img src="Images/paintings/painting11-dec.jpeg" width="800" height="1200" decoding="async" alt="Golden Abstraction – modern abstract with gold leaf details"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Golden Abstraction</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -124,7 +126,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Serene Composition" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting6-dec.jpeg" alt="Serene Composition – calming abstract with soft colour palette" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting6-dec.webp" type="image/webp"><img src="Images/paintings/painting6-dec.jpeg" width="800" height="1200" alt="Serene Composition – calming abstract with soft colour palette" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Serene Composition</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -134,7 +136,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Modern Harmony" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting8-dec.jpeg" alt="Modern Harmony – contemporary piece with balanced composition" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting8-dec.webp" type="image/webp"><img src="Images/paintings/painting8-dec.jpeg" width="800" height="1200" alt="Modern Harmony – contemporary piece with balanced composition" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Modern Harmony</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -144,7 +146,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Vibrant Expression" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting12-dec.jpeg" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting12-dec.webp" type="image/webp"><img src="Images/paintings/painting12-dec.jpeg" width="1600" height="1600" alt="Vibrant Expression – energetic abstract with bold colours" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Vibrant Expression</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -154,7 +156,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Classic Elegance" data-avail="out" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting14-dec.jpeg" alt="Classic Elegance – timeless piece with traditional influences" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting14-dec.webp" type="image/webp"><img src="Images/paintings/painting14-dec.jpeg" width="800" height="1200" alt="Classic Elegance – timeless piece with traditional influences" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Classic Elegance</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -164,7 +166,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Contemporary Flow" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting16-dec.jpeg" alt="Contemporary Flow – fluid abstract with modern aesthetic" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting16-dec.webp" type="image/webp"><img src="Images/paintings/painting16-dec.jpeg" width="800" height="1200" alt="Contemporary Flow – fluid abstract with modern aesthetic" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Contemporary Flow</p>
               <p class="gallery-item__med">Oil on Canvas · 70×100 cm</p>
@@ -174,7 +176,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Amber Dusk" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting15-dec.jpeg" alt="Amber Dusk – warm amber tones on textured canvas" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting15-dec.webp" type="image/webp"><img src="Images/paintings/painting15-dec.jpeg" width="800" height="1200" alt="Amber Dusk – warm amber tones on textured canvas" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Amber Dusk</p>
               <p class="gallery-item__med">Oil on Canvas · 60×80 cm</p>
@@ -184,7 +186,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Autumn Warmth" data-avail="out" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting-1.jpeg" alt="Autumn Warmth – warm terracotta and amber tones" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting-1.webp" type="image/webp"><img src="Images/paintings/painting-1.jpeg" width="580" height="704" alt="Autumn Warmth – warm terracotta and amber tones" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Autumn Warmth</p>
               <p class="gallery-item__med">Oil on Canvas · 60×80 cm</p>
@@ -194,7 +196,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Midnight Bloom" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <img src="Images/paintings/painting-2.jpeg" alt="Midnight Bloom – deep indigo with floral abstraction" loading="lazy" decoding="async">
+            <picture><source srcset="Images/paintings/painting-2.webp" type="image/webp"><img src="Images/paintings/painting-2.jpeg" width="770" height="1200" alt="Midnight Bloom – deep indigo with floral abstraction" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Midnight Bloom</p>
               <p class="gallery-item__med">Mixed Media · 70×90 cm</p>
@@ -204,7 +206,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Jessica Azar Residence" data-avail="out" data-cat="interior">
           <div class="gallery-item__inner">
-            <img src="Images/interior-2.jpg" alt="Contemporary interior with custom decorative wall finish – Jessica Azar Residence, Beirut" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-2.webp" type="image/webp"><img src="Images/interior-2.jpg" width="1084" height="1200" alt="Contemporary interior with custom decorative wall finish – Jessica Azar Residence, Beirut" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Jessica Azar Residence</p>
               <p class="gallery-item__med">Decorative Finish · Beirut</p>
@@ -214,7 +216,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Prince Tamim Mansion" data-avail="out" data-cat="interior">
           <div class="gallery-item__inner">
-            <img src="Images/interior-5.jpg" alt="Luxurious patina ceiling and cornice finish – Prince Tamim Mansion, Doha" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-5.webp" type="image/webp"><img src="Images/interior-5.jpg" width="1200" height="1130" alt="Luxurious patina ceiling and cornice finish – Prince Tamim Mansion, Doha" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Prince Tamim Mansion</p>
               <p class="gallery-item__med">Patina Finish · Doha</p>
@@ -224,7 +226,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Healing Garden Mural" data-avail="out" data-cat="interior">
           <div class="gallery-item__inner">
-            <img src="Images/interior-8.jpg" alt="Hand-painted mural for pediatric ward – Hôtel-Dieu Hospital, Beirut" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-8.webp" type="image/webp"><img src="Images/interior-8.jpg" width="1200" height="1138" alt="Hand-painted mural for pediatric ward – Hôtel-Dieu Hospital, Beirut" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Healing Garden Mural</p>
               <p class="gallery-item__med">Bespoke Mural · Beirut</p>
@@ -384,7 +386,7 @@ function openLb(visIndex) {
   lbIndex = visIndex;
   const item = vis[visIndex];
   const img = item.querySelector('img');
-  lbImg.src = img.src;
+  lbImg.src = img.currentSrc || img.src;
   lbImg.alt = img.alt;
   lbTitle.textContent = item.dataset.title;
   lightbox.hidden = false;
@@ -398,7 +400,7 @@ function moveLb(dir) {
   lbIndex = (lbIndex + dir + vis.length) % vis.length;
   const item = vis[lbIndex];
   const img = item.querySelector('img');
-  lbImg.src = img.src;
+  lbImg.src = img.currentSrc || img.src;
   lbImg.alt = img.alt;
   lbTitle.textContent = item.dataset.title;
 }
@@ -441,7 +443,7 @@ document.addEventListener('keydown', e => {
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.gallery-item').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  document.querySelectorAll('.gallery-item').forEach(function (el, i) { el.classList.add('reveal'); el.style.transitionDelay = Math.min(i * 60, 360) + 'ms'; io.observe(el); });
 }());
 
 var backTop = document.getElementById('backTop');

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="Images/hero-commission.webp" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Images/hero-commission-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Commission Custom Artwork · ArtLux</title>
   <meta name="description" content="Commission a bespoke artwork from ArtLux. Share your vision and collaborate with our artist to create a one‑of‑a‑kind piece." />
   <link rel="canonical" href="https://artluxdesign.com/commission.html" />
@@ -16,8 +19,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
@@ -27,7 +30,7 @@
 </head>
 <body>
   <!-- ======= HEADER ======= -->
-  <header class="al-header al-header--light" role="banner">
+  <header class="al-header" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
@@ -67,7 +70,6 @@
   <main>
     <!-- Hero Section -->
     <section class="page-hero" aria-labelledby="hero-heading">
-      <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__content">
         <p class="page-hero__eye" data-i18n="commission.hero.eye">ArtLux Studio</p>
         <h1 id="hero-heading" class="page-hero__title" data-i18n="commission.hero.title">Commission Your<br><em>Masterpiece</em></h1>

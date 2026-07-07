@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="Images/hero-about.webp" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Images/hero-about-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>About · ArtLux | Premium Decorative Painting</title>
   <meta name="description" content="Discover ArtLux's story - luxury decorative painting and artistic finishes by Manal Yehya with 30+ years of international experience." />
   <link rel="canonical" href="https://artluxdesign.com/about.html" />
@@ -16,19 +19,19 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="about.css">
-  <link rel="preload" as="image" href="Images/manal-2.jpg">
+  <link rel="preload" as="image" href="Images/manal-2.webp" type="image/webp">
 </head>
 <body>
 <!-- ======= HEADER ======= -->
-<header class="al-header al-header--light" role="banner">
+<header class="al-header" role="banner">
   <div class="al-header__main">
     <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
     <nav class="al-nav" aria-label="Site navigation">
@@ -68,7 +71,6 @@
   <main>
     <!-- Hero Section -->
     <section class="page-hero" aria-label="About ArtLux">
-      <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__content">
         <p class="page-hero__eye">ArtLux Studio</p>
         <h1 class="page-hero__title">Artistry in<br><em>Every Stroke</em></h1>
@@ -86,7 +88,7 @@
             <p class="founder-text">Our work blends traditional craftsmanship with contemporary design, creating spaces that tell stories through texture, color, and meticulous detail.</p>
           </div>
           <div class="founder-image">
-            <img src="Images/manal-2.jpg" alt="Manal Yehya, Founder of ArtLux" loading="lazy" decoding="async">
+            <picture><source srcset="Images/manal-2.webp" type="image/webp"><img src="Images/manal-2.jpg" width="838" height="1200" alt="Manal Yehya, Founder of ArtLux" loading="lazy" decoding="async"></picture>
           </div>
         </div>
       </div>
@@ -147,7 +149,7 @@
         <h2 class="section-title center">Signature Projects</h2>
         <div class="portfolio-grid">
           <article class="portfolio-card">
-            <img src="Images/interior-2.jpg" alt="Jessica Azar Residence" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-2.webp" type="image/webp"><img src="Images/interior-2.jpg" width="1084" height="1200" alt="Jessica Azar Residence" loading="lazy" decoding="async"></picture>
             <div class="card-content">
               <h3>Jessica Azar Residence</h3>
               <p class="location">Beirut, Lebanon</p>
@@ -155,7 +157,7 @@
             </div>
           </article>
           <article class="portfolio-card">
-            <img src="Images/interior-5.jpg" alt="Prince Tamim Mansion" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-5.webp" type="image/webp"><img src="Images/interior-5.jpg" width="1200" height="1130" alt="Prince Tamim Mansion" loading="lazy" decoding="async"></picture>
             <div class="card-content">
               <h3>Prince Tamim Mansion</h3>
               <p class="location">Doha, Qatar</p>
@@ -163,7 +165,7 @@
             </div>
           </article>
           <article class="portfolio-card">
-            <img src="Images/interior-8.jpg" alt="Hôtel-Dieu Hospital" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-8.webp" type="image/webp"><img src="Images/interior-8.jpg" width="1200" height="1138" alt="Hôtel-Dieu Hospital" loading="lazy" decoding="async"></picture>
             <div class="card-content">
               <h3>Hôtel-Dieu Hospital</h3>
               <p class="location">Beirut, Lebanon</p>

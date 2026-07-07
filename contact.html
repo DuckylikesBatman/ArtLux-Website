@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="Images/hero-contact.webp" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Images/hero-contact-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Contact · ArtLux | Premium Decorative Painting</title>
   <meta name="description" content="Get in touch with ArtLux for luxury decorative painting, bespoke murals, and artistic finishes." />
   <link rel="canonical" href="https://artluxdesign.com/contact.html" />
@@ -16,19 +19,20 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""
+    media="print" onload="this.onload=null;this.media='all'">
 </head>
 <body class="contact-page">
   <!-- ======= HEADER ======= -->
-  <header class="al-header al-header--light" role="banner">
+  <header class="al-header" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
@@ -68,7 +72,6 @@
   <main>
     <!-- Hero Section -->
     <section class="page-hero" aria-label="Contact ArtLux">
-      <div class="page-hero__bg" aria-hidden="true"></div>
       <div class="page-hero__content">
         <p class="page-hero__eye">Get In Touch</p>
         <h1 class="page-hero__title">Let's Create Something<br><em>Beautiful</em></h1>

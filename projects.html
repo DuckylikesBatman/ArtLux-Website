@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="Images/hero-projects.webp" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="Images/hero-projects-mobile.webp" media="(max-width: 700px)" fetchpriority="high">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Projects · ArtLux | Signature Interior &amp; Mural Work</title>
   <meta name="description" content="Explore ArtLux's signature projects — bespoke murals, luxury decorative finishes, and art installations across residential, commercial, and hospitality spaces." />
   <link rel="canonical" href="https://artluxdesign.com/projects.html" />
@@ -15,19 +18,19 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
 
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="projects.css">
-  <link rel="preload" as="image" href="Images/interior-2.jpg">
+  <link rel="preload" as="image" href="Images/interior-2.webp" type="image/webp">
 </head>
 <body>
 
 <!-- ======= HEADER ======= -->
-<header class="al-header al-header--light" role="banner">
+<header class="al-header" role="banner">
   <div class="al-header__main">
     <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
     <nav class="al-nav" aria-label="Site navigation">
@@ -67,7 +70,6 @@
 
   <!-- ======= PAGE HERO ======= -->
   <section class="page-hero" aria-label="Projects">
-    <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="page-hero__content">
       <p class="page-hero__eye">ArtLux Studio</p>
       <h1 class="page-hero__title">Signature<br><em>Projects</em></h1>
@@ -97,7 +99,7 @@
 
         <article class="project-card" data-cat="residential" data-project="jessica-azar" tabindex="0" role="button" aria-label="Open Jessica Azar Residence project">
           <div class="project-card__img">
-            <img src="Images/interior-2.jpg" alt="Contemporary living space with custom grey patina wall treatments – Jessica Azar Residence, Beirut" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-2.webp" type="image/webp"><img src="Images/interior-2.jpg" width="1084" height="1200" alt="Contemporary living space with custom grey patina wall treatments – Jessica Azar Residence, Beirut" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential">Residential</span>
           </div>
           <div class="project-card__body">
@@ -113,7 +115,7 @@
 
         <article class="project-card" data-cat="residential" data-project="tamim-mansion" tabindex="0" role="button" aria-label="Open Prince Tamim Mansion project">
           <div class="project-card__img">
-            <img src="Images/interior-5.jpg" alt="Grand salon with luxurious patina ceiling and cornice details – Prince Tamim Mansion, Doha" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-5.webp" type="image/webp"><img src="Images/interior-5.jpg" width="1200" height="1130" alt="Grand salon with luxurious patina ceiling and cornice details – Prince Tamim Mansion, Doha" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential">Residential</span>
           </div>
           <div class="project-card__body">
@@ -129,7 +131,7 @@
 
         <article class="project-card" data-cat="hospitality" data-project="hoteldieu" tabindex="0" role="button" aria-label="Open Hôtel-Dieu Hospital project">
           <div class="project-card__img">
-            <img src="Images/interior-8.jpg" alt="Whimsical hand-painted mural in pediatric ward – Hôtel-Dieu Hospital, Beirut" loading="lazy" decoding="async">
+            <picture><source srcset="Images/interior-8.webp" type="image/webp"><img src="Images/interior-8.jpg" width="1200" height="1138" alt="Whimsical hand-painted mural in pediatric ward – Hôtel-Dieu Hospital, Beirut" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--hospitality">Hospitality</span>
           </div>
           <div class="project-card__body">
@@ -145,7 +147,7 @@
 
         <article class="project-card" data-cat="residential" data-project="private-villa" tabindex="0" role="button" aria-label="Open Private Villa project">
           <div class="project-card__img">
-            <img src="Images/new-pics-5.jpg" alt="Private villa interior with bespoke decorative wall finish" loading="lazy" decoding="async">
+            <picture><source srcset="Images/new-pics-5.webp" type="image/webp"><img src="Images/new-pics-5.jpg" width="1200" height="900" alt="Private villa interior with bespoke decorative wall finish" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential">Residential</span>
           </div>
           <div class="project-card__body">
@@ -161,7 +163,7 @@
 
         <article class="project-card" data-cat="commercial" data-project="restaurant" tabindex="0" role="button" aria-label="Open Signature Restaurant project">
           <div class="project-card__img">
-            <img src="Images/new-pics-7.jpg" alt="Elegant restaurant interior with hand-crafted mural feature wall" loading="lazy" decoding="async">
+            <picture><source srcset="Images/new-pics-7.webp" type="image/webp"><img src="Images/new-pics-7.jpg" width="1200" height="900" alt="Elegant restaurant interior with hand-crafted mural feature wall" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--commercial">Commercial</span>
           </div>
           <div class="project-card__body">
@@ -177,7 +179,7 @@
 
         <article class="project-card" data-cat="commercial" data-project="corporate" tabindex="0" role="button" aria-label="Open Corporate Lobby project">
           <div class="project-card__img">
-            <img src="Images/new-pics-8.jpeg" alt="Corporate office lobby with refined decorative finish and brand-aligned artwork" loading="lazy" decoding="async">
+            <picture><source srcset="Images/new-pics-8.webp" type="image/webp"><img src="Images/new-pics-8.jpeg" width="1200" height="900" alt="Corporate office lobby with refined decorative finish and brand-aligned artwork" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--commercial">Commercial</span>
           </div>
           <div class="project-card__body">
@@ -193,7 +195,7 @@
 
         <article class="project-card" data-cat="hospitality" data-project="boutique-hotel" tabindex="0" role="button" aria-label="Open Boutique Hotel Suites project">
           <div class="project-card__img">
-            <img src="Images/new-pics-9.jpg" alt="Boutique hotel suite with hand-finished walls and custom artwork" loading="lazy" decoding="async">
+            <picture><source srcset="Images/new-pics-9.webp" type="image/webp"><img src="Images/new-pics-9.jpg" width="1200" height="900" alt="Boutique hotel suite with hand-finished walls and custom artwork" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--hospitality">Hospitality</span>
           </div>
           <div class="project-card__body">
@@ -209,7 +211,7 @@
 
         <article class="project-card" data-cat="residential" data-project="penthouse" tabindex="0" role="button" aria-label="Open Penthouse Apartment project">
           <div class="project-card__img">
-            <img src="Images/new-pics-10.jpeg" alt="Modern penthouse apartment with bespoke painted feature ceiling" loading="lazy" decoding="async">
+            <picture><source srcset="Images/new-pics-10.webp" type="image/webp"><img src="Images/new-pics-10.jpeg" width="1200" height="1127" alt="Modern penthouse apartment with bespoke painted feature ceiling" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential">Residential</span>
           </div>
           <div class="project-card__body">
@@ -225,7 +227,7 @@
 
         <article class="project-card" data-cat="commercial" data-project="retail" tabindex="0" role="button" aria-label="Open Luxury Retail Flagship project">
           <div class="project-card__img">
-            <img src="Images/new-pics-11.jpg" alt="High-end retail space with hand-painted decorative wall treatment" loading="lazy" decoding="async">
+            <picture><source srcset="Images/new-pics-11.webp" type="image/webp"><img src="Images/new-pics-11.jpg" width="1200" height="900" alt="High-end retail space with hand-painted decorative wall treatment" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--commercial">Commercial</span>
           </div>
           <div class="project-card__body">
@@ -518,10 +520,16 @@ const descEl   = document.getElementById('projDesc');
 let activeImages = [];
 let activeIdx    = 0;
 
+function withWebpFallback(el, src) {
+  const webp = src.replace(/\.(jpe?g|png)$/i, '.webp');
+  el.onerror = function () { el.onerror = null; el.src = src; };
+  el.src = webp;
+}
+
 function showImage(idx) {
   activeIdx = (idx + activeImages.length) % activeImages.length;
   const img = activeImages[activeIdx];
-  imgEl.src = img.src;
+  withWebpFallback(imgEl, img.src);
   imgEl.alt = img.alt;
 
   // counter
@@ -565,7 +573,7 @@ function openModal(key) {
       btn.className = 'proj-modal__thumb' + (i === 0 ? ' active' : '');
       btn.setAttribute('aria-label', 'View image ' + (i + 1));
       const thumbImg = document.createElement('img');
-      thumbImg.src = img.src;
+      withWebpFallback(thumbImg, img.src);
       thumbImg.alt = '';
       thumbImg.loading = 'lazy';
       btn.appendChild(thumbImg);
@@ -639,7 +647,7 @@ document.addEventListener('keydown', function(e) {
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-  document.querySelectorAll('.project-card').forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  document.querySelectorAll('.project-card').forEach(function (el, i) { el.classList.add('reveal'); el.style.transitionDelay = Math.min(i * 60, 360) + 'ms'; io.observe(el); });
   var pg = document.querySelector('.projects-grid');
   if (pg) Array.from(pg.children).forEach(function (c, i) { c.style.transitionDelay = Math.min(i * 70, 280) + 'ms'; });
 }());

@@ -4,31 +4,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Page Not Found · ArtLux</title>
   <meta name="robots" content="noindex" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
 
   <!-- Global styles -->
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="rtl.css" />
   <!-- Page styles -->
   <link rel="stylesheet" href="404.css" />
 </head>
 <body class="notfound-page">
-  <header class="artlux-header" role="banner">
-    <a class="artlux-header-logo site-logo" href="index.html" aria-label="ArtLux Home">ArtLux</a>
-    <nav class="artlux-nav" role="navigation" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="commission.html">Commission</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="al-header al-header--light" role="banner">
+    <div class="al-header__main">
+      <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
+      <nav class="al-nav" aria-label="Site navigation">
+        <a class="al-nav__link" href="index.html">Home</a>
+        <a class="al-nav__link" href="gallery.html">Gallery</a>
+        <a class="al-nav__link" href="projects.html">Projects</a>
+        <a class="al-nav__link" href="about.html">About</a>
+        <a class="al-nav__link" href="contact.html">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+      </nav>
+      <button class="al-burger" id="alBurger" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
+  <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
+    <a class="al-mobile-nav__link" href="index.html">Home</a>
+    <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
+    <a class="al-mobile-nav__link" href="projects.html">Projects</a>
+    <a class="al-mobile-nav__link" href="about.html">About</a>
+    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+  </nav>
 
   <main id="main" class="notfound-main" role="main">
     <section class="notfound-hero container" aria-labelledby="nf-title">
@@ -50,8 +68,8 @@
         <p class="nf-subtitle">The page you’re looking for may have been moved, renamed, or no longer exists.</p>
 
         <div class="nf-actions">
-          <a class="btn btn-primary" href="index.html">Back to Home</a>
-          <a class="btn btn-ghost" href="gallery.html">Explore the Gallery</a>
+          <a class="btn btn--primary" href="index.html">Back to Home</a>
+          <a class="btn btn--outline" href="gallery.html">Explore the Gallery <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
         <details class="nf-details">
@@ -79,20 +97,77 @@
   </main>
 
   <footer class="artlux-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p class="footer-brand">© <span id="year"></span> ArtLux</p>
-      <ul class="footer-links">
-        <li><a href="ToS.html">Terms</a></li>
-        <li><a href="return.html">Return Policy</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
+    <div class="footer-container">
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
+        <p>Elevating spaces with premium mural art and fine finishes since 2019.</p>
+      </div>
+
+      <nav class="footer-section footer-links" aria-label="Quick Links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="commission.html">Commission</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-section footer-links" aria-label="Legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="ToS.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <address class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <p>Corniche El Mazraa, Beirut</p>
+        <p><a href="tel:+9613683127">+961 3 683 127</a></p>
+        <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
+        <div class="social-links" aria-label="Follow us">
+          <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/9613683127" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+          </a>
+        </div>
+      </address>
+    </div>
+
+    <div class="copyright">
+      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Optional timed redirect:
-    // setTimeout(function(){ window.location.href = 'index.html'; }, 10000);
+  (function () {
+    var header = document.querySelector('.al-header');
+    var burger = document.getElementById('alBurger');
+    var mobile = document.getElementById('alMobileNav');
+    var isOpen = false;
+    function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
+    function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
+    if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
+    if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
+    document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+  }());
   </script>
 </body>
 </html>
