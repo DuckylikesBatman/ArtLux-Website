@@ -29,8 +29,14 @@ body.notfound-page {
   grid-template-columns: 1fr;
   gap: 24px;
   align-items: center;
-  padding: clamp(40px, 6vw, 72px) 0;
+  padding-block: clamp(40px, 6vw, 72px);
   position: relative;
+  overflow: hidden;
+}
+.nf-copy {
+  position: relative;
+  z-index: 1;
+  margin-top: 140px;
 }
 
 .nf-visual {
@@ -42,8 +48,6 @@ body.notfound-page {
   pointer-events: none;
 }
 .nf-svg { width: 100%; height: 220px; display: block; }
-
-.nf-copy { margin-top: 140px; }
 
 .nf-title {
   font-family: 'Playfair Display', Georgia, serif;
@@ -59,8 +63,14 @@ body.notfound-page {
 .nf-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* Quick links */
-.nf-links { padding: 8px 0 64px; }
+.nf-links {
+  padding-top: 8px;
+  padding-bottom: 64px;
+  position: relative;
+}
 .nf-quick {
+  position: relative;
+  z-index: 1;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

@@ -15,6 +15,15 @@
       linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
     padding: 150px 0 80px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    }
+    .policy-hero > * {
+    position: relative;
+    z-index: 1;
+    }
+    .policy-hero .container {
+    position: relative;
     }
 
     .policy-hero h1 {
@@ -45,12 +54,18 @@
     }
 
     .policy-card {
+    position: relative;
+    overflow: hidden;
     background: var(--surface);
     border: var(--brd-gold);
     border-radius: var(--radius-lg);
     padding: 40px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    }
+    .policy-card > * {
+    position: relative;
+    z-index: 1;
     }
 
     .policy-card:hover {
@@ -107,6 +122,12 @@
     text-align: center;
     padding: 60px 0;
     background: var(--surface-soft);
+    position: relative;
+    overflow: hidden;
+    }
+    .contact-cta > * {
+    position: relative;
+    z-index: 1;
     }
 
     .contact-cta h2 {

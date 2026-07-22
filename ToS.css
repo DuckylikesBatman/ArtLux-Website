@@ -7,8 +7,9 @@
 /* Terms Content */
 .terms-content {
   padding: 60px 0;
+  position: relative;
+  overflow: hidden;
 }
-
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 280px;
@@ -24,6 +25,11 @@
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.policy-toc > * {
+  position: relative;
+  z-index: 1;
 }
 
 .policy-toc h3 {
@@ -62,6 +68,8 @@
 }
 
 .terms-section {
+  position: relative;
+  overflow: hidden;
   margin-bottom: 40px;
   background: var(--surface);
   padding: 30px;
@@ -70,6 +78,11 @@
   box-shadow: var(--shadow-sm);
   scroll-margin-top: 100px;
   transition: var(--transition);
+}
+
+.terms-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .terms-section:hover {
@@ -126,6 +139,15 @@
     linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
   padding: 150px 0 80px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.policy-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.policy-hero .container {
+  position: relative;
 }
 
 .policy-eye {

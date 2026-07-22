@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M40 128 C 42 100, 44 80, 50 62 M60 128 C 60 96, 58 74, 56 58 M80 128 C 76 100, 70 80, 62 64" stroke="#a07840" stroke-width="2"/>
+
+  <g stroke="#c5a059" stroke-width="1.8">
+    <path d="M50 62 C 44 54, 44 44, 50 36 C 56 44, 56 54, 50 62 Z" fill="none"/>
+    <path d="M50 62 C 42 58, 34 58, 28 64 C 34 70, 42 70, 50 62 Z" fill="none"/>
+    <path d="M50 62 C 58 58, 66 58, 72 64 C 66 70, 58 70, 50 62 Z" fill="none"/>
+    <circle cx="50" cy="60" r="3" fill="#c5a059" stroke="none"/>
+  </g>
+
+  <g stroke="#a07840" stroke-width="1.8">
+    <path d="M56 58 C 50 50, 50 40, 56 32 C 62 40, 62 50, 56 58 Z" fill="none"/>
+    <path d="M56 58 C 48 54, 40 54, 34 60 C 40 66, 48 66, 56 58 Z" fill="none"/>
+    <path d="M56 58 C 64 54, 72 54, 78 60 C 72 66, 64 66, 56 58 Z" fill="none"/>
+    <circle cx="56" cy="56" r="3" fill="#a07840" stroke="none"/>
+  </g>
+
+  <g stroke="#c5a059" stroke-width="1.8">
+    <path d="M62 64 C 56 56, 56 46, 62 38 C 68 46, 68 56, 62 64 Z" fill="none"/>
+    <path d="M62 64 C 54 60, 46 60, 40 66 C 46 72, 54 72, 62 64 Z" fill="none"/>
+    <path d="M62 64 C 70 60, 78 60, 84 66 C 78 72, 70 72, 62 64 Z" fill="none"/>
+    <circle cx="62" cy="62" r="3" fill="#c5a059" stroke="none"/>
+  </g>
+
+  <path d="M46 78 C 40 80, 36 84, 34 90" stroke="#a07840" stroke-width="1.6" opacity="0.8"/>
+  <path d="M66 82 C 72 84, 76 88, 78 94" stroke="#a07840" stroke-width="1.6" opacity="0.8"/>
+</svg>

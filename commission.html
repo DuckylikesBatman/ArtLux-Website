@@ -39,7 +39,7 @@
         <a class="al-nav__link" href="projects.html"     data-i18n="nav.projects">Projects</a>
         <a class="al-nav__link" href="about.html"        data-i18n="nav.about">About</a>
         <a class="al-nav__link" href="contact.html"      data-i18n="nav.contact">Contact</a>
-        <a class="al-nav__link al-nav__cta active" href="commission.html" data-i18n="nav.commission">Commission</a>
+        <a class="al-nav__link al-nav__cta active" href="commission.html" aria-current="page" data-i18n="nav.commission">Commission</a>
       </nav>
       <div class="lang-switch" aria-label="Language selector">
         <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
@@ -58,7 +58,7 @@
     <a class="al-mobile-nav__link" href="projects.html"    data-i18n="nav.projects">Projects</a>
     <a class="al-mobile-nav__link" href="about.html"       data-i18n="nav.about">About</a>
     <a class="al-mobile-nav__link" href="contact.html"     data-i18n="nav.contact">Contact</a>
-    <a class="al-mobile-nav__link al-mobile-nav__cta active" href="commission.html" data-i18n="nav.commission">Commission</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta active" href="commission.html" aria-current="page" data-i18n="nav.commission">Commission</a>
     <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
       <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
       <span class="lang-sep" aria-hidden="true">/</span>
@@ -130,6 +130,11 @@
         </div>
 
         <form id="commissionForm" class="cfg-form" action="https://formspree.io/f/mdkwdqga" method="POST">
+          <!-- Honeypot (spam trap) -->
+          <div class="hp" aria-hidden="true">
+            <label for="cfg_gotcha">Leave this field empty</label>
+            <input id="cfg_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <input type="hidden" name="_subject" value="New Commission Request - ArtLux">
 
           <!-- ── STEP 1: TYPE ── -->
@@ -642,7 +647,7 @@
           .then(function (res) {
             if (btn) { btn.disabled = false; btn.style.opacity = ''; }
             if (res.ok) {
-              statusEl.textContent = 'Thank you! Your request has been received. We'll contact you within 24–48 hours.';
+              statusEl.textContent = "Thank you! Your request has been received. We'll contact you within 24–48 hours.";
               statusEl.className = 'form-status form-success';
               form.reset();
               if (preview) preview.innerHTML = '';

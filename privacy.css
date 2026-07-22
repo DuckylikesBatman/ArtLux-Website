@@ -38,6 +38,15 @@ body.policy-page {
   padding: 140px 0 80px;
   text-align: center;
   border-bottom: 1px solid var(--gray-300);
+  position: relative;
+  overflow: hidden;
+}
+.policy-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.policy-hero .container {
+  position: relative;
 }
 
 .policy-title {
@@ -59,8 +68,9 @@ body.policy-page {
 .policy-content {
   padding: 5rem 0;
   background: var(--white);
+  position: relative;
+  overflow: hidden;
 }
-
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -162,6 +172,11 @@ body.policy-page {
   border-radius: var(--radius-lg);
   padding: 2rem;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.policy-toc > * {
+  position: relative;
+  z-index: 1;
 }
 .email-link {
   color: var(--gold-700);

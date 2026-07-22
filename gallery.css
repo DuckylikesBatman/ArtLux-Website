@@ -25,6 +25,11 @@
   gap: 1rem;
   padding-block: 2.2rem;
   border-bottom: 1px solid rgba(0,0,0,.07);
+  position: relative;
+}
+.gallery-controls > * {
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-filters {
@@ -80,9 +85,12 @@
 /* ─── MASONRY GRID ────────────────────────────────────────── */
 .gallery-section {
   padding-block: 2.5rem 5rem;
+  position: relative;
+  overflow: hidden;
 }
-
 .gallery-masonry {
+  position: relative;
+  z-index: 1;
   columns: 3;
   column-gap: 1.1rem;
 }
@@ -117,6 +125,21 @@
   height: auto;
   display: block;
   transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Studio/detail shots (no room styling in the source photo) get a matted
+   presentation so they read as an intentional close-up rather than a
+   mismatched leftover next to the in-room renders. */
+.gallery-item--studio {
+  background: var(--surface-soft, #fbf8f1);
+}
+.gallery-item--studio .gallery-item__inner {
+  padding: 14px;
+}
+.gallery-item--studio .gallery-item__inner img {
+  border-radius: 4px;
+  filter: brightness(1.05) saturate(1.08) contrast(1.03);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 }
 
 .gallery-item:hover .gallery-item__inner img {

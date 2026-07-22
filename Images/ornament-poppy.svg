@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="poppyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8cd8e"/>
+      <stop offset="55%" stop-color="#c5a059"/>
+      <stop offset="100%" stop-color="#9a7638"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M100 250 C 98 210, 100 176, 96 148" stroke="url(#poppyGrad)" stroke-width="2.2"/>
+  <path d="M96 190 C 82 196, 72 208, 68 224 C 84 222, 96 210, 96 190 Z" stroke="url(#poppyGrad)" stroke-width="1.6"/>
+
+  <g stroke="url(#poppyGrad)" stroke-width="1.7">
+    <path d="M100 130 C 76 118, 58 96, 54 68 C 80 70, 100 88, 108 114 C 110 120, 110 126, 100 130 Z"/>
+    <path d="M100 130 C 124 118, 142 96, 146 68 C 120 70, 100 88, 92 114 C 90 120, 90 126, 100 130 Z"/>
+    <path d="M100 122 C 82 106, 66 82, 66 54 C 92 60, 108 80, 112 106 Z" opacity="0.8"/>
+    <path d="M100 122 C 118 106, 134 82, 134 54 C 108 60, 92 80, 88 106 Z" opacity="0.8"/>
+    <path d="M100 116 C 90 96, 88 74, 96 52 C 112 68, 116 92, 108 112 Z" opacity="0.9"/>
+  </g>
+
+  <g stroke="#9a7638" stroke-width="1.1">
+    <path d="M100 128 C 94 116, 92 104, 96 92"/>
+    <path d="M100 128 C 100 114, 100 100, 100 88"/>
+    <path d="M100 128 C 106 116, 108 104, 104 92"/>
+    <path d="M100 128 C 90 120, 84 110, 84 98"/>
+    <path d="M100 128 C 110 120, 116 110, 116 98"/>
+    <circle cx="96" cy="90" r="1.8" fill="#9a7638" stroke="none"/>
+    <circle cx="100" cy="86" r="1.8" fill="#9a7638" stroke="none"/>
+    <circle cx="104" cy="90" r="1.8" fill="#9a7638" stroke="none"/>
+    <circle cx="84" cy="96" r="1.8" fill="#9a7638" stroke="none"/>
+    <circle cx="116" cy="96" r="1.8" fill="#9a7638" stroke="none"/>
+  </g>
+
+  <path d="M96 170 C 78 166, 62 172, 50 186 C 66 194, 84 190, 96 170 Z" stroke="url(#poppyGrad)" stroke-width="1.5" opacity="0.85"/>
+</svg>

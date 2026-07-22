@@ -1,0 +1,78 @@
+{
+  "artifactVersion": "0.3",
+  "generatedAt": "2026-07-09T21:43:51.621Z",
+  "tool": {
+    "name": "vibecheck",
+    "version": "0.5.0"
+  },
+  "repo": {
+    "name": "ArtLux-Website",
+    "rootPathHash": "099bbe67ff1067c8",
+    "git": {
+      "branch": "main",
+      "commit": "e6fa46991e9548f54cca368fb89c61f4a8669e4c",
+      "remoteUrl": "https://github.com/DuckylikesBatman/ArtLux-Website.git",
+      "isDirty": true
+    }
+  },
+  "summary": {
+    "totalFindings": 0,
+    "bySeverity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0
+    },
+    "byCategory": {
+      "auth": 0,
+      "validation": 0,
+      "middleware": 0,
+      "secrets": 0,
+      "injection": 0,
+      "privacy": 0,
+      "config": 0,
+      "network": 0,
+      "crypto": 0,
+      "uploads": 0,
+      "hallucinations": 0,
+      "abuse": 0,
+      "correlation": 0,
+      "authorization": 0,
+      "lifecycle": 0,
+      "supply-chain": 0,
+      "other": 0
+    }
+  },
+  "findings": [],
+  "metrics": {
+    "filesScanned": 1,
+    "linesOfCode": 0,
+    "scanDurationMs": 679,
+    "rulesExecuted": 38,
+    "authCoverage": {
+      "totalStateChanging": 0,
+      "protectedCount": 0,
+      "unprotectedCount": 0
+    },
+    "validationCoverage": {
+      "totalStateChanging": 0,
+      "validatedCount": 0
+    },
+    "middlewareCoverage": {
+      "totalApiRoutes": 0,
+      "coveredApiRoutes": 0
+    }
+  },
+  "routeMap": {
+    "routes": []
+  },
+  "middlewareMap": {
+    "matcher": [],
+    "coverage": []
+  },
+  "intentMap": {
+    "intents": []
+  },
+  "proofTraces": {}
+}

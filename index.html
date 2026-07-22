@@ -37,7 +37,7 @@
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
-        <a class="al-nav__link active" href="index.html"    data-i18n="nav.home">Home</a>
+        <a class="al-nav__link active" href="index.html" aria-current="page"    data-i18n="nav.home">Home</a>
         <a class="al-nav__link" href="gallery.html"         data-i18n="nav.gallery">Gallery</a>
         <a class="al-nav__link" href="projects.html"        data-i18n="nav.projects">Projects</a>
         <a class="al-nav__link" href="about.html"           data-i18n="nav.about">About</a>
@@ -56,7 +56,7 @@
     </div>
   </header>
   <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-    <a class="al-mobile-nav__link active" href="index.html"    data-i18n="nav.home">Home</a>
+    <a class="al-mobile-nav__link active" href="index.html" aria-current="page"    data-i18n="nav.home">Home</a>
     <a class="al-mobile-nav__link" href="gallery.html"         data-i18n="nav.gallery">Gallery</a>
     <a class="al-mobile-nav__link" href="projects.html"        data-i18n="nav.projects">Projects</a>
     <a class="al-mobile-nav__link" href="about.html"           data-i18n="nav.about">About</a>
@@ -444,7 +444,6 @@
       io.observe(el);
     });
   }());
-
   var backTop = document.getElementById('backTop');
   if (backTop) {
     window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });

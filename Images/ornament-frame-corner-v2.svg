@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
+  <defs>
+    <linearGradient id="fc2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecd7a0"/>
+      <stop offset="100%" stop-color="#8a6530"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M2 190 L2 2 L190 2 L190 4 L4 4 L4 190 Z" fill="url(#fc2)"/>
+
+  <!-- main floral stem climbing the corner -->
+  <path d="M18 168 C 26 138, 24 106, 8 78 C -6 104, -6 138, 16 166
+           C 17 167, 17.5 167.5, 18 168 Z" fill="url(#fc2)"/>
+  <path d="M8 78 C 2 62, 2 46, 10 32 C 18 46, 18 62, 8 78 Z" fill="url(#fc2)"/>
+  <circle cx="10" cy="30" r="3.6" fill="#ecd7a0"/>
+
+  <!-- leaf clusters branching off -->
+  <path d="M32 134 C 44 128, 52 116, 52 100 C 38 104, 28 116, 28 132 Z" fill="url(#fc2)"/>
+  <circle cx="50" cy="102" r="3" fill="#c5a059"/>
+
+  <path d="M46 168 C 60 164, 70 152, 72 134 C 56 138, 44 150, 44 166 Z" fill="url(#fc2)"/>
+  <circle cx="70" cy="136" r="3" fill="#c5a059"/>
+
+  <path d="M56 76 C 68 70, 76 58, 76 42 C 62 46, 52 58, 52 74 Z" fill="url(#fc2)"/>
+  <circle cx="74" cy="44" r="3" fill="#c5a059"/>
+
+  <path d="M92 138 C 104 134, 114 124, 118 110" stroke="url(#fc2)" stroke-width="1.8" opacity="0.85" fill="none"/>
+  <circle cx="121" cy="106" r="2.8" fill="#c5a059"/>
+  <path d="M74 92 C 82 80, 84 66, 78 52" stroke="url(#fc2)" stroke-width="1.6" opacity="0.7" fill="none"/>
+</svg>

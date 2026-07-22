@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="trunkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a07840"/>
+      <stop offset="100%" stop-color="#c5a059"/>
+    </linearGradient>
+    <linearGradient id="canopyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e2c982"/>
+      <stop offset="55%" stop-color="#c5a059"/>
+      <stop offset="100%" stop-color="#a07840"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M210 508 C 208 440, 212 380, 210 320 C 209 290, 214 270, 210 240" stroke="url(#trunkGrad)" stroke-width="9"/>
+  <path d="M210 340 C 180 320, 150 322, 128 344" stroke="url(#trunkGrad)" stroke-width="5"/>
+  <path d="M210 300 C 244 282, 272 286, 292 310" stroke="url(#trunkGrad)" stroke-width="5"/>
+  <path d="M210 400 C 186 388, 168 390, 152 406" stroke="url(#trunkGrad)" stroke-width="4"/>
+
+  <g stroke="url(#canopyGrad)" stroke-width="2.6">
+    <path d="M210 250 C 170 250, 140 224, 140 188 C 140 150, 172 122, 210 122 C 210 90, 236 66, 270 66 C 308 66, 338 96, 338 134 C 338 138, 338 142, 337 146 C 358 156, 372 178, 372 204 C 372 240, 342 270, 306 270 C 296 270, 286 268, 278 264 C 264 282, 242 292, 218 288 C 190 284, 168 266, 160 240 C 142 244, 122 236, 112 220 C 100 200, 104 174, 122 158 C 116 148, 113 136, 113 124 C 113 88, 142 60, 178 60 C 196 60, 212 68, 224 80 C 200 92, 184 116, 184 144 C 184 152, 185 160, 188 168 C 168 178, 154 198, 154 222 C 154 232, 156 240, 160 248 C 176 250, 194 252, 210 250 Z"/>
+  </g>
+
+  <g stroke="#a07840" stroke-width="1.4" opacity="0.55">
+    <path d="M210 240 C 196 214, 198 186, 216 164"/>
+    <path d="M210 240 C 226 218, 250 208, 274 214"/>
+    <path d="M210 240 C 188 224, 168 224, 150 236"/>
+    <path d="M232 150 C 244 138, 260 132, 276 134"/>
+    <path d="M170 160 C 158 150, 144 148, 130 154"/>
+  </g>
+
+  <circle cx="178" cy="100" r="3.2" fill="#e2c982" stroke="none"/>
+  <circle cx="300" cy="150" r="3" fill="#e2c982" stroke="none"/>
+  <circle cx="140" cy="200" r="2.6" fill="#e2c982" stroke="none"/>
+  <circle cx="250" cy="250" r="2.8" fill="#e2c982" stroke="none"/>
+</svg>
