@@ -19,6 +19,7 @@
     --gold-500: #be8d68;
     --gold-600: #9f6a41;
     --gold-700: #7b5232;
+    --gold-text: #8a5b35;
     --gold-light: rgba(190, 141, 104, 0.1);
     --warm-muted: #776e63;
   
@@ -774,7 +775,7 @@
     font-weight: 800;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--gold-600);
+    color: var(--gold-text, #8a5b35);
     margin-bottom: var(--s-4);
     display: block;
   }
@@ -840,7 +841,7 @@
     font-family: var(--ff-serif);
     font-size: 1.2rem;
     font-weight: 900;
-    color: var(--gold-600);
+    color: var(--gold-text, #8a5b35);
     margin-bottom: var(--s-6);
     flex-shrink: 0;
   }
@@ -1147,7 +1148,7 @@
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0.06em;
-    color: var(--gold-600);
+    color: var(--gold-text, #8a5b35);
     font-family: var(--ff-sans);
   }
   
@@ -1251,7 +1252,7 @@
   
   .quote__role {
     font-size: 0.82rem;
-    color: var(--gold-600);
+    color: var(--gold-text, #8a5b35);
   }
   
   /* ============================================================

@@ -63,7 +63,7 @@
 }
 
 .policy-toc a:hover {
-  color: var(--gold-600);
+  color: var(--gold-text, #8a5b35);
   border-bottom-color: rgba(190, 141, 104, 0.3);
 }
 

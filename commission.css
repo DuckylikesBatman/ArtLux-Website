@@ -90,7 +90,7 @@
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 900;
-  color: var(--gold-600, #9f6a41);
+  color: var(--gold-text, #8a5b35);
   margin: 0 auto 1.25rem;
   line-height: 1;
   flex-shrink: 0;
@@ -618,7 +618,7 @@
 }
 
 .upload-zone__browse {
-  color: var(--gold-600, #9f6a41);
+  color: var(--gold-text, #8a5b35);
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
