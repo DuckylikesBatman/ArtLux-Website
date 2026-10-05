@@ -71,8 +71,8 @@
 .form-row input:focus,
 .form-row textarea:focus {
   outline: none;
-  border-color: var(--gold-500, #c5a059);
-  box-shadow: 0 0 0 3px rgba(197,160,89,.12);
+  border-color: var(--gold-500, #be8d68);
+  box-shadow: 0 0 0 3px rgba(190,141,104,.12);
 }
 
 .form-row textarea {
@@ -107,7 +107,7 @@
   border-radius: var(--radius-lg);
   padding: 1.8rem 2rem;
   border: 1px solid rgba(0,0,0,.07);
-  box-shadow: 0 3px 18px rgba(197, 160, 89, 0.05);
+  box-shadow: 0 3px 18px rgba(190, 141, 104, 0.05);
   transition: transform .24s cubic-bezier(.22,.61,.36,1), box-shadow .28s, border-color .24s;
 }
 .info-card > * {
@@ -117,8 +117,8 @@
 
 .info-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(197, 160, 89, 0.1);
-  border-color: rgba(197,160,89,.35);
+  box-shadow: 0 12px 36px rgba(190, 141, 104, 0.1);
+  border-color: rgba(190,141,104,.35);
 }
 
 .info-card h2 {
@@ -134,7 +134,7 @@
 
 .info-icon {
   width: 20px; height: 20px;
-  stroke: var(--gold-500, #c5a059);
+  stroke: var(--gold-500, #be8d68);
   fill: none;
   flex-shrink: 0;
 }
@@ -160,7 +160,7 @@
 
 .contact-icon {
   width: 17px; height: 17px;
-  stroke: var(--gold-500, #c5a059);
+  stroke: var(--gold-500, #be8d68);
   fill: none;
   flex-shrink: 0;
   margin-top: 2px;
@@ -174,7 +174,7 @@
   transition: color .22s;
   line-height: 1.5;
 }
-.contact-item a:hover { color: var(--gold-600, #a07840); }
+.contact-item a:hover { color: var(--gold-600, #9f6a41); }
 
 .info-card ul {
   margin-left: 1.1rem;
@@ -207,7 +207,7 @@
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(197, 160, 89, 0.1);
+  box-shadow: 0 8px 32px rgba(190, 141, 104, 0.1);
   border: 1px solid rgba(0,0,0,.07);
 }
 

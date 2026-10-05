@@ -14,7 +14,7 @@
       'nav.contact': 'Contact',
       'nav.commission': 'Commission',
       /* ── Footer (all pages) ── */
-      'footer.tagline': 'Elevating spaces with premium mural art and fine finishes since 2019.',
+      'footer.tagline': 'Decorative painting, fine murals, and bespoke furniture restoration since 2019.',
       'footer.quicklinks': 'Quick Links',
       'footer.legal': 'Legal',
       'footer.contact-us': 'Contact Us',
@@ -86,7 +86,7 @@
       'nav.contact': 'تواصل معنا',
       'nav.commission': 'اطلب عملاً',
       /* ── Footer ── */
-      'footer.tagline': 'نرتقي بالمساحات بفن الجداريات الفاخرة والتشطيبات الراقية منذ ٢٠١٩.',
+      'footer.tagline': 'رسم ديكوري، جداريات فنية، وترميم أثاث فاخر منذ ٢٠١٩.',
       'footer.quicklinks': 'روابط سريعة',
       'footer.legal': 'القانونية',
       'footer.contact-us': 'تواصل معنا',

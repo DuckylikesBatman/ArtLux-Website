@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="lilyGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#e8cd8e"/>
-      <stop offset="50%" stop-color="#c5a059"/>
+      <stop offset="50%" stop-color="#be8d68"/>
       <stop offset="100%" stop-color="#9a7638"/>
     </linearGradient>
   </defs>
@@ -31,6 +31,6 @@
 
   <g stroke="url(#lilyGrad)" stroke-width="1.6">
     <path d="M84 190 C 66 182, 46 184, 30 198 C 42 210, 62 210, 84 190 Z"/>
-    <circle cx="26" cy="199" r="2.2" fill="#c5a059" stroke="none"/>
+    <circle cx="26" cy="199" r="2.2" fill="#be8d68" stroke="none"/>
   </g>
 </svg>

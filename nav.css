@@ -8,13 +8,13 @@
     --al-ink-soft: #171310;
     --al-cream: #f7f0e6;
     --al-cream-soft: #efe2d1;
-    --al-gold: #c8a45d;
-    --al-gold-light: #e2c982;
-    --al-gold-dark: #9f7b35;
+    --al-gold: #be8d68;
+    --al-gold-light: #ceaf97;
+    --al-gold-dark: #98653e;
     --al-muted-light: rgba(247, 240, 230, 0.72);
     --al-muted-dark: #5f5a52;
     --al-border-light: rgba(247, 240, 230, 0.14);
-    --al-border-gold: rgba(200, 164, 93, 0.24);
+    --al-border-gold: rgba(190, 141, 104, 0.24);
     --al-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
     --al-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   }
@@ -299,7 +299,7 @@
     gap: clamp(1.6rem, 4vw, 2.6rem);
     padding: 6rem 1.5rem 3rem;
     background:
-      radial-gradient(circle at 25% 20%, rgba(200, 164, 93, 0.16), transparent 34%),
+      radial-gradient(circle at 25% 20%, rgba(190, 141, 104, 0.16), transparent 34%),
       linear-gradient(145deg, rgba(23, 19, 16, 0.99), rgba(15, 13, 11, 0.98));
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -341,7 +341,7 @@
     border-radius: 999px;
     background: transparent;
     color: var(--al-gold-light) !important;
-    border: 1.5px solid rgba(200, 164, 93, 0.45);
+    border: 1.5px solid rgba(190, 141, 104, 0.45);
     font-family: "Inter", system-ui, sans-serif;
     font-size: 0.8rem !important;
     font-weight: 700;
@@ -427,7 +427,7 @@
   
   .artlux-footer {
     background:
-      radial-gradient(circle at 20% 0%, rgba(200, 164, 93, 0.12), transparent 28%),
+      radial-gradient(circle at 20% 0%, rgba(190, 141, 104, 0.12), transparent 28%),
       #0d0c0a;
     color: var(--al-cream);
     padding: 5rem clamp(1.5rem, 5vw, 4rem) 0;
@@ -542,14 +542,14 @@
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background: rgba(200, 164, 93, 0.9);
+    background: rgba(190, 141, 104, 0.9);
     opacity: 0;
     transition: opacity 0.25s var(--al-ease);
   }
 
   .social-links a:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(200, 164, 93, 0.28);
+    box-shadow: 0 6px 18px rgba(190, 141, 104, 0.28);
   }
 
   .social-links a:hover::before {
@@ -595,11 +595,11 @@
     height: 54px;
     border-radius: 50%;
     background: #0f0d0b;
-    border: 1.5px solid rgba(200, 164, 93, 0.45);
+    border: 1.5px solid rgba(190, 141, 104, 0.45);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32), 0 2px 8px rgba(200, 164, 93, 0.12);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32), 0 2px 8px rgba(190, 141, 104, 0.12);
     transition:
       transform 0.25s var(--al-ease),
       box-shadow 0.25s var(--al-ease),
@@ -610,8 +610,8 @@
   .wa-btn:hover {
     transform: translateY(-3px);
     background: #1a1612;
-    border-color: rgba(200, 164, 93, 0.75);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.36), 0 4px 12px rgba(200, 164, 93, 0.22);
+    border-color: rgba(190, 141, 104, 0.75);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.36), 0 4px 12px rgba(190, 141, 104, 0.22);
   }
 
   .wa-btn svg {
@@ -657,8 +657,8 @@
 
   .back-top.visible:hover {
     background: rgba(25, 20, 15, 0.96);
-    border-color: rgba(200, 164, 93, 0.65);
-    box-shadow: 0 6px 18px rgba(200, 164, 93, 0.2);
+    border-color: rgba(190, 141, 104, 0.65);
+    box-shadow: 0 6px 18px rgba(190, 141, 104, 0.2);
   }
   
   .back-top.visible {
@@ -812,7 +812,7 @@
     gap: 4px;
     margin-top: 1rem;
     padding: 0.6rem 1.2rem;
-    border: 1px solid rgba(200, 164, 93, 0.2);
+    border: 1px solid rgba(190, 141, 104, 0.2);
     border-radius: 999px;
   }
 

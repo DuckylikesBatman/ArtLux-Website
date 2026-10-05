@@ -11,7 +11,7 @@
     /* Hero Section */
     .policy-hero {
     background:
-      radial-gradient(circle at 80% 25%, rgba(197, 160, 89, 0.14), transparent 36%),
+      radial-gradient(circle at 80% 25%, rgba(190, 141, 104, 0.14), transparent 36%),
       linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
     padding: 150px 0 80px;
     text-align: center;
@@ -71,7 +71,7 @@
     .policy-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
-    border-color: rgba(197, 160, 89, 0.45);
+    border-color: rgba(190, 141, 104, 0.45);
     }
 
     .policy-card h2 {
