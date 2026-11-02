@@ -341,7 +341,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-600, #9f6a41);
+  color: var(--gold-text, #8a5b35);
   margin-bottom: .65rem;
 }
 .card-content p:last-child {

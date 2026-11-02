@@ -5,24 +5,15 @@
 
 /* ----------  Variables  ---------- */
 :root {
-  --gold-50: #faf8f3;
-  --gold-100: #f8f2e6;
   --gold-900: #4d3d1a;
-  --black: #1a1a1a;
-  --gray-50: #faf9f7;
-  --gray-100: #f8f8f8;
-  --gray-300: #e0e0e0;
-  --gray-500: #999999;
-  --gray-700: #5c5c5c;
-  --white: #ffffff;
 }
 
 /* ----------  Base Styles  ---------- */
 body.policy-page {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: var(--black);
-  background: var(--white);
+  color: var(--text);
+  background: var(--bg);
   margin: 0;
 }
 
@@ -34,10 +25,11 @@ body.policy-page {
 
 /* ----------  Hero Section  ---------- */
 .policy-hero {
-  background: linear-gradient(135deg, var(--gold-50) 0%, var(--white) 100%);
-  padding: 140px 0 80px;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(190, 141, 104, 0.14), transparent 36%),
+    linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
+  padding: 150px 0 80px;
   text-align: center;
-  border-bottom: 1px solid var(--gray-300);
   position: relative;
   overflow: hidden;
 }
@@ -50,24 +42,26 @@ body.policy-page {
 }
 
 .policy-title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: var(--gold-700);
+  font-family: var(--ff-serif);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  letter-spacing: -0.03em;
+  color: var(--primary);
   margin-bottom: 1rem;
   line-height: 1.1;
 }
 
 .policy-subtitle {
-  font-size: 1.1rem;
-  color: var(--gray-700);
-  margin: 0;
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* ----------  Content Layout  ---------- */
 .policy-content {
   padding: 5rem 0;
-  background: var(--white);
+  background: var(--bg);
   position: relative;
   overflow: hidden;
 }
@@ -87,7 +81,7 @@ body.policy-page {
   line-height: 1.7;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid rgba(190, 141, 104, 0.18);
 }
 
 .intro-text p {
@@ -96,29 +90,38 @@ body.policy-page {
 
 /* ----------  Policy Sections  ---------- */
 .policy-section {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--gray-300);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  background: var(--surface);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  border: var(--brd-gold);
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 100px;
+  transition: var(--transition);
 }
 
-.policy-section:last-of-type {
-  border-bottom: none;
-  margin-bottom: 0;
+.policy-section:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(190, 141, 104, 0.45);
 }
 
 .policy-section h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--ff-serif);
   font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--gold-700);
+  font-weight: 900;
+  color: var(--primary);
   margin-bottom: 1.5rem;
-  scroll-margin-top: 100px;
+  border-bottom: 1px solid rgba(190, 141, 104, 0.25);
+  padding-bottom: 10px;
 }
 
 .policy-section p {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--gray-700);
+  color: var(--muted);
   margin-bottom: 1.5rem;
 }
 
@@ -130,11 +133,11 @@ body.policy-page {
 .legal-list li {
   margin-bottom: 1rem;
   line-height: 1.6;
-  color: var(--gray-700);
+  color: var(--muted);
 }
 
 .legal-list strong {
-  color: var(--black);
+  color: var(--text);
   font-weight: 600;
 }
 
@@ -142,7 +145,7 @@ body.policy-page {
 .policy-section a {
   color: var(--gold-700);
   text-decoration: underline;
-  text-decoration-color: rgba(138, 110, 45, 0.35);
+  text-decoration-color: rgba(123, 82, 50, 0.35);
   transition: var(--transition);
 }
 
@@ -165,12 +168,12 @@ body.policy-page {
 
 /* ----------  Table of Contents  ---------- */
 .policy-toc {
-  position: relative;
-  top: 120px;
-  background: var(--gold-50);
-  border: 1px solid var(--gold-100);
+  position: sticky;
+  top: 110px;
+  background: var(--surface-soft);
+  border: var(--brd-gold);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.75rem;
   box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
@@ -181,17 +184,17 @@ body.policy-page {
 .email-link {
   color: var(--gold-700);
   text-decoration: underline;
-  text-decoration-color: rgba(138, 110, 45, 0.35);
+  text-decoration-color: rgba(123, 82, 50, 0.35);
 }
 
 .policy-toc h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--gold-700);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--gold-300);
+  font-family: var(--ff-serif);
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(190, 141, 104, 0.25);
 }
 
 .policy-toc ol {
@@ -205,7 +208,7 @@ body.policy-page {
 }
 
 .policy-toc a {
-  color: var(--gray-700);
+  color: var(--muted);
   text-decoration: none;
   font-size: 0.95rem;
   transition: var(--transition);

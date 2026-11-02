@@ -588,8 +588,8 @@
   
   .wa-btn {
     position: fixed;
-    right: 22px;
-    bottom: 22px;
+    right: max(22px, env(safe-area-inset-right, 0px));
+    bottom: calc(22px + env(safe-area-inset-bottom, 0px));
     z-index: 900;
     width: 54px;
     height: 54px;
@@ -623,7 +623,9 @@
   /* Keep the floating action buttons from sitting on top of an active
      form field (e.g. the contact/commission textareas) while typing. */
   body:has(input:focus, textarea:focus, select:focus) .wa-btn,
-  body:has(input:focus, textarea:focus, select:focus) .back-top {
+  body:has(input:focus, textarea:focus, select:focus) .back-top,
+  body.wa-hide .wa-btn,
+  body.wa-hide .back-top {
     opacity: 0;
     pointer-events: none;
     transform: translateY(12px);
@@ -631,8 +633,8 @@
 
   .back-top {
     position: fixed;
-    right: 22px;
-    bottom: 88px;
+    right: max(22px, env(safe-area-inset-right, 0px));
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
     z-index: 900;
     width: 44px;
     height: 44px;

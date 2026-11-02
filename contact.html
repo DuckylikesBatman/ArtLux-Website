@@ -73,9 +73,9 @@
     <!-- Hero Section -->
     <section class="page-hero" aria-label="Contact ArtLux">
       <div class="page-hero__content">
-        <p class="page-hero__eye">Get In Touch</p>
-        <h1 class="page-hero__title">Let's Create Something<br><em>Beautiful</em></h1>
-        <p class="page-hero__sub">Get in touch to discuss your decorative painting, furniture restoration, or fine art project. We're here to bring your vision to life.</p>
+        <p class="page-hero__eye" data-i18n="contact.hero.eye">Get In Touch</p>
+        <h1 class="page-hero__title" data-i18n="contact.hero.title">Let's Create Something<br><em>Beautiful</em></h1>
+        <p class="page-hero__sub" data-i18n="contact.hero.sub">Get in touch to discuss your decorative painting, furniture restoration, or fine art project. We're here to bring your vision to life.</p>
       </div>
     </section>
 
@@ -84,22 +84,22 @@
       <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwprqdjp" method="POST" novalidate>
   <!-- Visible fields -->
   <div class="form-row">
-    <label for="name">Your Name</label>
+    <label for="name" data-i18n="contact.form.name">Your Name</label>
     <input id="name" name="name" type="text" autocomplete="name" required>
   </div>
 
   <div class="form-row">
-    <label for="email">Email</label>
+    <label for="email" data-i18n="contact.form.email">Email</label>
     <input id="email" name="email" type="email" autocomplete="email" required>
   </div>
 
   <div class="form-row">
-    <label for="subject">Subject (optional)</label>
+    <label for="subject" data-i18n="contact.form.subject">Subject (optional)</label>
     <input id="subject" name="subject" type="text" autocomplete="off">
   </div>
 
   <div class="form-row">
-    <label for="message">Message</label>
+    <label for="message" data-i18n="contact.form.message">Message</label>
     <textarea id="message" name="message" rows="6" required></textarea>
   </div>
 
@@ -113,7 +113,7 @@
   <input type="hidden" name="_subject" value="New ArtLux inquiry">
   <input type="hidden" name="_redirect" value="thanks.html">
 
-  <button class="btn btn--primary" type="submit">Send Message</button>
+  <button class="btn btn--primary" type="submit" data-i18n="contact.form.submit">Send Message</button>
   <p id="formStatus" class="form-status" aria-live="polite"></p>
 </form>
 
@@ -125,9 +125,9 @@
               <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.7764 3 12 3C8.22355 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Visit Our Studio
+            <span data-i18n="contact.card1.title">Visit Our Studio</span>
           </h2>
-          <p>We welcome visits by appointment to discuss your project in person.</p>
+          <p data-i18n="contact.card1.text">We welcome visits by appointment to discuss your project in person.</p>
           <div class="contact-details">
             <div class="contact-item">
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,8 +135,8 @@
                 <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <p>Corniche El Mazraa, Beirut</p>
-                <p>Lebanon</p>
+                <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
+                <p data-i18n="contact.lebanon">Lebanon</p>
               </div>
             </div>
           </div>
@@ -148,9 +148,9 @@
               <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Get In Touch
+            <span data-i18n="contact.card2.title">Get In Touch</span>
           </h2>
-          <p>Reach out to us directly through any of these channels.</p>
+          <p data-i18n="contact.card2.text">Reach out to us directly through any of these channels.</p>
           <div class="contact-details">
             <div class="contact-item">
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,23 +170,8 @@
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor"/>
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="currentColor"/>
               </svg>
-              <a href="https://wa.me/9613683127" target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+              <a href="https://wa.me/9613683127" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp us</a>
             </div>
-          </div>
-          <div class="social-links">
-            <a href="https://www.instagram.com/artlux.murals" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-              </svg>
-            </a>
-            <a href="https://wa.me/9613683127" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.11 1.518 5.834L0 24l6.335-1.518A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.53-5.38-1.452l-.386-.23-3.994.957.974-3.9-.252-.4A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-              </svg>
-            </a>
           </div>
         </div>
         
@@ -197,21 +182,21 @@
               <path d="M12 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Consultation Process
+            <span data-i18n="contact.card3.title">Consultation Process</span>
           </h2>
-          <p>We follow a structured approach to ensure your project exceeds expectations:</p>
+          <p data-i18n="contact.card3.text">We follow a structured approach to ensure your project exceeds expectations:</p>
           <ul>
-            <li>Initial consultation to understand your vision</li>
-            <li>Site visit and detailed assessment</li>
-            <li>Custom proposal with timeline and budget</li>
-            <li>Execution with regular progress updates</li>
+            <li data-i18n="contact.card3.item1">Initial consultation to understand your vision</li>
+            <li data-i18n="contact.card3.item2">Site visit and detailed assessment</li>
+            <li data-i18n="contact.card3.item3">Custom proposal with timeline and budget</li>
+            <li data-i18n="contact.card3.item4">Execution with regular progress updates</li>
           </ul>
         </div>
       </div>
     </section>
     <!-- Map Section -->
 <section class="map-section" aria-labelledby="map-title">
-  <h2 id="map-title" class="sr-only">Our Location</h2>
+  <h2 id="map-title" class="sr-only" data-i18n="contact.map.title">Our Location</h2>
 
   <div class="map-container">
     <!-- Interactive map -->
@@ -220,7 +205,7 @@
 
   <p class="map-actions">
     <a class="btn btn--primary" target="_blank" rel="noopener"
-       href="https://www.google.com/maps/search/?api=1&query=33.879907%2C35.491248">Open in Google Maps</a>
+       href="https://www.google.com/maps/search/?api=1&query=33.879907%2C35.491248" data-i18n="contact.map.open">Open in Google Maps</a>
   </p>
 </section>
 
@@ -231,33 +216,33 @@
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
+        <p data-i18n="footer.tagline">Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
       </div>
 
       <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quicklinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="commission.html" data-i18n="nav.commission">Commission</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
+        <h3 data-i18n="footer.legal">Legal</h3>
         <ul>
-          <li><a href="ToS.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="ToS.html" data-i18n="footer.tos">Terms of Service</a></li>
+          <li><a href="return.html" data-i18n="footer.return">Return Policy</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
         </ul>
       </nav>
 
       <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
+        <h3 data-i18n="footer.contact-us">Contact Us</h3>
+        <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+9613683127">+961 3 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
         <div class="social-links" aria-label="Follow us">
@@ -279,7 +264,7 @@
     </div>
 
     <div class="copyright">
-      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
+      &copy; <span class="yr">2026</span> ArtLux. All rights reserved.
     </div>
   </footer>
 
@@ -333,7 +318,7 @@
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const formStatus = document.getElementById('formStatus');
-      formStatus.textContent = 'Sending your message...';
+      formStatus.textContent = ArtLuxLang.t('contact.status.sending');
       formStatus.className = 'form-status';
 
       fetch(this.action, {
@@ -342,16 +327,28 @@
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
-          formStatus.textContent = 'Thank you! We will get back to you within 24 hours.';
+          formStatus.textContent = ArtLuxLang.t('contact.status.success');
           formStatus.className = 'form-status success';
           this.reset();
         } else {
           throw new Error('Submission failed');
         }
       }).catch(() => {
-        formStatus.textContent = 'Sorry, something went wrong. Please email us directly at artluxdesign@outlook.com';
+        formStatus.textContent = ArtLuxLang.t('contact.status.error');
         formStatus.className = 'form-status error';
       });
+    });
+
+    /* ── Prefill from a gallery "Inquire About This Piece" link ──
+       Waits for DOMContentLoaded since lang.js (ArtLuxLang) is deferred
+       and hasn't necessarily run yet at this point in parsing. */
+    document.addEventListener('DOMContentLoaded', function () {
+      const piece = new URLSearchParams(location.search).get('piece');
+      if (!piece) return;
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+      if (subject && !subject.value) subject.value = ArtLuxLang.t('contact.prefill.subject').replace('{piece}', piece);
+      if (message && !message.value) message.value = ArtLuxLang.t('contact.prefill.message').replace('{piece}', piece);
     });
 
     /* ── Scroll reveal ── */
@@ -369,6 +366,13 @@
     if (backTop) {
       window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
       backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      var siteFooter = document.querySelector('.artlux-footer');
+      if (siteFooter && window.IntersectionObserver) {
+        var footerIo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { document.body.classList.toggle('wa-hide', e.isIntersecting); });
+        });
+        footerIo.observe(siteFooter);
+      }
     }
     document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 

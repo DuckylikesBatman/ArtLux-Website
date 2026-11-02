@@ -1,0 +1,9 @@
+.DS_Store
+
+# Local safety backups made before recompressing/resizing images — not needed in the repo
+**/_originals_backup*/
+
+# Raw camera dumps (HEIC/DNG/unedited JPG) kept outside the site's actual image set
+Images/Kassem\ -\ beirut/
+Images/artlux\ workers/
+Images/wiam\ wahhab/

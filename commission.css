@@ -383,7 +383,7 @@
   transition: color 0.34s;
 }
 
-.cfg-step.active .cfg-step__label { color: var(--gold-600, #9f6a41); }
+.cfg-step.active .cfg-step__label { color: var(--gold-text, #8a5b35); }
 
 .cfg-step-line {
   flex: 1;

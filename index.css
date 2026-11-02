@@ -163,11 +163,9 @@
     transition: transform 0.3s var(--ease);
   }
 
-  .btn:focus-visible,
-  .al-btn:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 3px;
-  }
+  /* Buttons inherit the site-wide gold focus ring below rather than their
+     own dark one — a dark ring was nearly invisible on hero buttons sitting
+     over a dark photo background. */
 
   /* Site-wide keyboard focus indicator */
   :focus-visible {
@@ -225,7 +223,7 @@
   .btn--outline:hover,
   .al-btn--ghost:hover {
     background: transparent;
-    color: var(--gold-600);
+    color: var(--gold-text, #8a5b35);
     border-color: transparent;
     transform: none;
     box-shadow: none;
@@ -1409,52 +1407,6 @@
     max-width: 580px;
     margin: 0 auto var(--s-8);
     line-height: 1.72;
-  }
-  
-  /* ============================================================
-     LEGACY / GENERAL STATS
-     ============================================================ */
-  
-  .stats {
-    display: flex;
-    gap: var(--s-8);
-    padding: var(--s-6) 0;
-    border-top: var(--brd);
-    border-bottom: var(--brd);
-    margin: var(--s-6) 0 var(--s-8);
-  }
-  
-  .stat {
-    text-align: center;
-    position: relative;
-    flex: 1;
-    min-width: 0;
-  }
-  
-  .stat:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 10%;
-    height: 80%;
-    width: 1px;
-    background: rgba(0, 0, 0, 0.08);
-  }
-  
-  .stat__num {
-    font-family: var(--ff-serif);
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    color: var(--gold-600);
-    font-weight: 900;
-    line-height: 1;
-    display: block;
-  }
-  
-  .stat__label {
-    font-size: 0.82rem;
-    color: var(--muted);
-    margin-top: var(--s-1);
-    letter-spacing: 0.3px;
   }
   
   /* ============================================================

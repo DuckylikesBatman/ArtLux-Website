@@ -136,6 +136,7 @@
             <input id="cfg_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
           </div>
           <input type="hidden" name="_subject" value="New Commission Request - ArtLux">
+          <input type="hidden" name="_redirect" value="thanks.html">
 
           <!-- ── STEP 1: TYPE ── -->
           <div class="cfg-panel active" id="cfgPanel1">
@@ -202,6 +203,37 @@
                   </span>
                   <strong class="type-card__name" data-i18n="cfg.type.patina">Patina</strong>
                   <span class="type-card__desc" data-i18n="cfg.type.patina.desc">Aged metal and oxidized surface finishes</span>
+                </div>
+              </label>
+
+              <!-- Gold Leaf & Arabesque -->
+              <label class="type-card">
+                <input type="radio" name="artwork-type" value="Gold Leaf & Arabesque">
+                <div class="type-card__inner">
+                  <span class="type-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 6h12v12H6z"/>
+                      <path d="M12 3l9 9-9 9-9-9z"/>
+                    </svg>
+                  </span>
+                  <strong class="type-card__name" data-i18n="cfg.type.arabesque">Gold Leaf &amp; Arabesque</strong>
+                  <span class="type-card__desc" data-i18n="cfg.type.arabesque.desc">Hand-painted geometric patterns with hand-applied gold leaf</span>
+                </div>
+              </label>
+
+              <!-- Furniture Restoration -->
+              <label class="type-card">
+                <input type="radio" name="artwork-type" value="Furniture Restoration">
+                <div class="type-card__inner">
+                  <span class="type-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 12.5V8a2 2 0 012-2h12a2 2 0 012 2v4.5"/>
+                      <path d="M3.5 12.5h17a1.5 1.5 0 011.5 1.5v3a1 1 0 01-1 1h-18a1 1 0 01-1-1v-3a1.5 1.5 0 011.5-1.5z"/>
+                      <path d="M5.5 18v2.5M18.5 18v2.5"/>
+                    </svg>
+                  </span>
+                  <strong class="type-card__name" data-i18n="cfg.type.furniture">Furniture Restoration</strong>
+                  <span class="type-card__desc" data-i18n="cfg.type.furniture.desc">Refinishing and custom-painted restoration for cherished pieces</span>
                 </div>
               </label>
 
@@ -273,6 +305,7 @@
                 <select id="cfgTimeline" name="timeline">
                   <option value="">Select timeline</option>
                   <option value="Flexible">Flexible</option>
+                  <option value="2–4 weeks">2–4 weeks</option>
                   <option value="1–2 months">1–2 months</option>
                   <option value="3–4 months">3–4 months</option>
                   <option value="Urgent (discuss)">Urgent (discuss)</option>
@@ -376,7 +409,7 @@
             <details>
               <summary data-i18n="faq.q1">How long does a commission typically take?</summary>
               <div class="faq-content">
-                <p data-i18n="faq.a1">Most commissions take 4–6 weeks from concept approval to completion. Larger or complex works may require 8–10 weeks. We'll provide a detailed timeline during our initial consultation.</p>
+                <p data-i18n="faq.a1">Most commissions take 2–3 weeks from concept approval to completion. Larger or more complex works may take a little longer. We'll provide a detailed timeline during our initial consultation.</p>
               </div>
             </details>
           </article>
@@ -385,12 +418,12 @@
             <details>
               <summary data-i18n="faq.q2">What materials do you use?</summary>
               <div class="faq-content">
-                <p>We use only archival-quality materials to ensure your artwork stands the test of time:</p>
+                <p data-i18n="faq.a2.intro">We use only archival-quality materials to ensure your artwork stands the test of time:</p>
                 <ul>
-                  <li>Professional-grade acrylics and oils</li>
-                  <li>Gallery-wrapped canvases and premium panels</li>
-                  <li>Acid-free papers and mounting boards</li>
-                  <li>UV-protective varnishes for longevity</li>
+                  <li data-i18n="faq.a2.item1">Professional-grade acrylics and oils</li>
+                  <li data-i18n="faq.a2.item2">Gallery-wrapped canvases and premium panels</li>
+                  <li data-i18n="faq.a2.item3">Acid-free papers and mounting boards</li>
+                  <li data-i18n="faq.a2.item4">UV-protective varnishes for longevity</li>
                 </ul>
               </div>
             </details>
@@ -410,6 +443,15 @@
               <summary data-i18n="faq.q4">Can I see progress updates?</summary>
               <div class="faq-content">
                 <p data-i18n="faq.a4">Absolutely! We provide regular progress photos and updates throughout the creation process. We want you to be involved and excited as your vision comes to life.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="faq-item">
+            <details>
+              <summary data-i18n="faq.q5">How does on-site work like murals or ceiling painting work?</summary>
+              <div class="faq-content">
+                <p data-i18n="faq.a5">For murals, arabesque, and other wall or ceiling work, we begin with a site visit to assess the space. Floors, furniture, and fixtures are fully protected before any painting begins, and the number of days on site depends on the scale of the piece — we'll walk you through this during your consultation. Payment is arranged in stages tied to project milestones.</p>
               </div>
             </details>
           </article>
@@ -471,7 +513,7 @@
       </address>
     </div>
     <div class="copyright">
-      &copy; <span class="yr">2026</span> ArtLux Murals. All rights reserved.
+      &copy; <span class="yr">2026</span> ArtLux. All rights reserved.
     </div>
   </footer>
 
@@ -684,6 +726,13 @@
   if (backTop) {
     window.addEventListener('scroll', function () { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
     backTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+  var siteFooter = document.querySelector('.artlux-footer');
+  if (siteFooter && window.IntersectionObserver) {
+    var footerIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { document.body.classList.toggle('wa-hide', e.isIntersecting); });
+    });
+    footerIo.observe(siteFooter);
   }
   document.querySelectorAll('.yr').forEach(function (e) { e.textContent = new Date().getFullYear(); });
   </script>

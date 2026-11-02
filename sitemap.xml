@@ -55,10 +55,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
-    <loc>https://artluxdesign.com/thanks.html</loc>
-    <lastmod>2025-10-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
 </urlset>

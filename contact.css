@@ -174,7 +174,7 @@
   transition: color .22s;
   line-height: 1.5;
 }
-.contact-item a:hover { color: var(--gold-600, #9f6a41); }
+.contact-item a:hover { color: var(--gold-text, #8a5b35); }
 
 .info-card ul {
   margin-left: 1.1rem;
