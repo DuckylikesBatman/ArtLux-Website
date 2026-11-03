@@ -752,11 +752,9 @@
     content: "";
     display: block;
     width: 80px;
-    height: 15px;
+    height: 1.5px;
     margin: var(--s-4) auto 0;
-    background:
-      linear-gradient(var(--gold-500), var(--gold-500)) no-repeat left center / 34px 1.5px,
-      linear-gradient(var(--gold-500), var(--gold-500)) no-repeat right center / 34px 1.5px;
+    background: var(--gold-500);
   }
   
   .section__subtitle {
