@@ -109,7 +109,7 @@
       <button class="filter-pill" data-filter="furniture" data-i18n="projects.filter.furniture">Furniture Restoration</button>
     </div>
     <span class="projects-count" aria-live="polite">
-      <span id="countNum">8</span> <span data-i18n="projects.count.label">projects</span>
+      <span id="countNum">11</span> <span data-i18n="projects.count.label">projects</span>
     </span>
   </div>
 
@@ -241,6 +241,54 @@
             <p class="project-card__desc" data-i18n="proj.furniture-restoration.card.desc">Expert refinishing, custom-painted finishes, and antique restoration that give new life to timeless pieces — from hand-painted panel doors to gold-leafed tabletops and fully repainted case furniture.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.furniture-restoration.type">Furniture Painting &amp; Restoration</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" data-project="al-khourafi" tabindex="0" role="button" aria-label="Open Al Khourafi Residence project">
+          <div class="project-card__img">
+            <picture><source srcset="Images/artlux-al-khourafi-1.webp" type="image/webp"><img src="Images/artlux-al-khourafi-1.jpg" width="1200" height="900" alt="Hand-painted gold arabesque willow tree mural on a feature wall" loading="lazy" decoding="async"></picture>
+            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location" data-i18n="proj.al-khourafi.loc">Kuwait</p>
+            <h2 class="project-card__title">Al Khourafi Residence</h2>
+            <p class="project-card__desc" data-i18n="proj.al-khourafi.desc">Hand-painted gold leaf arabesque murals and botanical motifs throughout a grand private residence, from a flowing willow tree feature wall to richly patterned dining and reception rooms.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="proj.al-khourafi.type">Arabesque Painting &amp; Gold Leaf</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" data-project="lusail-palace" tabindex="0" role="button" aria-label="Open Lusail Palace project">
+          <div class="project-card__img">
+            <picture><source srcset="Images/artlux-lusail-palace-10.webp" type="image/webp"><img src="Images/artlux-lusail-palace-10.jpg" width="675" height="1200" alt="Grand crystal chandelier beneath an arched doorway" loading="lazy" decoding="async"></picture>
+            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location" data-i18n="proj.lusail-palace.loc">Qatar</p>
+            <h2 class="project-card__title">Lusail Palace</h2>
+            <p class="project-card__desc" data-i18n="proj.lusail-palace.desc">Large-scale sculptural plaster relief and hand-painted arabesque detailing throughout a monumental private palace, with gilded floral reliefs, ornamental columns, and domed reception halls.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="proj.lusail-palace.type">Ornamental Relief &amp; Arabesque</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" data-project="kuwait-residence" tabindex="0" role="button" aria-label="Open Private Residence, Kuwait project">
+          <div class="project-card__img">
+            <picture><source srcset="Images/artlux-kuwait-botanical-1.webp" type="image/webp"><img src="Images/artlux-kuwait-botanical-1.jpg" width="900" height="1200" alt="Hand-painted feather and floral mural along a staircase wall" loading="lazy" decoding="async"></picture>
+            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location" data-i18n="proj.kuwait-residence.loc">Kuwait</p>
+            <h2 class="project-card__title">Private Residence</h2>
+            <p class="project-card__desc" data-i18n="proj.kuwait-residence.desc">Delicate feather and botanical murals in soft silver and sage tones, hand-painted across a staircase and feature walls to bring an organic, textured elegance to the space.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="proj.kuwait-residence.type">Botanical Mural &amp; Textured Finish</span>
               <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
             </div>
           </div>
@@ -525,7 +573,11 @@ const PROJECTS = {
     desc: 'proj.nohad-machnouk.modal.desc',
     images: [
       { src: 'Images/artlux-nohad-machnouk-1.jpg', alt: 'Striped wall design with chandelier and arched windows' },
-      { src: 'Images/artlux-nohad-machnouk-2.jpg', alt: 'Hand-painted corner panel with gold ornamental border' }
+      { src: 'Images/artlux-nohad-machnouk-2.jpg', alt: 'Hand-painted corner panel with gold ornamental border' },
+      { src: 'Images/artlux-nohad-machnouk-3.jpg', alt: 'Hand-painted archway with ceiling beams and ornamental border' },
+      { src: 'Images/artlux-nohad-machnouk-4.jpg', alt: 'Striped hallway with chandelier and arched windows' },
+      { src: 'Images/artlux-nohad-machnouk-5.jpg', alt: 'Detail of an ornamental door panel with rosette motif' },
+      { src: 'Images/artlux-nohad-machnouk-6.jpg', alt: 'Corner view of hand-painted door panels with ornamental borders' }
     ]
   },
   'furniture-restoration': {
@@ -539,6 +591,60 @@ const PROJECTS = {
       { src: 'Images/artlux-furniture-1.jpg', alt: 'Hand-painted panel doors with ribbon and floral motifs' },
       { src: 'Images/artlux-furniture-2.jpg', alt: 'Round side table with hand-painted floral border' },
       { src: 'Images/artlux-furniture-3.jpg', alt: 'Gold-leafed console table with antiqued mirrored top' }
+    ]
+  },
+  'al-khourafi': {
+    title: 'Al Khourafi Residence',
+    location: 'proj.al-khourafi.loc',
+    cat: 'cat.residential', catClass: 'badge--residential',
+    type: 'proj.al-khourafi.type',
+    desc: 'proj.al-khourafi.desc',
+    images: [
+      { src: 'Images/artlux-al-khourafi-1.jpg', alt: 'Hand-painted gold arabesque willow tree mural on a feature wall' },
+      { src: 'Images/artlux-al-khourafi-4.jpg', alt: 'Living room with arched windows and gold floral wall murals' },
+      { src: 'Images/artlux-al-khourafi-10.jpg', alt: 'Formal dining room with hand-painted gold wall finish' },
+      { src: 'Images/artlux-al-khourafi-2.jpg', alt: 'Grand marble hallway with gold-accented columns and chandeliers' },
+      { src: 'Images/artlux-al-khourafi-6.jpg', alt: 'Gold-toned living and dining room with ornamental wall murals' },
+      { src: 'Images/artlux-al-khourafi-5.jpg', alt: 'Detail of a white blossom and gold leaf wall ornament' },
+      { src: 'Images/artlux-al-khourafi-3.jpg', alt: 'Green hand-painted willow mural with gilded mirror and sconces' },
+      { src: 'Images/artlux-al-khourafi-7.jpg', alt: 'Gold hand-painted botanical silhouette mural detail' },
+      { src: 'Images/artlux-al-khourafi-8.jpg', alt: 'Detail of a hand-painted gold floral pattern wall' },
+      { src: 'Images/artlux-al-khourafi-9.jpg', alt: 'Dressing room with soft pink hand-painted wall pattern' }
+    ]
+  },
+  'lusail-palace': {
+    title: 'Lusail Palace',
+    location: 'proj.lusail-palace.loc',
+    cat: 'cat.residential', catClass: 'badge--residential',
+    type: 'proj.lusail-palace.type',
+    desc: 'proj.lusail-palace.desc',
+    images: [
+      { src: 'Images/artlux-lusail-palace-10.jpg', alt: 'Grand crystal chandelier beneath an arched doorway' },
+      { src: 'Images/artlux-lusail-palace-4.jpg', alt: 'Detail of sculptural gold-accented arabesque plaster relief' },
+      { src: 'Images/artlux-lusail-palace-3.jpg', alt: 'Hand-sculpted floral relief wall detail' },
+      { src: 'Images/artlux-lusail-palace-8.jpg', alt: 'Detail of a gilded floral plaster relief with gold rosettes' },
+      { src: 'Images/artlux-lusail-palace-11.jpg', alt: 'Grand hallway with ornamental columns and arabesque relief' },
+      { src: 'Images/artlux-lusail-palace-6.jpg', alt: 'Ornamental column with carved arabesque border' },
+      { src: 'Images/artlux-lusail-palace-5.jpg', alt: 'Rose-toned column with carved ornamental border' },
+      { src: 'Images/artlux-lusail-palace-9.jpg', alt: 'Pair of ornamental columns with arabesque relief borders' },
+      { src: 'Images/artlux-lusail-palace-7.jpg', alt: 'Arched doorway framed with gold-accented relief border' },
+      { src: 'Images/artlux-lusail-palace-12.jpg', alt: 'Domed ceiling with crystal chandelier and gold trim' },
+      { src: 'Images/artlux-lusail-palace-2.jpg', alt: 'Domed hall with arched doorway and ornamental relief frieze' }
+    ]
+  },
+  'kuwait-residence': {
+    title: 'Private Residence',
+    location: 'proj.kuwait-residence.loc',
+    cat: 'cat.residential', catClass: 'badge--residential',
+    type: 'proj.kuwait-residence.type',
+    desc: 'proj.kuwait-residence.desc',
+    images: [
+      { src: 'Images/artlux-kuwait-botanical-1.jpg', alt: 'Hand-painted feather and floral mural along a staircase wall' },
+      { src: 'Images/artlux-kuwait-botanical-2.jpg', alt: 'Gold-toned botanical mural beside wood paneling' },
+      { src: 'Images/artlux-kuwait-botanical-3.jpg', alt: 'Detail of hand-painted silver and sage leaf mural' },
+      { src: 'Images/artlux-kuwait-botanical-4.jpg', alt: 'Feather and floral mural detail in soft silver tones' },
+      { src: 'Images/artlux-kuwait-botanical-5.jpg', alt: 'Hand-painted botanical branch mural detail' },
+      { src: 'Images/artlux-kuwait-botanical-6.jpg', alt: 'Textured gold botanical mural on a feature wall' }
     ]
   }
 };
