@@ -109,7 +109,7 @@
       <button class="filter-pill" data-filter="furniture" data-i18n="projects.filter.furniture">Furniture Restoration</button>
     </div>
     <span class="projects-count" aria-live="polite">
-      <span id="countNum">11</span> <span data-i18n="projects.count.label">projects</span>
+      <span id="countNum">14</span> <span data-i18n="projects.count.label">projects</span>
     </span>
   </div>
 
@@ -289,6 +289,54 @@
             <p class="project-card__desc" data-i18n="proj.kuwait-residence.desc">Delicate feather and botanical murals in soft silver and sage tones, hand-painted across a staircase and feature walls to bring an organic, textured elegance to the space.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.kuwait-residence.type">Botanical Mural &amp; Textured Finish</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" data-project="may-badawi" tabindex="0" role="button" aria-label="Open May Badawi Residence project">
+          <div class="project-card__img">
+            <picture><source srcset="Images/artlux-may-badawi-1.webp" type="image/webp"><img src="Images/artlux-may-badawi-1.jpg" width="900" height="1200" alt="Hand-painted radial sunburst ceiling with a hanging lantern" loading="lazy" decoding="async"></picture>
+            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location" data-i18n="proj.may-badawi.loc">Sursock, Beirut</p>
+            <h2 class="project-card__title">May Badawi Residence</h2>
+            <p class="project-card__desc" data-i18n="proj.may-badawi.desc">A hand-painted radial sunburst ceiling finish in warm gold tones transforms a small entrance foyer into a dramatic architectural moment.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="proj.may-badawi.type">Decorative Ceiling Finish</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" data-project="jamal-aljawhary" tabindex="0" role="button" aria-label="Open Jamal Al-Jawhary Residence project">
+          <div class="project-card__img">
+            <picture><source srcset="Images/artlux-jamal-aljawhary-1.webp" type="image/webp"><img src="Images/artlux-jamal-aljawhary-1.jpg" width="1200" height="900" alt="Bedroom with hand-painted ribbon and trellis wall pattern" loading="lazy" decoding="async"></picture>
+            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location" data-i18n="proj.jamal-aljawhary.loc">Hamra, Beirut</p>
+            <h2 class="project-card__title">Jamal Al-Jawhary Residence</h2>
+            <p class="project-card__desc" data-i18n="proj.jamal-aljawhary.desc">A delicate hand-painted ribbon and trellis pattern unifies a bedroom, hallway, and bathroom, finished with ornamental door panels and botanical urn motifs.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="proj.jamal-aljawhary.type">Hand-Painted Trellis Pattern</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" data-project="abboud" tabindex="0" role="button" aria-label="Open Abboud Residence project">
+          <div class="project-card__img">
+            <picture><source srcset="Images/artlux-abboud-1.webp" type="image/webp"><img src="Images/artlux-abboud-1.jpg" width="1200" height="900" alt="Fresco ceiling with cloud and cherub motifs in a gilded frame" loading="lazy" decoding="async"></picture>
+            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__location" data-i18n="proj.abboud.loc">Mar Takla, Hazmieh</p>
+            <h2 class="project-card__title">Abboud Residence</h2>
+            <p class="project-card__desc" data-i18n="proj.abboud.desc">Hand-painted ceiling work spanning a colorful arabesque medallion beam ceiling and a soft fresco cloud ceiling with cherub motifs, alongside detailed scrollwork and gilded accents.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="proj.abboud.type">Fresco Ceiling &amp; Arabesque Detail</span>
               <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
             </div>
           </div>
@@ -645,6 +693,48 @@ const PROJECTS = {
       { src: 'Images/artlux-kuwait-botanical-4.jpg', alt: 'Feather and floral mural detail in soft silver tones' },
       { src: 'Images/artlux-kuwait-botanical-5.jpg', alt: 'Hand-painted botanical branch mural detail' },
       { src: 'Images/artlux-kuwait-botanical-6.jpg', alt: 'Textured gold botanical mural on a feature wall' }
+    ]
+  },
+  'may-badawi': {
+    title: 'May Badawi Residence',
+    location: 'proj.may-badawi.loc',
+    cat: 'cat.residential', catClass: 'badge--residential',
+    type: 'proj.may-badawi.type',
+    desc: 'proj.may-badawi.desc',
+    images: [
+      { src: 'Images/artlux-may-badawi-1.jpg', alt: 'Hand-painted radial sunburst ceiling with a hanging lantern' },
+      { src: 'Images/artlux-may-badawi-2.jpg', alt: 'Radial striped ceiling finish in a small foyer' },
+      { src: 'Images/artlux-may-badawi-3.jpg', alt: 'Striped ceiling and wall finish with a pendant light fixture' }
+    ]
+  },
+  'jamal-aljawhary': {
+    title: 'Jamal Al-Jawhary Residence',
+    location: 'proj.jamal-aljawhary.loc',
+    cat: 'cat.residential', catClass: 'badge--residential',
+    type: 'proj.jamal-aljawhary.type',
+    desc: 'proj.jamal-aljawhary.desc',
+    images: [
+      { src: 'Images/artlux-jamal-aljawhary-1.jpg', alt: 'Bedroom with hand-painted ribbon and trellis wall pattern' },
+      { src: 'Images/artlux-jamal-aljawhary-2.jpg', alt: 'Hand-painted door panel with a botanical urn motif' },
+      { src: 'Images/artlux-jamal-aljawhary-3.jpg', alt: 'Radiator cover nook with hand-painted trellis wallpaper pattern' },
+      { src: 'Images/artlux-jamal-aljawhary-4.jpg', alt: 'Corner detail of the hand-painted ribbon trellis pattern with a cherub statuette' },
+      { src: 'Images/artlux-jamal-aljawhary-5.jpg', alt: 'Bathroom vanity with vintage mirrors and matching wall pattern' },
+      { src: 'Images/artlux-jamal-aljawhary-6.jpg', alt: 'Hallway with hand-painted trellis pattern and patterned floor' }
+    ]
+  },
+  'abboud': {
+    title: 'Abboud Residence',
+    location: 'proj.abboud.loc',
+    cat: 'cat.residential', catClass: 'badge--residential',
+    type: 'proj.abboud.type',
+    desc: 'proj.abboud.desc',
+    images: [
+      { src: 'Images/artlux-abboud-1.jpg', alt: 'Fresco ceiling with cloud and cherub motifs in a gilded frame' },
+      { src: 'Images/artlux-abboud-2.jpg', alt: 'Colorful hand-painted arabesque medallion beam ceiling' },
+      { src: 'Images/artlux-abboud-3.jpg', alt: 'Detail of a hand-painted geometric medallion beam ceiling' },
+      { src: 'Images/artlux-abboud-4.jpg', alt: 'Long fresco ceiling panel with cloud and cherub motifs' },
+      { src: 'Images/artlux-abboud-5.jpg', alt: 'Gold hand-painted floral panel detail' },
+      { src: 'Images/artlux-abboud-6.jpg', alt: 'Hand-painted scrollwork corner detail in blue' }
     ]
   }
 };
