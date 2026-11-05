@@ -8,3 +8,9 @@ Images/Kassem\ -\ beirut/
 Images/artlux\ workers/
 Images/wiam\ wahhab/
 new\ pics/
+
+# Local-only photo admin tool — runs on this machine only, never deployed
+admin-tool/
+
+# Photos removed via the admin tool, kept locally for recovery — not deployed
+Images/_admin_removed/
