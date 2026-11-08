@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>About · ArtLux | Decorative Art &amp; Paintings by Manal Yehya</title>
   <meta name="description" content="Discover ArtLux's story — high-end decorative art, murals, and original paintings by Manal Yehya, with 30+ years of experience across Qatar, Kuwait, Saudi Arabia, the UAE, France, and the UK." />
-  <link rel="canonical" href="https://artluxdesign.com/about.html" />
+  <link rel="canonical" href="https://artluxdesign.com/about" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://artluxdesign.com/about.html" />
+  <meta property="og:url"         content="https://artluxdesign.com/about" />
   <meta property="og:title"       content="About · ArtLux | Decorative Art &amp; Paintings by Manal Yehya" />
   <meta property="og:description" content="Meet Manal Yehya — 30+ years working on prestigious projects in Qatar, Kuwait, Saudi Arabia, the UAE, France, the UK, and beyond, founder of ArtLux in 2019." />
   <meta property="og:image"       content="https://artluxdesign.com/Images/manal.jpg" />
@@ -52,6 +52,7 @@
   <link rel="preload" as="image" href="Images/manal-2.webp" type="image/webp">
 </head>
 <body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
 <!-- ======= HEADER ======= -->
 <header class="al-header" role="banner">
   <div class="al-header__main">
@@ -90,12 +91,12 @@
 </nav>
 
   <!-- ========= MAIN CONTENT ========= -->
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="page-hero" aria-label="About ArtLux">
       <div class="page-hero__content">
         <p class="page-hero__eye" data-i18n="about.hero.eye">ArtLux Studio</p>
-        <h1 class="page-hero__title" data-i18n="about.hero.title">Every Wall<br>Is <em>Our Canvas</em></h1>
+        <h1 class="page-hero__title" data-i18n="about.hero.title">Manal Yehya and<br><em>ArtLux Studio</em></h1>
         <p class="page-hero__sub" data-i18n="about.hero.sub">Founded by Manal Yehya, ArtLux transforms spaces through masterful decorative painting, gold leaf and arabesque finishes, and timeless artistic craftsmanship.</p>
       </div>
     </section>
@@ -285,36 +286,11 @@
 <script>
 (function () {
   var header = document.querySelector('.al-header');
-  var burger = document.getElementById('alBurger');
-  var mobile = document.getElementById('alMobileNav');
-  var isOpen = false;
 
   function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  function openMenu() {
-    isOpen = true;
-    mobile.hidden = false;
-    burger.setAttribute('aria-expanded', 'true');
-    burger.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    requestAnimationFrame(function() { mobile.classList.add('visible'); });
-  }
-  function closeMenu() {
-    isOpen = false;
-    mobile.classList.remove('visible');
-    burger.setAttribute('aria-expanded', 'false');
-    burger.classList.remove('open');
-    document.body.style.overflow = '';
-    setTimeout(function() { mobile.hidden = true; }, 360);
-  }
-
-  if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
-  if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() { if (isOpen) closeMenu(); });
-  });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
 }());
 </script>
 
@@ -353,5 +329,6 @@ if (siteFooter && window.IntersectionObserver) {
 document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 </script>
 <script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

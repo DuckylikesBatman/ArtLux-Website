@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
   <meta name="description" content="ArtLux's Terms of Service for website usage and art commissions">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="canonical" href="https://artluxdesign.com/ToS.html">
+  <link rel="canonical" href="https://artluxdesign.com/tos">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="index.css">
@@ -27,18 +27,24 @@
   <link rel="stylesheet" href="ToS.css">
 
 </head>
-<body><!-- ======= ArtLux Header (unified) ======= -->
+<body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a><!-- ======= ArtLux Header (unified) ======= -->
 <header class="al-header al-header--light" role="banner">
   <div class="al-header__main">
     <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
     <nav class="al-nav" aria-label="Site navigation">
-      <a class="al-nav__link" href="index.html">Home</a>
-      <a class="al-nav__link" href="projects.html">Projects</a>
-      <a class="al-nav__link" href="gallery.html">Gallery</a>
-      <a class="al-nav__link" href="about.html">About</a>
-      <a class="al-nav__link" href="contact.html">Contact</a>
-      <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+      <a class="al-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+      <a class="al-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a class="al-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a class="al-nav__link" href="about.html" data-i18n="nav.about">About</a>
+      <a class="al-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="al-nav__link al-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
     </nav>
+    <div class="lang-switch" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+    </div>
     <button class="al-burger" id="alBurger" type="button"
             aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
       <span></span><span></span><span></span>
@@ -46,79 +52,84 @@
   </div>
 </header>
 <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-  <a class="al-mobile-nav__link" href="index.html">Home</a>
-  <a class="al-mobile-nav__link" href="projects.html">Projects</a>
-  <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
-  <a class="al-mobile-nav__link" href="about.html">About</a>
-  <a class="al-mobile-nav__link" href="contact.html">Contact</a>
-  <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+  <a class="al-mobile-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+  <a class="al-mobile-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+  <a class="al-mobile-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+  <a class="al-mobile-nav__link" href="about.html" data-i18n="nav.about">About</a>
+  <a class="al-mobile-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
+  <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+    <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+    <span class="lang-sep" aria-hidden="true">/</span>
+    <button class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+  </div>
 </nav>
 
-  <main class="terms-content">
+  <main class="terms-content" id="main-content" tabindex="-1">
         <section class="policy-hero">
       <div class="container">
-        <p class="policy-eye">Legal</p>
-        <h1>Terms of Service</h1>
-        <p>Please read these terms carefully before using our website or commissioning a work</p>
+        <p class="policy-eye" data-i18n="footer.legal">Legal</p>
+        <h1 data-i18n="footer.tos">Terms of Service</h1>
+        <p data-i18n="tos.subtitle">Please read these terms carefully before using our website or commissioning a work</p>
       </div>
     </section>
     <div class="container">
      <div class="content-grid">
       <div class="policy-main-content">
       <section class="terms-section" id="introduction">
-        <h2>1. Introduction</h2>
-        <p>These Terms of Service ("Terms") govern your use of the ArtLux website (the "Service") operated by ArtLux Fine Art ("us", "we", or "our"). By accessing or using the Service, you agree to be bound by these Terms.</p>
+        <h2 data-i18n="tos.h.intro">1. Introduction</h2>
+        <p data-i18n="tos.intro.text">These Terms of Service ("Terms") govern your use of the ArtLux website (the "Service") operated by ArtLux Fine Art ("us", "we", or "our"). By accessing or using the Service, you agree to be bound by these Terms.</p>
       </section>
 
       <section class="terms-section" id="intellectual-property">
-        <h2>2. Intellectual Property</h2>
-        <p>All original artworks, designs, and website content are the exclusive property of ArtLux and protected by international copyright laws. Unauthorized use may result in legal action.</p>
+        <h2 data-i18n="tos.h.ip">2. Intellectual Property</h2>
+        <p data-i18n="tos.ip.text">All original artworks, designs, and website content are the exclusive property of ArtLux and protected by international copyright laws. Unauthorized use may result in legal action.</p>
 
-        <h3>Commissioned Works</h3>
-        <p>Clients receive physical artwork ownership but grant ArtLux a perpetual license to display the work for promotional purposes unless otherwise agreed in writing.</p>
+        <h3 data-i18n="tos.ip.h3">Commissioned Works</h3>
+        <p data-i18n="tos.ip.commissioned.text">Clients receive physical artwork ownership but grant ArtLux a perpetual license to display the work for promotional purposes unless otherwise agreed in writing.</p>
       </section>
 
       <section class="terms-section" id="user-obligations">
-        <h2>3. User Obligations</h2>
-        <p>You agree not to:</p>
+        <h2 data-i18n="tos.h.obligations">3. User Obligations</h2>
+        <p data-i18n="tos.obligations.intro">You agree not to:</p>
         <ul>
-          <li>Use the Service for any illegal purpose</li>
-          <li>Reproduce or distribute artwork without permission</li>
-          <li>Submit false commission requests</li>
-          <li>Bypass any security measures</li>
+          <li data-i18n="tos.obligations.li1">Use the Service for any illegal purpose</li>
+          <li data-i18n="tos.obligations.li2">Reproduce or distribute artwork without permission</li>
+          <li data-i18n="tos.obligations.li3">Submit false commission requests</li>
+          <li data-i18n="tos.obligations.li4">Bypass any security measures</li>
         </ul>
       </section>
 
       <section class="terms-section" id="limitation-of-liability">
-        <h2>4. Limitation of Liability</h2>
-        <p>ArtLux shall not be liable for:</p>
+        <h2 data-i18n="tos.h.liability">4. Limitation of Liability</h2>
+        <p data-i18n="tos.liability.intro">ArtLux shall not be liable for:</p>
         <ul>
-          <li>Any indirect, incidental, or consequential damages</li>
-          <li>Color variations between digital previews and final artwork</li>
-          <li>Damage during shipping (covered separately under Return Policy)</li>
+          <li data-i18n="tos.liability.li1">Any indirect, incidental, or consequential damages</li>
+          <li data-i18n="tos.liability.li2">Color variations between digital previews and final artwork</li>
+          <li data-i18n="tos.liability.li3">Damage during shipping (covered separately under Return Policy)</li>
         </ul>
       </section>
 
       <section class="terms-section" id="governing-law">
-        <h2>5. Governing Law</h2>
-        <p>These Terms shall be governed by the laws of Lebanon. Any disputes will be resolved in the courts of Beirut.</p>
+        <h2 data-i18n="tos.h.law">5. Governing Law</h2>
+        <p data-i18n="tos.law.text">These Terms shall be governed by the laws of Lebanon. Any disputes will be resolved in the courts of Beirut.</p>
       </section>
 
       <section class="terms-section" id="changes-to-terms">
-        <h2>6. Changes to Terms</h2>
-        <p>We reserve the right to modify these Terms at any time. Continued use after changes constitutes acceptance.</p>
+        <h2 data-i18n="tos.h.changes">6. Changes to Terms</h2>
+        <p data-i18n="tos.changes.text">We reserve the right to modify these Terms at any time. Continued use after changes constitutes acceptance.</p>
       </section>
       </div>
 
       <nav class="policy-toc" aria-label="On this page">
-        <h3>On This Page</h3>
+        <h3 data-i18n="tos.toc.title">On This Page</h3>
         <ol>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#intellectual-property">Intellectual Property</a></li>
-          <li><a href="#user-obligations">User Obligations</a></li>
-          <li><a href="#limitation-of-liability">Limitation of Liability</a></li>
-          <li><a href="#governing-law">Governing Law</a></li>
-          <li><a href="#changes-to-terms">Changes to Terms</a></li>
+          <li><a href="#introduction" data-i18n="tos.toc.intro">Introduction</a></li>
+          <li><a href="#intellectual-property" data-i18n="tos.toc.ip">Intellectual Property</a></li>
+          <li><a href="#user-obligations" data-i18n="tos.toc.obligations">User Obligations</a></li>
+          <li><a href="#limitation-of-liability" data-i18n="tos.toc.liability">Limitation of Liability</a></li>
+          <li><a href="#governing-law" data-i18n="tos.toc.law">Governing Law</a></li>
+          <li><a href="#changes-to-terms" data-i18n="tos.toc.changes">Changes to Terms</a></li>
         </ol>
       </nav>
      </div>
@@ -130,33 +141,33 @@
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
+        <p data-i18n="footer.tagline">Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
       </div>
 
       <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quicklinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="commission.html" data-i18n="nav.commission">Commission</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
+        <h3 data-i18n="footer.legal">Legal</h3>
         <ul>
-          <li><a href="ToS.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="ToS.html" data-i18n="footer.tos">Terms of Service</a></li>
+          <li><a href="return.html" data-i18n="footer.return">Return Policy</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
         </ul>
       </nav>
 
       <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
+        <h3 data-i18n="footer.contact-us">Contact Us</h3>
+        <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+9613683127">+961 3 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
         <div class="social-links" aria-label="Follow us">
@@ -184,17 +195,9 @@
 <script>
 (function () {
   var header = document.querySelector('.al-header');
-  var burger = document.getElementById('alBurger');
-  var mobile = document.getElementById('alMobileNav');
-  var isOpen = false;
   function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
   document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 })();
 
@@ -207,5 +210,7 @@ document.querySelectorAll('.policy-toc a[href^="#"]').forEach(function (anchor) 
 });
 </script>
 
+<script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

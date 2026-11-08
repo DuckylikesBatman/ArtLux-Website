@@ -126,7 +126,7 @@ body.policy-page {
 }
 
 .legal-list {
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
   margin: 1.5rem 0;
 }
 
@@ -278,7 +278,7 @@ body.policy-page {
   }
   
   .legal-list {
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
   }
   
   .policy-toc {
@@ -306,3 +306,9 @@ body.policy-page {
     padding: 1rem 0;
   }
 }
+.policy-toc__details summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding-block: .35rem;
+}
+.policy-toc__details ol { margin-top: .75rem; }

@@ -17,7 +17,6 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
   <title>ArtLux | Decorative Art &amp; Paintings</title>
   <meta name="description" content="ArtLux is a Beirut decorative art studio: bespoke murals, gold leaf and arabesque finishes, furniture restoration, and original paintings." />
   <link rel="canonical" href="https://artluxdesign.com/" />
@@ -27,7 +26,6 @@
   <meta property="og:description" content="Bespoke decorative wall &amp; ceiling painting, gold leaf and arabesque finishes, furniture restoration, and original paintings by Manal Yehya. Beirut, since 2019." />
   <meta property="og:image"       content="https://artluxdesign.com/Images/interior-5.jpg" />
   <meta name="twitter:card"       content="summary_large_image" />
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,12 +55,12 @@
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="nav.css">
 <link rel="stylesheet" href="rtl.css">
-<link rel="preload" as="image" href="Images/artlux-al-ghanem-arabesque-1.webp" type="image/webp">
 
 
 </head>
 
-<body> 
+<body>
+  <a class="al-skip" href="#mainContent" data-i18n="nav.skip">Skip to content</a>
   <!-- ======= HEADER ======= -->
   <header class="al-header" role="banner">
     <div class="al-header__main">
@@ -100,50 +98,37 @@
     </div>
   </nav>
 
-  <main id="mainContent">
+  <main id="mainContent" tabindex="-1">
 
     <!-- ======= HERO ======= -->
-    <section class="hero" aria-label="ArtLux — Bespoke Art Studio">
-      <div class="hero__content">
+    <section class="hero hero--full" aria-label="ArtLux — Bespoke Art Studio">
+      <picture>
+        <source srcset="Images/hero-home-mobile.webp" type="image/webp" media="(max-width: 700px)">
+        <source srcset="Images/hero-home-mobile.jpg" media="(max-width: 700px)">
+        <source srcset="Images/hero-home.webp" type="image/webp">
+        <img class="hero__bg" src="Images/hero-home.jpg" alt="" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__content hero__content--full">
 
         <div class="hero__text">
-          <p class="hero__eyebrow" data-i18n="home.hero.eyebrow">Decorative Painting Studio &middot; Beirut</p>
+          <div class="hero__eyebrow-row">
+            <span class="hero__eyebrow-rule" aria-hidden="true"></span>
+            <p class="hero__eyebrow" data-i18n="home.hero.eyebrow">Decorative Painting Studio &middot; Beirut</p>
+          </div>
           <h1 class="hero__title" data-i18n="home.hero.title">Every Wall<br>Is Our <em>Canvas</em></h1>
-          <p class="hero__subtitle" data-i18n="home.hero.sub">Bespoke wall &amp; ceiling painting, hand-painted murals, gold leaf and arabesque finishes, furniture restoration, and fine art by Manal Yehya — trusted across Qatar, Kuwait, Saudi Arabia, France, and the UK.</p>
+          <p class="hero__subtitle" data-i18n="home.hero.sub">Bespoke wall &amp; ceiling painting, hand-painted murals, gold leaf and arabesque finishes, furniture restoration, and fine art by Manal Yehya.</p>
           <div class="hero__actions">
             <a href="projects.html" class="btn btn--hero-light" data-i18n="home.hero.cta1">View Our Projects</a>
-            <a href="commission.html" class="btn btn--hero-ghost"><span data-i18n="home.hero.cta2">Start a Project</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;transition:transform .25s"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="commission.html#request-form" class="btn btn--hero-ghost"><span data-i18n="home.hero.cta2">Request a quote</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:4px;vertical-align:middle;transition:transform .25s"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </div>
-
-        <div class="hero__slideshow" id="heroSlideshow" aria-label="Featured decorative painting projects">
-          <div class="hero__slides" id="heroSlides">
-            <div class="hero__slide">
-              <picture><source srcset="Images/artlux-al-ghanem-arabesque-1.webp" type="image/webp"><img src="Images/artlux-al-ghanem-arabesque-1.jpg" width="717" height="795" alt="Hand-painted rose terracotta and sage arabesque wall pattern – Al Ghanem Residence" fetchpriority="high" decoding="async"></picture>
-            </div>
-            <div class="hero__slide">
-              <picture><source srcset="Images/artlux-wiam-wahab-1.webp" type="image/webp"><img src="Images/artlux-wiam-wahab-1.jpg" width="693" height="795" alt="Ornate gold leaf ceiling with hand-painted arabesque detailing – Wiam Wahab's Residence" decoding="async"></picture>
-            </div>
-            <div class="hero__slide">
-              <picture><source srcset="Images/interior-2.webp" type="image/webp"><img src="Images/interior-2.jpg" width="1084" height="1200" alt="Contemporary living space with custom grey patina wall treatments – Jessica Azar Residence" decoding="async"></picture>
-            </div>
-          </div>
-
-          <button class="hero__slide-btn hero__slide-prev" aria-label="Previous artwork">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button class="hero__slide-btn hero__slide-next" aria-label="Next artwork">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-
-          <div class="hero__slide-dots" aria-hidden="true">
-            <button class="hero__dot active"></button>
-            <button class="hero__dot"></button>
-            <button class="hero__dot"></button>
+          <div class="hero__trust">
+            <span class="hero__trust-label" data-i18n="home.hero.trust.label">Trusted Across</span>
+            <span class="hero__trust-list" data-i18n="home.hero.trust.list">Qatar &middot; Kuwait &middot; Saudi Arabia &middot; UAE &middot; France &middot; UK</span>
           </div>
         </div>
 
       </div>
+      <span class="hero__base-rule" aria-hidden="true"></span>
     </section>
 
     <!-- ======= STATS BAND ======= -->
@@ -189,6 +174,7 @@
             </div>
             <h3 class="step__title" data-i18n="home.offer2.title">Furniture Painting &amp; Restoration</h3>
             <p class="step__text" data-i18n="home.offer2.text">Expert refinishing, custom-painted finishes, and antique restoration to revive furniture.</p>
+            <button type="button" class="step__link" id="furnitureViewBtn" data-i18n="home.offer2.viewLink">View Examples &rarr;</button>
           </li>
           <li class="step">
             <div class="step__num offer__icon" aria-hidden="true">
@@ -248,7 +234,7 @@
 
         <div class="cards">
           <article class="card">
-            <a class="card__media" href="projects.html" aria-label="View Al Ghanem Residence project">
+            <a class="card__media" href="projects.html#al-ghanem" aria-label="View Al Ghanem Residence project">
               <picture><source srcset="Images/artlux-al-ghanem-arabesque-2.webp" type="image/webp"><img src="Images/artlux-al-ghanem-arabesque-2.jpg" width="693" height="795" alt="Hand-painted rose terracotta arabesque walls and ceiling – Al Ghanem Residence" loading="lazy" decoding="async"></picture>
             </a>
             <div class="card__body">
@@ -258,7 +244,7 @@
           </article>
 
           <article class="card">
-            <a class="card__media" href="projects.html" aria-label="View Wiam Wahab's Residence project">
+            <a class="card__media" href="projects.html#wiam-wahab" aria-label="View Wiam Wahab's Residence project">
               <picture><source srcset="Images/artlux-wiam-wahab-2.webp" type="image/webp"><img src="Images/artlux-wiam-wahab-2.jpg" width="717" height="793" alt="Gold leaf ceiling drop with hand-painted arabesque patterning – Wiam Wahab's Residence" loading="lazy" decoding="async"></picture>
             </a>
             <div class="card__body">
@@ -268,7 +254,7 @@
           </article>
 
           <article class="card">
-            <a class="card__media" href="projects.html" aria-label="View Hôtel-Dieu Hospital project">
+            <a class="card__media" href="projects.html#hoteldieu" aria-label="View Hôtel-Dieu Hospital project">
               <picture><source srcset="Images/artlux-hoteldieu-2.webp" type="image/webp"><img src="Images/artlux-hoteldieu-2.jpg" width="702" height="793" alt="Sun and rainbow mural hand-painted in a hospital pediatric ward – Hôtel-Dieu Hospital" loading="lazy" decoding="async"></picture>
             </a>
             <div class="card__body">
@@ -295,16 +281,16 @@
           <a class="btn btn--outline" href="gallery.html"><span data-i18n="home.fineart.cta">Browse the Collection</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="side-art__thumbs">
-          <a class="side-art__thumb" href="gallery.html" aria-label="View Amber Dusk in the gallery">
+          <a class="side-art__thumb" href="gallery.html" aria-label="Browse original artworks">
             <picture><source srcset="Images/paintings/painting15-dec.webp" type="image/webp"><img src="Images/paintings/painting15-dec.jpeg" width="800" height="1200" alt="Amber Dusk – warm amber tones" loading="lazy" decoding="async"></picture>
           </a>
-          <a class="side-art__thumb" href="gallery.html" aria-label="View Serene Composition in the gallery">
+          <a class="side-art__thumb" href="gallery.html" aria-label="Browse original artworks">
             <picture><source srcset="Images/paintings/painting6-dec.webp" type="image/webp"><img src="Images/paintings/painting6-dec.jpeg" width="800" height="1200" alt="Serene Composition – soft abstract palette" loading="lazy" decoding="async"></picture>
           </a>
-          <a class="side-art__thumb" href="gallery.html" aria-label="View Golden Reverie in the gallery">
+          <a class="side-art__thumb" href="gallery.html#work-Golden%20Reverie" aria-label="View Golden Reverie in the gallery">
             <picture><source srcset="Images/paintings/gallery-03.webp" type="image/webp"><img src="Images/paintings/gallery-03.jpeg" width="1080" height="1080" alt="Golden Reverie – portrait study in gold and olive with crimson accents" loading="lazy" decoding="async"></picture>
           </a>
-          <a class="side-art__thumb" href="gallery.html" aria-label="View Regal Masks in the gallery">
+          <a class="side-art__thumb" href="gallery.html#work-Regal%20Masks" aria-label="View Regal Masks in the gallery">
             <picture><source srcset="Images/paintings/gallery-08.webp" type="image/webp"><img src="Images/paintings/gallery-08.jpeg" width="1080" height="1080" alt="Regal Masks – stylised portrait pair in teal, gold, and crimson" loading="lazy" decoding="async"></picture>
           </a>
         </div>
@@ -492,6 +478,26 @@
     </div>
   </footer>
 
+  <!-- Furniture restoration examples lightbox -->
+  <div class="flb" id="furnitureLightbox" role="dialog" aria-modal="true" aria-label="Furniture restoration examples">
+    <div class="flb__bd" id="furnitureLightboxBackdrop"></div>
+    <div class="flb__box">
+      <button class="flb__close" id="furnitureLightboxClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="flb__nav flb__prev" id="furnitureLightboxPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-7 6 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <figure class="flb__figure">
+        <img id="furnitureLightboxImg" src="" alt="">
+        <figcaption id="furnitureLightboxCaption"></figcaption>
+      </figure>
+      <button class="flb__nav flb__next" id="furnitureLightboxNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l7 6-7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
   <!-- Floating actions -->
   <a href="https://wa.me/9613683127" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -507,9 +513,6 @@
   /* ArtLux v2 — header + mobile menu */
   (function () {
     var header = document.querySelector('.al-header');
-    var burger = document.getElementById('alBurger');
-    var mobile = document.getElementById('alMobileNav');
-    var isOpen = false;
 
     function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
     onScroll();
@@ -521,63 +524,6 @@
       if (href === page) a.classList.add('active');
     });
 
-    function openMenu() {
-      isOpen = true;
-      mobile.hidden = false;
-      burger.setAttribute('aria-expanded', 'true');
-      burger.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(function() { mobile.classList.add('visible'); });
-    }
-    function closeMenu() {
-      isOpen = false;
-      mobile.classList.remove('visible');
-      burger.setAttribute('aria-expanded', 'false');
-      burger.classList.remove('open');
-      document.body.style.overflow = '';
-      setTimeout(function() { mobile.hidden = true; }, 360);
-    }
-
-    if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
-    if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { if (isOpen) closeMenu(); });
-    });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
-  }());
-
-  /* ── Hero slideshow ── */
-  (function () {
-    var ss    = document.getElementById('heroSlideshow');
-    var track = document.getElementById('heroSlides');
-    var dots  = Array.from(document.querySelectorAll('.hero__dot'));
-    var total = dots.length;
-    var cur   = 0;
-    var timer = null;
-
-    function goTo(idx) {
-      cur = (idx + total) % total;
-      track.style.transform = 'translateX(-' + (cur * 100) + '%)';
-      dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
-    }
-
-    function start() { timer = setInterval(function() { goTo(cur + 1); }, 4500); }
-    function stop()  { clearInterval(timer); }
-
-    document.querySelector('.hero__slide-prev').addEventListener('click', function() { stop(); goTo(cur - 1); start(); });
-    document.querySelector('.hero__slide-next').addEventListener('click', function() { stop(); goTo(cur + 1); start(); });
-    dots.forEach(function(d, i) { d.addEventListener('click', function() { stop(); goTo(i); start(); }); });
-
-    ss.addEventListener('mouseenter', stop);
-    ss.addEventListener('mouseleave', start);
-
-    var tx = 0;
-    ss.addEventListener('touchstart', function(e) { tx = e.touches[0].clientX; }, { passive: true });
-    ss.addEventListener('touchend',   function(e) {
-      var dx = e.changedTouches[0].clientX - tx;
-      if (Math.abs(dx) > 44) { stop(); goTo(dx < 0 ? cur + 1 : cur - 1); start(); }
-    }, { passive: true });
-
-    start();
   }());
 
   /* ── Scroll reveal ── */
@@ -610,7 +556,52 @@
     footerIo.observe(siteFooter);
   }
   document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+
+  /* ── Furniture restoration examples lightbox ── */
+  (function () {
+    var images = [
+      { src: 'Images/artlux-furniture-4.jpg', alt: 'Hand-restored chest of drawers with custom green patina finish' },
+      { src: 'Images/artlux-furniture-1.jpg', alt: 'Hand-painted panel doors with ribbon and floral motifs' },
+      { src: 'Images/artlux-furniture-2.jpg', alt: 'Round side table with hand-painted floral border' },
+      { src: 'Images/artlux-furniture-3.jpg', alt: 'Gold-leafed console table with antiqued mirrored top' }
+    ];
+    var btn = document.getElementById('furnitureViewBtn');
+    var lb = document.getElementById('furnitureLightbox');
+    if (!btn || !lb) return;
+    var img = document.getElementById('furnitureLightboxImg');
+    var caption = document.getElementById('furnitureLightboxCaption');
+    var cur = 0;
+
+    function show(i) {
+      cur = (i + images.length) % images.length;
+      img.src = images[cur].src;
+      img.alt = images[cur].alt;
+      caption.textContent = images[cur].alt;
+    }
+    function open() {
+      show(0);
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', open);
+    document.getElementById('furnitureLightboxClose').addEventListener('click', close);
+    document.getElementById('furnitureLightboxBackdrop').addEventListener('click', close);
+    document.getElementById('furnitureLightboxPrev').addEventListener('click', function () { show(cur - 1); });
+    document.getElementById('furnitureLightboxNext').addEventListener('click', function () { show(cur + 1); });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
+    });
+  }());
   </script>
   <script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html> 

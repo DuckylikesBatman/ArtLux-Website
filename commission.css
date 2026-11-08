@@ -306,12 +306,30 @@
   .submit-button { width: 100%; }
 
   .process-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
   }
 
   .process-card {
-    padding: 1.8rem 1.4rem;
+    padding: 0.9rem 0.65rem;
+  }
+
+  .process-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.82rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .process-card h3 {
+    font-size: 0.86rem;
+    line-height: 1.25;
+    margin-bottom: 0.3rem;
+  }
+
+  .process-card p {
+    font-size: 0.72rem;
+    line-height: 1.4;
   }
 
   .section-title {
@@ -698,4 +716,19 @@
 
 @media (max-width: 380px) {
   .type-grid { grid-template-columns: 1fr; }
+}
+
+.field-error { color: #8b2525; font-size: .875rem; margin: .4rem 0 0; }
+.field-error:empty { display: none; }
+[aria-invalid="true"] { outline: 2px solid #8b2525; outline-offset: 2px; }
+.cfg-hint:focus, #commissionSuccess:focus { scroll-margin-top: 90px; }
+.upload-zone { cursor: default; }
+.upload-zone input { max-width: 100%; margin-block: .5rem; }
+.upload-preview { padding: 0; }
+.upload-file { overflow-wrap: anywhere; }
+.upload-file button { min-height: 32px; }
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-section, .form-section { padding-block: 3.5rem; }
 }

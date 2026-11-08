@@ -26,7 +26,11 @@
   .al-header {
     position: fixed;
     inset: 0 0 auto 0;
-    z-index: 1000;
+    /* Must outrank .al-mobile-nav (z-index 1001) — .al-burger's own z-index
+       only resolves within this stacking context, so if the header itself
+       sits below the mobile nav overlay, the open/close button gets buried
+       under it with no way to close the menu. */
+    z-index: 1002;
     width: 100%;
     transition:
       background 0.35s var(--al-ease),
@@ -837,3 +841,27 @@
       display: none;
     }
   }
+.al-mobile-nav[hidden] { display: none; }
+.al-mobile-nav__link { color: rgba(247, 240, 230, .84); }
+@media (max-height: 610px) {
+  .al-mobile-nav {
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-block: 5rem 2rem;
+  }
+}
+
+.al-skip {
+  position: fixed;
+  z-index: 1010;
+  inset-block-start: .5rem;
+  inset-inline-start: .75rem;
+  transform: translateY(-160%);
+  padding: .7rem 1rem;
+  border-radius: .4rem;
+  background: #fff;
+  color: #201711;
+  font-weight: 700;
+}
+.al-skip:focus { transform: none; }
+main[id] { scroll-margin-top: 78px; }

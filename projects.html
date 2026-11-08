@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Projects · ArtLux | Decorative Painting, Murals &amp; Furniture Restoration</title>
   <meta name="description" content="ArtLux portfolio: hand-painted arabesque and gold leaf finishes, bespoke murals and furniture restoration in Lebanon and Qatar." />
-  <link rel="canonical" href="https://artluxdesign.com/projects.html" />
+  <link rel="canonical" href="https://artluxdesign.com/projects" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://artluxdesign.com/projects.html" />
+  <meta property="og:url"         content="https://artluxdesign.com/projects" />
   <meta property="og:title"       content="Projects · ArtLux | Decorative Painting, Murals & Furniture Restoration" />
   <meta property="og:description" content="Explore ArtLux's portfolio — hand-painted arabesque and gold leaf finishes, bespoke murals, and furniture restoration across residential and healthcare spaces in Lebanon and Qatar." />
   <meta property="og:image"       content="https://artluxdesign.com/Images/artlux-al-ghanem-arabesque-1.jpg" />
@@ -32,7 +32,7 @@
     "@type": "CollectionPage",
     "name": "ArtLux Projects",
     "description": "ArtLux portfolio: hand-painted arabesque and gold leaf finishes, bespoke murals, healthcare spaces, and furniture restoration in Lebanon and Qatar.",
-    "url": "https://artluxdesign.com/projects.html",
+    "url": "https://artluxdesign.com/projects",
     "isPartOf": { "@type": "WebSite", "name": "ArtLux", "url": "https://artluxdesign.com/" }
   }
   </script>
@@ -49,6 +49,7 @@
   <link rel="preload" as="image" href="Images/interior-2.webp" type="image/webp">
 </head>
 <body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
 
 <!-- ======= HEADER ======= -->
 <header class="al-header" role="banner">
@@ -87,7 +88,7 @@
   </div>
 </nav>
 
-<main>
+<main id="main-content" tabindex="-1">
 
   <!-- ======= PAGE HERO ======= -->
   <section class="page-hero" aria-label="Projects">
@@ -106,10 +107,9 @@
       <button class="filter-pill active" data-filter="all" data-i18n="projects.filter.all">All Projects</button>
       <button class="filter-pill" data-filter="residential" data-i18n="cat.residential">Residential</button>
       <button class="filter-pill" data-filter="healthcare" data-i18n="cat.healthcare">Healthcare</button>
-      <button class="filter-pill" data-filter="furniture" data-i18n="projects.filter.furniture">Furniture Restoration</button>
     </div>
     <span class="projects-count" aria-live="polite">
-      <span id="countNum">14</span> <span data-i18n="projects.count.label">projects</span>
+      <span id="countNum">14 projects</span>
     </span>
   </div>
 
@@ -118,7 +118,7 @@
     <div class="container">
       <div class="projects-grid" id="projectsGrid">
 
-        <article class="project-card" data-cat="residential" data-project="jessica-azar" tabindex="0" role="button" aria-label="Open Jessica Azar Residence project">
+        <article class="project-card" data-cat="residential" data-project="jessica-azar" id="jessica-azar" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Jessica Azar Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/interior-2.webp" type="image/webp"><img src="Images/interior-2.jpg" width="1084" height="1200" alt="Contemporary living space with custom grey patina wall treatments – Jessica Azar Residence, Beirut" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -129,12 +129,12 @@
             <p class="project-card__desc" data-i18n="proj.jessica-azar.desc">Custom grey patina wall treatments that bring modern elegance to traditional architecture. Every surface was hand-finished to create a seamless, gallery-like atmosphere throughout the home.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.jessica-azar.type">Decorative Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="tamim-mansion" tabindex="0" role="button" aria-label="Open Prince Tamim Mansion project">
+        <article class="project-card" data-cat="residential" data-project="tamim-mansion" id="tamim-mansion" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Prince Tamim Mansion project">
           <div class="project-card__img">
             <picture><source srcset="Images/interior-5.webp" type="image/webp"><img src="Images/interior-5.jpg" width="1200" height="1130" alt="Grand salon with luxurious patina ceiling and cornice details – Prince Tamim Mansion, Doha" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -145,12 +145,12 @@
             <p class="project-card__desc" data-i18n="proj.tamim-mansion.desc">Luxurious patina finishes applied to ceilings and cornices throughout a 12,000 sq ft private estate. The work required exceptional precision to achieve a consistent, regal tone across every room.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.tamim-mansion.type">Patina &amp; Ornamental Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="healthcare" data-project="hoteldieu" tabindex="0" role="button" aria-label="Open Hôtel-Dieu Hospital project">
+        <article class="project-card" data-cat="healthcare" data-project="hoteldieu" id="hoteldieu" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Hôtel-Dieu Hospital project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-hoteldieu-2.webp" type="image/webp"><img src="Images/artlux-hoteldieu-2.jpg" width="702" height="793" alt="Sun and rainbow mural hand-painted in a hospital pediatric ward – Hôtel-Dieu Hospital" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--healthcare" data-i18n="cat.healthcare">Healthcare</span>
@@ -161,12 +161,12 @@
             <p class="project-card__desc" data-i18n="proj.hoteldieu.desc">Whimsical hand-painted illustrations across the pediatric ward designed to create a calming, joyful environment for young patients and their families during difficult times.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.hoteldieu.type">Bespoke Mural</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="al-ghanem" tabindex="0" role="button" aria-label="Open Al Ghanem Residence project">
+        <article class="project-card" data-cat="residential" data-project="al-ghanem" id="al-ghanem" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Al Ghanem Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-al-ghanem-arabesque-1.webp" type="image/webp"><img src="Images/artlux-al-ghanem-arabesque-1.jpg" width="717" height="795" alt="Hand-painted rose terracotta and sage arabesque wall pattern – Al Ghanem Residence, Lebanon" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -177,12 +177,12 @@
             <p class="project-card__desc" data-i18n="proj.al-ghanem.card.desc">Intricate hand-painted arabesque patterns across walls and ceilings in a custom rose terracotta and sage palette, plus a hand-applied gold leaf entrance hall with hand-painted bamboo motifs.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.al-ghanem.type">Arabesque Painting &amp; Gold Leaf</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="wiam-wahab" tabindex="0" role="button" aria-label="Open Wiam Wahab's Residence project">
+        <article class="project-card" data-cat="residential" data-project="wiam-wahab" id="wiam-wahab" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Wiam Wahab's Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-wiam-wahab-1.webp" type="image/webp"><img src="Images/artlux-wiam-wahab-1.jpg" width="693" height="795" alt="Ornate gold leaf ceiling and arabesque wall panel – Wiam Wahab's Residence, Lebanon" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -193,12 +193,12 @@
             <p class="project-card__desc" data-i18n="proj.wiam-wahab.card.desc">Ornate ceilings, ceiling drops, and walls hand-painted in a rich arabesque style with gold leaf application, seamlessly blending precision and luxury with the home's architectural richness.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.wiam-wahab.type">Arabesque Painting &amp; Gold Leaf</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="kassem" tabindex="0" role="button" aria-label="Open Kassem Residence project">
+        <article class="project-card" data-cat="residential" data-project="kassem" id="kassem" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Kassem Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-kassem-1.webp" type="image/webp"><img src="Images/artlux-kassem-1.jpg" width="1200" height="900" alt="Dining room with a hand-painted blossom-branch mural on a gold-toned wall – Kassem Residence, Beirut" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -209,12 +209,12 @@
             <p class="project-card__desc" data-i18n="proj.kassem.desc">A hand-painted blossom-branch mural across a feature wall, finished in a warm gold-toned plaster with raised white blossoms that give the room its quiet, layered depth.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.kassem.type">Blossom Mural &amp; Textured Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="nohad-machnouk" tabindex="0" role="button" aria-label="Open Nohad Al Machnouk's Residence project">
+        <article class="project-card" data-cat="residential" data-project="nohad-machnouk" id="nohad-machnouk" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Nohad Al Machnouk's Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-nohad-machnouk-1.webp" type="image/webp"><img src="Images/artlux-nohad-machnouk-1.jpg" width="716" height="794" alt="Custom striped wall design with ornamental borders – Nohad Al Machnouk's Residence, Lebanon" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -225,28 +225,12 @@
             <p class="project-card__desc" data-i18n="proj.nohad-machnouk.card.desc">Hand-painted decorative finishes in the Arabesque style, with custom striped wall designs and detailed panel borders that preserve traditional elegance throughout the residence.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.nohad-machnouk.type">Arabesque Painting</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="furniture" data-project="furniture-restoration" tabindex="0" role="button" aria-label="Open Furniture Restoration project">
-          <div class="project-card__img">
-            <picture><source srcset="Images/artlux-furniture-4.webp" type="image/webp"><img src="Images/artlux-furniture-4.jpg" width="538" height="1049" alt="Hand-restored antique chest of drawers with custom green patina finish" loading="lazy" decoding="async"></picture>
-            <span class="project-card__badge badge--furniture" data-i18n="cat.furniture">Furniture</span>
-          </div>
-          <div class="project-card__body">
-            <p class="project-card__location" data-i18n="proj.furniture-restoration.loc">Beirut, Lebanon</p>
-            <h2 class="project-card__title">Furniture Restoration &amp; Refinishing</h2>
-            <p class="project-card__desc" data-i18n="proj.furniture-restoration.card.desc">Expert refinishing, custom-painted finishes, and antique restoration that give new life to timeless pieces — from hand-painted panel doors to gold-leafed tabletops and fully repainted case furniture.</p>
-            <div class="project-card__footer">
-              <span class="project-card__type" data-i18n="proj.furniture-restoration.type">Furniture Painting &amp; Restoration</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cat="residential" data-project="al-khourafi" tabindex="0" role="button" aria-label="Open Al Khourafi Residence project">
+        <article class="project-card" data-cat="residential" data-project="al-khourafi" id="al-khourafi" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Al Khourafi Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-al-khourafi-1.webp" type="image/webp"><img src="Images/artlux-al-khourafi-1.jpg" width="1200" height="900" alt="Hand-painted gold arabesque willow tree mural on a feature wall" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -257,12 +241,12 @@
             <p class="project-card__desc" data-i18n="proj.al-khourafi.desc">Hand-painted gold leaf arabesque murals and botanical motifs throughout a grand private residence, from a flowing willow tree feature wall to richly patterned dining and reception rooms.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.al-khourafi.type">Arabesque Painting &amp; Gold Leaf</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="lusail-palace" tabindex="0" role="button" aria-label="Open Lusail Palace project">
+        <article class="project-card" data-cat="residential" data-project="lusail-palace" id="lusail-palace" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Lusail Palace project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-lusail-palace-10.webp" type="image/webp"><img src="Images/artlux-lusail-palace-10.jpg" width="675" height="1200" alt="Grand crystal chandelier beneath an arched doorway" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -273,12 +257,12 @@
             <p class="project-card__desc" data-i18n="proj.lusail-palace.desc">Large-scale sculptural plaster relief and hand-painted arabesque detailing throughout a monumental private palace, with gilded floral reliefs, ornamental columns, and domed reception halls.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.lusail-palace.type">Ornamental Relief &amp; Arabesque</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="kuwait-residence" tabindex="0" role="button" aria-label="Open Private Residence, Kuwait project">
+        <article class="project-card" data-cat="residential" data-project="kuwait-residence" id="kuwait-residence" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Private Residence, Kuwait project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-kuwait-botanical-1.webp" type="image/webp"><img src="Images/artlux-kuwait-botanical-1.jpg" width="900" height="1200" alt="Hand-painted feather and floral mural along a staircase wall" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -289,12 +273,12 @@
             <p class="project-card__desc" data-i18n="proj.kuwait-residence.desc">Delicate feather and botanical murals in soft silver and sage tones, hand-painted across a staircase and feature walls to bring an organic, textured elegance to the space.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.kuwait-residence.type">Botanical Mural &amp; Textured Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="may-badawi" tabindex="0" role="button" aria-label="Open May Badawi Residence project">
+        <article class="project-card" data-cat="residential" data-project="may-badawi" id="may-badawi" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open May Badawi Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-may-badawi-1.webp" type="image/webp"><img src="Images/artlux-may-badawi-1.jpg" width="900" height="1200" alt="Hand-painted radial sunburst ceiling with a hanging lantern" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -305,12 +289,12 @@
             <p class="project-card__desc" data-i18n="proj.may-badawi.desc">A hand-painted radial sunburst ceiling finish in warm gold tones transforms a small entrance foyer into a dramatic architectural moment.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.may-badawi.type">Decorative Ceiling Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="jamal-aljawhary" tabindex="0" role="button" aria-label="Open Jamal Al-Jawhary Residence project">
+        <article class="project-card" data-cat="residential" data-project="jamal-aljawhary" id="jamal-aljawhary" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Jamal Al-Jawhary Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-jamal-aljawhary-1.webp" type="image/webp"><img src="Images/artlux-jamal-aljawhary-1.jpg" width="1200" height="900" alt="Bedroom with hand-painted ribbon and trellis wall pattern" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -321,12 +305,12 @@
             <p class="project-card__desc" data-i18n="proj.jamal-aljawhary.desc">A delicate hand-painted ribbon and trellis pattern unifies a bedroom, hallway, and bathroom, finished with ornamental door panels and botanical urn motifs.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.jamal-aljawhary.type">Hand-Painted Trellis Pattern</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
 
-        <article class="project-card" data-cat="residential" data-project="abboud" tabindex="0" role="button" aria-label="Open Abboud Residence project">
+        <article class="project-card" data-cat="residential" data-project="abboud" id="abboud" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Abboud Residence project">
           <div class="project-card__img">
             <picture><source srcset="Images/artlux-abboud-1.webp" type="image/webp"><img src="Images/artlux-abboud-1.jpg" width="1200" height="900" alt="Fresco ceiling with cloud and cherub motifs in a gilded frame" loading="lazy" decoding="async"></picture>
             <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
@@ -337,7 +321,7 @@
             <p class="project-card__desc" data-i18n="proj.abboud.desc">Hand-painted ceiling work spanning a colorful arabesque medallion beam ceiling and a soft fresco cloud ceiling with cherub motifs, alongside detailed scrollwork and gilded accents.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="proj.abboud.type">Fresco Ceiling &amp; Arabesque Detail</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">Tap to explore →</span>
+              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
             </div>
           </div>
         </article>
@@ -480,21 +464,14 @@
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
+<script src="viewers.js"></script>
 <script>
 /* ── Nav ── */
 (function () {
   var header = document.querySelector('.al-header');
-  var burger = document.getElementById('alBurger');
-  var mobile = document.getElementById('alMobileNav');
-  var isOpen = false;
   function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
 }());
 
 /* ── Project filter ── */
@@ -510,12 +487,18 @@ function applyFilter() {
     card.style.display = show ? '' : 'none';
     if (show) n++;
   });
-  countEl.textContent = n;
+  const language = window.ArtLuxLang;
+  const format = language?.t(n === 1 ? 'projects.count.one' : 'projects.count.many')
+    || (n === 1 ? '{n} project' : '{n} projects');
+  countEl.textContent = format.replace('{n}', n);
 }
 pills.forEach(function(pill) {
+  pill.setAttribute('aria-pressed', String(pill.classList.contains('active')));
   pill.addEventListener('click', function() {
-    pills.forEach(function(p){ p.classList.remove('active'); });
-    pill.classList.add('active');
+    pills.forEach(p => {
+      p.classList.toggle('active', p === pill);
+      p.setAttribute('aria-pressed', String(p === pill));
+    });
     current = pill.dataset.filter;
     applyFilter();
   });
@@ -626,19 +609,6 @@ const PROJECTS = {
       { src: 'Images/artlux-nohad-machnouk-4.jpg', alt: 'Striped hallway with chandelier and arched windows' },
       { src: 'Images/artlux-nohad-machnouk-5.jpg', alt: 'Detail of an ornamental door panel with rosette motif' },
       { src: 'Images/artlux-nohad-machnouk-6.jpg', alt: 'Corner view of hand-painted door panels with ornamental borders' }
-    ]
-  },
-  'furniture-restoration': {
-    title: 'Furniture Restoration & Refinishing',
-    location: 'proj.furniture-restoration.loc',
-    cat: 'cat.furniture', catClass: 'badge--furniture',
-    type: 'proj.furniture-restoration.type',
-    desc: 'proj.furniture-restoration.modal.desc',
-    images: [
-      { src: 'Images/artlux-furniture-4.jpg', alt: 'Hand-restored chest of drawers with custom green patina finish' },
-      { src: 'Images/artlux-furniture-1.jpg', alt: 'Hand-painted panel doors with ribbon and floral motifs' },
-      { src: 'Images/artlux-furniture-2.jpg', alt: 'Round side table with hand-painted floral border' },
-      { src: 'Images/artlux-furniture-3.jpg', alt: 'Gold-leafed console table with antiqued mirrored top' }
     ]
   },
   'al-khourafi': {
@@ -794,10 +764,12 @@ function renderModalInfo(p) {
 }
 
 document.addEventListener('artlux:langchange', function() {
+  applyFilter();
   if (activeProjectKey && !modal.hidden) renderModalInfo(PROJECTS[activeProjectKey]);
 });
 
-function openModal(key) {
+const viewer = ArtLuxViewer(modal, document.getElementById('projClose'));
+function openModal(key, trigger) {
   const p = PROJECTS[key];
   if (!p) return;
 
@@ -833,34 +805,40 @@ function openModal(key) {
 
   showImage(0);
 
-  modal.hidden = false;
-  document.body.style.overflow = 'hidden';
-  requestAnimationFrame(function() { modal.classList.add('open'); });
-  document.getElementById('projClose').focus();
+  modal.querySelector('.proj-modal__cta').href = 'commission.html?project=' + encodeURIComponent(p.title) + '#request-form';
+  viewer.open(trigger);
 }
 
 function closeModal() {
-  modal.classList.remove('open');
-  document.body.style.overflow = '';
-  modal.addEventListener('transitionend', function handler() {
-    modal.hidden = true;
-    modal.removeEventListener('transitionend', handler);
-  });
+  viewer.close();
+  if (location.hash === '#' + activeProjectKey) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
 }
 
-// Card clicks
-cards.forEach(function(card) {
-  card.addEventListener('click', function() {
-    var key = card.dataset.project;
-    if (key) openModal(key);
-  });
-  card.addEventListener('keydown', function(e) {
-    if ((e.key === 'Enter' || e.key === ' ') && card.dataset.project) {
-      e.preventDefault();
-      openModal(card.dataset.project);
+cards.forEach(card => {
+  function open() {
+    history.replaceState(null, '', '#' + card.dataset.project);
+    openModal(card.dataset.project, card);
+  }
+  card.addEventListener('click', open);
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      open();
     }
   });
 });
+
+function openLinkedProject() {
+  const card = cards.find(item => location.hash === '#' + item.dataset.project);
+  if (card) {
+    if (current !== 'all') pills[0].click();
+    openModal(card.dataset.project, card);
+  }
+}
+document.addEventListener('DOMContentLoaded', openLinkedProject);
+window.addEventListener('hashchange', openLinkedProject);
 
 // Controls
 document.getElementById('projClose').addEventListener('click', closeModal);
@@ -914,5 +892,6 @@ if (siteFooter && window.IntersectionObserver) {
 document.querySelectorAll('.yr').forEach(function(e){ e.textContent = new Date().getFullYear(); });
 </script>
 <script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

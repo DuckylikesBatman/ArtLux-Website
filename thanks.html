@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,21 +23,28 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,900&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="thanks.css">
 </head>
 <body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
   <!-- ======= HEADER ======= -->
   <header class="al-header al-header--light" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
-        <a class="al-nav__link" href="index.html">Home</a>
-        <a class="al-nav__link" href="projects.html">Projects</a>
-        <a class="al-nav__link" href="gallery.html">Gallery</a>
-        <a class="al-nav__link" href="about.html">About</a>
-        <a class="al-nav__link" href="contact.html">Contact</a>
-        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+        <a class="al-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="al-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a class="al-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a class="al-nav__link" href="about.html" data-i18n="nav.about">About</a>
+        <a class="al-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
       </nav>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+      </div>
       <button class="al-burger" id="alBurger" type="button"
               aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
         <span></span><span></span><span></span>
@@ -45,26 +52,31 @@
     </div>
   </header>
   <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-    <a class="al-mobile-nav__link" href="index.html">Home</a>
-    <a class="al-mobile-nav__link" href="projects.html">Projects</a>
-    <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
-    <a class="al-mobile-nav__link" href="about.html">About</a>
-    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
-    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+    <a class="al-mobile-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+    <a class="al-mobile-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+    <a class="al-mobile-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+    <a class="al-mobile-nav__link" href="about.html" data-i18n="nav.about">About</a>
+    <a class="al-mobile-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
+    <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+      <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+    </div>
   </nav>
 
-  <main class="thanks-page">
+  <main class="thanks-page" id="main-content" tabindex="-1">
     <div class="thanks-card">
       <div class="thanks-icon">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <polyline points="20 6 9 17 4 12"/>
         </svg>
       </div>
-      <h1>Thank You!</h1>
-      <p>Your message has been received. We'll review it and get back to you within 24–48 hours. We look forward to bringing your vision to life.</p>
+      <h1 data-i18n="thanks.title">Thank You!</h1>
+      <p data-i18n="thanks.text">Your message has been received. We'll review it and get back to you within 24–48 hours. We look forward to bringing your vision to life.</p>
       <div class="thanks-actions">
-        <a href="index.html" class="btn btn--primary">Return Home</a>
-        <a href="gallery.html" class="btn btn--outline">Explore Gallery <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="index.html" class="btn btn--primary" data-i18n="thanks.cta.home">Return Home</a>
+        <a href="gallery.html" class="btn btn--outline"><span data-i18n="thanks.cta.gallery">Explore Gallery</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </main>
@@ -72,18 +84,12 @@
   <script>
   (function () {
     var header = document.querySelector('.al-header');
-    var burger = document.getElementById('alBurger');
-    var mobile = document.getElementById('alMobileNav');
-    var isOpen = false;
     function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-    function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-    if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-    if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
   }());
   </script>
+<script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

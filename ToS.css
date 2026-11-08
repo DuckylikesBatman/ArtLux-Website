@@ -115,13 +115,13 @@
 }
 
 .terms-section ul {
-  padding-left: 20px;
+  padding-inline-start: 20px;
   margin-bottom: 20px;
 }
 
 .terms-section li {
   position: relative;
-  left: 5px;
+  inset-inline-start: 5px;
 }
 
 .terms-section li::before {
@@ -130,7 +130,7 @@
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
+  margin-inline-start: -1em;
 }
 
 .policy-hero {

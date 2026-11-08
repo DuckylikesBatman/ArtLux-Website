@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Return Policy · ArtLux</title>
   <meta name="description" content="ArtLux's premium return policy for original artworks and commissions.">
-  <link rel="canonical" href="https://artluxdesign.com/return.html">
+  <link rel="canonical" href="https://artluxdesign.com/return">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,18 +28,24 @@
 <link rel="stylesheet" href="rtl.css">
   <link rel="stylesheet" href="return.css">
 </head>
-<body><!-- ======= ArtLux Header (unified) ======= -->
+<body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a><!-- ======= ArtLux Header (unified) ======= -->
 <header class="al-header al-header--light" role="banner">
   <div class="al-header__main">
     <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
     <nav class="al-nav" aria-label="Site navigation">
-      <a class="al-nav__link" href="index.html">Home</a>
-      <a class="al-nav__link" href="projects.html">Projects</a>
-      <a class="al-nav__link" href="gallery.html">Gallery</a>
-      <a class="al-nav__link" href="about.html">About</a>
-      <a class="al-nav__link" href="contact.html">Contact</a>
-      <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+      <a class="al-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+      <a class="al-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+      <a class="al-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a class="al-nav__link" href="about.html" data-i18n="nav.about">About</a>
+      <a class="al-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a class="al-nav__link al-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
     </nav>
+    <div class="lang-switch" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+    </div>
     <button class="al-burger" id="alBurger" type="button"
             aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
       <span></span><span></span><span></span>
@@ -47,20 +53,25 @@
   </div>
 </header>
 <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-  <a class="al-mobile-nav__link" href="index.html">Home</a>
-  <a class="al-mobile-nav__link" href="projects.html">Projects</a>
-  <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
-  <a class="al-mobile-nav__link" href="about.html">About</a>
-  <a class="al-mobile-nav__link" href="contact.html">Contact</a>
-  <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+  <a class="al-mobile-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+  <a class="al-mobile-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+  <a class="al-mobile-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+  <a class="al-mobile-nav__link" href="about.html" data-i18n="nav.about">About</a>
+  <a class="al-mobile-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
+  <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+    <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+    <span class="lang-sep" aria-hidden="true">/</span>
+    <button class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+  </div>
 </nav>
 
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="policy-hero">
       <div class="container">
-        <h1>ArtLux Return Policy</h1>
-        <p>Our commitment to excellence extends to every aspect of your art collecting experience</p>
+        <h1 data-i18n="return.title">ArtLux Return Policy</h1>
+        <p data-i18n="return.subtitle">Our commitment to excellence extends to every aspect of your art collecting experience</p>
       </div>
     </section>
 
@@ -68,38 +79,38 @@
       <div class="container">
         <div class="policy-grid">
           <div class="policy-card">
-            <h2>Commissioned Works</h2>
-            <p>Due to the bespoke nature of commissioned pieces, commissions are final once production begins (typically 3–5 days after confirmation).</p>
-            <p>You may cancel within 24 hours of confirmation at no charge. After this window, a 15% design fee applies to cover concept work already completed.</p>
+            <h2 data-i18n="return.h.commissioned">Commissioned Works</h2>
+            <p data-i18n="return.commissioned.p1">Due to the bespoke nature of commissioned pieces, commissions are final once production begins (typically 3–5 days after confirmation).</p>
+            <p data-i18n="return.commissioned.p2">You may cancel within 24 hours of confirmation at no charge. After this window, a 15% design fee applies to cover concept work already completed.</p>
           </div>
 
           <div class="policy-card">
-            <h2>Damaged Deliveries</h2>
-            <p>If your commissioned artwork arrives damaged, please contact us within 7 days of delivery with photographs of both the artwork and packaging. We will arrange return shipping and either repair or replace the piece at no extra cost.</p>
+            <h2 data-i18n="return.h.damaged">Damaged Deliveries</h2>
+            <p data-i18n="return.damaged.text">If your commissioned artwork arrives damaged, please contact us within 7 days of delivery with photographs of both the artwork and packaging. We will arrange return shipping and either repair or replace the piece at no extra cost.</p>
           </div>
 
           <div class="policy-card">
-            <h2>How to Reach Us</h2>
+            <h2 data-i18n="return.h.reach">How to Reach Us</h2>
             <ol>
-              <li>Email us at <a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a> with details and photos</li>
-              <li>We will respond within 48 hours with next steps</li>
-              <li>Return shipping instructions will be provided if needed</li>
+              <li data-i18n="return.reach.li1">Email us at <a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a> with details and photos</li>
+              <li data-i18n="return.reach.li2">We will respond within 48 hours with next steps</li>
+              <li data-i18n="return.reach.li3">Return shipping instructions will be provided if needed</li>
             </ol>
           </div>
 
           <div class="policy-card">
-            <h2>International Shipments</h2>
-            <p>For international returns, clients are responsible for any customs duties or taxes associated with the return shipment.</p>
-            <p>All commissioned works are professionally packaged and fully insured during transit.</p>
+            <h2 data-i18n="return.h.international">International Shipments</h2>
+            <p data-i18n="return.international.p1">For international returns, clients are responsible for any customs duties or taxes associated with the return shipment.</p>
+            <p data-i18n="return.international.p2">All commissioned works are professionally packaged and fully insured during transit.</p>
           </div>
 
           <div class="policy-card">
-            <h2>Artwork Care</h2>
-            <p>To preserve your artwork:</p>
+            <h2 data-i18n="return.h.care">Artwork Care</h2>
+            <p data-i18n="return.care.intro">To preserve your artwork:</p>
             <ul>
-              <li>Keep away from direct sunlight</li>
-              <li>Maintain stable humidity levels</li>
-              <li>Handle with clean hands or cotton gloves</li>
+              <li data-i18n="return.care.li1">Keep away from direct sunlight</li>
+              <li data-i18n="return.care.li2">Maintain stable humidity levels</li>
+              <li data-i18n="return.care.li3">Handle with clean hands or cotton gloves</li>
             </ul>
           </div>
         </div>
@@ -108,8 +119,8 @@
 
     <section class="contact-cta">
       <div class="container">
-        <h2>Have questions about your commission?</h2>
-        <a href="contact.html" class="btn btn--primary">Contact ArtLux</a>
+        <h2 data-i18n="return.cta.title">Have questions about your commission?</h2>
+        <a href="contact.html" class="btn btn--primary" data-i18n="return.cta.button">Contact ArtLux</a>
       </div>
     </section>
   </main>
@@ -118,33 +129,33 @@
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
+        <p data-i18n="footer.tagline">Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
       </div>
 
       <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quicklinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="commission.html" data-i18n="nav.commission">Commission</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
+        <h3 data-i18n="footer.legal">Legal</h3>
         <ul>
-          <li><a href="ToS.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="ToS.html" data-i18n="footer.tos">Terms of Service</a></li>
+          <li><a href="return.html" data-i18n="footer.return">Return Policy</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
         </ul>
       </nav>
 
       <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
+        <h3 data-i18n="footer.contact-us">Contact Us</h3>
+        <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+9613683127">+961 3 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
         <div class="social-links" aria-label="Follow us">
@@ -172,20 +183,14 @@
   <script>
 (function () {
   var header = document.querySelector('.al-header');
-  var burger = document.getElementById('alBurger');
-  var mobile = document.getElementById('alMobileNav');
-  var isOpen = false;
   function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
   document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 })();
 </script>
 
+<script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

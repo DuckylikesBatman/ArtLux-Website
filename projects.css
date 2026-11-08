@@ -174,11 +174,6 @@
   color: #3a3530;
 }
 
-.badge--furniture {
-  background: rgba(159, 106, 65, .92);
-  color: #fff;
-}
-
 .badge--healthcare {
   background: rgba(141, 157, 130, .92);
   color: #fff;
@@ -611,6 +606,14 @@
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
+
+  .project-card__badge {
+    top: .5rem;
+    left: .5rem;
+    padding: .14rem .42rem;
+    font-size: .42rem;
+    letter-spacing: .06em;
+  }
 }
 
 @media (max-width: 560px) {
@@ -674,9 +677,9 @@
   }
 
   .proj-modal__gallery {
-    height: 64vw;
-    min-height: 220px;
-    max-height: 340px;
+    height: 85vw;
+    min-height: 260px;
+    max-height: 420px;
   }
 
   .proj-modal__close {
@@ -689,3 +692,5 @@
     justify-content: center;
   }
 }
+
+.proj-modal[hidden], .proj-modal button[hidden] { display: none; }

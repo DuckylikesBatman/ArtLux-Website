@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Gallery · ArtLux | Premium Artworks</title>
   <meta name="description" content="Browse the ArtLux collection of original paintings and bespoke artworks by Manal Yehya." />
-  <link rel="canonical" href="https://artluxdesign.com/gallery.html" />
+  <link rel="canonical" href="https://artluxdesign.com/gallery" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://artluxdesign.com/gallery.html" />
+  <meta property="og:url"         content="https://artluxdesign.com/gallery" />
   <meta property="og:title"       content="Gallery · ArtLux | Premium Artworks" />
   <meta property="og:description" content="Browse the ArtLux collection of original paintings and bespoke artworks by Manal Yehya." />
   <meta property="og:image"       content="https://artluxdesign.com/Images/paintings/painting15-dec.jpeg" />
@@ -32,7 +32,7 @@
     "@type": "ImageGallery",
     "name": "ArtLux Gallery",
     "description": "Original paintings and bespoke fine art by Manal Yehya.",
-    "url": "https://artluxdesign.com/gallery.html",
+    "url": "https://artluxdesign.com/gallery",
     "isPartOf": { "@type": "WebSite", "name": "ArtLux", "url": "https://artluxdesign.com/" }
   }
   </script>
@@ -49,6 +49,7 @@
   <link rel="preload" as="image" href="Images/paintings/painting1-dec.webp" type="image/webp">
 </head>
 <body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
 
 <!-- ======= HEADER ======= -->
 <header class="al-header" role="banner">
@@ -87,7 +88,7 @@
   </div>
 </nav>
 
-<main>
+<main id="main-content" tabindex="-1">
 
   <!-- ======= PAGE HERO ======= -->
   <section class="page-hero" aria-label="Gallery">
@@ -100,12 +101,8 @@
 
   <!-- ======= CONTROLS ======= -->
   <div class="gallery-controls container" role="region" aria-label="Gallery controls">
-    <div class="gallery-filters" role="group" aria-label="Filter by category">
-      <button class="filter-pill active" data-filter="all" data-i18n="gallery.filter.all">All Works</button>
-      <button class="filter-pill" data-filter="painting" data-i18n="gallery.filter.painting">Paintings</button>
-    </div>
     <span class="gallery-count" aria-live="polite">
-      <span data-i18n="gallery.count.showing">Showing</span> <span id="countNum">0</span> <span data-i18n="gallery.count.pieces">curated pieces</span>
+      <span data-i18n="gallery.count.showing">Showing</span> <span id="countNum">33</span> <span data-i18n="gallery.count.pieces">curated pieces</span>
     </span>
   </div>
 
@@ -116,7 +113,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Floral Relief Duet" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <picture><source srcset="Images/paintings/gallery-01.webp" type="image/webp"><img src="Images/paintings/gallery-01.jpeg" width="720" height="1280" alt="Floral Relief Duet – Textured relief florals in silver, red, and gold on a weathered ground" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="Images/paintings/gallery-01.webp" type="image/webp"><img src="Images/paintings/gallery-01.jpeg" width="720" height="1280" alt="Floral Relief Duet – Textured relief florals in silver, red, and gold on a weathered ground" loading="eager" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Floral Relief Duet</p>
               <p class="gallery-item__med" data-i18n="medium.mixed-relief-diptych">Mixed Media Relief · Diptych</p>
@@ -126,7 +123,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Radiant Pinwheel" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <picture><source srcset="Images/paintings/gallery-02.webp" type="image/webp"><img src="Images/paintings/gallery-02.jpeg" width="1080" height="1080" alt="Radiant Pinwheel – Sunburst composition in coral, ochre, grey, and soft yellow" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="Images/paintings/gallery-02.webp" type="image/webp"><img src="Images/paintings/gallery-02.jpeg" width="1080" height="1080" alt="Radiant Pinwheel – Sunburst composition in coral, ochre, grey, and soft yellow" loading="eager" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Radiant Pinwheel</p>
               <p class="gallery-item__med" data-i18n="medium.mixed-paper">Mixed Media on Paper</p>
@@ -136,7 +133,7 @@
 
         <article class="gallery-item" role="listitem" data-title="Golden Reverie" data-avail="in" data-cat="painting">
           <div class="gallery-item__inner">
-            <picture><source srcset="Images/paintings/gallery-03.webp" type="image/webp"><img src="Images/paintings/gallery-03.jpeg" width="1080" height="1080" alt="Golden Reverie – Portrait study in gold and olive with crimson accents" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="Images/paintings/gallery-03.webp" type="image/webp"><img src="Images/paintings/gallery-03.jpeg" width="1080" height="1080" alt="Golden Reverie – Portrait study in gold and olive with crimson accents" loading="eager" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Golden Reverie</p>
               <p class="gallery-item__med" data-i18n="medium.oil-canvas">Oil on Canvas</p>
@@ -537,12 +534,10 @@
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
+<script src="viewers.js"></script>
 <script>
 (function () {
   var header = document.querySelector('.al-header');
-  var burger = document.getElementById('alBurger');
-  var mobile = document.getElementById('alMobileNav');
-  var isOpen = false;
   function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -551,28 +546,10 @@
     var href = (a.getAttribute('href') || '').split('/').pop() || 'index.html';
     if (href === page) a.classList.add('active');
   });
-  function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-  function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-  if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-  if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
 }());
 
-/* ── Gallery filter ── */
-const pills   = document.querySelectorAll('.filter-pill');
-const items   = Array.from(document.querySelectorAll('.gallery-item'));
-const countEl = document.getElementById('countNum');
-let current = 'all';
-
-function applyFilter() {
-  let n = 0;
-  items.forEach(item => {
-    const show = current === 'all' || item.dataset.cat === current;
-    item.style.display = show ? '' : 'none';
-    if (show) n++;
-  });
-  countEl.textContent = n;
-}
+const items = Array.from(document.querySelectorAll('.gallery-item'));
+document.getElementById('countNum').textContent = items.length;
 
 /* ── True masonry layout — each item goes into whichever column is
    currently shortest, using each image's real aspect ratio (from its
@@ -620,17 +597,6 @@ window.addEventListener('resize', () => {
   masonryResizeTimer = setTimeout(layoutMasonry, 180);
 });
 
-pills.forEach(pill => {
-  pill.addEventListener('click', () => {
-    pills.forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-    current = pill.dataset.filter;
-    applyFilter();
-    layoutMasonry();
-  });
-});
-
-applyFilter();
 layoutMasonry();
 
 /* ── Lightbox ── */
@@ -640,7 +606,7 @@ const lbTitle   = lightbox.querySelector('.lightbox__title');
 const lbInquire = document.getElementById('lbInquire');
 
 let lbIndex = -1;
-function getVisible() { return items.filter(i => i.style.display !== 'none'); }
+const viewer = ArtLuxViewer(lightbox, lightbox.querySelector('.lightbox__close'));
 
 function showInLb(item) {
   const img = item.querySelector('img');
@@ -650,41 +616,43 @@ function showInLb(item) {
   lbInquire.href = 'contact.html?piece=' + encodeURIComponent(item.dataset.title);
 }
 
-function openLb(visIndex) {
-  const vis = getVisible();
-  lbIndex = visIndex;
-  showInLb(vis[visIndex]);
-  lightbox.hidden = false;
-  requestAnimationFrame(() => lightbox.classList.add('open'));
-  document.body.style.overflow = 'hidden';
-  lightbox.querySelector('.lightbox__close').focus();
+function openLb(index) {
+  lbIndex = index;
+  const item = items[index];
+  showInLb(item);
+  viewer.open(item.querySelector('.gallery-item__open'));
 }
 
-function moveLb(dir) {
-  const vis = getVisible();
-  lbIndex = (lbIndex + dir + vis.length) % vis.length;
-  showInLb(vis[lbIndex]);
+function moveLb(direction) {
+  lbIndex = (lbIndex + direction + items.length) % items.length;
+  showInLb(items[lbIndex]);
+  history.replaceState(null, '', '#work-' + encodeURIComponent(items[lbIndex].dataset.title));
 }
 
 function closeLb() {
-  lightbox.classList.remove('open');
-  lightbox.addEventListener('transitionend', () => {
-    if (!lightbox.classList.contains('open')) lightbox.hidden = true;
-  }, { once: true });
-  document.body.style.overflow = '';
+  viewer.close();
+  if (location.hash.startsWith('#work-')) history.replaceState(null, '', location.pathname + location.search);
 }
 
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    const vis = getVisible();
-    const visIndex = vis.indexOf(item);
-    if (visIndex !== -1) openLb(visIndex);
-  });
-  item.setAttribute('tabindex', '0');
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+items.forEach((item, index) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'gallery-item__open';
+  button.setAttribute('aria-haspopup', 'dialog');
+  button.setAttribute('aria-label', item.dataset.title);
+  item.append(button);
+  button.addEventListener('click', () => {
+    history.replaceState(null, '', '#work-' + encodeURIComponent(item.dataset.title));
+    openLb(index);
   });
 });
+
+function openLinkedWork() {
+  const index = items.findIndex(item => location.hash === '#work-' + encodeURIComponent(item.dataset.title));
+  if (index !== -1) openLb(index);
+}
+document.addEventListener('DOMContentLoaded', openLinkedWork);
+window.addEventListener('hashchange', openLinkedWork);
 
 lightbox.querySelector('.lightbox__bd').addEventListener('click', closeLb);
 lightbox.querySelector('.lightbox__close').addEventListener('click', closeLb);
@@ -704,7 +672,7 @@ document.addEventListener('keydown', e => {
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.gallery-item').forEach(function (el, i) { el.classList.add('reveal'); el.style.transitionDelay = Math.min(i * 60, 360) + 'ms'; io.observe(el); });
+  document.querySelectorAll('.gallery-item').forEach(el => io.observe(el));
 }());
 
 var backTop = document.getElementById('backTop');
@@ -724,5 +692,6 @@ if (siteFooter && window.IntersectionObserver) {
 document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 </script>
 <script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

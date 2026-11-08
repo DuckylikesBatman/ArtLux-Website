@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Contact · ArtLux | Decorative Art &amp; Paintings</title>
   <meta name="description" content="Get in touch with ArtLux for decorative art, bespoke murals, and original paintings." />
-  <link rel="canonical" href="https://artluxdesign.com/contact.html" />
+  <link rel="canonical" href="https://artluxdesign.com/contact" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://artluxdesign.com/contact.html" />
+  <meta property="og:url"         content="https://artluxdesign.com/contact" />
   <meta property="og:title"       content="Contact · ArtLux | Decorative Art &amp; Paintings" />
   <meta property="og:description" content="Get in touch with ArtLux to discuss your decorative painting or mural project. Studio based in Beirut, serving clients worldwide." />
   <meta property="og:image"       content="https://artluxdesign.com/Images/interior-2.jpg" />
@@ -32,7 +32,7 @@
     "@type": "LocalBusiness",
     "name": "ArtLux",
     "description": "Decorative art studio in Beirut: bespoke murals, gold leaf and arabesque finishes, furniture restoration, and original paintings.",
-    "url": "https://artluxdesign.com/contact.html",
+    "url": "https://artluxdesign.com/contact",
     "telephone": "+961 3 683 127",
     "email": "artluxdesign@outlook.com",
     "address": { "@type": "PostalAddress", "streetAddress": "Corniche El Mazraa", "addressLocality": "Beirut", "addressCountry": "LB" },
@@ -61,6 +61,7 @@
     media="print" onload="this.onload=null;this.media='all'">
 </head>
 <body class="contact-page">
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
   <!-- ======= HEADER ======= -->
   <header class="al-header" role="banner">
     <div class="al-header__main">
@@ -99,19 +100,23 @@
   </nav>
 
   <!-- ========= MAIN CONTENT ========= -->
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="page-hero" aria-label="Contact ArtLux">
       <div class="page-hero__content">
         <p class="page-hero__eye" data-i18n="contact.hero.eye">Get In Touch</p>
         <h1 class="page-hero__title" data-i18n="contact.hero.title">Let's Create Something<br><em>Beautiful</em></h1>
         <p class="page-hero__sub" data-i18n="contact.hero.sub">Get in touch to discuss your decorative painting, furniture restoration, or fine art project. We're here to bring your vision to life.</p>
+        <div class="page-hero__actions">
+          <a class="btn btn--hero-light" href="#contactForm" data-i18n="contact.hero.form">Send a message</a>
+          <a class="btn btn--hero-ghost" href="https://wa.me/9613683127" data-i18n="contact.hero.whatsapp">WhatsApp the studio</a>
+        </div>
       </div>
     </section>
 
     <!-- Contact Grid -->
     <section class="contact__grid">
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwprqdjp" method="POST" novalidate>
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwprqdjp" method="POST">
   <!-- Visible fields -->
   <div class="form-row">
     <label for="name" data-i18n="contact.form.name">Your Name</label>
@@ -145,6 +150,7 @@
 
   <button class="btn btn--primary" type="submit" data-i18n="contact.form.submit">Send Message</button>
   <p id="formStatus" class="form-status" aria-live="polite"></p>
+  <p id="contactFallback" hidden><a href="mailto:artluxdesign@outlook.com" data-i18n="form.email">Email the studio</a></p>
 </form>
 
       <!-- Contact Information -->
@@ -323,60 +329,39 @@
   <script>
     (function () {
       var header = document.querySelector('.al-header');
-      var burger = document.getElementById('alBurger');
-      var mobile = document.getElementById('alMobileNav');
-      var isOpen = false;
 
       function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
 
-      function openMenu() {
-        isOpen = true;
-        mobile.hidden = false;
-        burger.setAttribute('aria-expanded', 'true');
-        burger.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        requestAnimationFrame(function() { mobile.classList.add('visible'); });
-      }
-      function closeMenu() {
-        isOpen = false;
-        mobile.classList.remove('visible');
-        burger.setAttribute('aria-expanded', 'false');
-        burger.classList.remove('open');
-        document.body.style.overflow = '';
-        setTimeout(function() { mobile.hidden = true; }, 360);
-      }
-
-      if (burger) burger.addEventListener('click', function() { isOpen ? closeMenu() : openMenu(); });
-      if (mobile) mobile.querySelectorAll('a').forEach(function(a) {
-        a.addEventListener('click', function() { if (isOpen) closeMenu(); });
-      });
-      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
     }());
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formStatus = document.getElementById('formStatus');
-      formStatus.textContent = ArtLuxLang.t('contact.status.sending');
-      formStatus.className = 'form-status';
+    const contactForm = document.getElementById('contactForm');
+    const sendButton = contactForm.querySelector('[type="submit"]');
+    const contactStatus = document.getElementById('formStatus');
+    contactForm.addEventListener('input', event => ArtLuxEnquiry.clear(event.target));
+    contactForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (sendButton.disabled) return;
+      const fields = [...this.querySelectorAll('[required]')];
+      const invalid = ArtLuxEnquiry.validate(fields);
+      if (invalid) { invalid.reportValidity(); return; }
 
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          formStatus.textContent = ArtLuxLang.t('contact.status.success');
-          formStatus.className = 'form-status success';
-          this.reset();
-        } else {
-          throw new Error('Submission failed');
-        }
-      }).catch(() => {
-        formStatus.textContent = ArtLuxLang.t('contact.status.error');
-        formStatus.className = 'form-status error';
-      });
+      sendButton.disabled = true;
+      contactStatus.textContent = ArtLuxLang.t('contact.status.sending');
+      contactStatus.className = 'form-status';
+      let error;
+      try {
+        error = await ArtLuxEnquiry.send(this, new FormData(this));
+      } catch {
+        error = 'form.error';
+      } finally {
+        sendButton.disabled = false;
+      }
+      contactStatus.className = error ? 'form-status error' : 'form-status success';
+      contactStatus.textContent = ArtLuxLang.t(error || 'contact.status.success');
+      document.getElementById('contactFallback').hidden = !error;
+      if (!error) this.reset();
     });
 
     /* ── Prefill from a gallery "Inquire About This Piece" link ──
@@ -424,6 +409,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
+  if (!window.L) return;
   const LAT = 33.879907, LNG = 35.491248;
 
   // Leaflet's auto-detected icon path breaks on unpkg URLs; build the icon explicitly instead.
@@ -435,6 +421,7 @@ document.addEventListener('DOMContentLoaded', function(){
     popupAnchor: [1, -34], shadowSize: [41, 41]
   });
 
+  function loadMap() {
   // Create map
   const map = L.map('artluxMap', { scrollWheelZoom:false }).setView([LAT, LNG], 16);
 
@@ -452,10 +439,24 @@ document.addEventListener('DOMContentLoaded', function(){
   `;
   L.marker([LAT, LNG], { icon: artluxMarkerIcon }).addTo(map).bindPopup(popup).openPopup();
 
-  // Enable scroll zoom after first click (nice UX)
-  map.on('click', () => map.scrollWheelZoom.enable());
+  }
+
+  const mapNode = document.getElementById('artluxMap');
+  if (!('IntersectionObserver' in window)) {
+    loadMap();
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      observer.disconnect();
+      loadMap();
+    }
+  }, { rootMargin: '250px' });
+  observer.observe(mapNode);
 });
 </script>
+<script src="enquiry.js" defer></script>
 <script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

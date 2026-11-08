@@ -1,6 +1,6 @@
 <!-- 404.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,17 +32,23 @@
   <link rel="stylesheet" href="404.css" />
 </head>
 <body class="notfound-page">
+  <a class="al-skip" href="#main" data-i18n="nav.skip">Skip to content</a>
   <header class="al-header al-header--light" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
-        <a class="al-nav__link" href="index.html">Home</a>
-        <a class="al-nav__link" href="projects.html">Projects</a>
-        <a class="al-nav__link" href="gallery.html">Gallery</a>
-        <a class="al-nav__link" href="about.html">About</a>
-        <a class="al-nav__link" href="contact.html">Contact</a>
-        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+        <a class="al-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="al-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a class="al-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a class="al-nav__link" href="about.html" data-i18n="nav.about">About</a>
+        <a class="al-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
       </nav>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+      </div>
       <button class="al-burger" id="alBurger" type="button"
               aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
         <span></span><span></span><span></span>
@@ -50,15 +56,20 @@
     </div>
   </header>
   <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-    <a class="al-mobile-nav__link" href="index.html">Home</a>
-    <a class="al-mobile-nav__link" href="projects.html">Projects</a>
-    <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
-    <a class="al-mobile-nav__link" href="about.html">About</a>
-    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
-    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+    <a class="al-mobile-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+    <a class="al-mobile-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+    <a class="al-mobile-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+    <a class="al-mobile-nav__link" href="about.html" data-i18n="nav.about">About</a>
+    <a class="al-mobile-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
+    <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+      <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+    </div>
   </nav>
 
-  <main id="main" class="notfound-main" role="main">
+  <main id="main" class="notfound-main" role="main" tabindex="-1">
     <section class="notfound-hero container" aria-labelledby="nf-title">
       <div class="nf-visual" aria-hidden="true">
         <svg class="nf-svg" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative">
@@ -74,34 +85,34 @@
       </div>
 
       <div class="nf-copy">
-        <h1 id="nf-title" class="nf-title">404 — Page Not Found</h1>
-        <p class="nf-subtitle">The page you’re looking for may have been moved, renamed, or no longer exists.</p>
+        <h1 id="nf-title" class="nf-title" data-i18n="nf.title">404 — Page Not Found</h1>
+        <p class="nf-subtitle" data-i18n="nf.subtitle">The page you’re looking for may have been moved, renamed, or no longer exists.</p>
 
         <div class="nf-actions">
-          <a class="btn btn--primary" href="index.html">Back to Home</a>
-          <a class="btn btn--outline" href="gallery.html">Explore the Gallery <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--primary" href="index.html" data-i18n="nf.cta.home">Back to Home</a>
+          <a class="btn btn--outline" href="gallery.html"><span data-i18n="nf.cta.gallery">Explore the Gallery</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
         <details class="nf-details">
-          <summary>Why am I seeing this?</summary>
+          <summary data-i18n="nf.why">Why am I seeing this?</summary>
           <ul>
-            <li>A link may be outdated or misspelled.</li>
-            <li>The page was renamed during a site update.</li>
-            <li>You followed an external link that no longer works.</li>
+            <li data-i18n="nf.reason1">A link may be outdated or misspelled.</li>
+            <li data-i18n="nf.reason2">The page was renamed during a site update.</li>
+            <li data-i18n="nf.reason3">You followed an external link that no longer works.</li>
           </ul>
         </details>
       </div>
     </section>
 
     <section class="nf-links container" aria-labelledby="quick-links">
-      <h2 id="quick-links" class="sr-only">Quick links</h2>
+      <h2 id="quick-links" class="sr-only" data-i18n="nf.quicklinks.title">Quick links</h2>
       <ul class="nf-quick">
-        <li><a href="commission.html">Request a Commission</a></li>
-        <li><a href="about.html">About ArtLux</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="return.html">Return Policy</a></li>
-        <li><a href="ToS.html">Terms</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="commission.html" data-i18n="nf.quick.commission">Request a Commission</a></li>
+        <li><a href="about.html" data-i18n="nf.quick.about">About ArtLux</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="return.html" data-i18n="footer.return">Return Policy</a></li>
+        <li><a href="ToS.html" data-i18n="nf.quick.terms">Terms</a></li>
+        <li><a href="privacy.html" data-i18n="nf.quick.privacy">Privacy</a></li>
       </ul>
     </section>
   </main>
@@ -110,33 +121,33 @@
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
+        <p data-i18n="footer.tagline">Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
       </div>
 
       <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quicklinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="commission.html" data-i18n="nav.commission">Commission</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
+        <h3 data-i18n="footer.legal">Legal</h3>
         <ul>
-          <li><a href="ToS.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="ToS.html" data-i18n="footer.tos">Terms of Service</a></li>
+          <li><a href="return.html" data-i18n="footer.return">Return Policy</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
         </ul>
       </nav>
 
       <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
+        <h3 data-i18n="footer.contact-us">Contact Us</h3>
+        <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+9613683127">+961 3 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
         <div class="social-links" aria-label="Follow us">
@@ -165,19 +176,13 @@
   <script>
   (function () {
     var header = document.querySelector('.al-header');
-    var burger = document.getElementById('alBurger');
-    var mobile = document.getElementById('alMobileNav');
-    var isOpen = false;
     function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-    function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-    if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-    if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
     document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
   }());
   </script>
+<script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

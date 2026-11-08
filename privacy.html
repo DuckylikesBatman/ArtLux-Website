@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
   <title>Privacy Policy · ArtLux</title>
   <meta name="description" content="ArtLux Privacy Policy — learn how we collect, use, and protect your personal data when you visit our website or submit a form." />
 
-  <link rel="canonical" href="https://artluxdesign.com/privacy.html">
+  <link rel="canonical" href="https://artluxdesign.com/privacy">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,18 +32,24 @@
   <link rel="stylesheet" href="privacy.css">
 </head>
 <body class="policy-page">
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
   <!-- ======= Header ======= -->
   <header class="al-header al-header--light" role="banner">
     <div class="al-header__main">
       <a class="al-logo" href="index.html" aria-label="ArtLux — home">Art<em>Lux</em></a>
       <nav class="al-nav" aria-label="Site navigation">
-        <a class="al-nav__link" href="index.html">Home</a>
-        <a class="al-nav__link" href="projects.html">Projects</a>
-        <a class="al-nav__link" href="gallery.html">Gallery</a>
-        <a class="al-nav__link" href="about.html">About</a>
-        <a class="al-nav__link" href="contact.html">Contact</a>
-        <a class="al-nav__link al-nav__cta" href="commission.html">Commission</a>
+        <a class="al-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="al-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a class="al-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a class="al-nav__link" href="about.html" data-i18n="nav.about">About</a>
+        <a class="al-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="al-nav__link al-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
       </nav>
+      <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+      </div>
       <button class="al-burger" id="alBurger" type="button"
               aria-label="Toggle navigation" aria-expanded="false" aria-controls="alMobileNav">
         <span></span><span></span><span></span>
@@ -51,21 +57,26 @@
     </div>
   </header>
   <nav class="al-mobile-nav" id="alMobileNav" aria-label="Mobile navigation" hidden>
-    <a class="al-mobile-nav__link" href="index.html">Home</a>
-    <a class="al-mobile-nav__link" href="projects.html">Projects</a>
-    <a class="al-mobile-nav__link" href="gallery.html">Gallery</a>
-    <a class="al-mobile-nav__link" href="about.html">About</a>
-    <a class="al-mobile-nav__link" href="contact.html">Contact</a>
-    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html">Commission</a>
+    <a class="al-mobile-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+    <a class="al-mobile-nav__link" href="projects.html" data-i18n="nav.projects">Projects</a>
+    <a class="al-mobile-nav__link" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+    <a class="al-mobile-nav__link" href="about.html" data-i18n="nav.about">About</a>
+    <a class="al-mobile-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <a class="al-mobile-nav__link al-mobile-nav__cta" href="commission.html" data-i18n="nav.commission">Commission</a>
+    <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+      <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+    </div>
   </nav>
 
   <!-- ========== MAIN CONTENT ========== -->
-  <main class="policy-main" role="main">
+  <main class="policy-main" role="main" id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="policy-hero">
       <div class="container">
-        <h1 class="policy-title">Privacy Policy</h1>
-        <p class="policy-subtitle">Last updated: <time datetime="2025-10-07">October 7, 2025</time></p>
+        <h1 class="policy-title" data-i18n="footer.privacy">Privacy Policy</h1>
+        <p class="policy-subtitle" data-i18n="privacy.updated">Last updated: <time datetime="2025-10-07">October 7, 2025</time></p>
       </div>
     </section>
 
@@ -76,88 +87,89 @@
           <!-- Main Content -->
           <div class="policy-main-content">
             <div class="intro-text">
-              <p>At <strong>ArtLux</strong>, we respect your privacy. This Privacy Policy explains what information we collect when you use our website, how we use it, and the choices you have. If you have any questions, contact us at <a href="mailto:artluxdesign@outlook.com" class="email-link">artluxdesign@outlook.com</a>.</p>
+              <p data-i18n="privacy.intro">At <strong>ArtLux</strong>, we respect your privacy. This Privacy Policy explains what information we collect when you use our website, how we use it, and the choices you have. If you have any questions, contact us at <a href="mailto:artluxdesign@outlook.com" class="email-link">artluxdesign@outlook.com</a>.</p>
             </div>
 
             <article class="policy-section">
-              <h2 id="what-we-collect">Information We Collect</h2>
+              <h2 id="what-we-collect" data-i18n="privacy.h.collect">Information We Collect</h2>
               <ul class="legal-list">
-                <li><strong>Information you provide via forms.</strong> When you use the Contact or Commission forms, we collect the details you submit (name, email, phone, project details). These forms are processed by Formspree.</li>
-                <li><strong>Basic technical data.</strong> Our servers may log basic metadata such as IP address and browser type for security and reliability.</li>
-                <li><strong>Cookies & analytics.</strong> We currently do not use third-party analytics or advertising cookies on this site.</li>
+                <li data-i18n="privacy.collect.li1"><strong>Information you provide via forms.</strong> When you use the Contact or Commission forms, we collect the details you submit (such as your name, email, phone, project details and any optional reference files). These forms are processed by Formspree.</li>
+                <li data-i18n="privacy.collect.li2"><strong>Basic technical data.</strong> Our servers may log basic metadata such as IP address and browser type for security and reliability.</li>
+                <li data-i18n="privacy.collect.li3"><strong>Cookies &amp; analytics.</strong> We use Google Analytics to understand how visitors use the site. Google Analytics may use cookies to measure visits and interactions. Avoid including sensitive personal information in project descriptions or reference files.</li>
               </ul>
             </article>
 
             <article class="policy-section">
-              <h2 id="how-we-use">How We Use Your Information</h2>
+              <h2 id="how-we-use" data-i18n="privacy.h.use">How We Use Your Information</h2>
               <ul class="legal-list">
-                <li>To reply to your inquiries and commission requests</li>
-                <li>To prepare quotations and project documentation</li>
-                <li>To maintain website security and reliability</li>
+                <li data-i18n="privacy.use.li1">To reply to your inquiries and commission requests</li>
+                <li data-i18n="privacy.use.li2">To prepare quotations and project documentation</li>
+                <li data-i18n="privacy.use.li3">To maintain website security and reliability</li>
               </ul>
             </article>
 
             <article class="policy-section">
-              <h2 id="legal-basis">Legal Bases</h2>
-              <p>We process your information on the following bases:</p>
+              <h2 id="legal-basis" data-i18n="privacy.h.basis">Legal Bases</h2>
+              <p data-i18n="privacy.basis.intro">We process your information on the following bases:</p>
               <ul class="legal-list">
-                <li><strong>Contractual necessity</strong> to respond to commission requests</li>
-                <li><strong>Legitimate interests</strong> for website security</li>
-                <li><strong>Consent</strong> when you voluntarily submit a form</li>
+                <li data-i18n="privacy.basis.li1"><strong>Contractual necessity</strong> to respond to commission requests</li>
+                <li data-i18n="privacy.basis.li2"><strong>Legitimate interests</strong> for website security</li>
+                <li data-i18n="privacy.basis.li3"><strong>Consent</strong> when you voluntarily submit a form</li>
               </ul>
             </article>
 
             <article class="policy-section">
-              <h2 id="sharing">Sharing Your Information</h2>
-              <p>We do not sell your personal data. We share it only with:</p>
+              <h2 id="sharing" data-i18n="privacy.h.sharing">Sharing Your Information</h2>
+              <p data-i18n="privacy.sharing.intro">We do not sell your personal data. We share it only with:</p>
               <ul class="legal-list">
-                <li><strong>Service providers.</strong> We use Formspree to receive form submissions</li>
-                <li><strong>Legal requirements.</strong> If required by law or to protect our rights</li>
+                <li data-i18n="privacy.sharing.li1"><strong>Service providers.</strong> We use Formspree to receive form submissions</li>
+                <li data-i18n="privacy.sharing.li2"><strong>Legal requirements.</strong> If required by law or to protect our rights</li>
               </ul>
             </article>
 
             <article class="policy-section">
-              <h2 id="retention">Data Retention</h2>
-              <p>We retain form submissions for as long as necessary to respond to your request and manage our relationship, and to comply with legal obligations. You can ask us to delete your message at any time.</p>
+              <h2 id="retention" data-i18n="privacy.h.retention">Data Retention</h2>
+              <p data-i18n="privacy.retention.text">We retain form submissions for as long as necessary to respond to your request and manage our relationship, and to comply with legal obligations. You can ask us to delete your message at any time.</p>
             </article>
 
             <article class="policy-section">
-              <h2 id="your-rights">Your Rights</h2>
-              <p>You may have the right to access, correct, delete, or receive a copy of your personal data. To exercise these rights, email us at <a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a>.</p>
+              <h2 id="your-rights" data-i18n="privacy.h.rights">Your Rights</h2>
+              <p data-i18n="privacy.rights.text">You may have the right to access, correct, delete, or receive a copy of your personal data. To exercise these rights, email us at <a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a>.</p>
             </article>
 
             <article class="policy-section">
-              <h2 id="security">Security</h2>
-              <p>We use reasonable technical and organizational measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
+              <h2 id="security" data-i18n="privacy.h.security">Security</h2>
+              <p data-i18n="privacy.security.text">We use reasonable technical and organizational measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
             </article>
 
             <article class="policy-section">
-              <h2 id="children">Children</h2>
-              <p>Our website is not directed to children under 13. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
+              <h2 id="children" data-i18n="privacy.h.children">Children</h2>
+              <p data-i18n="privacy.children.text">Our website is not directed to children under 13. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
             </article>
 
             <article class="policy-section">
-              <h2 id="changes">Changes to This Policy</h2>
-              <p>We may update this policy from time to time. If changes are significant, we will adjust the "Last updated" date and provide notice where appropriate.</p>
+              <h2 id="changes" data-i18n="privacy.h.changes">Changes to This Policy</h2>
+              <p data-i18n="privacy.changes.text">We may update this policy from time to time. If changes are significant, we will adjust the "Last updated" date and provide notice where appropriate.</p>
             </article>
 
           </div>
 
           <!-- Table of Contents -->
           <nav class="policy-toc" aria-label="On this page">
-            <h3>On This Page</h3>
+            <details class="policy-toc__details">
+              <summary data-i18n="privacy.toc.summary">On this page</summary>
             <ol>
-              <li><a href="#what-we-collect">Information We Collect</a></li>
-              <li><a href="#how-we-use">How We Use</a></li>
-              <li><a href="#legal-basis">Legal Bases</a></li>
-              <li><a href="#sharing">Sharing</a></li>
-              <li><a href="#retention">Data Retention</a></li>
-              <li><a href="#your-rights">Your Rights</a></li>
-              <li><a href="#security">Security</a></li>
-              <li><a href="#children">Children</a></li>
-              <li><a href="#changes">Changes</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#what-we-collect" data-i18n="privacy.toc.collect">Information We Collect</a></li>
+              <li><a href="#how-we-use" data-i18n="privacy.toc.use">How We Use</a></li>
+              <li><a href="#legal-basis" data-i18n="privacy.toc.basis">Legal Bases</a></li>
+              <li><a href="#sharing" data-i18n="privacy.toc.sharing">Sharing</a></li>
+              <li><a href="#retention" data-i18n="privacy.toc.retention">Data Retention</a></li>
+              <li><a href="#your-rights" data-i18n="privacy.toc.rights">Your Rights</a></li>
+              <li><a href="#security" data-i18n="privacy.toc.security">Security</a></li>
+              <li><a href="#children" data-i18n="privacy.toc.children">Children</a></li>
+              <li><a href="#changes" data-i18n="privacy.toc.changes">Changes</a></li>
             </ol>
+            </details>
           </nav>
         </div>
       </div>
@@ -168,33 +180,33 @@
     <div class="footer-container">
       <div class="footer-about">
         <a href="index.html" class="footer-logo">Art<span>Lux</span></a>
-        <p>Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
+        <p data-i18n="footer.tagline">Decorative painting, fine murals, and bespoke furniture restoration since 2019.</p>
       </div>
 
       <nav class="footer-section footer-links" aria-label="Quick Links">
-        <h3>Quick Links</h3>
+        <h3 data-i18n="footer.quicklinks">Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="commission.html">Commission</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="commission.html" data-i18n="nav.commission">Commission</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <nav class="footer-section footer-links" aria-label="Legal">
-        <h3>Legal</h3>
+        <h3 data-i18n="footer.legal">Legal</h3>
         <ul>
-          <li><a href="ToS.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="ToS.html" data-i18n="footer.tos">Terms of Service</a></li>
+          <li><a href="return.html" data-i18n="footer.return">Return Policy</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
         </ul>
       </nav>
 
       <address class="footer-section footer-contact">
-        <h3>Contact Us</h3>
-        <p>Corniche El Mazraa, Beirut</p>
+        <h3 data-i18n="footer.contact-us">Contact Us</h3>
+        <p data-i18n="footer.address">Corniche El Mazraa, Beirut</p>
         <p><a href="tel:+9613683127">+961 3 683 127</a></p>
         <p><a href="mailto:artluxdesign@outlook.com">artluxdesign@outlook.com</a></p>
         <div class="social-links" aria-label="Follow us">
@@ -224,17 +236,9 @@
     // Header behavior
     (function () {
       var header = document.querySelector('.al-header');
-      var burger = document.getElementById('alBurger');
-      var mobile = document.getElementById('alMobileNav');
-      var isOpen = false;
       function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
-      function openMenu() { isOpen = true; mobile.hidden = false; burger.setAttribute('aria-expanded','true'); burger.classList.add('open'); document.body.style.overflow='hidden'; requestAnimationFrame(function(){ mobile.classList.add('visible'); }); }
-      function closeMenu() { isOpen = false; mobile.classList.remove('visible'); burger.setAttribute('aria-expanded','false'); burger.classList.remove('open'); document.body.style.overflow=''; setTimeout(function(){ mobile.hidden=true; },360); }
-      if (burger) burger.addEventListener('click', function(){ isOpen ? closeMenu() : openMenu(); });
-      if (mobile) mobile.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if(isOpen) closeMenu(); }); });
-      document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&isOpen) closeMenu(); });
       document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
     })();
 
@@ -252,5 +256,14 @@
       });
     });
   </script>
+<script>
+  const toc = document.querySelector('.policy-toc__details');
+  const widePolicy = matchMedia('(min-width: 1100px)');
+  function setContentsDefault() { toc.open = widePolicy.matches; }
+  setContentsDefault();
+  widePolicy.addEventListener('change', setContentsDefault);
+</script>
+<script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>

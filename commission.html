@@ -18,9 +18,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Commission Custom Artwork · ArtLux</title>
   <meta name="description" content="Commission a bespoke artwork from ArtLux. Share your vision and collaborate with our artist to create a one‑of‑a‑kind piece." />
-  <link rel="canonical" href="https://artluxdesign.com/commission.html" />
+  <link rel="canonical" href="https://artluxdesign.com/commission" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://artluxdesign.com/commission.html" />
+  <meta property="og:url"         content="https://artluxdesign.com/commission" />
   <meta property="og:title"       content="Commission Custom Artwork · ArtLux" />
   <meta property="og:description" content="Commission a bespoke mural or painting from ArtLux. Share your vision and we'll create a one-of-a-kind piece for your space." />
   <meta property="og:image"       content="https://artluxdesign.com/Images/paintings/painting14-dec.jpeg" />
@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="commission.css">
 </head>
 <body>
+  <a class="al-skip" href="#main-content" data-i18n="nav.skip">Skip to content</a>
   <!-- ======= HEADER ======= -->
   <header class="al-header" role="banner">
     <div class="al-header__main">
@@ -77,13 +78,16 @@
   </nav>
 
   <!-- ========== MAIN CONTENT ========== -->
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="page-hero" aria-labelledby="hero-heading">
       <div class="page-hero__content">
         <p class="page-hero__eye" data-i18n="commission.hero.eye">ArtLux Studio</p>
         <h1 id="hero-heading" class="page-hero__title" data-i18n="commission.hero.title">Commission Your<br><em>Masterpiece</em></h1>
         <p class="page-hero__sub" data-i18n="commission.hero.sub">Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.</p>
+        <div class="page-hero__actions">
+          <a class="btn btn--hero-light" href="#request-form" data-i18n="commission.hero.start">Start your request</a>
+        </div>
       </div>
     </section>
 
@@ -110,7 +114,7 @@
           <div class="process-card">
             <div class="process-icon">04</div>
             <h3 data-i18n="commission.p4.title">Final Delivery</h3>
-            <p data-i18n="commission.p4.text">Your completed artwork is carefully packaged and shipped with full insurance coverage.</p>
+            <p data-i18n="commission.p4.text">We arrange on-site installation or insured delivery for artwork, depending on the project.</p>
           </div>
         </div>
       </div>
@@ -139,18 +143,20 @@
           </div>
         </div>
 
-        <form id="commissionForm" class="cfg-form" action="https://formspree.io/f/mdkwdqga" method="POST">
+        <p id="commissionSuccess" class="form-status form-success" tabindex="-1" role="status"></p>
+        <form id="commissionForm" class="cfg-form" action="https://formspree.io/f/mdkwdqga" method="POST" enctype="multipart/form-data">
           <!-- Honeypot (spam trap) -->
           <div class="hp" aria-hidden="true">
             <label for="cfg_gotcha">Leave this field empty</label>
             <input id="cfg_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
           </div>
+          <input type="hidden" name="reference-project">
           <input type="hidden" name="_subject" value="New Commission Request - ArtLux">
           <input type="hidden" name="_redirect" value="thanks.html">
 
           <!-- ── STEP 1: TYPE ── -->
           <div class="cfg-panel active" id="cfgPanel1">
-            <p class="cfg-hint" data-i18n="cfg.hint1">What type of artwork are you commissioning?</p>
+            <p class="cfg-hint" tabindex="-1" data-i18n="cfg.hint1">What type of artwork are you commissioning?</p>
 
             <div class="type-grid">
 
@@ -251,6 +257,7 @@
 
             <div class="cfg-nav">
               <span></span>
+              <p class="field-error" id="cfgTypeError" role="alert"></p>
               <button type="button" class="cfg-btn cfg-btn--next" id="cfgNext1">
                 <span data-i18n="cfg.btn.next1">Next: Dimensions</span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -260,24 +267,28 @@
 
           <!-- ── STEP 2: DIMENSIONS ── -->
           <div class="cfg-panel" id="cfgPanel2" hidden>
-            <p class="cfg-hint" data-i18n="cfg.hint2">Tell us about the size and scope of your project.</p>
+            <p class="cfg-hint" tabindex="-1" data-i18n="cfg.hint2">Tell us about the project. You can leave dimensions blank if you haven’t measured yet.</p>
 
             <div class="dim-grid">
+              <div class="form-group">
+                <label for="cfgLocation" data-i18n="cfg.location">City and country (optional)</label>
+                <input id="cfgLocation" name="project-location" type="text" maxlength="120">
+              </div>
 
               <div class="form-group">
                 <label for="cfgWidth">
                   <span data-i18n="cfg.label.width">Width (cm)</span>
-                  <span class="required" aria-hidden="true">*</span>
                 </label>
-                <input type="number" id="cfgWidth" name="width-cm" min="10" max="3000" placeholder="e.g. 200">
+                <input type="number" id="cfgWidth" aria-describedby="cfgWidthError" name="width-cm" min="10" max="3000" placeholder="e.g. 200">
+                <p class="field-error" id="cfgWidthError" aria-live="polite"></p>
               </div>
 
               <div class="form-group">
                 <label for="cfgHeight">
                   <span data-i18n="cfg.label.height">Height (cm)</span>
-                  <span class="required" aria-hidden="true">*</span>
                 </label>
-                <input type="number" id="cfgHeight" name="height-cm" min="10" max="3000" placeholder="e.g. 150">
+                <input type="number" id="cfgHeight" aria-describedby="cfgHeightError" name="height-cm" min="10" max="3000" placeholder="e.g. 150">
+                <p class="field-error" id="cfgHeightError" aria-live="polite"></p>
               </div>
 
               <div class="form-group">
@@ -338,7 +349,7 @@
 
           <!-- ── STEP 3: DETAILS ── -->
           <div class="cfg-panel" id="cfgPanel3" hidden>
-            <p class="cfg-hint" data-i18n="cfg.hint3">Share your vision and contact details.</p>
+            <p class="cfg-hint" tabindex="-1" data-i18n="cfg.hint3">Share your vision and contact details.</p>
 
             <div class="form-grid">
 
@@ -374,20 +385,16 @@
               </div>
 
               <div class="form-group full-width">
-                <label>
+                <label for="cfgPhotos">
                   <span data-i18n="cfg.label.photos">Space Photos</span>
                   <span class="form-hint" data-i18n="cfg.photos.hint">optional — helps us visualize</span>
                 </label>
-                <div class="upload-zone" id="uploadZone" role="button" tabindex="0" aria-label="Upload space photos">
-                  <svg class="upload-zone__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
-                  </svg>
-                  <p class="upload-zone__text">
-                    <span data-i18n="cfg.upload.text">Drag & drop photos here, or</span>&#32;<label for="cfgPhotos" class="upload-zone__browse" data-i18n="cfg.upload.browse">browse</label>
-                  </p>
-                  <p class="upload-zone__sub" data-i18n="cfg.upload.sub">JPG, PNG, PDF · Max 10 MB per file</p>
-                  <input id="cfgPhotos" type="file" name="photos" multiple accept="image/*,.pdf" hidden aria-hidden="true">
-                  <div id="uploadPreview" class="upload-preview" role="list" aria-label="Selected files"></div>
+                <div class="upload-zone" id="uploadZone">
+                  <p class="upload-zone__text" data-i18n="cfg.upload.prompt">Drop reference files here or choose files below.</p>
+                  <p class="upload-zone__sub" id="uploadHelp" data-i18n="cfg.upload.limit">JPG, PNG or PDF. Up to 5 files, 10 MB each.</p>
+                  <input id="cfgPhotos" type="file" name="photos" multiple accept="image/jpeg,image/png,application/pdf,.jpg,.jpeg,.png,.pdf" aria-describedby="uploadHelp uploadError">
+                  <p class="field-error" id="uploadError" role="alert"></p>
+                  <ul id="uploadPreview" class="upload-preview" aria-label="Selected files"></ul>
                 </div>
               </div>
 
@@ -402,7 +409,8 @@
                 <span data-i18n="cfg.btn.submit">Submit Commission Request</span>
               </button>
             </div>
-            <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+            <p id="formStatus" class="form-status" role="status"></p>
+            <p id="commissionFallback" hidden><a href="mailto:artluxdesign@outlook.com" data-i18n="form.email">Email the studio</a></p>
           </div><!-- /cfgPanel3 -->
 
         </form>
@@ -542,182 +550,201 @@
   /* ── Header / burger ── */
   (function () {
     var header = document.querySelector('.al-header');
-    var burger = document.getElementById('alBurger');
-    var mobile = document.getElementById('alMobileNav');
-    var isOpen = false;
 
     function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    function openMenu() {
-      isOpen = true; mobile.hidden = false;
-      burger.setAttribute('aria-expanded', 'true'); burger.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(function () { mobile.classList.add('visible'); });
-    }
-    function closeMenu() {
-      isOpen = false; mobile.classList.remove('visible');
-      burger.setAttribute('aria-expanded', 'false'); burger.classList.remove('open');
-      document.body.style.overflow = '';
-      setTimeout(function () { mobile.hidden = true; }, 360);
-    }
-
-    if (burger) burger.addEventListener('click', function () { isOpen ? closeMenu() : openMenu(); });
-    if (mobile) mobile.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { if (isOpen) closeMenu(); });
-    });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && isOpen) closeMenu(); });
   }());
 
   /* ── Multi-step configurator ── */
   (function () {
-    var panels = ['cfgPanel1', 'cfgPanel2', 'cfgPanel3'].map(function (id) { return document.getElementById(id); });
-    var dots   = ['cfgStepDot1', 'cfgStepDot2', 'cfgStepDot3'].map(function (id) { return document.getElementById(id); });
-    var lines  = document.querySelectorAll('.cfg-step-line');
-    var current = 0;
+    const form = document.getElementById('commissionForm');
+    const project = new URLSearchParams(location.search).get('project');
+    if (project) form.elements['reference-project'].defaultValue = project.slice(0, 120);
+    const panels = [...form.querySelectorAll('.cfg-panel')];
+    const dots = [...document.querySelectorAll('[id^="cfgStepDot"]')];
+    const lines = [...document.querySelectorAll('.cfg-step-line')];
+    const radios = [...form.querySelectorAll('[name="artwork-type"]')];
+    const dimensions = ['cfgWidth', 'cfgHeight'].map(id => document.getElementById(id));
+    const fileInput = document.getElementById('cfgPhotos');
+    const zone = document.getElementById('uploadZone');
+    const preview = document.getElementById('uploadPreview');
+    const uploadError = document.getElementById('uploadError');
+    const submit = document.getElementById('cfgSubmit');
+    const status = document.getElementById('formStatus');
+    const success = document.getElementById('commissionSuccess');
+    const fallback = document.getElementById('commissionFallback');
+    const typeError = document.getElementById('cfgTypeError');
+    const files = [];
+    let current = 0;
+    dots[0].setAttribute('aria-current', 'step');
 
-    function goTo(idx) {
-      panels[current].classList.remove('active');
-      panels[current].hidden = true;
-      current = idx;
-      panels[current].hidden = false;
-      requestAnimationFrame(function () { panels[current].classList.add('active'); });
-      dots.forEach(function (d, i) {
-        d.classList.toggle('active', i === current);
-        d.classList.toggle('done', i < current);
+    // Validate only the active step on Enter. Hidden fields are checked before send.
+    form.noValidate = true;
+    function goTo(index, focus = true) {
+      current = index;
+      panels.forEach((panel, i) => {
+        panel.hidden = i !== index;
+        panel.classList.toggle('active', i === index);
       });
-      lines.forEach(function (l, i) { l.classList.toggle('done', i < current); });
-      var sec = document.getElementById('request-form');
-      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.classList.toggle('done', i < index);
+        if (i === index) dot.setAttribute('aria-current', 'step');
+        else dot.removeAttribute('aria-current');
+      });
+      lines.forEach((line, i) => line.classList.toggle('done', i < index));
+      if (focus) panels[index].querySelector('.cfg-hint').focus();
     }
 
-    /* Step 1 → 2 */
-    document.getElementById('cfgNext1').addEventListener('click', function () {
-      var sel = document.querySelector('input[name="artwork-type"]:checked');
-      if (!sel) {
-        var grid = document.querySelector('.type-grid');
-        if (grid) { grid.classList.add('shake'); setTimeout(function () { grid.classList.remove('shake'); }, 500); }
+    function validateType() {
+      if (radios.some(radio => radio.checked)) return true;
+      typeError.textContent = ArtLuxLang.t('cfg.error.type');
+      radios[0].focus();
+      return false;
+    }
+
+    function validateDimensions() {
+      let firstInvalid;
+      dimensions.forEach(field => {
+        const invalid = !field.validity.valid;
+        document.getElementById(field.id + 'Error').textContent = invalid ? ArtLuxLang.t('cfg.error.dim') : '';
+        field.setAttribute('aria-invalid', String(invalid));
+        if (invalid && !firstInvalid) firstInvalid = field;
+      });
+      if (firstInvalid) firstInvalid.focus();
+      return !firstInvalid;
+    }
+
+    function advance() {
+      success.textContent = '';
+      if (current === 0 && validateType()) goTo(1);
+      else if (current === 1 && validateDimensions()) goTo(2);
+    }
+    document.getElementById('cfgNext1').addEventListener('click', advance);
+    document.getElementById('cfgNext2').addEventListener('click', advance);
+    document.getElementById('cfgBack2').addEventListener('click', () => goTo(0));
+    document.getElementById('cfgBack3').addEventListener('click', () => goTo(1));
+    radios.forEach(radio => radio.addEventListener('change', () => {
+      typeError.textContent = '';
+      radios.forEach(option => option.closest('.type-card').classList.toggle('selected', option.checked));
+    }));
+    form.addEventListener('input', event => {
+      ArtLuxEnquiry.clear(event.target);
+      if (dimensions.includes(event.target)) {
+        document.getElementById(event.target.id + 'Error').textContent = '';
+      }
+    });
+
+    function renderFiles(focusIndex) {
+      preview.replaceChildren();
+      files.forEach((file, index) => {
+        const item = document.createElement('li');
+        item.className = 'upload-file';
+        const name = document.createElement('span');
+        name.textContent = file.name;
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.textContent = ArtLuxLang.t('cfg.upload.remove');
+        remove.setAttribute('aria-label', remove.textContent + ': ' + file.name);
+        remove.disabled = submit.disabled;
+        remove.addEventListener('click', () => {
+          if (submit.disabled) return;
+          files.splice(index, 1);
+          renderFiles(index);
+          uploadError.textContent = '';
+        });
+        item.append(name, remove);
+        preview.append(item);
+      });
+      if (focusIndex !== undefined) {
+        (preview.querySelectorAll('button')[Math.min(focusIndex, files.length - 1)] || fileInput).focus();
+      }
+    }
+
+    function addFiles(selection) {
+      if (submit.disabled) return;
+      const errors = [];
+      for (const file of selection) {
+        if (!/\.(jpe?g|png|pdf)$/i.test(file.name) ||
+            (file.type && !['image/jpeg', 'image/png', 'application/pdf'].includes(file.type))) {
+          errors.push(file.name + ': ' + ArtLuxLang.t('cfg.error.fileType'));
+        } else if (!file.size || file.size > 10_000_000) {
+          errors.push(file.name + ': ' + ArtLuxLang.t('cfg.error.fileSize'));
+        } else if (files.length >= 5) {
+          errors.push(ArtLuxLang.t('cfg.error.fileCount'));
+          break;
+        } else if (!files.some(existing =>
+          existing.name === file.name && existing.size === file.size && existing.lastModified === file.lastModified
+        )) {
+          files.push(file);
+        }
+      }
+      uploadError.textContent = errors.join(' ');
+      renderFiles();
+    }
+
+    fileInput.addEventListener('change', () => {
+      addFiles(fileInput.files);
+      fileInput.value = '';
+    });
+    zone.addEventListener('dragover', event => {
+      event.preventDefault();
+      zone.classList.add('drag-over');
+    });
+    zone.addEventListener('dragleave', event => {
+      if (!zone.contains(event.relatedTarget)) zone.classList.remove('drag-over');
+    });
+    zone.addEventListener('drop', event => {
+      event.preventDefault();
+      zone.classList.remove('drag-over');
+      addFiles(event.dataTransfer.files);
+    });
+    document.addEventListener('artlux:langchange', () => renderFiles());
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (submit.disabled) return;
+      if (current !== 2) { advance(); return; }
+      if (!radios.some(radio => radio.checked)) { goTo(0); validateType(); return; }
+      if (dimensions.some(field => !field.validity.valid)) { goTo(1); validateDimensions(); return; }
+      const invalid = ArtLuxEnquiry.validate([...panels[2].querySelectorAll('[required]')]);
+      if (invalid) { invalid.reportValidity(); return; }
+
+      const data = new FormData(form);
+      data.delete('photos');
+      files.forEach(file => data.append('photos', file));
+      const controls = [submit, fileInput, document.getElementById('cfgBack3'), ...preview.querySelectorAll('button')];
+      controls.forEach(control => { control.disabled = true; });
+      status.className = 'form-status';
+      status.textContent = ArtLuxLang.t('contact.status.sending');
+      fallback.hidden = true;
+      let error;
+      try {
+        error = await ArtLuxEnquiry.send(form, data);
+      } catch {
+        error = 'form.error';
+      } finally {
+        controls.forEach(control => { control.disabled = false; });
+        preview.querySelectorAll('button').forEach(button => { button.disabled = false; });
+      }
+      if (error) {
+        status.className = 'form-status form-error';
+        status.textContent = ArtLuxLang.t(error);
+        fallback.hidden = false;
         return;
       }
-      goTo(1);
+      status.textContent = '';
+      form.reset();
+      radios.forEach(radio => radio.closest('.type-card').classList.remove('selected'));
+      files.length = 0;
+      renderFiles();
+      uploadError.textContent = '';
+      goTo(0, false);
+      success.textContent = ArtLuxLang.t('cfg.success');
+      success.focus();
     });
-
-    /* Step 2 → 3 */
-    document.getElementById('cfgNext2').addEventListener('click', function () {
-      var w = document.getElementById('cfgWidth');
-      var h = document.getElementById('cfgHeight');
-      var ok = true;
-      [w, h].forEach(function (el) { if (!el.value) { el.classList.add('input-error'); ok = false; } });
-      if (!ok) return;
-      goTo(2);
-    });
-
-    document.getElementById('cfgBack2').addEventListener('click', function () { goTo(0); });
-    document.getElementById('cfgBack3').addEventListener('click', function () { goTo(1); });
-
-    /* Clear error on input */
-    ['cfgWidth', 'cfgHeight'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.addEventListener('input', function () { this.classList.remove('input-error'); });
-    });
-
-    /* Type card selection */
-    document.querySelectorAll('.type-card input[type="radio"]').forEach(function (r) {
-      r.addEventListener('change', function () {
-        document.querySelectorAll('.type-card').forEach(function (c) { c.classList.remove('selected'); });
-        this.closest('.type-card').classList.add('selected');
-      });
-    });
-
-    /* File upload */
-    var zone    = document.getElementById('uploadZone');
-    var fileIn  = document.getElementById('cfgPhotos');
-    var preview = document.getElementById('uploadPreview');
-
-    if (zone && fileIn) {
-      zone.addEventListener('click', function (e) {
-        if (!e.target.classList.contains('upload-zone__browse')) fileIn.click();
-      });
-      zone.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileIn.click(); }
-      });
-      fileIn.addEventListener('change', function () { renderFiles(this.files); });
-      zone.addEventListener('dragover', function (e) { e.preventDefault(); zone.classList.add('drag-over'); });
-      zone.addEventListener('dragleave', function () { zone.classList.remove('drag-over'); });
-      zone.addEventListener('drop', function (e) {
-        e.preventDefault(); zone.classList.remove('drag-over');
-        renderFiles(e.dataTransfer.files);
-      });
-
-      function renderFiles(files) {
-        if (!preview) return;
-        preview.innerHTML = '';
-        Array.from(files).forEach(function (f) {
-          var item = document.createElement('div');
-          item.className = 'upload-file'; item.setAttribute('role', 'listitem');
-          if (f.type.startsWith('image/')) {
-            var img = document.createElement('img');
-            img.src = URL.createObjectURL(f); img.alt = f.name;
-            item.appendChild(img);
-          } else {
-            var ic = document.createElement('span');
-            ic.className = 'upload-file__icon'; ic.textContent = '📄';
-            item.appendChild(ic);
-          }
-          var nm = document.createElement('span');
-          nm.className = 'upload-file__name';
-          nm.textContent = f.name.length > 18 ? f.name.slice(0, 16) + '…' : f.name;
-          item.appendChild(nm);
-          preview.appendChild(item);
-        });
-        if (files.length) zone.classList.add('has-files');
-      }
-    }
-
-    /* Form submit */
-    var form = document.getElementById('commissionForm');
-    var statusEl = document.getElementById('formStatus');
-
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var nameEl = form.querySelector('[name="name"]');
-        var emailEl = form.querySelector('[name="email"]');
-        var descEl  = form.querySelector('[name="description"]');
-        var ok = true;
-        [nameEl, emailEl, descEl].forEach(function (el) {
-          if (!el || !el.value.trim()) { if (el) el.classList.add('input-error'); ok = false; }
-        });
-        if (!ok) return;
-
-        var btn = document.getElementById('cfgSubmit');
-        if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
-        statusEl.textContent = ''; statusEl.className = 'form-status';
-
-        fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } })
-          .then(function (res) {
-            if (btn) { btn.disabled = false; btn.style.opacity = ''; }
-            if (res.ok) {
-              statusEl.textContent = "Thank you! Your request has been received. We'll contact you within 24–48 hours.";
-              statusEl.className = 'form-status form-success';
-              form.reset();
-              if (preview) preview.innerHTML = '';
-              if (zone) zone.classList.remove('has-files');
-              goTo(0);
-            } else { throw new Error(); }
-          })
-          .catch(function () {
-            if (btn) { btn.disabled = false; btn.style.opacity = ''; }
-            statusEl.textContent = 'Something went wrong. Please email us at artluxdesign@outlook.com';
-            statusEl.className = 'form-status form-error';
-          });
-      });
-
-      form.querySelectorAll('input, textarea').forEach(function (el) {
-        el.addEventListener('input', function () { this.classList.remove('input-error'); });
-      });
-    }
   }());
 
   /* ── Scroll reveal ── */
@@ -747,6 +774,8 @@
   document.querySelectorAll('.yr').forEach(function (e) { e.textContent = new Date().getFullYear(); });
   </script>
 
+  <script src="enquiry.js" defer></script>
   <script src="lang.js" defer></script>
+<script src="navigation.js" defer></script>
 </body>
 </html>
