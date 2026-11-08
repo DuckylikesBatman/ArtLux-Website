@@ -115,7 +115,7 @@
       /* ── Home page ── */
       'home.hero.eyebrow': 'Decorative Painting Studio &middot; Beirut',
       'home.hero.title': 'Every Wall<br>Is Our <em>Canvas</em>',
-      'home.hero.sub': 'Bespoke wall &amp; ceiling painting, hand-painted murals, gold leaf and arabesque finishes, furniture restoration, and fine art by Manal Yehya.',
+      'home.hero.sub': 'Decorative art for walls, ceilings and furniture — hand-painted murals, gold leaf and arabesque finishes — plus original paintings and drawings by Manal Yehya.',
       'home.hero.cta1': 'View Our Projects',
       'home.hero.cta2': 'Request a quote',
       'home.hero.trust.label': 'Trusted Across',
@@ -529,7 +529,7 @@
       /* ── Home page ── */
       'home.hero.eyebrow': 'استوديو الرسم الديكوري &middot; بيروت',
       'home.hero.title': 'كل جدار<br>هو <em>لوحتنا</em>',
-      'home.hero.sub': 'رسم جداري وسقوف مخصص، جداريات مرسومة يدويًا، تشطيبات ذهبية وأرابيسك، ترميم أثاث، وأعمال فنية بريشة منال يحيى.',
+      'home.hero.sub': 'فن ديكوري للجدران والأسقف والأثاث — جداريات مرسومة يدويًا، تشطيبات ذهبية وأرابيسك — إضافة إلى لوحات ورسومات أصلية بريشة منال يحيى.',
       'home.hero.cta1': 'مشاهدة مشاريعنا',
       'home.hero.cta2': 'اطلب عرض سعر',
       'home.hero.trust.label': 'موثوقون في',

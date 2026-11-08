@@ -424,7 +424,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 32%;
+    object-position: center 30%;
     filter: saturate(0.88) brightness(0.94) sepia(0.1) contrast(1.04);
   }
 
