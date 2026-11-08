@@ -109,7 +109,7 @@
       <button class="filter-pill" data-filter="healthcare" data-i18n="cat.healthcare">Healthcare</button>
     </div>
     <span class="projects-count" aria-live="polite">
-      <span id="countNum">14 projects</span>
+      <span id="countNum">11 projects</span>
     </span>
   </div>
 
@@ -117,38 +117,6 @@
   <section class="projects-section" aria-label="Project showcase">
     <div class="container">
       <div class="projects-grid" id="projectsGrid">
-
-        <article class="project-card" data-cat="residential" data-project="jessica-azar" id="jessica-azar" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Jessica Azar Residence project">
-          <div class="project-card__img">
-            <picture><source srcset="Images/interior-2.webp" type="image/webp"><img src="Images/interior-2.jpg" width="1084" height="1200" alt="Contemporary living space with custom grey patina wall treatments – Jessica Azar Residence, Beirut" loading="lazy" decoding="async"></picture>
-            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
-          </div>
-          <div class="project-card__body">
-            <p class="project-card__location" data-i18n="proj.jessica-azar.card.loc">Beirut, Lebanon</p>
-            <h2 class="project-card__title">Jessica Azar Residence</h2>
-            <p class="project-card__desc" data-i18n="proj.jessica-azar.desc">Custom grey patina wall treatments that bring modern elegance to traditional architecture. Every surface was hand-finished to create a seamless, gallery-like atmosphere throughout the home.</p>
-            <div class="project-card__footer">
-              <span class="project-card__type" data-i18n="proj.jessica-azar.type">Decorative Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cat="residential" data-project="tamim-mansion" id="tamim-mansion" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Prince Tamim Mansion project">
-          <div class="project-card__img">
-            <picture><source srcset="Images/interior-5.webp" type="image/webp"><img src="Images/interior-5.jpg" width="1200" height="1130" alt="Grand salon with luxurious patina ceiling and cornice details – Prince Tamim Mansion, Doha" loading="lazy" decoding="async"></picture>
-            <span class="project-card__badge badge--residential" data-i18n="cat.residential">Residential</span>
-          </div>
-          <div class="project-card__body">
-            <p class="project-card__location" data-i18n="proj.tamim-mansion.loc">Doha, Qatar</p>
-            <h2 class="project-card__title">Prince Tamim Mansion</h2>
-            <p class="project-card__desc" data-i18n="proj.tamim-mansion.desc">Luxurious patina finishes applied to ceilings and cornices throughout a 12,000 sq ft private estate. The work required exceptional precision to achieve a consistent, regal tone across every room.</p>
-            <div class="project-card__footer">
-              <span class="project-card__type" data-i18n="proj.tamim-mansion.type">Patina &amp; Ornamental Finish</span>
-              <span class="project-card__view-hint" data-i18n="projects.tap.hint">View project →</span>
-            </div>
-          </div>
-        </article>
 
         <article class="project-card" data-cat="healthcare" data-project="hoteldieu" id="hoteldieu" aria-haspopup="dialog" tabindex="0" role="button" aria-label="Open Hôtel-Dieu Hospital project">
           <div class="project-card__img">
@@ -510,32 +478,6 @@ applyFilter();
    { src: 'Images/your-photo.jpg', alt: 'Description of the photo' }
 */
 const PROJECTS = {
-  'jessica-azar': {
-    title: 'Jessica Azar Residence',
-    location: 'proj.jessica-azar.modal.loc',
-    cat: 'cat.residential', catClass: 'badge--residential',
-    type: 'proj.jessica-azar.type',
-    desc: 'proj.jessica-azar.desc',
-    images: [
-      { src: 'Images/interior-2.jpg', alt: 'Living space with custom grey patina wall finish' },
-      { src: 'Images/artlux-jessica-azar-2.jpg', alt: 'Dining area with patina wall and gold accent lines' },
-      { src: 'Images/artlux-jessica-azar-3.jpg', alt: 'Reception room with patina panel and gold-framed artwork' },
-      { src: 'Images/artlux-jessica-azar-4.jpg', alt: 'Sculptural textured wall panel in the bathroom' }
-    ]
-  },
-  'tamim-mansion': {
-    title: 'Prince Tamim Mansion',
-    location: 'proj.tamim-mansion.loc',
-    cat: 'cat.residential', catClass: 'badge--residential',
-    type: 'proj.tamim-mansion.type',
-    desc: 'proj.tamim-mansion.desc',
-    images: [
-      { src: 'Images/interior-5.jpg', alt: 'Grand salon with patina ceiling and cornice details' },
-      { src: 'Images/artlux-prince-tamim-2.jpg', alt: 'Ornamental cornice detail with hand-painted patina' },
-      { src: 'Images/artlux-prince-tamim-3.jpg', alt: 'Gallery hall ceiling with chandelier and custom paintwork' },
-      { src: 'Images/artlux-prince-tamim-4.jpg', alt: 'Grand hallway with painted gypsum cornices and chandeliers' }
-    ]
-  },
   'hoteldieu': {
     title: 'Hôtel-Dieu Hospital',
     location: 'proj.hoteldieu.modal.loc',
