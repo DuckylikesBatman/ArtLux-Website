@@ -2,11 +2,11 @@
    ArtLux – commission.css  ·  Commission Page
    ============================================================ */
 
-/* ─── PAGE HERO BACKGROUND ────────────────────────────────── */
+/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
 .page-hero {
   background-image: url("Images/hero-commission.jpg");
   background-image: image-set(url("Images/hero-commission.webp") type("image/webp"), url("Images/hero-commission.jpg") type("image/jpeg"));
-  background-position: center 65%;
+  background-position: center;
 }
 
 @media (max-width: 700px) {
@@ -81,7 +81,7 @@
 .process-icon {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
+  border-radius: 0;
   border: 1.5px solid var(--gold-500, #be8d68);
   background: rgba(190, 141, 104, 0.08);
   display: flex;
@@ -155,7 +155,7 @@
   width: 100%;
   padding: .78rem 1rem;
   border: 1.5px solid rgba(0,0,0,.12);
-  border-radius: 6px;
+  border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: .95rem;
   color: #1a1918;
@@ -195,7 +195,7 @@
   background: #111110;
   color: #f7f0e6;
   border: 1.5px solid #111110;
-  border-radius: 999px;
+  border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: .76rem;
   font-weight: 600;
@@ -217,7 +217,7 @@
   margin-top: 1rem;
   font-size: .9rem;
   padding: .75rem 1rem;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .form-status:empty { display: none; }
 .form-success { background: #f0faf4; color: #1a6e3a; border: 1px solid #b3e0c4; }
@@ -372,7 +372,7 @@
 .cfg-step__num {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,7 +482,7 @@
 .type-card__icon {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 0;
   background: rgba(190, 141, 104, 0.1);
   border: 1.5px solid rgba(190, 141, 104, 0.22);
   display: flex;
@@ -549,7 +549,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.78rem 1.9rem;
-  border-radius: 999px;
+  border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: 0.74rem;
   font-weight: 600;
@@ -669,14 +669,14 @@
   width: 64px;
   height: 64px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1.5px solid rgba(190, 141, 104, 0.28);
 }
 
 .upload-file__icon {
   width: 64px;
   height: 64px;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1.5px solid rgba(0, 0, 0, 0.1);
   background: #fff;
   display: flex;

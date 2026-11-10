@@ -2,11 +2,18 @@
    ArtLux – about.css  ·  About Page
    ============================================================ */
 
-/* ─── PAGE HERO BACKGROUND ────────────────────────────────── */
+/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
 .page-hero {
   background-image: url("Images/hero-about.jpg");
   background-image: image-set(url("Images/hero-about.webp") type("image/webp"), url("Images/hero-about.jpg") type("image/jpeg"));
-  background-position: 15% 12%;
+  background-position: center;
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    background-image: url("Images/hero-about-mobile.jpg");
+    background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
+  }
 }
 
 /* ─── ABOUT STATS BAND ────────────────────────────────────── */
@@ -15,7 +22,7 @@
   background-image: url("Images/hero-about.jpg");
   background-image: image-set(url("Images/hero-about.webp") type("image/webp"), url("Images/hero-about.jpg") type("image/jpeg"));
   background-size: cover;
-  background-position: center 75%;
+  background-position: center 70%;
   overflow: hidden;
 }
 
@@ -39,22 +46,6 @@
   -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid rgba(217, 191, 171, 0.22);
   border-bottom: 1px solid rgba(217, 191, 171, 0.22);
-}
-
-.about-stats::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.16;
-  background:
-    url("Images/ornament-bloom.svg") no-repeat 6% 24% / 44px 44px,
-    url("Images/ornament-bloom.svg") no-repeat 17% 74% / 30px 30px,
-    url("Images/ornament-bloom.svg") no-repeat 40% 18% / 24px 24px,
-    url("Images/ornament-bloom.svg") no-repeat 63% 76% / 38px 38px,
-    url("Images/ornament-bloom.svg") no-repeat 83% 26% / 32px 32px,
-    url("Images/ornament-bloom.svg") no-repeat 93% 68% / 22px 22px;
 }
 
 .about-stats__row {
@@ -251,7 +242,7 @@
 
 .service-icon {
   width: 44px; height: 44px;
-  border-radius: 50%;
+  border-radius: 0;
   background: rgba(190,141,104,.1);
   border: 1.5px solid rgba(190,141,104,.25);
   display: flex;

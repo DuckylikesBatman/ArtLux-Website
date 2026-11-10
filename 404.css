@@ -41,18 +41,6 @@ body.notfound-page {
 }
 .nf-svg { width: 100%; height: 220px; display: block; }
 
-.nf-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-  background:
-    url("Images/ornament-sprig.svg") no-repeat top 18px left 20px / 60px auto,
-    url("Images/ornament-sprig-mirror.svg") no-repeat bottom 14px right 24px / 72px auto;
-}
-
 .nf-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -143,10 +131,5 @@ body.notfound-page {
   }
   .nf-visual { position: relative; height: auto; z-index: 0; border-radius: var(--radius-lg); }
   .nf-svg { height: 100%; border-radius: var(--radius-lg); }
-  .nf-visual::after {
-    background:
-      url("Images/ornament-sprig.svg") no-repeat top 28px left 24px / 84px auto,
-      url("Images/ornament-sprig-mirror.svg") no-repeat bottom 24px right 28px / 100px auto;
-  }
   .nf-copy { margin-top: 0; padding-inline-start: 20px; }
 }

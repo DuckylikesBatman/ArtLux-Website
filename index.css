@@ -8,13 +8,14 @@
    ============================================================ */
 
    :root {
-    --bg: #f7f5f0;
+    --bg: #ffffff;
+    --bg-soft: #f7f5f0;
     --surface: #ffffff;
     --surface-soft: #fbf8f1;
     --text: #1a1918;
     --muted: #6a6866;
     --primary: #111110;
-  
+
     --gold-300: #d9bfab;
     --gold-500: #be8d68;
     --gold-600: #9f6a41;
@@ -22,14 +23,14 @@
     --gold-text: #8a5b35;
     --gold-light: rgba(190, 141, 104, 0.1);
     --warm-muted: #776e63;
-  
-    --shadow-sm: 0 4px 20px rgba(190, 141, 104, 0.10);
-    --shadow-md: 0 16px 40px -8px rgba(190, 141, 104, 0.14);
-    --shadow-lg: 0 30px 64px -12px rgba(190, 141, 104, 0.18);
-  
-    --radius: 12px;
-    --radius-lg: 22px;
-    --brd: 1px solid rgba(0, 0, 0, 0.07);
+
+    --shadow-sm: 0 1px 3px rgba(20, 16, 12, 0.05);
+    --shadow-md: 0 6px 20px rgba(20, 16, 12, 0.07);
+    --shadow-lg: 0 14px 36px rgba(20, 16, 12, 0.09);
+
+    --radius: 0px;
+    --radius-lg: 0px;
+    --brd: 1px solid rgba(0, 0, 0, 0.08);
     --brd-gold: 1px solid rgba(190, 141, 104, 0.22);
   
     --s-1: 0.25rem;
@@ -143,7 +144,7 @@
     justify-content: center;
     gap: var(--s-2);
     padding: 0.82rem 2rem;
-    border-radius: 999px;
+    border-radius: 0;
     font-weight: 600;
     font-size: 0.76rem;
     letter-spacing: 0.14em;
@@ -171,7 +172,7 @@
   :focus-visible {
     outline: 2px solid var(--gold-500);
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 0;
   }
 
   /* Primary — solid dark ink, reads cleanly on any light background */
@@ -268,41 +269,30 @@
 
   .page-hero {
     position: relative;
-    min-height: 64vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 150px 24px 90px;
+    padding: 160px 24px 72px;
     overflow: hidden;
     isolation: isolate;
+    background: var(--bg-soft, #f7f5f0);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: inset 0 -1px 0 rgba(217, 191, 171, 0.3);
   }
 
+  /* Frosted colour wash — the page's own photo, blurred into an abstract
+     field of colour rather than a legible room, so framing/crop never
+     matters and the hero stays quiet but isn't flatly colourless. */
   .page-hero::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background:
-      linear-gradient(to bottom, rgba(10, 8, 6, 0.34) 0%, rgba(10, 8, 6, 0.3) 42%, rgba(7, 5, 4, 0.86) 100%),
-      linear-gradient(100deg, rgba(7, 5, 4, 0.55) 0%, rgba(7, 5, 4, 0.12) 45%, rgba(7, 5, 4, 0.5) 100%);
-  }
-
-  .page-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.9;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-    background:
-      url("Images/ornament-sprig.svg") no-repeat top 100px left 16px / 76px auto,
-      url("Images/ornament-sprig-mirror.svg") no-repeat bottom 12px right 22px / 94px auto;
+    background: rgba(247, 245, 240, 0.74);
+    backdrop-filter: blur(50px) saturate(1.3);
+    -webkit-backdrop-filter: blur(50px) saturate(1.3);
   }
 
   .page-hero__content {
@@ -313,40 +303,12 @@
     z-index: 2;
   }
 
-  .page-hero__content::before,
-  .page-hero__content::after {
-    content: "";
-    position: absolute;
-    bottom: -40px;
-    width: 172px;
-    height: 224px;
-    background: url("Images/ornament-photo-lotus.webp") no-repeat center / contain;
-    opacity: 0.75;
-    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.3));
-    pointer-events: none;
-    display: none;
-  }
-  .page-hero__content::before {
-    left: calc(50% - 490px);
-  }
-  .page-hero__content::after {
-    right: calc(50% - 490px);
-    transform: scaleX(-1);
-  }
-
-  @media (min-width: 1300px) {
-    .page-hero__content::before,
-    .page-hero__content::after {
-      display: block;
-    }
-  }
-
   .page-hero__eye {
     display: inline-flex;
     align-items: center;
     gap: 14px;
     margin: 0 0 20px;
-    color: var(--gold-300);
+    color: var(--gold-text, #8a5b35);
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.24em;
@@ -358,47 +320,36 @@
     content: "";
     width: 42px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(217, 191, 171, 0.7));
+    background: linear-gradient(90deg, transparent, rgba(190, 141, 104, 0.5));
   }
 
   .page-hero__eye::after {
-    background: linear-gradient(90deg, rgba(217, 191, 171, 0.7), transparent);
-  }
-
-  @keyframes goldShimmer {
-    to { background-position: 200% center; }
+    background: linear-gradient(90deg, rgba(190, 141, 104, 0.5), transparent);
   }
 
   .page-hero__title {
     margin: 0;
     font-family: var(--ff-serif);
-    font-size: clamp(3rem, 7vw, 7.2rem);
-    line-height: 0.92;
-    font-weight: 900;
-    letter-spacing: -0.065em;
+    font-size: clamp(2.6rem, 5.4vw, 5rem);
+    line-height: 1.04;
+    font-weight: 600;
+    letter-spacing: -0.015em;
     text-wrap: balance;
-    color: #f7f0e6;
-    text-shadow: 0 6px 40px rgba(0, 0, 0, 0.35);
+    color: var(--primary, #111110);
   }
 
   .page-hero__title em {
-    background: linear-gradient(105deg, var(--gold-600), var(--gold-300) 45%, var(--gold-600));
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation: goldShimmer 6s linear infinite;
+    color: var(--gold-600, #9f6a41);
     font-style: italic;
-    font-weight: 900;
+    font-weight: 500;
   }
 
   .page-hero__sub {
     max-width: 660px;
-    margin: 28px auto 0;
-    color: rgba(247, 240, 230, 0.82);
+    margin: 24px auto 0;
+    color: var(--muted, #6a6866);
     font-size: clamp(1rem, 1.4vw, 1.18rem);
-    line-height: 1.85;
+    line-height: 1.8;
     font-weight: 400;
   }
   
@@ -435,21 +386,8 @@
     z-index: 1;
     pointer-events: none;
     background:
-      linear-gradient(105deg, rgba(8, 6, 5, 0.84) 0%, rgba(8, 6, 5, 0.6) 40%, rgba(8, 6, 5, 0.42) 62%, rgba(8, 6, 5, 0.68) 100%),
-      linear-gradient(to bottom, rgba(8, 6, 5, 0.18), rgba(8, 6, 5, 0.48));
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0.9;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
-    background:
-      url("Images/ornament-sprig.svg") no-repeat top 100px left 16px / 76px auto,
-      url("Images/ornament-sprig-mirror.svg") no-repeat bottom 12px right 22px / 94px auto;
+      linear-gradient(105deg, rgba(8, 6, 5, 0.5) 0%, rgba(8, 6, 5, 0.28) 45%, rgba(8, 6, 5, 0.18) 65%, rgba(8, 6, 5, 0.4) 100%),
+      linear-gradient(to bottom, rgba(8, 6, 5, 0.08), rgba(8, 6, 5, 0.26));
   }
 
   .hero__content {
@@ -461,33 +399,6 @@
     grid-template-columns: 0.9fr 1.1fr;
     gap: clamp(3rem, 6vw, 6rem);
     align-items: center;
-  }
-
-  .hero__content::before,
-  .hero__content::after {
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    width: 172px;
-    height: 224px;
-    background: url("Images/ornament-photo-lotus.webp") no-repeat center / contain;
-    opacity: 0.75;
-    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.3));
-    pointer-events: none;
-    display: none;
-  }
-  .hero__content::before {
-    left: -210px;
-  }
-  .hero__content::after {
-    right: -210px;
-    transform: scaleX(-1);
-  }
-  @media (min-width: 1780px) {
-    .hero__content::before,
-    .hero__content::after {
-      display: block;
-    }
   }
 
   .hero__text {
@@ -505,24 +416,19 @@
 
   .hero__title {
     font-family: var(--ff-serif);
-    font-size: var(--fs-hero);
-    font-weight: 900;
-    line-height: 0.92;
-    letter-spacing: -0.07em;
+    font-size: clamp(2.8rem, 5.6vw, 5.6rem);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
     color: #f7f0e6;
-    text-shadow: 0 6px 40px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.22);
     margin-bottom: 1.5rem;
   }
 
   .hero__title em {
-    background: linear-gradient(105deg, var(--gold-600), var(--gold-300) 45%, var(--gold-600));
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation: goldShimmer 6s linear infinite;
+    color: var(--gold-300);
     font-style: italic;
+    font-weight: 500;
   }
 
   .hero__subtitle {
@@ -619,22 +525,6 @@
     -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid rgba(217, 191, 171, 0.22);
     border-bottom: 1px solid rgba(217, 191, 171, 0.22);
-  }
-
-  .home-stats::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.16;
-    background:
-      url("Images/ornament-bloom.svg") no-repeat 6% 24% / 44px 44px,
-      url("Images/ornament-bloom.svg") no-repeat 17% 74% / 30px 30px,
-      url("Images/ornament-bloom.svg") no-repeat 40% 18% / 24px 24px,
-      url("Images/ornament-bloom.svg") no-repeat 63% 76% / 38px 38px,
-      url("Images/ornament-bloom.svg") no-repeat 83% 26% / 32px 32px,
-      url("Images/ornament-bloom.svg") no-repeat 93% 68% / 22px 22px;
   }
 
   .home-stats__inner {
@@ -756,8 +646,8 @@
     background: var(--surface);
     border-radius: var(--radius-lg);
     padding: var(--s-10) var(--s-8);
-    border: var(--brd-gold);
-    box-shadow: var(--shadow-sm);
+    border: var(--brd);
+    box-shadow: none;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -771,17 +661,17 @@
     position: relative;
     z-index: 1;
   }
-  
+
   .step:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
-    border-color: rgba(190, 141, 104, 0.45);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+    border-color: rgba(190, 141, 104, 0.3);
   }
   
   .step__num {
     width: 58px;
     height: 58px;
-    border-radius: 50%;
+    border-radius: 0;
     border: 1.5px solid var(--gold-500);
     background: var(--gold-light);
     display: flex;
@@ -874,7 +764,7 @@
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 50%;
+    border-radius: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -890,7 +780,7 @@
     transform: translateY(-50%);
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 0;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.18);
     cursor: pointer;
@@ -979,13 +869,13 @@
     overflow: hidden;
     background: var(--surface);
     border: var(--brd);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition);
   }
-  
+
   .card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
     border-color: var(--gold-300);
   }
   
@@ -1268,21 +1158,20 @@
     background: var(--surface);
     border-radius: var(--radius-lg);
     padding: var(--s-10) var(--s-8) var(--s-8);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     border: var(--brd);
-    border-top: 2.5px solid var(--gold-500);
     position: relative;
-    transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-top-color 0.28s var(--ease);
+    transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease);
     overflow: hidden;
   }
-  
+
   .quote::before {
     content: "\201C";
     font-family: var(--ff-serif);
     font-size: 8rem;
     line-height: 1;
     color: var(--gold-500);
-    opacity: 0.14;
+    opacity: 0.12;
     position: absolute;
     top: -0.8rem;
     left: var(--s-4);
@@ -1291,9 +1180,8 @@
   }
 
   .quote:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-top-color: var(--gold-300);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
   }
 
   .quote:hover::before {
@@ -1345,20 +1233,19 @@
   .partner-tile {
     background: var(--surface);
     border: var(--brd);
-    border-top: 2.5px solid var(--gold-500);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     min-height: 176px;
     display: flex;
     flex-direction: column;
     padding: var(--s-6) var(--s-5) var(--s-5);
-    transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-top-color 0.28s var(--ease);
+    transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-color 0.28s var(--ease);
   }
 
   .partner-tile:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-top-color: var(--gold-300);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+    border-color: rgba(190, 141, 104, 0.3);
   }
 
   .partner-tile__logo {
@@ -1420,43 +1307,11 @@
      ============================================================ */
 
   .band {
-    background:
-      radial-gradient(circle at 50% 0%, rgba(190, 141, 104, 0.16), transparent 34%),
-      #0d0c0a;
+    background: #0d0c0a;
     padding-block: var(--s-16);
     text-align: center;
     position: relative;
     overflow: hidden;
-  }
-
-  .band::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 20px;
-    width: 90px;
-    height: 70px;
-    background: url("Images/ornament-butterfly.svg") no-repeat center / contain;
-    opacity: 0.6;
-    filter: drop-shadow(0 2px 8px rgba(190, 141, 104, 0.4));
-    transform: rotate(-12deg);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .band::after {
-    content: "";
-    position: absolute;
-    bottom: 16px;
-    right: 20px;
-    width: 90px;
-    height: 70px;
-    background: url("Images/ornament-butterfly.svg") no-repeat center / contain;
-    opacity: 0.6;
-    filter: drop-shadow(0 2px 8px rgba(190, 141, 104, 0.4));
-    transform: scaleX(-1) rotate(-10deg);
-    pointer-events: none;
-    z-index: 0;
   }
 
   .band > .container {
@@ -1558,12 +1413,7 @@
   @media (max-width: 768px) {
     /* Inner page heroes */
     .page-hero {
-      padding: 120px 20px 64px;
-      min-height: 46vh;
-    }
-
-    .page-hero::after {
-      background-size: 52px auto, 64px auto;
+      padding: 120px 20px 56px;
     }
 
     .page-hero__title {
@@ -1584,10 +1434,6 @@
     /* Homepage hero */
     .hero {
       padding: 96px 1.25rem 60px;
-    }
-
-    .hero::after {
-      background-size: 52px auto, 64px auto;
     }
 
     .home-stats {
@@ -1662,8 +1508,7 @@
   @media (max-width: 520px) {
     /* Inner page heroes */
     .page-hero {
-      padding: 100px 16px 56px;
-      min-height: 42vh;
+      padding: 100px 16px 48px;
     }
 
     .page-hero__title {
@@ -1842,14 +1687,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-  /* Give inner-page content an earlier start on tall and short tablets. */
-  @media (min-width: 769px) and (max-width: 1180px) {
-    .page-hero {
-      min-height: clamp(410px, 48svh, 530px);
-      padding-block: 110px 56px;
-    }
-  }
-
   @media (min-width: 961px) and (max-width: 1180px) and (max-height: 850px) {
     .hero {
       min-height: min(690px, 86svh);

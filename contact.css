@@ -3,10 +3,11 @@
    ============================================================ */
 
 /* ─── PAGE HERO BACKGROUND ────────────────────────────────── */
+/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
 .page-hero {
   background-image: url("Images/hero-contact.jpg");
   background-image: image-set(url("Images/hero-contact.webp") type("image/webp"), url("Images/hero-contact.jpg") type("image/jpeg"));
-  background-position: center 35%;
+  background-position: center;
 }
 
 @media (max-width: 700px) {
@@ -60,7 +61,7 @@
   width: 100%;
   padding: .8rem 1rem;
   border: 1.5px solid rgba(0,0,0,.11);
-  border-radius: 6px;
+  border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-size: .95rem;
   color: #1a1918;
@@ -86,7 +87,7 @@
 .form-status {
   font-size: .9rem;
   padding: .7rem 1rem;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .form-status:empty { display: none; }
 .form-status.success { background: #f0faf4; color: #1a6e3a; border: 1px solid #b3e0c4; }

@@ -2,18 +2,13 @@
    ArtLux – gallery.css  ·  Gallery Page
    ============================================================ */
 
-/* ─── PAGE HERO BACKGROUND ────────────────────────────────── */
+/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
+/* Uses one of the gallery's own paintings (navy + gold) for a richer wash
+   than the original pale fresco photo gave once blurred. */
 .page-hero {
-  background-image: url("Images/hero-gallery.jpg");
-  background-image: image-set(url("Images/hero-gallery.webp") type("image/webp"), url("Images/hero-gallery.jpg") type("image/jpeg"));
-  background-position: center 25%;
-}
-
-@media (max-width: 700px) {
-  .page-hero {
-    background-image: url("Images/hero-gallery-mobile.jpg");
-    background-image: image-set(url("Images/hero-gallery-mobile.webp") type("image/webp"), url("Images/hero-gallery-mobile.jpg") type("image/jpeg"));
-  }
+  background-image: url("Images/paintings/gallery-03.jpeg");
+  background-image: image-set(url("Images/paintings/gallery-03.webp") type("image/webp"), url("Images/paintings/gallery-03.jpeg") type("image/jpeg"));
+  background-position: center;
 }
 
 /* ─── GALLERY CONTROLS BAR ────────────────────────────────── */
@@ -44,7 +39,7 @@
   align-items: center;
   padding: .5rem 1.2rem;
   min-height: 38px;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1.5px solid rgba(0,0,0,.12);
   background: transparent;
   font-family: 'Inter', sans-serif;
@@ -144,7 +139,7 @@
   padding: 14px;
 }
 .gallery-item--studio .gallery-item__inner img {
-  border-radius: 4px;
+  border-radius: 0;
   filter: brightness(1.05) saturate(1.08) contrast(1.03);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 }
@@ -206,7 +201,7 @@
   letter-spacing: .1em;
   text-transform: uppercase;
   padding: .28rem .7rem;
-  border-radius: 999px;
+  border-radius: 0;
   line-height: 1;
 }
 
@@ -256,7 +251,7 @@
   height: 40px;
   background: rgba(255,255,255,.1);
   border: 1px solid rgba(255,255,255,.18);
-  border-radius: 50%;
+  border-radius: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -277,7 +272,7 @@
   top: 50%;
   transform: translateY(-50%);
   width: 44px; height: 44px;
-  border-radius: 50%;
+  border-radius: 0;
   background: rgba(255,255,255,.1);
   border: 1px solid rgba(255,255,255,.18);
   cursor: pointer;
@@ -346,7 +341,7 @@
   gap: .5rem;
   margin-top: 1.4rem;
   padding: .8rem 1.9rem;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1.5px solid rgba(217, 191, 171, 0.4);
   background: transparent;
   color: #f7f0e6;
