@@ -2,14 +2,7 @@
    ArtLux – gallery.css  ·  Gallery Page
    ============================================================ */
 
-/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
-/* Uses one of the gallery's own paintings (navy + gold) for a richer wash
-   than the original pale fresco photo gave once blurred. */
-.page-hero {
-  background-image: url("Images/paintings/gallery-03.jpeg");
-  background-image: image-set(url("Images/paintings/gallery-03.webp") type("image/webp"), url("Images/paintings/gallery-03.jpeg") type("image/jpeg"));
-  background-position: center;
-}
+/* Page hero is the shared quiet, no-photo treatment — see index.css */
 
 /* ─── GALLERY CONTROLS BAR ────────────────────────────────── */
 .gallery-controls {
@@ -106,7 +99,7 @@
   background: #111;
   border-radius: var(--radius-lg);
   display: block;
-  border: 1px solid transparent;
+  border: var(--brd);
   transition: transform 0.34s var(--ease), box-shadow 0.34s var(--ease), border-color 0.34s var(--ease);
 }
 

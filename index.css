@@ -30,7 +30,7 @@
 
     --radius: 0px;
     --radius-lg: 0px;
-    --brd: 1px solid rgba(0, 0, 0, 0.08);
+    --brd: 1px solid rgba(0, 0, 0, 0.16);
     --brd-gold: 1px solid rgba(190, 141, 104, 0.22);
   
     --s-1: 0.25rem;
@@ -267,90 +267,53 @@
      Used by about.html, gallery.html, commission.html, contact.html, projects.html
      ============================================================ */
 
+  /* No more "hero" treatment at all — this is now just the page's title,
+     styled exactly like every other .section__title, sitting directly at
+     the top of the page instead of in its own banner. */
   .page-hero {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 160px 24px 72px;
-    overflow: hidden;
-    isolation: isolate;
-    background: var(--bg-soft, #f7f5f0);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* Frosted colour wash — the page's own photo, blurred into an abstract
-     field of colour rather than a legible room, so framing/crop never
-     matters and the hero stays quiet but isn't flatly colourless. */
-  .page-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background: rgba(247, 245, 240, 0.74);
-    backdrop-filter: blur(50px) saturate(1.3);
-    -webkit-backdrop-filter: blur(50px) saturate(1.3);
+    padding: 108px 24px 36px;
+    background: var(--bg);
   }
 
   .page-hero__content {
     width: min(1120px, 100%);
     text-align: center;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
   }
 
-  .page-hero__eye {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    margin: 0 0 20px;
-    color: var(--gold-text, #8a5b35);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-  }
-
-  .page-hero__eye::before,
-  .page-hero__eye::after {
-    content: "";
-    width: 42px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(190, 141, 104, 0.5));
-  }
-
-  .page-hero__eye::after {
-    background: linear-gradient(90deg, rgba(190, 141, 104, 0.5), transparent);
+  .page-hero__eye,
+  .page-hero__sub {
+    display: none;
   }
 
   .page-hero__title {
     margin: 0;
     font-family: var(--ff-serif);
-    font-size: clamp(2.6rem, 5.4vw, 5rem);
-    line-height: 1.04;
+    font-size: var(--fs-h2);
+    line-height: 1.12;
     font-weight: 600;
     letter-spacing: -0.015em;
     text-wrap: balance;
     color: var(--primary, #111110);
   }
 
+  .page-hero__title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1.5px;
+    margin: var(--s-4) auto 0;
+    background: var(--gold-500);
+  }
+
   .page-hero__title em {
     color: var(--gold-600, #9f6a41);
     font-style: italic;
     font-weight: 500;
-  }
-
-  .page-hero__sub {
-    max-width: 660px;
-    margin: 24px auto 0;
-    color: var(--muted, #6a6866);
-    font-size: clamp(1rem, 1.4vw, 1.18rem);
-    line-height: 1.8;
-    font-weight: 400;
   }
   
   /* ============================================================
@@ -376,7 +339,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    filter: saturate(0.88) brightness(0.94) sepia(0.1) contrast(1.04);
+    filter: saturate(1.05) brightness(1.3) contrast(1.02);
   }
 
   .hero::before {
@@ -386,8 +349,8 @@
     z-index: 1;
     pointer-events: none;
     background:
-      linear-gradient(105deg, rgba(8, 6, 5, 0.5) 0%, rgba(8, 6, 5, 0.28) 45%, rgba(8, 6, 5, 0.18) 65%, rgba(8, 6, 5, 0.4) 100%),
-      linear-gradient(to bottom, rgba(8, 6, 5, 0.08), rgba(8, 6, 5, 0.26));
+      linear-gradient(105deg, rgba(8, 6, 5, 0.3) 0%, rgba(8, 6, 5, 0.1) 45%, rgba(8, 6, 5, 0.06) 65%, rgba(8, 6, 5, 0.2) 100%),
+      linear-gradient(to bottom, rgba(8, 6, 5, 0.04), rgba(8, 6, 5, 0.12));
   }
 
   .hero__content {
@@ -826,11 +789,53 @@
     font-size: 0.85rem;
   }
 
-  .offer__icon svg {
-    width: 26px;
-    height: 26px;
+  /* "What We Do" — bordered card with a small icon badge (picked from the
+     mockup options: A3). */
+  .offer__grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    text-align: left;
   }
-  
+
+  .offer__grid .step {
+    background: var(--surface);
+    border: 1.5px solid rgba(17, 17, 16, 0.2);
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1.6rem 1.4rem;
+    align-items: flex-start;
+    text-align: left;
+    transition: var(--transition);
+  }
+
+  .offer__grid .step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-sm);
+    border-color: rgba(190, 141, 104, 0.5);
+  }
+
+  .offer__grid .offer__icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 0.9rem;
+  }
+
+  .offer__grid .step__title {
+    margin-top: 0;
+  }
+
+  .offer__grid .step__link {
+    margin-top: 1.1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-text, #8a5b35);
+  }
+
+  .offer__grid .step__link:hover {
+    color: var(--gold-600);
+  }
+
   .section__cta {
     display: flex;
     gap: 1rem;
@@ -1413,27 +1418,21 @@
   @media (max-width: 768px) {
     /* Inner page heroes */
     .page-hero {
-      padding: 120px 20px 56px;
-    }
-
-    .page-hero__title {
-      font-size: clamp(2.6rem, 9vw, 4rem);
-      letter-spacing: -0.05em;
-    }
-
-    .page-hero__sub {
-      font-size: 0.95rem;
-      line-height: 1.75;
-    }
-
-    .page-hero__eye {
-      font-size: 0.62rem;
-      letter-spacing: 0.28em;
+      padding: 84px 20px 28px;
     }
 
     /* Homepage hero */
     .hero {
       padding: 96px 1.25rem 60px;
+    }
+
+    /* Mobile stacks the photo full-bleed behind centered-width text with no
+       side-to-side room to dodge busy detail, so darken more uniformly than
+       the desktop diagonal gradient (which relies on the text sitting in a
+       calmer left-hand zone that doesn't exist at this width). */
+    .hero::before {
+      background:
+        linear-gradient(to bottom, rgba(8, 6, 5, 0.3) 0%, rgba(8, 6, 5, 0.22) 40%, rgba(8, 6, 5, 0.4) 100%);
     }
 
     .home-stats {
@@ -1508,21 +1507,7 @@
   @media (max-width: 520px) {
     /* Inner page heroes */
     .page-hero {
-      padding: 100px 16px 48px;
-    }
-
-    .page-hero__title {
-      font-size: clamp(2.2rem, 10vw, 3.2rem);
-      letter-spacing: -0.045em;
-    }
-
-    .page-hero__eye {
-      font-size: 0.58rem;
-      letter-spacing: 0.22em;
-    }
-
-    .page-hero__sub {
-      font-size: 0.91rem;
+      padding: 76px 16px 24px;
     }
 
     /* Homepage hero */
@@ -1595,6 +1580,19 @@
       grid-column: 1 / -1;
       max-width: calc(50% - 0.35rem);
       margin-inline: auto;
+    }
+
+    /* The plain-text offer list isn't cards, so it just stacks — the
+       2-up grid above is only meant for the numbered process steps. */
+    .offer__grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    .offer__grid > .step:last-child:nth-child(odd) {
+      grid-column: auto;
+      max-width: none;
+      margin-inline: 0;
     }
 
     .step {

@@ -2,19 +2,7 @@
    ArtLux – commission.css  ·  Commission Page
    ============================================================ */
 
-/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
-.page-hero {
-  background-image: url("Images/hero-commission.jpg");
-  background-image: image-set(url("Images/hero-commission.webp") type("image/webp"), url("Images/hero-commission.jpg") type("image/jpeg"));
-  background-position: center;
-}
-
-@media (max-width: 700px) {
-  .page-hero {
-    background-image: url("Images/hero-commission-mobile.jpg");
-    background-image: image-set(url("Images/hero-commission-mobile.webp") type("image/webp"), url("Images/hero-commission-mobile.jpg") type("image/jpeg"));
-  }
-}
+/* Page hero is the shared quiet, no-photo treatment — see index.css */
 
 /* ─── PROCESS SECTION ─────────────────────────────────────── */
 .process-section {
@@ -248,7 +236,7 @@
   z-index: 1;
   background: #fff;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(0,0,0,.07);
+  border: 1px solid rgba(0,0,0,.16);
   overflow: hidden;
   transition: border-color .24s;
 }

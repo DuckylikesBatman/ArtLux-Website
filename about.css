@@ -2,19 +2,7 @@
    ArtLux – about.css  ·  About Page
    ============================================================ */
 
-/* ─── PAGE HERO BACKGROUND (blurred to a colour wash — see index.css) ──── */
-.page-hero {
-  background-image: url("Images/hero-about.jpg");
-  background-image: image-set(url("Images/hero-about.webp") type("image/webp"), url("Images/hero-about.jpg") type("image/jpeg"));
-  background-position: center;
-}
-
-@media (max-width: 700px) {
-  .page-hero {
-    background-image: url("Images/hero-about-mobile.jpg");
-    background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
-  }
-}
+/* Page hero is the shared quiet, no-photo treatment — see index.css */
 
 /* ─── ABOUT STATS BAND ────────────────────────────────────── */
 .about-stats {
@@ -27,10 +15,6 @@
 }
 
 @media (max-width: 700px) {
-  .page-hero {
-    background-image: url("Images/hero-about-mobile.jpg");
-    background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
-  }
   .about-stats {
     background-image: url("Images/hero-about-mobile.jpg");
     background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
@@ -296,7 +280,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(0,0,0,.07);
+  border: 1px solid rgba(0,0,0,.16);
   box-shadow: 0 4px 20px rgba(190, 141, 104, 0.06);
   transition: transform .34s cubic-bezier(.22,.61,.36,1),
               box-shadow .34s, border-color .28s;

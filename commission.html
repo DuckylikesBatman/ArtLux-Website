@@ -291,7 +291,7 @@
                 <p class="field-error" id="cfgHeightError" aria-live="polite"></p>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" data-show-for="wall">
                 <label for="cfgSurface">
                   <span data-i18n="cfg.label.surface">Surface</span>
                 </label>
@@ -299,9 +299,60 @@
                   <option value="">Select surface</option>
                   <option value="Interior wall">Interior wall</option>
                   <option value="Exterior wall">Exterior wall</option>
-                  <option value="Canvas (stretched)">Canvas (stretched)</option>
-                  <option value="Wood panel">Wood panel</option>
                   <option value="Ceiling">Ceiling</option>
+                </select>
+              </div>
+
+              <div class="form-group" data-show-for="canvas" hidden>
+                <label for="cfgCanvasStyle">
+                  <span data-i18n="cfg.label.canvasStyle">Style</span>
+                </label>
+                <select id="cfgCanvasStyle" name="canvas-style">
+                  <option value="">Select style</option>
+                  <option value="Realistic">Realistic</option>
+                  <option value="Abstract">Abstract</option>
+                  <option value="Impressionistic">Impressionistic</option>
+                  <option value="Minimalist">Minimalist</option>
+                  <option value="Custom (discuss)">Custom (discuss)</option>
+                </select>
+              </div>
+
+              <div class="form-group" data-show-for="furniture" hidden>
+                <label for="cfgFurnitureType">
+                  <span data-i18n="cfg.label.furnitureType">Furniture Type</span>
+                </label>
+                <select id="cfgFurnitureType" name="furniture-type">
+                  <option value="">Select type</option>
+                  <option value="Chair">Chair</option>
+                  <option value="Table">Table</option>
+                  <option value="Cabinet / Dresser">Cabinet / Dresser</option>
+                  <option value="Armoire">Armoire</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group" data-show-for="furniture" hidden>
+                <label for="cfgMaterial">
+                  <span data-i18n="cfg.label.material">Material</span>
+                </label>
+                <select id="cfgMaterial" name="material">
+                  <option value="">Select material</option>
+                  <option value="Wood">Wood</option>
+                  <option value="Metal">Metal</option>
+                  <option value="Wicker / Rattan">Wicker / Rattan</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group" data-show-for="furniture" hidden>
+                <label for="cfgCondition">
+                  <span data-i18n="cfg.label.condition">Current Condition</span>
+                </label>
+                <select id="cfgCondition" name="condition">
+                  <option value="">Select condition</option>
+                  <option value="Good – light refresh">Good – light refresh</option>
+                  <option value="Fair – minor repairs needed">Fair – minor repairs needed</option>
+                  <option value="Poor – significant restoration needed">Poor – significant restoration needed</option>
                 </select>
               </div>
 
@@ -626,9 +677,23 @@
     document.getElementById('cfgNext2').addEventListener('click', advance);
     document.getElementById('cfgBack2').addEventListener('click', () => goTo(0));
     document.getElementById('cfgBack3').addEventListener('click', () => goTo(1));
+    const typeCategory = {
+      'Mural': 'wall',
+      'Decorative Finish': 'wall',
+      'Patina': 'wall',
+      'Gold Leaf & Arabesque': 'wall',
+      'Canvas Painting': 'canvas',
+      'Furniture Restoration': 'furniture'
+    };
+    const conditionalFields = [...form.querySelectorAll('[data-show-for]')];
+    function updateStep2Fields(value) {
+      const cat = typeCategory[value] || 'wall';
+      conditionalFields.forEach(el => { el.hidden = el.dataset.showFor !== cat; });
+    }
     radios.forEach(radio => radio.addEventListener('change', () => {
       typeError.textContent = '';
       radios.forEach(option => option.closest('.type-card').classList.toggle('selected', option.checked));
+      updateStep2Fields(radio.value);
     }));
     form.addEventListener('input', event => {
       ArtLuxEnquiry.clear(event.target);
