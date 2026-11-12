@@ -768,6 +768,11 @@
     font-size: 0.85rem;
   }
 
+  .offer {
+    background: var(--surface-soft);
+    border-block: 1px solid rgba(190, 141, 104, 0.16);
+  }
+
   /* "What We Do" — bordered card with a small icon badge (picked from the
      mockup options: A3). */
   .offer__grid {
