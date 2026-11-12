@@ -204,15 +204,6 @@
 
 
 
-    <!-- ======= COMMISSION BAND ======= -->
-    <section class="band" aria-label="Start your project">
-      <div class="container">
-        <h2 class="band__title" data-i18n="about.band.title">Transform your <em>space</em></h2>
-        <p class="band__sub" data-i18n="about.band.sub">Partner with our studio for decorative wall &amp; ceiling painting, furniture restoration, or a bespoke commission — tailored to your vision, your space, and your story.</p>
-        <a class="btn btn--primary" href="commission.html" data-i18n="about.band.cta">Start a Project</a>
-      </div>
-    </section>
-
   </main>
 
   <!-- ======= FOOTER ======= -->
@@ -301,7 +292,7 @@
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-  document.querySelectorAll('.service-card, .portfolio-card, .about-stat-item, .founder-content, .founder-image, .band__title, .band__sub').forEach(function (el, i) {
+  document.querySelectorAll('.service-card, .portfolio-card, .about-stat-item, .founder-content, .founder-image').forEach(function (el, i) {
     el.classList.add('reveal');
     io.observe(el);
   });

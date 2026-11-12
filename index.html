@@ -407,14 +407,6 @@
     </section>
 
     <!-- ======= STATEMENT BAND ======= -->
-    <section class="band" aria-label="Start your project">
-      <div class="container">
-        <h2 class="band__title" data-i18n="home.band.title">Ready to transform<br>your <em>space</em>?</h2>
-        <p class="band__sub" data-i18n="home.band.sub">Partner with our studio for decorative wall &amp; ceiling painting, furniture restoration, or a bespoke commission — bring your vision to life with 30 years of masterful artistry.</p>
-        <a class="btn btn--primary" href="commission.html" data-i18n="home.band.cta">Start Your Project</a>
-      </div>
-    </section>
-
   </main>
 
   <!-- ======= FOOTER ======= -->
@@ -523,7 +515,7 @@
         if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-    document.querySelectorAll('.step, .card, .quote, .side-art__content, .side-art__thumbs, .bio__content, .bio__media, .partner-tile, .section__header, .band__title, .band__sub').forEach(function (el, i) {
+    document.querySelectorAll('.step, .card, .quote, .side-art__content, .side-art__thumbs, .bio__content, .bio__media, .partner-tile, .section__header').forEach(function (el, i) {
       el.classList.add('reveal');
       var siblings = el.parentNode.querySelectorAll('.step, .card, .quote, .partner-tile');
       if (siblings.length > 1) {

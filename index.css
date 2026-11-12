@@ -1221,48 +1221,6 @@
   }
 
   /* ============================================================
-     STATEMENT BAND
-     ============================================================ */
-
-  .band {
-    background:
-      radial-gradient(circle at 80% 25%, rgba(190, 141, 104, 0.14), transparent 36%),
-      linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
-    padding-block: var(--s-16);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-block: 1px solid rgba(190, 141, 104, 0.18);
-  }
-
-  .band > .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .band__title {
-    font-family: var(--ff-serif);
-    font-size: clamp(2rem, 4vw, 3.8rem);
-    color: var(--primary, #111110);
-    font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -0.05em;
-    margin-bottom: var(--s-4);
-  }
-
-  .band__title em {
-    color: var(--gold-600, #9f6a41);
-    font-style: italic;
-  }
-
-  .band__sub {
-    color: var(--muted, #6b6762);
-    max-width: 580px;
-    margin: 0 auto var(--s-8);
-    line-height: 1.72;
-  }
-  
-  /* ============================================================
      RESPONSIVE
      ============================================================ */
 
@@ -1404,18 +1362,6 @@
     .section__header {
       margin-bottom: 2.5rem;
     }
-
-    .band {
-      padding-block: 3rem;
-    }
-
-    .band__title {
-      font-size: clamp(1.7rem, 7vw, 2.8rem);
-    }
-
-    .band__sub {
-      font-size: 0.94rem;
-    }
   }
 
   /* ── Small mobile (≤520px) ──────────────────────────────── */
@@ -1544,18 +1490,6 @@
 
     .section__header {
       margin-bottom: 2rem;
-    }
-
-    .band {
-      padding-block: 2.5rem;
-    }
-
-    .band__title {
-      font-size: clamp(1.5rem, 9vw, 2rem);
-    }
-
-    .band__sub {
-      font-size: 0.9rem;
     }
 
     /* Bio quote */
