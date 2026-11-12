@@ -191,29 +191,13 @@
     box-shadow: 0 10px 28px rgba(190, 141, 104, 0.22);
   }
 
-  /* Secondary — understated text-link CTA, deliberately distinct from the
-     solid primary pill rather than a bordered pill that inverts to match it */
+  /* Secondary — fine gold-outlined pill, paired alongside the solid
+     primary button as one deliberate two-button system */
   .btn--outline,
   .al-btn--ghost {
-    position: relative;
     background: transparent;
     color: #111110;
-    border-color: transparent;
-    padding-inline: 0.2rem;
-  }
-
-  .btn--outline::before,
-  .al-btn--ghost::before {
-    content: "";
-    position: absolute;
-    left: 0.2rem;
-    right: 0.2rem;
-    bottom: 0.6rem;
-    height: 1px;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.35s var(--ease);
+    border-color: rgba(190, 141, 104, 0.55);
   }
 
   .btn--outline:hover svg,
@@ -223,16 +207,11 @@
 
   .btn--outline:hover,
   .al-btn--ghost:hover {
-    background: transparent;
+    background: rgba(190, 141, 104, 0.1);
     color: var(--gold-text, #8a5b35);
-    border-color: transparent;
-    transform: none;
-    box-shadow: none;
-  }
-
-  .btn--outline:hover::before,
-  .al-btn--ghost:hover::before {
-    transform: scaleX(1);
+    border-color: var(--gold-500);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(190, 141, 104, 0.18);
   }
 
   /* Hero variants — on dark backgrounds */
