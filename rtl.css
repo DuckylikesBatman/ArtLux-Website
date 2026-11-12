@@ -155,11 +155,6 @@
   direction: rtl;
 }
 
-[dir="rtl"] .upload-zone__browse {
-  margin-left: 0;
-  margin-right: 0.3rem;
-}
-
 [dir="rtl"] .upload-preview {
   flex-direction: row-reverse;
 }
@@ -229,10 +224,6 @@
 
 /* ─── GALLERY ───────────────────────────────────────────────── */
 [dir="rtl"] .gallery-controls {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .gallery-filters {
   flex-direction: row-reverse;
 }
 

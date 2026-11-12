@@ -1,4 +1,5 @@
 .DS_Store
+**/.DS_Store
 
 # Local safety backups made before recompressing/resizing images — not needed in the repo
 **/_originals_backup*/

@@ -151,17 +151,6 @@
   color: #111;
 }
 
-.badge--commercial {
-  background: rgba(28, 24, 20, .88);
-  color: rgba(217, 191, 171, .92);
-  border: 1px solid rgba(190, 141, 104, .3);
-}
-
-.badge--hospitality {
-  background: rgba(247, 240, 230, .92);
-  color: #3a3530;
-}
-
 .badge--healthcare {
   background: rgba(141, 157, 130, .92);
   color: #fff;
@@ -518,6 +507,13 @@
   background-size: cover;
   background-position: center 75%;
   overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .projects-stats {
+    background-image: url("Images/hero-projects-mobile.jpg");
+    background-image: image-set(url("Images/hero-projects-mobile.webp") type("image/webp"), url("Images/hero-projects-mobile.jpg") type("image/jpeg"));
+  }
 }
 
 .projects-stats::before {

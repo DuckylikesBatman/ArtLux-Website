@@ -337,78 +337,6 @@
   }
   
   /* ============================================================
-     LEGACY HEADER SUPPORT
-     For pages still using .artlux-header / .artlux-nav-main
-     ============================================================ */
-  
-  .artlux-header {
-    position: fixed;
-    inset: 0 0 auto;
-    z-index: 1000;
-    height: 82px;
-    padding: 0 clamp(1.25rem, 4vw, 3rem);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(15, 13, 11, 0.84);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--al-border-gold);
-  }
-  
-  .site-logo,
-  .artlux-header-logo {
-    color: var(--al-cream);
-    text-decoration: none;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: clamp(1.75rem, 2vw, 2.35rem);
-    font-weight: 900;
-    letter-spacing: -0.045em;
-    line-height: 1;
-  }
-  
-  .site-logo span,
-  .artlux-header-logo span {
-    color: var(--al-gold);
-  }
-  
-  .artlux-nav,
-  .artlux-nav-main {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-  }
-  
-  .artlux-nav ul,
-  .nav-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .artlux-nav a,
-  .artlux-nav-main-button {
-    color: rgba(247, 240, 230, 0.78);
-    text-decoration: none;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-  }
-
-  .artlux-nav a:hover,
-  .artlux-nav-main-button:hover {
-    color: var(--al-gold-light);
-  }
-  
-  .burger {
-    display: none;
-  }
-  
-  /* ============================================================
      FOOTER
      ============================================================ */
   
@@ -694,15 +622,6 @@
   
     .al-logo::after {
       font-size: 0.52rem;
-    }
-  
-    .artlux-nav,
-    .artlux-nav-main {
-      display: none;
-    }
-  
-    .burger {
-      display: flex;
     }
   }
   

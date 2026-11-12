@@ -41,6 +41,30 @@ body.policy-page {
   position: relative;
 }
 
+.policy-eye {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  color: var(--gold-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.policy-eye::before,
+.policy-eye::after {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-600));
+}
+
+.policy-eye::after {
+  background: linear-gradient(90deg, var(--gold-600), transparent);
+}
+
 .policy-title {
   font-family: var(--ff-serif);
   font-weight: 900;
@@ -293,7 +317,7 @@ body.policy-page {
 /* Print Styles */
 @media print {
   .policy-toc,
-  .artlux-header,
+  .al-header,
   .artlux-footer {
     display: none;
   }
