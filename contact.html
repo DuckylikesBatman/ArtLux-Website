@@ -388,12 +388,18 @@
     if (backTop) {
       window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
       backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-      var siteFooter = document.querySelector('.artlux-footer');
-      if (siteFooter && window.IntersectionObserver) {
-        var footerIo = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { document.body.classList.toggle('wa-hide', e.isIntersecting); });
+      if (window.IntersectionObserver) {
+        var waHideSet = new Set();
+        var waIo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { e.isIntersecting ? waHideSet.add(e.target) : waHideSet.delete(e.target); });
+          document.body.classList.toggle('wa-hide', waHideSet.size > 0);
         });
-        footerIo.observe(siteFooter);
+        var siteFooter = document.querySelector('.artlux-footer');
+        if (siteFooter) waIo.observe(siteFooter);
+        /* also keep the floating buttons clear of the message field, which
+           sits in the bottom-right corner on medium-width viewports */
+        var msgField = document.getElementById('message');
+        if (msgField) waIo.observe(msgField);
       }
     }
     document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});

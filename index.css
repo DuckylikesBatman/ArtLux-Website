@@ -937,9 +937,30 @@
 
   .crew__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--s-5);
     margin-top: var(--s-10);
+  }
+
+  .crew__more {
+    text-align: center;
+    margin: var(--s-8) 0 0;
+  }
+
+  .crew__more a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--gold-700, #7b5232);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(190, 141, 104, 0.4);
+    padding-bottom: 2px;
+    transition: var(--transition);
+  }
+
+  .crew__more a:hover {
+    color: var(--gold-900, #4d3d1a);
+    border-bottom-color: currentColor;
   }
 
   .crew__item {
