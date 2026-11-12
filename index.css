@@ -1246,11 +1246,14 @@
      ============================================================ */
 
   .band {
-    background: #0d0c0a;
+    background:
+      radial-gradient(circle at 80% 25%, rgba(190, 141, 104, 0.14), transparent 36%),
+      linear-gradient(135deg, #fbf7ee 0%, #f3eadb 48%, #e7d8bd 100%);
     padding-block: var(--s-16);
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-block: 1px solid rgba(190, 141, 104, 0.18);
   }
 
   .band > .container {
@@ -1261,21 +1264,20 @@
   .band__title {
     font-family: var(--ff-serif);
     font-size: clamp(2rem, 4vw, 3.8rem);
-    color: #fff;
+    color: var(--primary, #111110);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -0.05em;
     margin-bottom: var(--s-4);
   }
-  
+
   .band__title em {
-    color: var(--gold-300);
+    color: var(--gold-600, #9f6a41);
     font-style: italic;
-    text-shadow: 0 0 48px rgba(190, 141, 104, 0.45), 0 0 20px rgba(190, 141, 104, 0.2);
   }
-  
+
   .band__sub {
-    color: rgba(255, 255, 255, 0.58);
+    color: var(--muted, #6b6762);
     max-width: 580px;
     margin: 0 auto var(--s-8);
     line-height: 1.72;

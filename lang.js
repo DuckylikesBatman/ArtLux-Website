@@ -206,7 +206,6 @@
       /* ── Projects page ── */
       'projects.hero.title': 'Signature<br><em>Projects</em>',
       'projects.hero.sub': 'A selection of hand-painted interiors, gold leaf and arabesque finishes, and murals across private residences and healthcare spaces.',
-      'projects.filter.all': 'All Projects',
       'cat.residential': 'Residential',
       'cat.healthcare': 'Healthcare',
       'projects.count.label': 'projects',
@@ -613,7 +612,6 @@
       /* ── Projects page ── */
       'projects.hero.title': 'مشاريع<br><em>مميزة</em>',
       'projects.hero.sub': 'مجموعة مختارة من المساحات الداخلية المرسومة يدويًا، تشطيبات الذهب والأرابيسك، والجداريات في منازل خاصة ومساحات صحية.',
-      'projects.filter.all': 'كل المشاريع',
       'cat.residential': 'سكني',
       'cat.healthcare': 'رعاية صحية',
       'projects.count.label': 'مشروعًا',

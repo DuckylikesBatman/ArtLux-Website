@@ -102,12 +102,7 @@
 
 
   <!-- ======= CONTROLS ======= -->
-  <div class="projects-controls container" role="region" aria-label="Project filters">
-    <div class="projects-filters" role="group" aria-label="Filter by type">
-      <button class="filter-pill active" data-filter="all" data-i18n="projects.filter.all">All Projects</button>
-      <button class="filter-pill" data-filter="residential" data-i18n="cat.residential">Residential</button>
-      <button class="filter-pill" data-filter="healthcare" data-i18n="cat.healthcare">Healthcare</button>
-    </div>
+  <div class="projects-controls container" role="region" aria-label="Project count">
     <span class="projects-count" aria-live="polite">
       <span id="countNum">11 projects</span>
     </span>
@@ -442,36 +437,18 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 }());
 
-/* ── Project filter ── */
-const pills   = document.querySelectorAll('.filter-pill');
+/* ── Project count ── */
 const cards   = Array.from(document.querySelectorAll('.project-card'));
 const countEl = document.getElementById('countNum');
-let current   = 'all';
 
-function applyFilter() {
-  let n = 0;
-  cards.forEach(function(card) {
-    const show = current === 'all' || card.dataset.cat === current;
-    card.style.display = show ? '' : 'none';
-    if (show) n++;
-  });
+function updateCount() {
+  const n = cards.length;
   const language = window.ArtLuxLang;
   const format = language?.t(n === 1 ? 'projects.count.one' : 'projects.count.many')
     || (n === 1 ? '{n} project' : '{n} projects');
   countEl.textContent = format.replace('{n}', n);
 }
-pills.forEach(function(pill) {
-  pill.setAttribute('aria-pressed', String(pill.classList.contains('active')));
-  pill.addEventListener('click', function() {
-    pills.forEach(p => {
-      p.classList.toggle('active', p === pill);
-      p.setAttribute('aria-pressed', String(p === pill));
-    });
-    current = pill.dataset.filter;
-    applyFilter();
-  });
-});
-applyFilter();
+updateCount();
 
 /* ── Project data ──
    To add more images to a project, just add objects to its `images` array:
@@ -706,7 +683,7 @@ function renderModalInfo(p) {
 }
 
 document.addEventListener('artlux:langchange', function() {
-  applyFilter();
+  updateCount();
   if (activeProjectKey && !modal.hidden) renderModalInfo(PROJECTS[activeProjectKey]);
 });
 
@@ -775,7 +752,6 @@ cards.forEach(card => {
 function openLinkedProject() {
   const card = cards.find(item => location.hash === '#' + item.dataset.project);
   if (card) {
-    if (current !== 'all') pills[0].click();
     openModal(card.dataset.project, card);
   }
 }
