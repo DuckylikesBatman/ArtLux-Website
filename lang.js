@@ -205,7 +205,7 @@
       'about.band.cta': 'Start a Project',
       /* ── Projects page ── */
       'projects.hero.title': 'Signature<br><em>Projects</em>',
-      'projects.hero.sub': 'A selection of hand-painted interiors, gold leaf and arabesque finishes, murals, and restored furniture across private residences and healthcare spaces.',
+      'projects.hero.sub': 'A selection of hand-painted interiors, gold leaf and arabesque finishes, and murals across private residences and healthcare spaces.',
       'projects.filter.all': 'All Projects',
       'cat.residential': 'Residential',
       'cat.healthcare': 'Healthcare',
@@ -259,6 +259,7 @@
       'gallery.count.showing': 'Showing',
       'gallery.count.pieces': 'curated pieces',
       'gallery.lb.meta': 'Original Artwork · ArtLux',
+      'gallery.lb.dims': 'Sizes vary by piece — ask us for exact dimensions and availability.',
       'gallery.lb.inquire': 'Inquire About This Piece',
       'gallery.lb.note': 'Looking for a custom size or a similar piece?',
       'gallery.lb.talk': 'Let’s talk',
@@ -611,7 +612,7 @@
       'about.band.cta': 'ابدأ مشروعًا',
       /* ── Projects page ── */
       'projects.hero.title': 'مشاريع<br><em>مميزة</em>',
-      'projects.hero.sub': 'مجموعة مختارة من المساحات الداخلية المرسومة يدويًا، تشطيبات الذهب والأرابيسك، الجداريات، والأثاث المرمم في منازل خاصة ومساحات صحية.',
+      'projects.hero.sub': 'مجموعة مختارة من المساحات الداخلية المرسومة يدويًا، تشطيبات الذهب والأرابيسك، والجداريات في منازل خاصة ومساحات صحية.',
       'projects.filter.all': 'كل المشاريع',
       'cat.residential': 'سكني',
       'cat.healthcare': 'رعاية صحية',
@@ -665,6 +666,7 @@
       'gallery.count.showing': 'عرض',
       'gallery.count.pieces': 'قطعة مختارة',
       'gallery.lb.meta': 'عمل فني أصلي · ArtLux',
+      'gallery.lb.dims': 'تختلف المقاسات حسب القطعة — تواصل معنا لمعرفة الأبعاد الدقيقة والتوفر.',
       'gallery.lb.inquire': 'استفسر عن هذه القطعة',
       'gallery.lb.note': 'تبحث عن مقاس مخصص أو قطعة مشابهة؟',
       'gallery.lb.talk': 'لنتحدث',
