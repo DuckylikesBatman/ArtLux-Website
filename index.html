@@ -155,7 +155,7 @@
     <section id="featuredProjects" class="section featured" aria-label="Signature Projects">
       <div class="container">
         <header class="section__header">
-          <p class="section__eyebrow" data-i18n="home.featured.eyebrow">Projects</p>
+          <p class="section__eyebrow" data-i18n="home.featured.eyebrow">Our Work</p>
           <h2 class="section__title" data-i18n="home.featured.title">Signature Projects</h2>
           <p class="section__subtitle" data-i18n="home.featured.sub">A selection of hand-painted interiors, gold leaf and arabesque finishes, and murals across private residences and healthcare spaces.</p>
         </header>
@@ -528,12 +528,19 @@
     window.addEventListener('scroll', function() { backTop.classList.toggle('visible', window.scrollY > 500); }, { passive: true });
     backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   }
-  var siteFooter = document.querySelector('.artlux-footer');
-  if (siteFooter && window.IntersectionObserver) {
-    var footerIo = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { document.body.classList.toggle('wa-hide', e.isIntersecting); });
+  if (window.IntersectionObserver) {
+    var waHideSet = new Set();
+    var waIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? waHideSet.add(e.target) : waHideSet.delete(e.target); });
+      document.body.classList.toggle('wa-hide', waHideSet.size > 0);
     });
-    footerIo.observe(siteFooter);
+    var siteFooter = document.querySelector('.artlux-footer');
+    if (siteFooter) waIo.observe(siteFooter);
+    /* also clear the floating buttons while the "Signature Projects"
+       heading is in view, since it sits close to the viewport bottom
+       on a lot of scroll positions right after the hero stats band */
+    var featuredHeader = document.querySelector('#featuredProjects .section__header');
+    if (featuredHeader) waIo.observe(featuredHeader);
   }
   document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
 
