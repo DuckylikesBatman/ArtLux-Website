@@ -816,6 +816,7 @@
         return;
       }
       status.textContent = '';
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'commission_form' });
       form.reset();
       radios.forEach(radio => radio.closest('.type-card').classList.remove('selected'));
       files.length = 0;

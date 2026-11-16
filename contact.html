@@ -356,7 +356,10 @@
       contactStatus.className = error ? 'form-status error' : 'form-status success';
       contactStatus.textContent = ArtLuxLang.t(error || 'contact.status.success');
       document.getElementById('contactFallback').hidden = !error;
-      if (!error) this.reset();
+      if (!error) {
+        this.reset();
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'contact_form' });
+      }
     });
 
     /* ── Prefill from a gallery "Inquire About This Piece" link ──

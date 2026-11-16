@@ -67,3 +67,23 @@
     }
   });
 }());
+
+/* Track the contact channels people actually use — WhatsApp, phone, and
+   email links are scattered across every page (floating button, footer,
+   hero CTAs, info cards), so one delegated listener covers all of them
+   instead of wiring each page separately. */
+(function () {
+  if (typeof gtag !== 'function') return;
+  document.addEventListener('click', function (event) {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (href.startsWith('https://wa.me/')) {
+      gtag('event', 'contact', { event_category: 'whatsapp_click' });
+    } else if (href.startsWith('tel:')) {
+      gtag('event', 'contact', { event_category: 'phone_click' });
+    } else if (href.startsWith('mailto:')) {
+      gtag('event', 'contact', { event_category: 'email_click' });
+    }
+  });
+}());
