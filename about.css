@@ -4,83 +4,6 @@
 
 /* Page hero is the shared quiet, no-photo treatment — see index.css */
 
-/* ─── ABOUT STATS BAND ────────────────────────────────────── */
-.about-stats {
-  position: relative;
-  background-image: url("Images/hero-about.jpg");
-  background-image: image-set(url("Images/hero-about.webp") type("image/webp"), url("Images/hero-about.jpg") type("image/jpeg"));
-  background-size: cover;
-  background-position: center 70%;
-  overflow: hidden;
-}
-
-@media (max-width: 700px) {
-  .about-stats {
-    background-image: url("Images/hero-about-mobile.jpg");
-    background-image: image-set(url("Images/hero-about-mobile.webp") type("image/webp"), url("Images/hero-about-mobile.jpg") type("image/jpeg"));
-  }
-}
-
-.about-stats::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 16, 12, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(217, 191, 171, 0.22);
-  border-bottom: 1px solid rgba(217, 191, 171, 0.22);
-}
-
-.about-stats__row {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin-inline: auto;
-  padding-inline: clamp(1.5rem, 4vw, 3rem);
-}
-
-.about-stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  padding: 2.2rem 1rem;
-  flex: 1;
-  min-width: 0;
-  text-align: center;
-}
-.about-stat-item strong {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.9rem, 2.8vw, 2.5rem);
-  font-weight: 700;
-  color: #be8d68;
-  line-height: 1;
-  display: block;
-}
-.about-stat-item span {
-  font-size: .62rem;
-  font-weight: 500;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.5);
-}
-.about-stat-div {
-  width: 1px;
-  height: 36px;
-  background: rgba(255,255,255,.1);
-  flex-shrink: 0;
-}
-
-@media (max-width: 600px) {
-  .about-stats__row { flex-wrap: wrap; }
-  .about-stat-item { flex: 0 0 50%; padding: 1.4rem .5rem; }
-  .about-stat-div { display: none; }
-}
-
 /* ─── FOUNDER SECTION ─────────────────────────────────────── */
 .about-founder {
   padding-block: 6rem;
@@ -137,25 +60,6 @@
   overflow: hidden;
   aspect-ratio: 4/5;
   box-shadow: 0 24px 60px rgba(190, 141, 104, 0.13), inset 0 0 0 1px rgba(190, 141, 104, 0.22);
-}
-.founder-image-frame__badge {
-  position: absolute;
-  bottom: 18px;
-  left: -18px;
-  background: var(--gold-500, #be8d68);
-  color: #241c10;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.15rem;
-  padding: 1rem 1.4rem;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 16px 40px rgba(190, 141, 104, 0.28);
-  z-index: 2;
-  white-space: nowrap;
-}
-@media (max-width: 900px) {
-  .founder-image-frame__badge { display: none; }
 }
 .founder-image img {
   width: 100%;
@@ -366,10 +270,6 @@
 }
 
 @media (max-width: 480px) {
-  .about-stats__row { flex-wrap: wrap; }
-  .about-stat-item { flex: 0 0 50%; padding: 1.2rem .5rem; }
-  .about-stat-div { display: none; }
-
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
