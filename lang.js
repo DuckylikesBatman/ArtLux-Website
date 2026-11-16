@@ -41,9 +41,7 @@
       'footer.contact-us': 'Contact Us',
       'footer.address': 'Corniche El Mazraa, Beirut',
       /* ── Commission hero ── */
-      'commission.hero.eye': 'ArtLux Studio',
       'commission.hero.title': 'Commission Your<br><em>Masterpiece</em>',
-      'commission.hero.sub': 'Bespoke artwork, meticulously crafted for your space. Transform your vision into a timeless piece of art.',
       /* ── Process section ── */
       'commission.process.title': 'Our Process',
       'commission.p1.title': 'Initial Consultation',
@@ -183,9 +181,7 @@
       'home.partners.title': 'Our Partners',
       'home.partners.sub': 'We take pride in working with prestigious companies and clients who trust our expertise in decorative painting and luxury finishes.',
       /* ── About page ── */
-      'about.hero.eye': 'ArtLux Studio',
       'about.hero.title': 'Manal Yehya and<br><em>ArtLux Studio</em>',
-      'about.hero.sub': 'Founded by Manal Yehya, ArtLux transforms spaces through masterful decorative painting, gold leaf and arabesque finishes, and timeless artistic craftsmanship.',
       'about.vision.title': 'The ArtLux Vision',
       'about.vision.p1': 'After 30 years in the industry, working on prestigious projects in Qatar, Kuwait, Saudi Arabia, the UAE, France, the UK, and beyond, and collaborating with renowned designers and architects, Manal Yehya founded ArtLux in 2019 to bring her expertise and passion for decorative painting to life.',
       'about.vision.p2': 'Specializing in high-end decorative finishes, we create bespoke wall and ceiling treatments, hand-painted murals, and refined textures that blend art with architecture. Beyond interiors, we restore and transform furniture with expert refinishing and custom-painted designs — elevating every space into a masterpiece.',
@@ -200,7 +196,6 @@
       'about.port3.text': 'Hand-painted arabesque patterns in a custom rose terracotta and sage palette, plus a gold leaf entrance hall.',
       /* ── Projects page ── */
       'projects.hero.title': 'Signature<br><em>Projects</em>',
-      'projects.hero.sub': 'A selection of hand-painted interiors, gold leaf and arabesque finishes, and murals across private residences and healthcare spaces.',
       'cat.residential': 'Residential',
       'cat.healthcare': 'Healthcare',
       'projects.count.label': 'projects',
@@ -244,9 +239,7 @@
       'proj.abboud.type': 'Fresco Ceiling &amp; Arabesque Detail',
       'proj.abboud.desc': 'An arabesque medallion beam ceiling paired with a soft fresco cloud ceiling and cherub motifs.',
       /* ── Gallery page ── */
-      'gallery.hero.eye': 'ArtLux Collection',
       'gallery.hero.title': 'The<br><em>Gallery</em>',
-      'gallery.hero.sub': 'Original paintings and bespoke fine art by Manal Yehya — a complement to our decorative painting studio.',
       'gallery.count.showing': 'Showing',
       'gallery.count.pieces': 'curated pieces',
       'gallery.lb.meta': 'Original Artwork · ArtLux',
@@ -262,9 +255,7 @@
       'medium.acrylic-canvas-diptych': 'Acrylic on Canvas · Diptych',
       'medium.acrylic-canvas': 'Acrylic on Canvas',
       /* ── Contact page ── */
-      'contact.hero.eye': 'Get In Touch',
       'contact.hero.title': 'Let’s Create Something<br><em>Beautiful</em>',
-      'contact.hero.sub': 'Get in touch to discuss your decorative painting, furniture restoration, or fine art project. We’re here to bring your vision to life.',
       'contact.form.name': 'Your Name',
       'contact.form.email': 'Email',
       'contact.form.subject': 'Subject (optional)',
@@ -439,9 +430,7 @@
       'footer.contact-us': 'تواصل معنا',
       'footer.address': 'كورنيش المزرعة، بيروت',
       /* ── Commission hero ── */
-      'commission.hero.eye': 'استوديو ArtLux',
       'commission.hero.title': 'اطلب<br><em>تحفتك الفنية</em>',
-      'commission.hero.sub': 'أعمال فنية مخصصة تُصنع بعناية لمساحتك. حوّل رؤيتك إلى قطعة فنية خالدة.',
       /* ── Process ── */
       'commission.process.title': 'مراحل العمل',
       'commission.p1.title': 'الاستشارة الأولية',
@@ -581,9 +570,7 @@
       'home.partners.title': 'شركاؤنا',
       'home.partners.sub': 'نفخر بالعمل مع شركات وعملاء مرموقين يثقون بخبرتنا في الرسم الديكوري والتشطيبات الفاخرة.',
       /* ── About page ── */
-      'about.hero.eye': 'استوديو ArtLux',
       'about.hero.title': 'منال يحيى<br><em>واستوديو ArtLux</em>',
-      'about.hero.sub': 'بتأسيس منال يحيى، يحوّل استوديو ArtLux المساحات من خلال رسم ديكوري احترافي، تشطيبات ذهبية وأرابيسك، وحرفية فنية خالدة.',
       'about.vision.title': 'رؤية ArtLux',
       'about.vision.p1': 'بعد ٣٠ عامًا في هذا المجال، عملت خلالها على مشاريع مرموقة في قطر والكويت والسعودية والإمارات وفرنسا والمملكة المتحدة وما وراءها، وتعاونت مع مصممين ومهندسين معماريين بارزين، أسّست منال يحيى ArtLux عام ٢٠١٩ لتجسيد خبرتها وشغفها بالرسم الديكوري.',
       'about.vision.p2': 'متخصصون في التشطيبات الديكورية الفاخرة، نبتكر معالجات مخصصة للجدران والأسقف، جداريات مرسومة يدويًا، وملامس راقية تمزج الفن بالعمارة. وإلى جانب الديكور الداخلي، نرمم ونحوّل الأثاث بإعادة تشطيب احترافية وتصاميم مرسومة حسب الطلب — لنرتقي بكل مساحة إلى تحفة فنية.',
@@ -598,7 +585,6 @@
       'about.port3.text': 'زخارف أرابيسك مرسومة يدويًا بألوان تراكوتا وردية وأخضر حكيم مخصصة، إضافة إلى مدخل مذهّب بورق الذهب.',
       /* ── Projects page ── */
       'projects.hero.title': 'مشاريع<br><em>مميزة</em>',
-      'projects.hero.sub': 'مجموعة مختارة من المساحات الداخلية المرسومة يدويًا، تشطيبات الذهب والأرابيسك، والجداريات في منازل خاصة ومساحات صحية.',
       'cat.residential': 'سكني',
       'cat.healthcare': 'رعاية صحية',
       'projects.count.label': 'مشروعًا',
@@ -642,9 +628,7 @@
       'proj.abboud.type': 'سقف فريسكو وتفاصيل أرابيسك',
       'proj.abboud.desc': 'أعمال سقف مرسومة يدويًا تمتد من سقف جسور بزخارف أرابيسك ملونة إلى سقف فريسكو ناعم بزخارف سحابية وملائكية، إلى جانب زخارف خطية مفصلة ولمسات مذهّبة.',
       /* ── Gallery page ── */
-      'gallery.hero.eye': 'مجموعة ArtLux',
       'gallery.hero.title': 'معرض<br><em>الأعمال</em>',
-      'gallery.hero.sub': 'لوحات أصلية وأعمال فنية راقية بريشة منال يحيى — إضافة مكمّلة لاستوديو الرسم الديكوري لدينا.',
       'gallery.count.showing': 'عرض',
       'gallery.count.pieces': 'قطعة مختارة',
       'gallery.lb.meta': 'عمل فني أصلي · ArtLux',
@@ -660,9 +644,7 @@
       'medium.acrylic-canvas-diptych': 'أكريليك على قماش · ثنائية',
       'medium.acrylic-canvas': 'أكريليك على قماش',
       /* ── Contact page ── */
-      'contact.hero.eye': 'تواصل معنا',
       'contact.hero.title': 'لنبدع شيئًا<br><em>جميلاً</em>',
-      'contact.hero.sub': 'تواصل معنا لمناقشة مشروعك في الرسم الديكوري، ترميم الأثاث، أو الأعمال الفنية. نحن هنا لتحويل رؤيتك إلى واقع.',
       'contact.form.name': 'اسمك',
       'contact.form.email': 'البريد الإلكتروني',
       'contact.form.subject': 'الموضوع (اختياري)',

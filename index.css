@@ -264,11 +264,6 @@
     margin: 0 auto;
   }
 
-  .page-hero__eye,
-  .page-hero__sub {
-    display: none;
-  }
-
   .page-hero__title {
     margin: 0;
     font-family: var(--ff-serif);
