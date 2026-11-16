@@ -51,7 +51,7 @@
     transition: opacity 0.35s var(--al-ease);
   }
 
-  .al-header--light:not(.scrolled)::before,
+  .al-header--light::before,
   .al-header.scrolled::before {
     opacity: 0;
   }
@@ -63,7 +63,19 @@
     border-bottom: 1px solid var(--al-border-gold);
     box-shadow: none;
   }
-  
+
+  /* Light-variant pages (every inner page) never had a dark hero photo to
+     fade out of, so scrolling shouldn't flip them to the homepage's dark
+     bar — that read as an abrupt, mismatched snap against an otherwise
+     all-light page. Lift with the page's own cream tone instead. */
+  .al-header--light.scrolled {
+    background: rgba(251, 248, 241, 0.86);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--al-border-gold);
+    box-shadow: 0 4px 24px rgba(15, 13, 11, 0.06);
+  }
+
   .al-header__main {
     position: relative;
     max-width: 1320px;
@@ -109,11 +121,11 @@
   }
   
   /* Light header — homepage (transparent nav over light hero) */
-  .al-header--light:not(.scrolled) .al-logo {
+  .al-header--light .al-logo {
     color: var(--al-ink);
   }
 
-  .al-header--light:not(.scrolled) .al-logo::after {
+  .al-header--light .al-logo::after {
     color: rgba(15, 13, 11, 0.45);
   }
   
@@ -185,16 +197,16 @@
     );
   }
   
-  .al-header--light:not(.scrolled) .al-nav__link {
+  .al-header--light .al-nav__link {
     color: rgba(15, 13, 11, 0.68);
   }
   
-  .al-header--light:not(.scrolled) .al-nav__link:hover {
+  .al-header--light .al-nav__link:hover {
     color: var(--al-ink);
     background: rgba(15, 13, 11, 0.06);
   }
   
-  .al-header--light:not(.scrolled) .al-nav__link.active {
+  .al-header--light .al-nav__link.active {
     color: var(--al-gold-dark);
   }
   
@@ -211,11 +223,11 @@
   }
 
   /* On light hero — dark header, gold text */
-  .al-header--light:not(.scrolled) .al-nav__cta {
+  .al-header--light .al-nav__cta {
     color: var(--al-gold-dark) !important;
   }
 
-  .al-header--light:not(.scrolled) .al-nav__cta:hover {
+  .al-header--light .al-nav__cta:hover {
     color: var(--al-ink) !important;
     background: rgba(15, 13, 11, 0.06);
   }
@@ -241,7 +253,7 @@
     z-index: 1002;
   }
   
-  .al-header--light:not(.scrolled) .al-burger {
+  .al-header--light .al-burger {
     color: var(--al-ink);
     background: rgba(15, 13, 11, 0.05);
   }
@@ -699,20 +711,20 @@
   }
 
   /* Light header adjustments */
-  .al-header--light:not(.scrolled) .lang-btn {
+  .al-header--light .lang-btn {
     color: rgba(15, 13, 11, 0.38);
   }
 
-  .al-header--light:not(.scrolled) .lang-btn.active {
+  .al-header--light .lang-btn.active {
     color: var(--al-gold-dark);
   }
 
-  .al-header--light:not(.scrolled) .lang-btn:hover {
+  .al-header--light .lang-btn:hover {
     color: var(--al-ink);
     background: rgba(15, 13, 11, 0.06);
   }
 
-  .al-header--light:not(.scrolled) .lang-sep {
+  .al-header--light .lang-sep {
     color: rgba(15, 13, 11, 0.18);
   }
 

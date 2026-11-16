@@ -278,7 +278,7 @@
 (function () {
   var header = document.querySelector('.al-header');
 
-  function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 8); }
+  function onScroll() { header && header.classList.toggle('scrolled', window.scrollY > 60); }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
