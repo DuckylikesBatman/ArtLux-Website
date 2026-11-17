@@ -272,28 +272,59 @@
       </div>
     </section>
 
-    <!-- ======= FINE ART SIDE NOTE ======= -->
-    <section id="fineArt" class="section side-art" aria-label="Fine Art and Paintings">
-      <div class="container side-art__grid">
-        <div class="side-art__content">
+    <!-- ======= FEATURED PAINTINGS ======= -->
+    <section id="featuredPaintings" class="section paintings-feat" aria-label="Featured Paintings">
+      <div class="container">
+        <header class="section__header">
           <p class="section__eyebrow" data-i18n="home.fineart.eyebrow">Also From Our Studio</p>
-          <h2 class="side-art__title" data-i18n="home.fineart.title">Fine Art &amp; Original Paintings</h2>
-          <p class="side-art__text" data-i18n="home.fineart.text">Alongside our interior work, Manal creates original oil and mixed-media paintings — available as standalone pieces or as a tailored companion to a completed space.</p>
-          <a class="btn btn--outline" href="gallery.html"><span data-i18n="home.fineart.cta">Browse the Collection</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <h2 class="section__title" data-i18n="home.fineart.title">Fine Art &amp; Original Paintings</h2>
+          <p class="section__subtitle" data-i18n="home.fineart.text">Alongside our interior work, Manal creates original oil and mixed-media paintings — available as standalone pieces or as a tailored companion to a completed space.</p>
+        </header>
+
+        <div class="cards cards--paintings">
+          <article class="card">
+            <a class="card__media" href="gallery.html#work-Birds%20of%20Paradise" aria-label="View Birds of Paradise in the gallery">
+              <picture><source srcset="Images/paintings/gallery-31.webp" type="image/webp"><img src="Images/paintings/gallery-31.jpeg" width="853" height="1280" alt="Birds of Paradise – Tropical florals in coral, purple, and green" loading="lazy" decoding="async"></picture>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Birds of Paradise</h3>
+              <span class="card__meta">Mixed Media on Canvas</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card__media" href="gallery.html#work-Golden%20Reverie" aria-label="View Golden Reverie in the gallery">
+              <picture><source srcset="Images/paintings/gallery-03.webp" type="image/webp"><img src="Images/paintings/gallery-03.jpeg" width="1080" height="1080" alt="Golden Reverie – Portrait study in gold and olive with crimson accents" loading="lazy" decoding="async"></picture>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Golden Reverie</h3>
+              <span class="card__meta">Oil on Canvas</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card__media" href="gallery.html#work-Regal%20Masks" aria-label="View Regal Masks in the gallery">
+              <picture><source srcset="Images/paintings/gallery-08.webp" type="image/webp"><img src="Images/paintings/gallery-08.jpeg" width="1080" height="1080" alt="Regal Masks – Stylised portrait pair in teal, gold, and crimson" loading="lazy" decoding="async"></picture>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Regal Masks</h3>
+              <span class="card__meta">Mixed Media · Diptych</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card__media" href="gallery.html#work-Blush%20Foliage" aria-label="View Blush Foliage in the gallery">
+              <picture><source srcset="Images/paintings/gallery-32.webp" type="image/webp"><img src="Images/paintings/gallery-32.jpeg" width="960" height="1280" alt="Blush Foliage – Layered leaf forms in blush pink and sage green" loading="lazy" decoding="async"></picture>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Blush Foliage</h3>
+              <span class="card__meta">Mixed Media on Canvas</span>
+            </div>
+          </article>
         </div>
-        <div class="side-art__thumbs">
-          <a class="side-art__thumb" href="gallery.html#work-Birds%20of%20Paradise" aria-label="View Birds of Paradise in the gallery">
-            <picture><source srcset="Images/paintings/gallery-31.webp" type="image/webp"><img src="Images/paintings/gallery-31.jpeg" width="853" height="1280" alt="Birds of Paradise – Tropical florals in coral, purple, and green" loading="lazy" decoding="async"></picture>
-          </a>
-          <a class="side-art__thumb" href="gallery.html#work-Golden%20Reverie" aria-label="View Golden Reverie in the gallery">
-            <picture><source srcset="Images/paintings/gallery-03.webp" type="image/webp"><img src="Images/paintings/gallery-03.jpeg" width="1080" height="1080" alt="Golden Reverie – Portrait study in gold and olive with crimson accents" loading="lazy" decoding="async"></picture>
-          </a>
-          <a class="side-art__thumb" href="gallery.html#work-Regal%20Masks" aria-label="View Regal Masks in the gallery">
-            <picture><source srcset="Images/paintings/gallery-08.webp" type="image/webp"><img src="Images/paintings/gallery-08.jpeg" width="1080" height="1080" alt="Regal Masks – Stylised portrait pair in teal, gold, and crimson" loading="lazy" decoding="async"></picture>
-          </a>
-          <a class="side-art__thumb" href="gallery.html#work-Blush%20Foliage" aria-label="View Blush Foliage in the gallery">
-            <picture><source srcset="Images/paintings/gallery-32.webp" type="image/webp"><img src="Images/paintings/gallery-32.jpeg" width="960" height="1280" alt="Blush Foliage – Layered leaf forms in blush pink and sage green" loading="lazy" decoding="async"></picture>
-          </a>
+
+        <div class="section__cta">
+          <a class="btn btn--primary" href="gallery.html" data-i18n="home.fineart.cta">Browse the Collection</a>
         </div>
       </div>
     </section>
@@ -529,7 +560,7 @@
         if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-    document.querySelectorAll('.step, .card, .quote, .side-art__content, .side-art__thumbs, .bio__content, .bio__media, .partner-tile, .section__header').forEach(function (el, i) {
+    document.querySelectorAll('.step, .card, .quote, .bio__content, .bio__media, .partner-tile, .section__header').forEach(function (el, i) {
       el.classList.add('reveal');
       var siblings = el.parentNode.querySelectorAll('.step, .card, .quote, .partner-tile');
       if (siblings.length > 1) {

@@ -998,77 +998,17 @@
   }
 
   /* ============================================================
-     FINE ART SIDE NOTE
+     FEATURED PAINTINGS
      ============================================================ */
 
-  .side-art {
+  .paintings-feat {
     background: var(--surface-soft);
     padding-block: var(--s-16);
     border-block: 1px solid rgba(190, 141, 104, 0.16);
   }
 
-  .side-art__grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: var(--s-12);
-    align-items: center;
-  }
-
-  .side-art__title {
-    font-family: var(--ff-serif);
-    font-size: var(--fs-h3);
-    font-weight: 900;
-    color: var(--primary);
-    letter-spacing: -0.02em;
-    margin-bottom: var(--s-3);
-  }
-
-  .side-art__text {
-    color: var(--muted);
-    line-height: 1.72;
-    max-width: 480px;
-    margin-bottom: var(--s-6);
-  }
-
-  .side-art__thumbs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--s-3);
-  }
-
-  .side-art__thumb {
-    display: block;
-    aspect-ratio: 1;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: var(--brd-gold);
-    transition: var(--transition);
-  }
-
-  .side-art__thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 1s var(--ease);
-  }
-
-  .side-art__thumb:hover img {
-    transform: scale(1.08);
-  }
-
-  @media (max-width: 860px) {
-    .side-art__grid {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .side-art__text {
-      margin-inline: auto;
-    }
-    .side-art__thumbs {
-      max-width: 420px;
-      margin-inline: auto;
-    }
+  .cards--paintings {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   }
 
   /* ============================================================
