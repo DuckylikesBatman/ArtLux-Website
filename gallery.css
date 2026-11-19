@@ -293,6 +293,14 @@
   margin-top: .5rem;
 }
 
+.lightbox__size {
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: rgba(217, 191, 171, 0.9);
+  margin-top: .5rem;
+}
+
 .lightbox__cta {
   display: inline-flex;
   align-items: center;

@@ -105,32 +105,32 @@
     <div class="container">
       <div class="gallery-masonry" id="galleryGrid" role="list">
 
-        <article class="gallery-item" role="listitem" data-title="The Hidden Garden" data-avail="in" data-cat="painting">
+        <article class="gallery-item" role="listitem" data-title="The Hidden Garden" data-avail="in" data-cat="painting" data-size="80 × 100 cm">
           <div class="gallery-item__inner">
             <picture><source srcset="Images/paintings/gallery-31.webp" type="image/webp"><img src="Images/paintings/gallery-31.jpeg" width="853" height="1280" alt="The Hidden Garden – Tropical florals in coral, purple, and green" loading="eager" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">The Hidden Garden</p>
-              <p class="gallery-item__med" data-i18n="medium.mixed-canvas">Mixed Media on Canvas</p>
+              <p class="gallery-item__med" data-i18n="medium.acrylic-canvas">Acrylic on Canvas</p>
             </div>
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Blush Foliage" data-avail="in" data-cat="painting">
+        <article class="gallery-item" role="listitem" data-title="Blush Foliage" data-avail="in" data-cat="painting" data-size="80 × 100 cm">
           <div class="gallery-item__inner">
             <picture><source srcset="Images/paintings/gallery-32.webp" type="image/webp"><img src="Images/paintings/gallery-32.jpeg" width="960" height="1280" alt="Blush Foliage – Layered leaf forms in blush pink and sage green" loading="eager" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Blush Foliage</p>
-              <p class="gallery-item__med" data-i18n="medium.mixed-canvas">Mixed Media on Canvas</p>
+              <p class="gallery-item__med" data-i18n="medium.acrylic-canvas">Acrylic on Canvas</p>
             </div>
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Petals of Harmony" data-avail="in" data-cat="painting">
+        <article class="gallery-item" role="listitem" data-title="Petals of Harmony" data-avail="in" data-cat="painting" data-size="60 × 60 cm">
           <div class="gallery-item__inner">
             <picture><source srcset="Images/paintings/gallery-33.webp" type="image/webp"><img src="Images/paintings/gallery-33.jpeg" width="1024" height="1024" alt="Petals of Harmony – Soft pink and cream blossoms on a washed ground" loading="eager" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Petals of Harmony</p>
-              <p class="gallery-item__med" data-i18n="medium.mixed-canvas">Mixed Media on Canvas</p>
+              <p class="gallery-item__med" data-i18n="medium.acrylic-canvas">Acrylic on Canvas</p>
             </div>
           </div>
         </article>
@@ -425,32 +425,32 @@
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="The Village" data-avail="in" data-cat="painting">
+        <article class="gallery-item" role="listitem" data-title="The Village" data-avail="in" data-cat="painting" data-size="150 × 150 cm">
           <div class="gallery-item__inner">
             <picture><source srcset="Images/paintings/gallery-34.webp" type="image/webp"><img src="Images/paintings/gallery-34.jpeg" width="1120" height="1120" alt="The Village" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">The Village</p>
-              <p class="gallery-item__med">Acrylic on Canvas</p>
+              <p class="gallery-item__med" data-i18n="medium.acrylic-canvas">Acrylic on Canvas</p>
             </div>
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="The Secret Garden" data-avail="in" data-cat="painting">
+        <article class="gallery-item" role="listitem" data-title="The Secret Garden" data-avail="in" data-cat="painting" data-size="100 × 100 cm">
           <div class="gallery-item__inner">
             <picture><source srcset="Images/paintings/gallery-35.webp" type="image/webp"><img src="Images/paintings/gallery-35.jpeg" width="1141" height="1190" alt="The Secret Garden" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">The Secret Garden</p>
-              <p class="gallery-item__med">Acrylic on Canvas</p>
+              <p class="gallery-item__med" data-i18n="medium.acrylic-canvas">Acrylic on Canvas</p>
             </div>
           </div>
         </article>
 
-        <article class="gallery-item" role="listitem" data-title="Fire Fields" data-avail="in" data-cat="painting">
+        <article class="gallery-item" role="listitem" data-title="Fire Fields" data-avail="in" data-cat="painting" data-size="100 × 100 cm">
           <div class="gallery-item__inner">
             <picture><source srcset="Images/paintings/gallery-36.webp" type="image/webp"><img src="Images/paintings/gallery-36.jpeg" width="1024" height="1024" alt="Fire Fields" loading="lazy" decoding="async"></picture>
             <div class="gallery-item__overlay">
               <p class="gallery-item__name">Fire Fields</p>
-              <p class="gallery-item__med">Acrylic on Canvas</p>
+              <p class="gallery-item__med" data-i18n="medium.acrylic-canvas">Acrylic on Canvas</p>
             </div>
           </div>
         </article>
@@ -480,6 +480,7 @@
     <div class="lightbox__info">
       <p class="lightbox__title"></p>
       <p class="lightbox__meta" data-i18n="gallery.lb.meta">Original Artwork · ArtLux</p>
+      <p class="lightbox__size" hidden></p>
       <p class="lightbox__dims" data-i18n="gallery.lb.dims">Sizes vary by piece — ask us for exact dimensions and availability.</p>
       <a class="lightbox__cta" id="lbInquire" href="contact.html" data-i18n="gallery.lb.inquire">Inquire About This Piece</a>
       <p class="lightbox__note"><span data-i18n="gallery.lb.note">Looking for a custom size or a similar piece?</span> <a href="commission.html" data-i18n="gallery.lb.talk">Let's talk</a>.</p>
@@ -618,6 +619,8 @@ layoutMasonry();
 const lightbox  = document.getElementById('lightbox');
 const lbImg     = lightbox.querySelector('.lightbox__img');
 const lbTitle   = lightbox.querySelector('.lightbox__title');
+const lbSize    = lightbox.querySelector('.lightbox__size');
+const lbDims    = lightbox.querySelector('.lightbox__dims');
 const lbInquire = document.getElementById('lbInquire');
 
 let lbIndex = -1;
@@ -629,6 +632,16 @@ function showInLb(item) {
   lbImg.alt = img.alt;
   lbTitle.textContent = item.dataset.title;
   lbInquire.href = 'contact.html?piece=' + encodeURIComponent(item.dataset.title);
+
+  const size = item.dataset.size;
+  if (size) {
+    lbSize.textContent = size;
+    lbSize.hidden = false;
+    lbDims.hidden = true;
+  } else {
+    lbSize.hidden = true;
+    lbDims.hidden = false;
+  }
 }
 
 function openLb(index) {
