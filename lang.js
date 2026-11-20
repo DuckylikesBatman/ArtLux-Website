@@ -256,6 +256,8 @@
       'medium.mixed-diptych': 'Mixed Media · Diptych',
       'medium.acrylic-canvas-diptych': 'Acrylic on Canvas · Diptych',
       'medium.acrylic-canvas': 'Acrylic on Canvas',
+      'medium.acrylic-woodboard': 'Acrylic on Woodboard',
+      'medium.acrylic-woodboard-diptych': 'Acrylic on Woodboard · Diptych',
       /* ── Contact page ── */
       'contact.hero.title': 'Let’s Create Something<br><em>Beautiful</em>',
       'contact.form.name': 'Your Name',
@@ -647,6 +649,8 @@
       'medium.mixed-diptych': 'وسائط مختلطة · ثنائية',
       'medium.acrylic-canvas-diptych': 'أكريليك على قماش · ثنائية',
       'medium.acrylic-canvas': 'أكريليك على قماش',
+      'medium.acrylic-woodboard': 'أكريليك على لوح خشبي',
+      'medium.acrylic-woodboard-diptych': 'أكريليك على لوح خشبي · ثنائية',
       /* ── Contact page ── */
       'contact.hero.title': 'لنبدع شيئًا<br><em>جميلاً</em>',
       'contact.form.name': 'اسمك',
